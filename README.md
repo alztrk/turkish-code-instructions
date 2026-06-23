@@ -42,6 +42,9 @@ Python (142), JavaScript (84), Java (67), Go (43), SQL (43), TypeScript (42), We
 ```python
 from datasets import load_dataset
 dataset = load_dataset("json", data_files="output/dataset.jsonl")
+
+# Or from HuggingFace:
+dataset = load_dataset("alztrk/turkish-code-instructions")
 ```
 
 ## Adding Data
