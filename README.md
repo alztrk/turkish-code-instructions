@@ -1,95 +1,57 @@
-# 🇹🇷 Turkish Code Instructions
+# Turkish Code Instructions
 
-> **Türkçe kod açıklama veri seti** — Turkish instruction-code pairs for LLM fine-tuning.
+Turkish instruction-code pairs for LLM fine-tuning. Each entry contains a Turkish instruction and a corresponding code response.
 
-Bu veri seti, Türkçe instruction'lar ile kod çiftlerinden oluşur. Amacı, Türkçe kod üreten/tanıyan modelleri eğitmek için kullanılabilecek kaliteli bir kaynak sağlamaktır.
+## Dataset Stats
 
-## 📊 İstatistikler
+- **531 examples** across 7 formats and 10 languages
+- 271 KB JSONL format
+- Clean, runnable code with Turkish variable names
 
-| Metrik | Değer |
-|---|---|
-| Toplam örnek | 531 |
-| Format sayısı | 7 |
-| Dil sayısı | 10 |
-| Boyut | 271 KB (JSONL) |
-
-## 📁 Klasör Yapısı
+## Structure
 
 ```
-├── output/
-│   └── dataset.jsonl          # Birleştirilmiş veri seti
-├── submissions/               # Tüm manuel batch'ler (kaynak)
-├── templates/                 # Pattern template'leri
-│   ├── python.json
-│   ├── javascript.json
-│   ├── typescript.json
-│   ├── java.json
-│   ├── cpp.json
-│   ├── go.json
-│   ├── rust.json
-│   ├── sql.json
-│   ├── web.json
-│   ├── algorithms.json
-│   └── knowledge/             # Dil bilgi dosyaları
-├── dataset_card.json          # HuggingFace metadata
-└── README.md
+output/dataset.jsonl       -- merged dataset (531 entries)
+submissions/               -- individual batch files (sources)
+templates/                 -- pattern templates for each language
+  python.json, javascript.json, typescript.json, java.json
+  cpp.json, go.json, rust.json, sql.json, web.json, algorithms.json
+  knowledge/               -- language reference files
+dataset_card.json          -- HuggingFace metadata
 ```
 
-## 🎯 Formatlar
+## Formats
 
-| Format | Açıklama | Adet |
+| Format | Count | Description |
 |---|---|---|
-| `standard` | Instruction → kod | 341 |
-| `bug_fix` | Hatalı kod → düzeltilmiş kod | 40 |
-| `advanced` | İleri seviye konular | 40 |
-| `project` | Proje bazlı (çok fonksiyonlu) | 30 |
-| `cross_lang` | Aynı problem, farklı diller | 30 |
-| `code_to_desc` | Kod → Türkçe açıklama | 25 |
-| `test` | Test yazma | 25 |
-| `knowledge` | Kavram açıklamaları | 20 |
+| standard | 341 | Turkish instruction to code |
+| bug_fix | 40 | Find and fix the bug |
+| advanced | 40 | Intermediate/advanced topics |
+| project | 30 | Multi-function project implementations |
+| cross_lang | 30 | Same problem in different languages |
+| code_to_desc | 25 | Explain the given code in Turkish |
+| test | 25 | Unit test writing |
+| knowledge | 20 | Concept explanations |
 
-## 🛠 Diller
+## Languages
 
-| Dil | Adet |
-|---|---|
-| Python | 142 |
-| JavaScript | 84 |
-| Java | 67 |
-| Go | 43 |
-| SQL | 43 |
-| TypeScript | 42 |
-| Web (HTML/CSS) | 32 |
-| C++ | 21 |
-| Algorithms | 20 |
-| Rust | 17 |
+Python (142), JavaScript (84), Java (67), Go (43), SQL (43), TypeScript (42), Web/HTML-CSS (32), C++ (21), Algorithms (20), Rust (17)
 
-## 📝 Kullanım
-
-Bu veri seti özellikle **Türkçe kod üreten modelleri fine-tune etmek** için hazırlanmıştır.
+## Usage
 
 ```python
-# HuggingFace datasets ile yükleme
 from datasets import load_dataset
-
 dataset = load_dataset("json", data_files="output/dataset.jsonl")
-print(dataset["train"][0])
 ```
 
-## 🧠 Veri Türleri
+## Adding Data
 
-- **Türkçe değişken isimli kodlar**: `toplam`, `sayiListesi`, `kullaniciAdi` gibi
-- **Farklı zorluk seviyeleri**: Başlangıçtan ileri seviyeye
-- **Gerçek proje senaryoları**: Hesap makinesi, telefon rehberi, yapılacaklar listesi
-- **Hata ayıklama**: Hatalı kod + düzeltilmiş kod çiftleri
-
-## 🤝 Katkı
-
-Yeni instruction-code çiftleri eklemek için `submissions/` klasörüne JSON dosyası ekleyin:
+Add JSON files to `submissions/`:
 
 ```json
-{"instruction": "Türkçe instruction", "response": "kod", "language": "python", "category": "manual", "type": "manual"}
+{"instruction": "Bir diziyi tersine ceviren fonksiyon yaz", "response": "def ters_cevir(dizi):\n    return dizi[::-1]", "language": "python", "category": "manual", "type": "manual"}
 ```
 
-## 📄 Lisans
+## License
 
 MIT
