@@ -1,0 +1,4002 @@
+[
+  {
+    "instruction": "Diziyi tersine ceviren fonksiyon yaz",
+    "response": "def ters_cevir(dizi):\n    return dizi[::-1]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Diziyi tersine ceviren fonksiyon yaz",
+    "response": "public static int[] tersCevir(int[] dizi) {\n    int[] sonuc = new int[dizi.length];\n    for (int i = 0; i < dizi.length; i++) sonuc[i] = dizi[dizi.length-1-i];\n    return sonuc;\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Diziyi tersine ceviren fonksiyon yaz",
+    "response": "function tersCevir(dizi) {\n    return [...dizi].reverse();\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki en buyuk sayiyi bulan fonksiyon yaz",
+    "response": "public static int enBuyuk(int[] dizi) {\n    int max = dizi[0];\n    for (int n : dizi) if (n > max) max = n;\n    return max;\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki en buyuk sayiyi bulan fonksiyon yaz",
+    "response": "function enBuyuk(dizi) {\n    return dizi.length ? Math.max(...dizi) : null;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki en buyuk sayiyi bulan fonksiyon yaz",
+    "response": "def en_buyuk(dizi):\n    return max(dizi) if dizi else None",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metnin palindrom olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "public static boolean palindrom(String m) {\n    String s = m.toLowerCase().replaceAll(\" \", \"\");\n    return s.equals(new StringBuilder(s).reverse().toString());\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metnin palindrom olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "function palindrom(m) {\n    const s = m.toLowerCase().replace(/ /g, '');\n    return s === [...s].reverse().join('');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Fibonacci serisinin n. elemanini bulan fonksiyon yaz",
+    "response": "public static int fibonacci(int n) {\n    int a = 0, b = 1;\n    for (int i = 0; i < n; i++) { int t = a; a = b; b = t + b; }\n    return a;\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Fibonacci serisinin n. elemanini bulan fonksiyon yaz",
+    "response": "function fibonacci(n) {\n    let [a, b] = [0, 1];\n    for (let i = 0; i < n; i++) [a, b] = [b, a + b];\n    return a;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Fibonacci serisinin n. elemanini bulan fonksiyon yaz",
+    "response": "def fibonacci(n):\n    a, b = 0, 1\n    for _ in range(n): a, b = b, a + b\n    return a",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin faktoriyelini hesaplayan fonksiyon yaz",
+    "response": "def faktoriyel(n):\n    return 1 if n < 2 else n * faktoriyel(n - 1)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin faktoriyelini hesaplayan fonksiyon yaz",
+    "response": "function faktoriyel(n) {\n    return n < 2 ? 1 : n * faktoriyel(n - 1);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin asal olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "def asal_mi(n):\n    if n < 2: return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0: return False\n    return True",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin asal olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "function asalMi(n) {\n    if (n < 2) return false;\n    for (let i = 2; i <= Math.sqrt(n); i++)\n        if (n % i === 0) return false;\n    return true;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki sesli harflerin sayisini bulan fonksiyon yaz",
+    "response": "def sesli_say(m):\n    return sum(1 for h in m.lower() if h in 'aeiou')",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki sesli harflerin sayisini bulan fonksiyon yaz",
+    "response": "function sesliSay(m) {\n    return (m.match(/[aeiou]/gi) || []).length;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki sesli harflerin sayisini bulan fonksiyon yaz",
+    "response": "func SesliSay(m string) int {\n    c := 0\n    for _, h := range strings.ToLower(m) {\n        if strings.ContainsRune(\"aeiou\", h) { c++ }\n    }\n    return c\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni duzgun isim formatina ceviren fonksiyon yaz",
+    "response": "func DuzgunIsim(m string) string {\n    return strings.Title(strings.ToLower(m))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni duzgun isim formatina ceviren fonksiyon yaz",
+    "response": "function duzgunIsim(m) {\n    return m.replace(/\\w\\S*/g, t => t[0].toUpperCase() + t.slice(1).toLowerCase());\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni duzgun isim formatina ceviren fonksiyon yaz",
+    "response": "def duzgun_isim(m):\n    return m.title()",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi birlestiren fonksiyon yaz",
+    "response": "def dizi_birlestir(a, b):\n    return a + b",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi birlestiren fonksiyon yaz",
+    "response": "function diziBirlestir(a, b) {\n    return [...a, ...b];\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi birlestiren fonksiyon yaz",
+    "response": "public static int[] diziBirlestir(int[] a, int[] b) {\n    int[] sonuc = new int[a.length + b.length];\n    System.arraycopy(a, 0, sonuc, 0, a.length);\n    System.arraycopy(b, 0, sonuc, a.length, b.length);\n    return sonuc;\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizide tekrar eden elemani bulan fonksiyon yaz",
+    "response": "def tekrar_eden(dizi):\n    gorulen = set()\n    for e in dizi:\n        if e in gorulen: return e\n        gorulen.add(e)\n    return None",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizide tekrar eden elemani bulan fonksiyon yaz",
+    "response": "function tekrarEden(dizi) {\n    const gorulen = new Set();\n    for (const e of dizi) {\n        if (gorulen.has(e)) return e;\n        gorulen.add(e);\n    }\n    return null;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizide belirtilen degeri arayan fonksiyon yaz",
+    "response": "public static int dizideAra(int[] dizi, int hedef) {\n    for (int i = 0; i < dizi.length; i++)\n        if (dizi[i] == hedef) return i;\n    return -1;\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizide belirtilen degeri arayan fonksiyon yaz",
+    "response": "function dizideAra(dizi, hedef) {\n    return dizi.indexOf(hedef);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kucukten buyuge siralayan fonksiyon yaz",
+    "response": "public static void siralama(int[] dizi) {\n    Arrays.sort(dizi);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kucukten buyuge siralayan fonksiyon yaz",
+    "response": "function siralama(dizi) {\n    return [...dizi].sort((a, b) => a - b);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kucukten buyuge siralayan fonksiyon yaz",
+    "response": "def siralama(dizi):\n    return sorted(dizi)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelime sayisini bulan fonksiyon yaz",
+    "response": "func KelimeSayisi(m string) int {\n    return len(strings.Fields(m))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelime sayisini bulan fonksiyon yaz",
+    "response": "function kelimeSayisi(m) {\n    return m.trim() ? m.trim().split(/\\s+/).length : 0;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelime sayisini bulan fonksiyon yaz",
+    "response": "def kelime_sayisi(m):\n    return len(m.split())",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki karakter sayisini bulan fonksiyon yaz",
+    "response": "def karakter_sayisi(m):\n    return len(m)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki karakter sayisini bulan fonksiyon yaz",
+    "response": "function karakterSayisi(m) {\n    return m.length;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "public static List<Integer> dizidenKumeye(int[] dizi) {\n    return Arrays.stream(dizi).distinct().boxed().collect(Collectors.toList());\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "function dizidenKumeye(dizi) {\n    return [...new Set(dizi)];\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi karsilastiran fonksiyon yaz",
+    "response": "func DiziKarsilastir(a, b []int) bool {\n    if len(a) != len(b) { return false }\n    for i := range a { if a[i] != b[i] { return false } }\n    return true\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi karsilastiran fonksiyon yaz",
+    "response": "function diziKarsilastir(a, b) {\n    return a.length === b.length && a.every((v, i) => v === b[i]);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni URL encode eden fonksiyon yaz",
+    "response": "func URLEncode(m string) string {\n    return url.QueryEscape(m)\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni URL encode eden fonksiyon yaz",
+    "response": "function urlEncode(m) {\n    return encodeURIComponent(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni URL encode eden fonksiyon yaz",
+    "response": "def url_encode(m):\n    from urllib.parse import quote\n    return quote(m)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "def base64_encode(m):\n    import base64\n    return base64.b64encode(m.encode()).decode()",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "function base64Encode(m) {\n    return btoa(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "func Base64Encode(m string) string {\n    return base64.StdEncoding.EncodeToString([]byte(m))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metnin MD5 hashini hesaplayan fonksiyon yaz",
+    "response": "def md5_hash(m):\n    import hashlib\n    return hashlib.md5(m.encode()).hexdigest()",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metnin MD5 hashini hesaplayan fonksiyon yaz",
+    "response": "public static String md5Hash(String m) throws Exception {\n    MessageDigest md = MessageDigest.getInstance(\"MD5\");\n    byte[] hash = md.digest(m.getBytes());\n    StringBuilder sb = new StringBuilder();\n    for (byte b : hash) sb.append(String.format(\"%02x\", b));\n    return sb.toString();\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metnin MD5 hashini hesaplayan fonksiyon yaz",
+    "response": "function md5Hash(m) {\n    const { createHash } = require('crypto');\n    return createHash('md5').update(m).digest('hex');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir JSON metnini parse eden fonksiyon yaz",
+    "response": "def json_parse(m):\n    import json\n    return json.loads(m)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir JSON metnini parse eden fonksiyon yaz",
+    "response": "function jsonParse(m) {\n    return JSON.parse(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir JSON metnini parse eden fonksiyon yaz",
+    "response": "func JSONParse(m string) (map[string]interface{}, error) {\n    var data map[string]interface{}\n    err := json.Unmarshal([]byte(m), &data)\n    return data, err\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "def csv_satir_parse(satir):\n    return satir.split(',')",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "function csvSatirParse(satir) {\n    return satir.split(',');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "func CSVSatirParse(satir string) []string {\n    return strings.Split(satir, \",\")\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni regex ile dogrulayan fonksiyon yaz",
+    "response": "public static boolean regexDogrula(String desen, String m) {\n    return m.matches(desen);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni regex ile dogrulayan fonksiyon yaz",
+    "response": "function regexDogrula(desen, m) {\n    return new RegExp('^' + desen + '$').test(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni regex ile dogrulayan fonksiyon yaz",
+    "response": "def regex_dogrula(desen, m):\n    import re\n    return bool(re.fullmatch(desen, m))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir e-posta adresini dogrulayan fonksiyon yaz",
+    "response": "func EpostaDogrula(e string) bool {\n    matched, _ := regexp.MatchString(`^[\\w.+-]+@[\\w-]+\\.[\\w.]+$`, e)\n    return matched\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir e-posta adresini dogrulayan fonksiyon yaz",
+    "response": "function epostaDogrula(e) {\n    return /^[\\w.+-]+@[\\w-]+\\.[\\w.]+$/.test(e);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sifrenin guclugunu kontrol eden fonksiyon yaz",
+    "response": "func SifreGuclugu(s string) int {\n    puan := 0\n    if len(s) >= 8 { puan++ }\n    matched, _ := regexp.MatchString(`[a-z]`, s); if matched { puan++ }\n    matched, _ = regexp.MatchString(`[A-Z]`, s); if matched { puan++ }\n    matched, _ = regexp.MatchString(`\\d`, s); if matched { puan++ }\n    matched, _ = regexp.MatchString(`[^\\w]`, s); if matched { puan++ }\n    return puan\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sifrenin guclugunu kontrol eden fonksiyon yaz",
+    "response": "function sifreGuclugu(s) {\n    let puan = 0;\n    if (s.length >= 8) puan++;\n    if (/[a-z]/.test(s)) puan++;\n    if (/[A-Z]/.test(s)) puan++;\n    if (/\\d/.test(s)) puan++;\n    if (/[^\\w]/.test(s)) puan++;\n    return puan;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Rastgele sayi ureten fonksiyon yaz",
+    "response": "public static int rastgeleSayi(int min, int max) {\n    return new Random().nextInt(max - min + 1) + min;\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Rastgele sayi ureten fonksiyon yaz",
+    "response": "function rastgeleSayi(min, max) {\n    return Math.floor(Math.random() * (max - min + 1)) + min;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Rastgele renk kodu ureten fonksiyon yaz",
+    "response": "func RastgeleRenk() string {\n    return fmt.Sprintf(\"#%06x\", rand.Intn(0x1000000))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Rastgele renk kodu ureten fonksiyon yaz",
+    "response": "function rastgeleRenk() {\n    return '#' + Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, '0');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Rastgele renk kodu ureten fonksiyon yaz",
+    "response": "def rastgele_renk():\n    import random\n    return f'#{random.randint(0, 0xFFFFFF):06x}'",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tarihi belirtilen formatta bicimlendiren fonksiyon yaz",
+    "response": "func TarihFormatla(t time.Time) string {\n    return t.Format(\"2006-01-02\")\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tarihi belirtilen formatta bicimlendiren fonksiyon yaz",
+    "response": "function tarihFormatla(tarih, format) {\n    const m = String(tarih.getMonth() + 1).padStart(2, '0');\n    const d = String(tarih.getDate()).padStart(2, '0');\n    return format.replace('YYYY', tarih.getFullYear()).replace('MM', m).replace('DD', d);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tarihi belirtilen formatta bicimlendiren fonksiyon yaz",
+    "response": "def tarih_formatla(tarih, format):\n    return tarih.strftime(format)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayiyi para birimi formatina ceviren fonksiyon yaz",
+    "response": "def para_formatla(miktar):\n    return f'{miktar:,.2f}'",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayiyi para birimi formatina ceviren fonksiyon yaz",
+    "response": "public static String paraFormatla(double miktar) {\n    return String.format(\"%,.2f\", miktar);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dosya adindan uzantiyi bulan fonksiyon yaz",
+    "response": "func DosyaUzantisi(dosya string) string {\n    return filepath.Ext(dosya)\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dosya adindan uzantiyi bulan fonksiyon yaz",
+    "response": "function dosyaUzantisi(dosya) {\n    return dosya.substring(dosya.lastIndexOf('.'));\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir IP adresini dogrulayan fonksiyon yaz",
+    "response": "func IPDogrula(ip string) bool {\n    return net.ParseIP(ip) != nil\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir IP adresini dogrulayan fonksiyon yaz",
+    "response": "function ipDogrula(ip) {\n    return /^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$/.test(ip);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir IP adresini dogrulayan fonksiyon yaz",
+    "response": "def ip_dogrula(ip):\n    import re\n    return bool(re.match(r'^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$', ip))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir telefon numarasini dogrulayan fonksiyon yaz",
+    "response": "def telefon_dogrula(tel):\n    import re\n    return bool(re.fullmatch(r'\\+?\\d{10,15}', tel))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir telefon numarasini dogrulayan fonksiyon yaz",
+    "response": "function telefonDogrula(tel) {\n    return /^\\+?\\d{10,15}$/.test(tel);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir telefon numarasini dogrulayan fonksiyon yaz",
+    "response": "func TelefonDogrula(tel string) bool {\n    matched, _ := regexp.MatchString(`^\\+?\\d{10,15}$`, tel)\n    return matched\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelimeleri alfabetik siraya dizen fonksiyon yaz",
+    "response": "def kelime_sirala(m):\n    return sorted(m.split())",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelimeleri alfabetik siraya dizen fonksiyon yaz",
+    "response": "function kelimeSirala(m) {\n    return m.split(' ').sort();\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki harf frekansini hesaplayan fonksiyon yaz",
+    "response": "func HarfFrekansi(m string) map[rune]int {\n    f := make(map[rune]int)\n    for _, h := range strings.ToLower(m) {\n        if unicode.IsLetter(h) { f[h]++ }\n    }\n    return f\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki harf frekansini hesaplayan fonksiyon yaz",
+    "response": "function harfFrekansi(m) {\n    const f = {};\n    for (const h of m.toLowerCase())\n        if (/[a-z]/.test(h)) f[h] = (f[h] || 0) + 1;\n    return f;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki harf frekansini hesaplayan fonksiyon yaz",
+    "response": "def harf_frekansi(m):\n    return {h: m.lower().count(h) for h in set(m.lower()) if h.isalpha()}",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki kelimenin anagram olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "function anagramKontrol(a, b) {\n    return a.toLowerCase().split('').sort().join('') === b.toLowerCase().split('').sort().join('');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki kelimenin anagram olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "def anagram_kontrol(a, b):\n    return sorted(a.lower()) == sorted(b.lower())",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki kelimenin anagram olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "public static boolean anagramKontrol(String a, String b) {\n    char[] x = a.toLowerCase().toCharArray();\n    char[] y = b.toLowerCase().toCharArray();\n    Arrays.sort(x); Arrays.sort(y);\n    return Arrays.equals(x, y);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metinde alt stringin konumunu bulan fonksiyon yaz",
+    "response": "function substringBul(m, alt) {\n    return m.indexOf(alt);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metinde alt stringin konumunu bulan fonksiyon yaz",
+    "response": "def substring_bul(m, alt):\n    return m.find(alt)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki belirtilen alt stringi baska bir stringle degistiren fonksiyon yaz",
+    "response": "def string_replace(m, eski, yeni):\n    return m.replace(eski, yeni)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki belirtilen alt stringi baska bir stringle degistiren fonksiyon yaz",
+    "response": "func StringReplace(m, eski, yeni string) string {\n    return strings.ReplaceAll(m, eski, yeni)\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni belirtilen ayirac ile bolen fonksiyon yaz",
+    "response": "def string_split(m, ayirac):\n    return m.split(ayirac)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni belirtilen ayirac ile bolen fonksiyon yaz",
+    "response": "function stringSplit(m, ayirac) {\n    return m.split(ayirac);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "function arraySlice(dizi, bas, son) {\n    return dizi.slice(bas, son);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "def array_slice(dizi, bas, son):\n    return dizi[bas:son]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen konumdan itibaren eleman silen fonksiyon yaz",
+    "response": "func ArraySplice(dizi []int, bas, adet int) []int {\n    return append(dizi[:bas], dizi[bas+adet:]...)\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen konumdan itibaren eleman silen fonksiyon yaz",
+    "response": "def array_splice(dizi, bas, adet):\n    del dizi[bas:bas+adet]\n    return dizi",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye map islemi uygulayan fonksiyon yaz",
+    "response": "def map_islemi(dizi, fn):\n    return [fn(x) for x in dizi]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye map islemi uygulayan fonksiyon yaz",
+    "response": "function mapIslemi(dizi, fn) {\n    return dizi.map(fn);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye map islemi uygulayan fonksiyon yaz",
+    "response": "public static List<Integer> mapIslemi(List<Integer> dizi, java.util.function.Function<Integer, Integer> fn) {\n    return dizi.stream().map(fn).collect(Collectors.toList());\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye filter islemi uygulayan fonksiyon yaz",
+    "response": "public static List<Integer> filterUygula(List<Integer> dizi, java.util.function.Predicate<Integer> fn) {\n    return dizi.stream().filter(fn).collect(Collectors.toList());\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye filter islemi uygulayan fonksiyon yaz",
+    "response": "function filterUygula(dizi, fn) {\n    return dizi.filter(fn);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye filter islemi uygulayan fonksiyon yaz",
+    "response": "def filter_uygula(dizi, fn):\n    return [x for x in dizi if fn(x)]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye reduce islemi uygulayan fonksiyon yaz",
+    "response": "def reduce_islemi(dizi, fn, baslangic):\n    from functools import reduce\n    return reduce(fn, dizi, baslangic)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye reduce islemi uygulayan fonksiyon yaz",
+    "response": "function reduceIslemi(dizi, fn, baslangic) {\n    return dizi.reduce(fn, baslangic);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye reduce islemi uygulayan fonksiyon yaz",
+    "response": "func ReduceIslemi(dizi []int, fn func(int, int) int, baslangic int) int {\n    s := baslangic\n    for _, v := range dizi { s = fn(s, v) }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye flat map islemi uygulayan fonksiyon yaz",
+    "response": "function flatMap(dizi, fn) {\n    return dizi.flatMap(fn);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye flat map islemi uygulayan fonksiyon yaz",
+    "response": "def flat_map(dizi, fn):\n    return [y for x in dizi for y in fn(x)]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye flat map islemi uygulayan fonksiyon yaz",
+    "response": "func FlatMap(dizi []int, fn func(int) []int) []int {\n    var s []int\n    for _, v := range dizi { s = append(s, fn(v)...) }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Birden fazla diziyi zip yapan fonksiyon yaz",
+    "response": "def zip_islemi(*diziler):\n    return list(zip(*diziler))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Birden fazla diziyi zip yapan fonksiyon yaz",
+    "response": "function zipIslemi(...diziler) {\n    return diziler[0].map((_, i) => diziler.map(d => d[i]));\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Zip yapilmis bir listeyi eski haline getiren fonksiyon yaz",
+    "response": "def unzip_islemi(dizi):\n    return list(zip(*dizi))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Zip yapilmis bir listeyi eski haline getiren fonksiyon yaz",
+    "response": "function unzipIslemi(dizi) {\n    return dizi[0].map((_, i) => dizi.map(d => d[i]));\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Zip yapilmis bir listeyi eski haline getiren fonksiyon yaz",
+    "response": "func UnzipIslemi(dizi [][]int) [][]int {\n    var s [][]int\n    for i := range dizi[0] {\n        var t []int\n        for _, d := range dizi { t = append(t, d[i]) }\n        s = append(s, t)\n    }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi belirtilen boyutta parcalara ayiran fonksiyon yaz",
+    "response": "def chunk_islemi(dizi, boyut):\n    return [dizi[i:i+boyut] for i in range(0, len(dizi), boyut)]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi belirtilen boyutta parcalara ayiran fonksiyon yaz",
+    "response": "function chunkIslemi(dizi, boyut) {\n    const s = [];\n    for (let i = 0; i < dizi.length; i += boyut) s.push(dizi.slice(i, i + boyut));\n    return s;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi karistiran fonksiyon yaz",
+    "response": "function shuffleIslemi(dizi) {\n    for (let i = dizi.length - 1; i > 0; i--) {\n        const j = Math.floor(Math.random() * (i + 1));\n        [dizi[i], dizi[j]] = [dizi[j], dizi[i]];\n    }\n    return dizi;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi karistiran fonksiyon yaz",
+    "response": "func ShuffleIslemi(dizi []int) []int {\n    rand.Shuffle(len(dizi), func(i, j int) { dizi[i], dizi[j] = dizi[j], dizi[i] })\n    return dizi\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "def sample_islemi(dizi, k):\n    import random\n    return random.sample(dizi, k)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "function sampleIslemi(dizi, k) {\n    const s = [...dizi];\n    for (let i = s.length - 1; i > 0; i--) {\n        const j = Math.floor(Math.random() * (i + 1));\n        [s[i], s[j]] = [s[j], s[i]];\n    }\n    return s.slice(0, k);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "func SampleIslemi(dizi []int, k int) []int {\n    rand.Shuffle(len(dizi), func(i, j int) { dizi[i], dizi[j] = dizi[j], dizi[i] })\n    return dizi[:k]\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki benzersiz degerleri donduren fonksiyon yaz",
+    "response": "func UniqueDegerler(dizi []int) []int {\n    g := make(map[int]bool)\n    var s []int\n    for _, v := range dizi {\n        if !g[v] { s = append(s, v); g[v] = true }\n    }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki benzersiz degerleri donduren fonksiyon yaz",
+    "response": "function uniqueDegerler(dizi) {\n    return [...new Set(dizi)];\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki benzersiz degerleri donduren fonksiyon yaz",
+    "response": "def unique_degerler(dizi):\n    return list(set(dizi))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki elemanlari anahtar degerlerine gore gruplayan fonksiyon yaz",
+    "response": "def gruplama(dizi, anahtar_fn):\n    from collections import defaultdict\n    s = defaultdict(list)\n    for e in dizi: s[anahtar_fn(e)].append(e)\n    return dict(s)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki elemanlari anahtar degerlerine gore gruplayan fonksiyon yaz",
+    "response": "func Gruplama(dizi []int, anahtarFn func(int) int) map[int][]int {\n    s := make(map[int][]int)\n    for _, e := range dizi {\n        k := anahtarFn(e)\n        s[k] = append(s[k], e)\n    }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki elemanlari anahtar degerlerine gore gruplayan fonksiyon yaz",
+    "response": "function gruplama(dizi, anahtarFn) {\n    return dizi.reduce((s, e) => {\n        const k = anahtarFn(e);\n        (s[k] = s[k] || []).push(e);\n        return s;\n    }, {});\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tablodaki veriyi pivot yapan fonksiyon yaz",
+    "response": "def pivot_islemi(data, satir, sutun, deger):\n    s = {}\n    for r in data:\n        ri, si = r[satir], r[sutun]\n        s.setdefault(ri, {})[si] = r[deger]\n    return s",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tablodaki veriyi pivot yapan fonksiyon yaz",
+    "response": "function pivotIslemi(data, satir, sutun, deger) {\n    const s = {};\n    for (const r of data) {\n        const ri = r[satir], si = r[sutun];\n        if (!s[ri]) s[ri] = {};\n        s[ri][si] = r[deger];\n    }\n    return s;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tablodaki veriyi pivot yapan fonksiyon yaz",
+    "response": "func PivotIslemi(data []map[string]interface{}, satir, sutun, deger string) map[string]map[string]interface{} {\n    s := make(map[string]map[string]interface{})\n    for _, r := range data {\n        ri := r[satir].(string)\n        si := r[sutun].(string)\n        if s[ri] == nil { s[ri] = make(map[string]interface{}) }\n        s[ri][si] = r[deger]\n    }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye map islemi uygulayan fonksiyon yaz",
+    "response": "function mapIslemi(dizi, fn) {\n    return dizi.map(fn);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye map islemi uygulayan fonksiyon yaz",
+    "response": "def map_islemi(dizi, fn):\n    return [fn(x) for x in dizi]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye map islemi uygulayan fonksiyon yaz",
+    "response": "public static List<Integer> mapIslemi(List<Integer> dizi, java.util.function.Function<Integer, Integer> fn) {\n    return dizi.stream().map(fn).collect(Collectors.toList());\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni regex ile dogrulayan fonksiyon yaz",
+    "response": "function regexDogrula(desen, m) {\n    return new RegExp('^' + desen + '$').test(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni regex ile dogrulayan fonksiyon yaz",
+    "response": "public static boolean regexDogrula(String desen, String m) {\n    return m.matches(desen);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir JSON metnini parse eden fonksiyon yaz",
+    "response": "def json_parse(m):\n    import json\n    return json.loads(m)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir JSON metnini parse eden fonksiyon yaz",
+    "response": "func JSONParse(m string) (map[string]interface{}, error) {\n    var data map[string]interface{}\n    err := json.Unmarshal([]byte(m), &data)\n    return data, err\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir JSON metnini parse eden fonksiyon yaz",
+    "response": "function jsonParse(m) {\n    return JSON.parse(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "function sampleIslemi(dizi, k) {\n    const s = [...dizi];\n    for (let i = s.length - 1; i > 0; i--) {\n        const j = Math.floor(Math.random() * (i + 1));\n        [s[i], s[j]] = [s[j], s[i]];\n    }\n    return s.slice(0, k);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "def sample_islemi(dizi, k):\n    import random\n    return random.sample(dizi, k)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tarihi belirtilen formatta bicimlendiren fonksiyon yaz",
+    "response": "func TarihFormatla(t time.Time) string {\n    return t.Format(\"2006-01-02\")\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tarihi belirtilen formatta bicimlendiren fonksiyon yaz",
+    "response": "function tarihFormatla(tarih, format) {\n    const m = String(tarih.getMonth() + 1).padStart(2, '0');\n    const d = String(tarih.getDate()).padStart(2, '0');\n    return format.replace('YYYY', tarih.getFullYear()).replace('MM', m).replace('DD', d);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tarihi belirtilen formatta bicimlendiren fonksiyon yaz",
+    "response": "def tarih_formatla(tarih, format):\n    return tarih.strftime(format)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki benzersiz degerleri donduren fonksiyon yaz",
+    "response": "func UniqueDegerler(dizi []int) []int {\n    g := make(map[int]bool)\n    var s []int\n    for _, v := range dizi {\n        if !g[v] { s = append(s, v); g[v] = true }\n    }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki benzersiz degerleri donduren fonksiyon yaz",
+    "response": "function uniqueDegerler(dizi) {\n    return [...new Set(dizi)];\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi karistiran fonksiyon yaz",
+    "response": "def shuffle_islemi(dizi):\n    import random\n    random.shuffle(dizi)\n    return dizi",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi karistiran fonksiyon yaz",
+    "response": "function shuffleIslemi(dizi) {\n    for (let i = dizi.length - 1; i > 0; i--) {\n        const j = Math.floor(Math.random() * (i + 1));\n        [dizi[i], dizi[j]] = [dizi[j], dizi[i]];\n    }\n    return dizi;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "def diziden_kumeye(dizi):\n    return list(set(dizi))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "public static List<Integer> dizidenKumeye(int[] dizi) {\n    return Arrays.stream(dizi).distinct().boxed().collect(Collectors.toList());\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Fibonacci serisinin n. elemanini bulan fonksiyon yaz",
+    "response": "def fibonacci(n):\n    a, b = 0, 1\n    for _ in range(n): a, b = b, a + b\n    return a",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Fibonacci serisinin n. elemanini bulan fonksiyon yaz",
+    "response": "function fibonacci(n) {\n    let [a, b] = [0, 1];\n    for (let i = 0; i < n; i++) [a, b] = [b, a + b];\n    return a;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni URL encode eden fonksiyon yaz",
+    "response": "function urlEncode(m) {\n    return encodeURIComponent(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni URL encode eden fonksiyon yaz",
+    "response": "func URLEncode(m string) string {\n    return url.QueryEscape(m)\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni URL encode eden fonksiyon yaz",
+    "response": "def url_encode(m):\n    from urllib.parse import quote\n    return quote(m)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir JSON metnini parse eden fonksiyon yaz",
+    "response": "func JSONParse(m string) (map[string]interface{}, error) {\n    var data map[string]interface{}\n    err := json.Unmarshal([]byte(m), &data)\n    return data, err\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir JSON metnini parse eden fonksiyon yaz",
+    "response": "function jsonParse(m) {\n    return JSON.parse(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir JSON metnini parse eden fonksiyon yaz",
+    "response": "def json_parse(m):\n    import json\n    return json.loads(m)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni URL encode eden fonksiyon yaz",
+    "response": "func URLEncode(m string) string {\n    return url.QueryEscape(m)\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni URL encode eden fonksiyon yaz",
+    "response": "function urlEncode(m) {\n    return encodeURIComponent(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dosya adindan uzantiyi bulan fonksiyon yaz",
+    "response": "def dosya_uzantisi(dosya):\n    import os\n    return os.path.splitext(dosya)[1]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dosya adindan uzantiyi bulan fonksiyon yaz",
+    "response": "function dosyaUzantisi(dosya) {\n    return dosya.substring(dosya.lastIndexOf('.'));\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki belirtilen alt stringi baska bir stringle degistiren fonksiyon yaz",
+    "response": "def string_replace(m, eski, yeni):\n    return m.replace(eski, yeni)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki belirtilen alt stringi baska bir stringle degistiren fonksiyon yaz",
+    "response": "function stringReplace(m, eski, yeni) {\n    return m.replaceAll(eski, yeni);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tarihi belirtilen formatta bicimlendiren fonksiyon yaz",
+    "response": "function tarihFormatla(tarih, format) {\n    const m = String(tarih.getMonth() + 1).padStart(2, '0');\n    const d = String(tarih.getDate()).padStart(2, '0');\n    return format.replace('YYYY', tarih.getFullYear()).replace('MM', m).replace('DD', d);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tarihi belirtilen formatta bicimlendiren fonksiyon yaz",
+    "response": "func TarihFormatla(t time.Time) string {\n    return t.Format(\"2006-01-02\")\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "def base64_encode(m):\n    import base64\n    return base64.b64encode(m.encode()).decode()",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "function base64Encode(m) {\n    return btoa(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "func Base64Encode(m string) string {\n    return base64.StdEncoding.EncodeToString([]byte(m))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "def array_slice(dizi, bas, son):\n    return dizi[bas:son]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "function arraySlice(dizi, bas, son) {\n    return dizi.slice(bas, son);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "func ArraySlice(dizi []int, bas, son int) []int {\n    return dizi[bas:son]\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "func SampleIslemi(dizi []int, k int) []int {\n    rand.Shuffle(len(dizi), func(i, j int) { dizi[i], dizi[j] = dizi[j], dizi[i] })\n    return dizi[:k]\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "function sampleIslemi(dizi, k) {\n    const s = [...dizi];\n    for (let i = s.length - 1; i > 0; i--) {\n        const j = Math.floor(Math.random() * (i + 1));\n        [s[i], s[j]] = [s[j], s[i]];\n    }\n    return s.slice(0, k);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "def sample_islemi(dizi, k):\n    import random\n    return random.sample(dizi, k)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tablodaki veriyi pivot yapan fonksiyon yaz",
+    "response": "def pivot_islemi(data, satir, sutun, deger):\n    s = {}\n    for r in data:\n        ri, si = r[satir], r[sutun]\n        s.setdefault(ri, {})[si] = r[deger]\n    return s",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tablodaki veriyi pivot yapan fonksiyon yaz",
+    "response": "func PivotIslemi(data []map[string]interface{}, satir, sutun, deger string) map[string]map[string]interface{} {\n    s := make(map[string]map[string]interface{})\n    for _, r := range data {\n        ri := r[satir].(string)\n        si := r[sutun].(string)\n        if s[ri] == nil { s[ri] = make(map[string]interface{}) }\n        s[ri][si] = r[deger]\n    }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni belirtilen ayirac ile bolen fonksiyon yaz",
+    "response": "def string_split(m, ayirac):\n    return m.split(ayirac)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni belirtilen ayirac ile bolen fonksiyon yaz",
+    "response": "function stringSplit(m, ayirac) {\n    return m.split(ayirac);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye flat map islemi uygulayan fonksiyon yaz",
+    "response": "def flat_map(dizi, fn):\n    return [y for x in dizi for y in fn(x)]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye flat map islemi uygulayan fonksiyon yaz",
+    "response": "function flatMap(dizi, fn) {\n    return dizi.flatMap(fn);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni regex ile dogrulayan fonksiyon yaz",
+    "response": "def regex_dogrula(desen, m):\n    import re\n    return bool(re.fullmatch(desen, m))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni regex ile dogrulayan fonksiyon yaz",
+    "response": "public static boolean regexDogrula(String desen, String m) {\n    return m.matches(desen);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "func Base64Encode(m string) string {\n    return base64.StdEncoding.EncodeToString([]byte(m))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "function base64Encode(m) {\n    return btoa(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi karsilastiran fonksiyon yaz",
+    "response": "func DiziKarsilastir(a, b []int) bool {\n    if len(a) != len(b) { return false }\n    for i := range a { if a[i] != b[i] { return false } }\n    return true\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi karsilastiran fonksiyon yaz",
+    "response": "function diziKarsilastir(a, b) {\n    return a.length === b.length && a.every((v, i) => v === b[i]);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi karsilastiran fonksiyon yaz",
+    "response": "def dizi_karsilastir(a, b):\n    return a == b",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "def sample_islemi(dizi, k):\n    import random\n    return random.sample(dizi, k)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "function sampleIslemi(dizi, k) {\n    const s = [...dizi];\n    for (let i = s.length - 1; i > 0; i--) {\n        const j = Math.floor(Math.random() * (i + 1));\n        [s[i], s[j]] = [s[j], s[i]];\n    }\n    return s.slice(0, k);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "func SampleIslemi(dizi []int, k int) []int {\n    rand.Shuffle(len(dizi), func(i, j int) { dizi[i], dizi[j] = dizi[j], dizi[i] })\n    return dizi[:k]\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "def sample_islemi(dizi, k):\n    import random\n    return random.sample(dizi, k)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "function sampleIslemi(dizi, k) {\n    const s = [...dizi];\n    for (let i = s.length - 1; i > 0; i--) {\n        const j = Math.floor(Math.random() * (i + 1));\n        [s[i], s[j]] = [s[j], s[i]];\n    }\n    return s.slice(0, k);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Diziyi tersine ceviren fonksiyon yaz",
+    "response": "def ters_cevir(dizi):\n    return dizi[::-1]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Diziyi tersine ceviren fonksiyon yaz",
+    "response": "function tersCevir(dizi) {\n    return [...dizi].reverse();\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki harf frekansini hesaplayan fonksiyon yaz",
+    "response": "func HarfFrekansi(m string) map[rune]int {\n    f := make(map[rune]int)\n    for _, h := range strings.ToLower(m) {\n        if unicode.IsLetter(h) { f[h]++ }\n    }\n    return f\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki harf frekansini hesaplayan fonksiyon yaz",
+    "response": "function harfFrekansi(m) {\n    const f = {};\n    for (const h of m.toLowerCase())\n        if (/[a-z]/.test(h)) f[h] = (f[h] || 0) + 1;\n    return f;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki harf frekansini hesaplayan fonksiyon yaz",
+    "response": "def harf_frekansi(m):\n    return {h: m.lower().count(h) for h in set(m.lower()) if h.isalpha()}",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi birlestiren fonksiyon yaz",
+    "response": "public static int[] diziBirlestir(int[] a, int[] b) {\n    int[] sonuc = new int[a.length + b.length];\n    System.arraycopy(a, 0, sonuc, 0, a.length);\n    System.arraycopy(b, 0, sonuc, a.length, b.length);\n    return sonuc;\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi birlestiren fonksiyon yaz",
+    "response": "function diziBirlestir(a, b) {\n    return [...a, ...b];\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi birlestiren fonksiyon yaz",
+    "response": "def dizi_birlestir(a, b):\n    return a + b",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin asal olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "func AsalMi(n int) bool {\n    if n < 2 { return false }\n    for i := 2; i*i <= n; i++ {\n        if n%i == 0 { return false }\n    }\n    return true\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin asal olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "function asalMi(n) {\n    if (n < 2) return false;\n    for (let i = 2; i <= Math.sqrt(n); i++)\n        if (n % i === 0) return false;\n    return true;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin asal olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "def asal_mi(n):\n    if n < 2: return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0: return False\n    return True",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelimeleri alfabetik siraya dizen fonksiyon yaz",
+    "response": "func KelimeSirala(m string) []string {\n    k := strings.Fields(m)\n    sort.Strings(k)\n    return k\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelimeleri alfabetik siraya dizen fonksiyon yaz",
+    "response": "function kelimeSirala(m) {\n    return m.split(' ').sort();\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen konumdan itibaren eleman silen fonksiyon yaz",
+    "response": "func ArraySplice(dizi []int, bas, adet int) []int {\n    return append(dizi[:bas], dizi[bas+adet:]...)\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen konumdan itibaren eleman silen fonksiyon yaz",
+    "response": "function arraySplice(dizi, bas, adet) {\n    dizi.splice(bas, adet);\n    return dizi;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen konumdan itibaren eleman silen fonksiyon yaz",
+    "response": "def array_splice(dizi, bas, adet):\n    del dizi[bas:bas+adet]\n    return dizi",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki karakter sayisini bulan fonksiyon yaz",
+    "response": "function karakterSayisi(m) {\n    return m.length;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki karakter sayisini bulan fonksiyon yaz",
+    "response": "def karakter_sayisi(m):\n    return len(m)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki karakter sayisini bulan fonksiyon yaz",
+    "response": "func KarakterSayisi(m string) int {\n    return len([]rune(m))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "func CSVSatirParse(satir string) []string {\n    return strings.Split(satir, \",\")\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "function csvSatirParse(satir) {\n    return satir.split(',');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen konumdan itibaren eleman silen fonksiyon yaz",
+    "response": "def array_splice(dizi, bas, adet):\n    del dizi[bas:bas+adet]\n    return dizi",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen konumdan itibaren eleman silen fonksiyon yaz",
+    "response": "func ArraySplice(dizi []int, bas, adet int) []int {\n    return append(dizi[:bas], dizi[bas+adet:]...)\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Birden fazla diziyi zip yapan fonksiyon yaz",
+    "response": "def zip_islemi(*diziler):\n    return list(zip(*diziler))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Birden fazla diziyi zip yapan fonksiyon yaz",
+    "response": "function zipIslemi(...diziler) {\n    return diziler[0].map((_, i) => diziler.map(d => d[i]));\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Birden fazla diziyi zip yapan fonksiyon yaz",
+    "response": "func ZipIslemi(diziler ...[]int) [][]int {\n    var s [][]int\n    for i := range diziler[0] {\n        var t []int\n        for _, d := range diziler { t = append(t, d[i]) }\n        s = append(s, t)\n    }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi birlestiren fonksiyon yaz",
+    "response": "public static int[] diziBirlestir(int[] a, int[] b) {\n    int[] sonuc = new int[a.length + b.length];\n    System.arraycopy(a, 0, sonuc, 0, a.length);\n    System.arraycopy(b, 0, sonuc, a.length, b.length);\n    return sonuc;\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi birlestiren fonksiyon yaz",
+    "response": "function diziBirlestir(a, b) {\n    return [...a, ...b];\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelime sayisini bulan fonksiyon yaz",
+    "response": "func KelimeSayisi(m string) int {\n    return len(strings.Fields(m))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelime sayisini bulan fonksiyon yaz",
+    "response": "function kelimeSayisi(m) {\n    return m.trim() ? m.trim().split(/\\s+/).length : 0;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki elemanlari anahtar degerlerine gore gruplayan fonksiyon yaz",
+    "response": "def gruplama(dizi, anahtar_fn):\n    from collections import defaultdict\n    s = defaultdict(list)\n    for e in dizi: s[anahtar_fn(e)].append(e)\n    return dict(s)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki elemanlari anahtar degerlerine gore gruplayan fonksiyon yaz",
+    "response": "function gruplama(dizi, anahtarFn) {\n    return dizi.reduce((s, e) => {\n        const k = anahtarFn(e);\n        (s[k] = s[k] || []).push(e);\n        return s;\n    }, {});\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki elemanlari anahtar degerlerine gore gruplayan fonksiyon yaz",
+    "response": "func Gruplama(dizi []int, anahtarFn func(int) int) map[int][]int {\n    s := make(map[int][]int)\n    for _, e := range dizi {\n        k := anahtarFn(e)\n        s[k] = append(s[k], e)\n    }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Zip yapilmis bir listeyi eski haline getiren fonksiyon yaz",
+    "response": "def unzip_islemi(dizi):\n    return list(zip(*dizi))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Zip yapilmis bir listeyi eski haline getiren fonksiyon yaz",
+    "response": "function unzipIslemi(dizi) {\n    return dizi[0].map((_, i) => dizi.map(d => d[i]));\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki harf frekansini hesaplayan fonksiyon yaz",
+    "response": "func HarfFrekansi(m string) map[rune]int {\n    f := make(map[rune]int)\n    for _, h := range strings.ToLower(m) {\n        if unicode.IsLetter(h) { f[h]++ }\n    }\n    return f\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki harf frekansini hesaplayan fonksiyon yaz",
+    "response": "function harfFrekansi(m) {\n    const f = {};\n    for (const h of m.toLowerCase())\n        if (/[a-z]/.test(h)) f[h] = (f[h] || 0) + 1;\n    return f;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki harf frekansini hesaplayan fonksiyon yaz",
+    "response": "def harf_frekansi(m):\n    return {h: m.lower().count(h) for h in set(m.lower()) if h.isalpha()}",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelime sayisini bulan fonksiyon yaz",
+    "response": "def kelime_sayisi(m):\n    return len(m.split())",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelime sayisini bulan fonksiyon yaz",
+    "response": "function kelimeSayisi(m) {\n    return m.trim() ? m.trim().split(/\\s+/).length : 0;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelime sayisini bulan fonksiyon yaz",
+    "response": "func KelimeSayisi(m string) int {\n    return len(strings.Fields(m))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi belirtilen boyutta parcalara ayiran fonksiyon yaz",
+    "response": "def chunk_islemi(dizi, boyut):\n    return [dizi[i:i+boyut] for i in range(0, len(dizi), boyut)]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi belirtilen boyutta parcalara ayiran fonksiyon yaz",
+    "response": "function chunkIslemi(dizi, boyut) {\n    const s = [];\n    for (let i = 0; i < dizi.length; i += boyut) s.push(dizi.slice(i, i + boyut));\n    return s;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni duzgun isim formatina ceviren fonksiyon yaz",
+    "response": "def duzgun_isim(m):\n    return m.title()",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni duzgun isim formatina ceviren fonksiyon yaz",
+    "response": "function duzgunIsim(m) {\n    return m.replace(/\\w\\S*/g, t => t[0].toUpperCase() + t.slice(1).toLowerCase());\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir e-posta adresini dogrulayan fonksiyon yaz",
+    "response": "func EpostaDogrula(e string) bool {\n    matched, _ := regexp.MatchString(`^[\\w.+-]+@[\\w-]+\\.[\\w.]+$`, e)\n    return matched\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir e-posta adresini dogrulayan fonksiyon yaz",
+    "response": "function epostaDogrula(e) {\n    return /^[\\w.+-]+@[\\w-]+\\.[\\w.]+$/.test(e);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir e-posta adresini dogrulayan fonksiyon yaz",
+    "response": "def eposta_dogrula(e):\n    import re\n    return bool(re.fullmatch(r'[\\w.+-]+@[\\w-]+\\.[\\w.]+', e))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Birden fazla diziyi zip yapan fonksiyon yaz",
+    "response": "func ZipIslemi(diziler ...[]int) [][]int {\n    var s [][]int\n    for i := range diziler[0] {\n        var t []int\n        for _, d := range diziler { t = append(t, d[i]) }\n        s = append(s, t)\n    }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Birden fazla diziyi zip yapan fonksiyon yaz",
+    "response": "function zipIslemi(...diziler) {\n    return diziler[0].map((_, i) => diziler.map(d => d[i]));\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye reduce islemi uygulayan fonksiyon yaz",
+    "response": "def reduce_islemi(dizi, fn, baslangic):\n    from functools import reduce\n    return reduce(fn, dizi, baslangic)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye reduce islemi uygulayan fonksiyon yaz",
+    "response": "function reduceIslemi(dizi, fn, baslangic) {\n    return dizi.reduce(fn, baslangic);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "func CSVSatirParse(satir string) []string {\n    return strings.Split(satir, \",\")\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "def csv_satir_parse(satir):\n    return satir.split(',')",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "function csvSatirParse(satir) {\n    return satir.split(',');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metinde alt stringin konumunu bulan fonksiyon yaz",
+    "response": "public static int substringBul(String m, String alt) {\n    return m.indexOf(alt);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metinde alt stringin konumunu bulan fonksiyon yaz",
+    "response": "function substringBul(m, alt) {\n    return m.indexOf(alt);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metinde alt stringin konumunu bulan fonksiyon yaz",
+    "response": "def substring_bul(m, alt):\n    return m.find(alt)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni regex ile dogrulayan fonksiyon yaz",
+    "response": "def regex_dogrula(desen, m):\n    import re\n    return bool(re.fullmatch(desen, m))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni regex ile dogrulayan fonksiyon yaz",
+    "response": "function regexDogrula(desen, m) {\n    return new RegExp('^' + desen + '$').test(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "func Base64Encode(m string) string {\n    return base64.StdEncoding.EncodeToString([]byte(m))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "function base64Encode(m) {\n    return btoa(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen konumdan itibaren eleman silen fonksiyon yaz",
+    "response": "func ArraySplice(dizi []int, bas, adet int) []int {\n    return append(dizi[:bas], dizi[bas+adet:]...)\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen konumdan itibaren eleman silen fonksiyon yaz",
+    "response": "function arraySplice(dizi, bas, adet) {\n    dizi.splice(bas, adet);\n    return dizi;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen konumdan itibaren eleman silen fonksiyon yaz",
+    "response": "def array_splice(dizi, bas, adet):\n    del dizi[bas:bas+adet]\n    return dizi",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelime sayisini bulan fonksiyon yaz",
+    "response": "def kelime_sayisi(m):\n    return len(m.split())",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelime sayisini bulan fonksiyon yaz",
+    "response": "function kelimeSayisi(m) {\n    return m.trim() ? m.trim().split(/\\s+/).length : 0;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki sesli harflerin sayisini bulan fonksiyon yaz",
+    "response": "function sesliSay(m) {\n    return (m.match(/[aeiou]/gi) || []).length;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki sesli harflerin sayisini bulan fonksiyon yaz",
+    "response": "func SesliSay(m string) int {\n    c := 0\n    for _, h := range strings.ToLower(m) {\n        if strings.ContainsRune(\"aeiou\", h) { c++ }\n    }\n    return c\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "func ArraySlice(dizi []int, bas, son int) []int {\n    return dizi[bas:son]\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "function arraySlice(dizi, bas, son) {\n    return dizi.slice(bas, son);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir e-posta adresini dogrulayan fonksiyon yaz",
+    "response": "def eposta_dogrula(e):\n    import re\n    return bool(re.fullmatch(r'[\\w.+-]+@[\\w-]+\\.[\\w.]+', e))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir e-posta adresini dogrulayan fonksiyon yaz",
+    "response": "function epostaDogrula(e) {\n    return /^[\\w.+-]+@[\\w-]+\\.[\\w.]+$/.test(e);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir IP adresini dogrulayan fonksiyon yaz",
+    "response": "def ip_dogrula(ip):\n    import re\n    return bool(re.match(r'^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$', ip))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir IP adresini dogrulayan fonksiyon yaz",
+    "response": "function ipDogrula(ip) {\n    return /^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$/.test(ip);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir IP adresini dogrulayan fonksiyon yaz",
+    "response": "func IPDogrula(ip string) bool {\n    return net.ParseIP(ip) != nil\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "func SampleIslemi(dizi []int, k int) []int {\n    rand.Shuffle(len(dizi), func(i, j int) { dizi[i], dizi[j] = dizi[j], dizi[i] })\n    return dizi[:k]\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "function sampleIslemi(dizi, k) {\n    const s = [...dizi];\n    for (let i = s.length - 1; i > 0; i--) {\n        const j = Math.floor(Math.random() * (i + 1));\n        [s[i], s[j]] = [s[j], s[i]];\n    }\n    return s.slice(0, k);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kucukten buyuge siralayan fonksiyon yaz",
+    "response": "function siralama(dizi) {\n    return [...dizi].sort((a, b) => a - b);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kucukten buyuge siralayan fonksiyon yaz",
+    "response": "def siralama(dizi):\n    return sorted(dizi)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kucukten buyuge siralayan fonksiyon yaz",
+    "response": "public static void siralama(int[] dizi) {\n    Arrays.sort(dizi);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelimeleri alfabetik siraya dizen fonksiyon yaz",
+    "response": "func KelimeSirala(m string) []string {\n    k := strings.Fields(m)\n    sort.Strings(k)\n    return k\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelimeleri alfabetik siraya dizen fonksiyon yaz",
+    "response": "def kelime_sirala(m):\n    return sorted(m.split())",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelimeleri alfabetik siraya dizen fonksiyon yaz",
+    "response": "function kelimeSirala(m) {\n    return m.split(' ').sort();\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelimeleri alfabetik siraya dizen fonksiyon yaz",
+    "response": "def kelime_sirala(m):\n    return sorted(m.split())",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelimeleri alfabetik siraya dizen fonksiyon yaz",
+    "response": "function kelimeSirala(m) {\n    return m.split(' ').sort();\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "def array_slice(dizi, bas, son):\n    return dizi[bas:son]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "function arraySlice(dizi, bas, son) {\n    return dizi.slice(bas, son);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "func ArraySlice(dizi []int, bas, son int) []int {\n    return dizi[bas:son]\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye filter islemi uygulayan fonksiyon yaz",
+    "response": "def filter_uygula(dizi, fn):\n    return [x for x in dizi if fn(x)]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye filter islemi uygulayan fonksiyon yaz",
+    "response": "function filterUygula(dizi, fn) {\n    return dizi.filter(fn);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye filter islemi uygulayan fonksiyon yaz",
+    "response": "public static List<Integer> filterUygula(List<Integer> dizi, java.util.function.Predicate<Integer> fn) {\n    return dizi.stream().filter(fn).collect(Collectors.toList());\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayiyi para birimi formatina ceviren fonksiyon yaz",
+    "response": "public static String paraFormatla(double miktar) {\n    return String.format(\"%,.2f\", miktar);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayiyi para birimi formatina ceviren fonksiyon yaz",
+    "response": "function paraFormatla(miktar) {\n    return miktar.toLocaleString('tr-TR', {minimumFractionDigits: 2, maximumFractionDigits: 2});\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen konumdan itibaren eleman silen fonksiyon yaz",
+    "response": "func ArraySplice(dizi []int, bas, adet int) []int {\n    return append(dizi[:bas], dizi[bas+adet:]...)\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen konumdan itibaren eleman silen fonksiyon yaz",
+    "response": "function arraySplice(dizi, bas, adet) {\n    dizi.splice(bas, adet);\n    return dizi;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki sesli harflerin sayisini bulan fonksiyon yaz",
+    "response": "def sesli_say(m):\n    return sum(1 for h in m.lower() if h in 'aeiou')",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki sesli harflerin sayisini bulan fonksiyon yaz",
+    "response": "function sesliSay(m) {\n    return (m.match(/[aeiou]/gi) || []).length;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni belirtilen ayirac ile bolen fonksiyon yaz",
+    "response": "func StringSplit(m, ayirac string) []string {\n    return strings.Split(m, ayirac)\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni belirtilen ayirac ile bolen fonksiyon yaz",
+    "response": "function stringSplit(m, ayirac) {\n    return m.split(ayirac);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sifrenin guclugunu kontrol eden fonksiyon yaz",
+    "response": "def sifre_guclugu(s):\n    import re\n    puan = 0\n    if len(s) >= 8: puan += 1\n    if re.search(r'[a-z]', s): puan += 1\n    if re.search(r'[A-Z]', s): puan += 1\n    if re.search(r'\\d', s): puan += 1\n    if re.search(r'[^\\w]', s): puan += 1\n    return puan",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sifrenin guclugunu kontrol eden fonksiyon yaz",
+    "response": "function sifreGuclugu(s) {\n    let puan = 0;\n    if (s.length >= 8) puan++;\n    if (/[a-z]/.test(s)) puan++;\n    if (/[A-Z]/.test(s)) puan++;\n    if (/\\d/.test(s)) puan++;\n    if (/[^\\w]/.test(s)) puan++;\n    return puan;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sifrenin guclugunu kontrol eden fonksiyon yaz",
+    "response": "func SifreGuclugu(s string) int {\n    puan := 0\n    if len(s) >= 8 { puan++ }\n    matched, _ := regexp.MatchString(`[a-z]`, s); if matched { puan++ }\n    matched, _ = regexp.MatchString(`[A-Z]`, s); if matched { puan++ }\n    matched, _ = regexp.MatchString(`\\d`, s); if matched { puan++ }\n    matched, _ = regexp.MatchString(`[^\\w]`, s); if matched { puan++ }\n    return puan\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki kelimenin anagram olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "def anagram_kontrol(a, b):\n    return sorted(a.lower()) == sorted(b.lower())",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki kelimenin anagram olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "function anagramKontrol(a, b) {\n    return a.toLowerCase().split('').sort().join('') === b.toLowerCase().split('').sort().join('');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki kelimenin anagram olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "public static boolean anagramKontrol(String a, String b) {\n    char[] x = a.toLowerCase().toCharArray();\n    char[] y = b.toLowerCase().toCharArray();\n    Arrays.sort(x); Arrays.sort(y);\n    return Arrays.equals(x, y);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni regex ile dogrulayan fonksiyon yaz",
+    "response": "public static boolean regexDogrula(String desen, String m) {\n    return m.matches(desen);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni regex ile dogrulayan fonksiyon yaz",
+    "response": "function regexDogrula(desen, m) {\n    return new RegExp('^' + desen + '$').test(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni regex ile dogrulayan fonksiyon yaz",
+    "response": "def regex_dogrula(desen, m):\n    import re\n    return bool(re.fullmatch(desen, m))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "def sample_islemi(dizi, k):\n    import random\n    return random.sample(dizi, k)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "func SampleIslemi(dizi []int, k int) []int {\n    rand.Shuffle(len(dizi), func(i, j int) { dizi[i], dizi[j] = dizi[j], dizi[i] })\n    return dizi[:k]\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "function sampleIslemi(dizi, k) {\n    const s = [...dizi];\n    for (let i = s.length - 1; i > 0; i--) {\n        const j = Math.floor(Math.random() * (i + 1));\n        [s[i], s[j]] = [s[j], s[i]];\n    }\n    return s.slice(0, k);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni regex ile dogrulayan fonksiyon yaz",
+    "response": "public static boolean regexDogrula(String desen, String m) {\n    return m.matches(desen);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni regex ile dogrulayan fonksiyon yaz",
+    "response": "function regexDogrula(desen, m) {\n    return new RegExp('^' + desen + '$').test(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni regex ile dogrulayan fonksiyon yaz",
+    "response": "def regex_dogrula(desen, m):\n    import re\n    return bool(re.fullmatch(desen, m))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni duzgun isim formatina ceviren fonksiyon yaz",
+    "response": "def duzgun_isim(m):\n    return m.title()",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni duzgun isim formatina ceviren fonksiyon yaz",
+    "response": "function duzgunIsim(m) {\n    return m.replace(/\\w\\S*/g, t => t[0].toUpperCase() + t.slice(1).toLowerCase());\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelime sayisini bulan fonksiyon yaz",
+    "response": "def kelime_sayisi(m):\n    return len(m.split())",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelime sayisini bulan fonksiyon yaz",
+    "response": "function kelimeSayisi(m) {\n    return m.trim() ? m.trim().split(/\\s+/).length : 0;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelime sayisini bulan fonksiyon yaz",
+    "response": "func KelimeSayisi(m string) int {\n    return len(strings.Fields(m))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "def csv_satir_parse(satir):\n    return satir.split(',')",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "function csvSatirParse(satir) {\n    return satir.split(',');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir e-posta adresini dogrulayan fonksiyon yaz",
+    "response": "func EpostaDogrula(e string) bool {\n    matched, _ := regexp.MatchString(`^[\\w.+-]+@[\\w-]+\\.[\\w.]+$`, e)\n    return matched\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir e-posta adresini dogrulayan fonksiyon yaz",
+    "response": "function epostaDogrula(e) {\n    return /^[\\w.+-]+@[\\w-]+\\.[\\w.]+$/.test(e);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "function arraySlice(dizi, bas, son) {\n    return dizi.slice(bas, son);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "func ArraySlice(dizi []int, bas, son int) []int {\n    return dizi[bas:son]\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "def array_slice(dizi, bas, son):\n    return dizi[bas:son]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "function csvSatirParse(satir) {\n    return satir.split(',');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "def csv_satir_parse(satir):\n    return satir.split(',')",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "func CSVSatirParse(satir string) []string {\n    return strings.Split(satir, \",\")\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Fibonacci serisinin n. elemanini bulan fonksiyon yaz",
+    "response": "def fibonacci(n):\n    a, b = 0, 1\n    for _ in range(n): a, b = b, a + b\n    return a",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Fibonacci serisinin n. elemanini bulan fonksiyon yaz",
+    "response": "public static int fibonacci(int n) {\n    int a = 0, b = 1;\n    for (int i = 0; i < n; i++) { int t = a; a = b; b = t + b; }\n    return a;\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tarihi belirtilen formatta bicimlendiren fonksiyon yaz",
+    "response": "func TarihFormatla(t time.Time) string {\n    return t.Format(\"2006-01-02\")\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tarihi belirtilen formatta bicimlendiren fonksiyon yaz",
+    "response": "def tarih_formatla(tarih, format):\n    return tarih.strftime(format)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye reduce islemi uygulayan fonksiyon yaz",
+    "response": "function reduceIslemi(dizi, fn, baslangic) {\n    return dizi.reduce(fn, baslangic);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye reduce islemi uygulayan fonksiyon yaz",
+    "response": "func ReduceIslemi(dizi []int, fn func(int, int) int, baslangic int) int {\n    s := baslangic\n    for _, v := range dizi { s = fn(s, v) }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye reduce islemi uygulayan fonksiyon yaz",
+    "response": "def reduce_islemi(dizi, fn, baslangic):\n    from functools import reduce\n    return reduce(fn, dizi, baslangic)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "def diziden_kumeye(dizi):\n    return list(set(dizi))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "public static List<Integer> dizidenKumeye(int[] dizi) {\n    return Arrays.stream(dizi).distinct().boxed().collect(Collectors.toList());\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "def array_slice(dizi, bas, son):\n    return dizi[bas:son]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "func ArraySlice(dizi []int, bas, son int) []int {\n    return dizi[bas:son]\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "function arraySlice(dizi, bas, son) {\n    return dizi.slice(bas, son);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizide tekrar eden elemani bulan fonksiyon yaz",
+    "response": "function tekrarEden(dizi) {\n    const gorulen = new Set();\n    for (const e of dizi) {\n        if (gorulen.has(e)) return e;\n        gorulen.add(e);\n    }\n    return null;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizide tekrar eden elemani bulan fonksiyon yaz",
+    "response": "def tekrar_eden(dizi):\n    gorulen = set()\n    for e in dizi:\n        if e in gorulen: return e\n        gorulen.add(e)\n    return None",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kucukten buyuge siralayan fonksiyon yaz",
+    "response": "def siralama(dizi):\n    return sorted(dizi)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kucukten buyuge siralayan fonksiyon yaz",
+    "response": "function siralama(dizi) {\n    return [...dizi].sort((a, b) => a - b);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "def array_slice(dizi, bas, son):\n    return dizi[bas:son]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "function arraySlice(dizi, bas, son) {\n    return dizi.slice(bas, son);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden belirtilen araliktaki elemanlari alan fonksiyon yaz",
+    "response": "func ArraySlice(dizi []int, bas, son int) []int {\n    return dizi[bas:son]\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "func Base64Encode(m string) string {\n    return base64.StdEncoding.EncodeToString([]byte(m))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "function base64Encode(m) {\n    return btoa(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi birlestiren fonksiyon yaz",
+    "response": "public static int[] diziBirlestir(int[] a, int[] b) {\n    int[] sonuc = new int[a.length + b.length];\n    System.arraycopy(a, 0, sonuc, 0, a.length);\n    System.arraycopy(b, 0, sonuc, a.length, b.length);\n    return sonuc;\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi birlestiren fonksiyon yaz",
+    "response": "def dizi_birlestir(a, b):\n    return a + b",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi karsilastiran fonksiyon yaz",
+    "response": "def dizi_karsilastir(a, b):\n    return a == b",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi karsilastiran fonksiyon yaz",
+    "response": "function diziKarsilastir(a, b) {\n    return a.length === b.length && a.every((v, i) => v === b[i]);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin faktoriyelini hesaplayan fonksiyon yaz",
+    "response": "public static int faktoriyel(int n) {\n    return n < 2 ? 1 : n * faktoriyel(n - 1);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin faktoriyelini hesaplayan fonksiyon yaz",
+    "response": "function faktoriyel(n) {\n    return n < 2 ? 1 : n * faktoriyel(n - 1);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "def csv_satir_parse(satir):\n    return satir.split(',')",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "function csvSatirParse(satir) {\n    return satir.split(',');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "func CSVSatirParse(satir string) []string {\n    return strings.Split(satir, \",\")\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Rastgele sayi ureten fonksiyon yaz",
+    "response": "public static int rastgeleSayi(int min, int max) {\n    return new Random().nextInt(max - min + 1) + min;\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Rastgele sayi ureten fonksiyon yaz",
+    "response": "function rastgeleSayi(min, max) {\n    return Math.floor(Math.random() * (max - min + 1)) + min;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi belirtilen boyutta parcalara ayiran fonksiyon yaz",
+    "response": "func ChunkIslemi(dizi []int, boyut int) [][]int {\n    var s [][]int\n    for i := 0; i < len(dizi); i += boyut {\n        son := i + boyut\n        if son > len(dizi) { son = len(dizi) }\n        s = append(s, dizi[i:son])\n    }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi belirtilen boyutta parcalara ayiran fonksiyon yaz",
+    "response": "function chunkIslemi(dizi, boyut) {\n    const s = [];\n    for (let i = 0; i < dizi.length; i += boyut) s.push(dizi.slice(i, i + boyut));\n    return s;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metnin MD5 hashini hesaplayan fonksiyon yaz",
+    "response": "def md5_hash(m):\n    import hashlib\n    return hashlib.md5(m.encode()).hexdigest()",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metnin MD5 hashini hesaplayan fonksiyon yaz",
+    "response": "function md5Hash(m) {\n    const { createHash } = require('crypto');\n    return createHash('md5').update(m).digest('hex');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metnin MD5 hashini hesaplayan fonksiyon yaz",
+    "response": "public static String md5Hash(String m) throws Exception {\n    MessageDigest md = MessageDigest.getInstance(\"MD5\");\n    byte[] hash = md.digest(m.getBytes());\n    StringBuilder sb = new StringBuilder();\n    for (byte b : hash) sb.append(String.format(\"%02x\", b));\n    return sb.toString();\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metnin MD5 hashini hesaplayan fonksiyon yaz",
+    "response": "def md5_hash(m):\n    import hashlib\n    return hashlib.md5(m.encode()).hexdigest()",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metnin MD5 hashini hesaplayan fonksiyon yaz",
+    "response": "function md5Hash(m) {\n    const { createHash } = require('crypto');\n    return createHash('md5').update(m).digest('hex');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "func CSVSatirParse(satir string) []string {\n    return strings.Split(satir, \",\")\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir CSV satirini parse eden fonksiyon yaz",
+    "response": "function csvSatirParse(satir) {\n    return satir.split(',');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "def diziden_kumeye(dizi):\n    return list(set(dizi))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "function dizidenKumeye(dizi) {\n    return [...new Set(dizi)];\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "public static List<Integer> dizidenKumeye(int[] dizi) {\n    return Arrays.stream(dizi).distinct().boxed().collect(Collectors.toList());\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Diziyi tersine ceviren fonksiyon yaz",
+    "response": "def ters_cevir(dizi):\n    return dizi[::-1]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Diziyi tersine ceviren fonksiyon yaz",
+    "response": "function tersCevir(dizi) {\n    return [...dizi].reverse();\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Diziyi tersine ceviren fonksiyon yaz",
+    "response": "public static int[] tersCevir(int[] dizi) {\n    int[] sonuc = new int[dizi.length];\n    for (int i = 0; i < dizi.length; i++) sonuc[i] = dizi[dizi.length-1-i];\n    return sonuc;\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sifrenin guclugunu kontrol eden fonksiyon yaz",
+    "response": "def sifre_guclugu(s):\n    import re\n    puan = 0\n    if len(s) >= 8: puan += 1\n    if re.search(r'[a-z]', s): puan += 1\n    if re.search(r'[A-Z]', s): puan += 1\n    if re.search(r'\\d', s): puan += 1\n    if re.search(r'[^\\w]', s): puan += 1\n    return puan",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sifrenin guclugunu kontrol eden fonksiyon yaz",
+    "response": "function sifreGuclugu(s) {\n    let puan = 0;\n    if (s.length >= 8) puan++;\n    if (/[a-z]/.test(s)) puan++;\n    if (/[A-Z]/.test(s)) puan++;\n    if (/\\d/.test(s)) puan++;\n    if (/[^\\w]/.test(s)) puan++;\n    return puan;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin asal olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "function asalMi(n) {\n    if (n < 2) return false;\n    for (let i = 2; i <= Math.sqrt(n); i++)\n        if (n % i === 0) return false;\n    return true;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin asal olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "def asal_mi(n):\n    if n < 2: return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0: return False\n    return True",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye flat map islemi uygulayan fonksiyon yaz",
+    "response": "function flatMap(dizi, fn) {\n    return dizi.flatMap(fn);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye flat map islemi uygulayan fonksiyon yaz",
+    "response": "def flat_map(dizi, fn):\n    return [y for x in dizi for y in fn(x)]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye filter islemi uygulayan fonksiyon yaz",
+    "response": "function filterUygula(dizi, fn) {\n    return dizi.filter(fn);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye filter islemi uygulayan fonksiyon yaz",
+    "response": "def filter_uygula(dizi, fn):\n    return [x for x in dizi if fn(x)]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye map islemi uygulayan fonksiyon yaz",
+    "response": "function mapIslemi(dizi, fn) {\n    return dizi.map(fn);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye map islemi uygulayan fonksiyon yaz",
+    "response": "def map_islemi(dizi, fn):\n    return [fn(x) for x in dizi]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metinde alt stringin konumunu bulan fonksiyon yaz",
+    "response": "def substring_bul(m, alt):\n    return m.find(alt)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metinde alt stringin konumunu bulan fonksiyon yaz",
+    "response": "function substringBul(m, alt) {\n    return m.indexOf(alt);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metinde alt stringin konumunu bulan fonksiyon yaz",
+    "response": "public static int substringBul(String m, String alt) {\n    return m.indexOf(alt);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki sesli harflerin sayisini bulan fonksiyon yaz",
+    "response": "func SesliSay(m string) int {\n    c := 0\n    for _, h := range strings.ToLower(m) {\n        if strings.ContainsRune(\"aeiou\", h) { c++ }\n    }\n    return c\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki sesli harflerin sayisini bulan fonksiyon yaz",
+    "response": "function sesliSay(m) {\n    return (m.match(/[aeiou]/gi) || []).length;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki sesli harflerin sayisini bulan fonksiyon yaz",
+    "response": "def sesli_say(m):\n    return sum(1 for h in m.lower() if h in 'aeiou')",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye map islemi uygulayan fonksiyon yaz",
+    "response": "public static List<Integer> mapIslemi(List<Integer> dizi, java.util.function.Function<Integer, Integer> fn) {\n    return dizi.stream().map(fn).collect(Collectors.toList());\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye map islemi uygulayan fonksiyon yaz",
+    "response": "function mapIslemi(dizi, fn) {\n    return dizi.map(fn);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kucukten buyuge siralayan fonksiyon yaz",
+    "response": "def siralama(dizi):\n    return sorted(dizi)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kucukten buyuge siralayan fonksiyon yaz",
+    "response": "function siralama(dizi) {\n    return [...dizi].sort((a, b) => a - b);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye reduce islemi uygulayan fonksiyon yaz",
+    "response": "def reduce_islemi(dizi, fn, baslangic):\n    from functools import reduce\n    return reduce(fn, dizi, baslangic)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye reduce islemi uygulayan fonksiyon yaz",
+    "response": "function reduceIslemi(dizi, fn, baslangic) {\n    return dizi.reduce(fn, baslangic);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye filter islemi uygulayan fonksiyon yaz",
+    "response": "public static List<Integer> filterUygula(List<Integer> dizi, java.util.function.Predicate<Integer> fn) {\n    return dizi.stream().filter(fn).collect(Collectors.toList());\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye filter islemi uygulayan fonksiyon yaz",
+    "response": "function filterUygula(dizi, fn) {\n    return dizi.filter(fn);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi karistiran fonksiyon yaz",
+    "response": "function shuffleIslemi(dizi) {\n    for (let i = dizi.length - 1; i > 0; i--) {\n        const j = Math.floor(Math.random() * (i + 1));\n        [dizi[i], dizi[j]] = [dizi[j], dizi[i]];\n    }\n    return dizi;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi karistiran fonksiyon yaz",
+    "response": "def shuffle_islemi(dizi):\n    import random\n    random.shuffle(dizi)\n    return dizi",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki karakter sayisini bulan fonksiyon yaz",
+    "response": "def karakter_sayisi(m):\n    return len(m)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki karakter sayisini bulan fonksiyon yaz",
+    "response": "function karakterSayisi(m) {\n    return m.length;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni belirtilen ayirac ile bolen fonksiyon yaz",
+    "response": "def string_split(m, ayirac):\n    return m.split(ayirac)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni belirtilen ayirac ile bolen fonksiyon yaz",
+    "response": "function stringSplit(m, ayirac) {\n    return m.split(ayirac);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "function sampleIslemi(dizi, k) {\n    const s = [...dizi];\n    for (let i = s.length - 1; i > 0; i--) {\n        const j = Math.floor(Math.random() * (i + 1));\n        [s[i], s[j]] = [s[j], s[i]];\n    }\n    return s.slice(0, k);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "func SampleIslemi(dizi []int, k int) []int {\n    rand.Shuffle(len(dizi), func(i, j int) { dizi[i], dizi[j] = dizi[j], dizi[i] })\n    return dizi[:k]\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "def sample_islemi(dizi, k):\n    import random\n    return random.sample(dizi, k)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "func SampleIslemi(dizi []int, k int) []int {\n    rand.Shuffle(len(dizi), func(i, j int) { dizi[i], dizi[j] = dizi[j], dizi[i] })\n    return dizi[:k]\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "function sampleIslemi(dizi, k) {\n    const s = [...dizi];\n    for (let i = s.length - 1; i > 0; i--) {\n        const j = Math.floor(Math.random() * (i + 1));\n        [s[i], s[j]] = [s[j], s[i]];\n    }\n    return s.slice(0, k);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "def sample_islemi(dizi, k):\n    import random\n    return random.sample(dizi, k)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tablodaki veriyi pivot yapan fonksiyon yaz",
+    "response": "func PivotIslemi(data []map[string]interface{}, satir, sutun, deger string) map[string]map[string]interface{} {\n    s := make(map[string]map[string]interface{})\n    for _, r := range data {\n        ri := r[satir].(string)\n        si := r[sutun].(string)\n        if s[ri] == nil { s[ri] = make(map[string]interface{}) }\n        s[ri][si] = r[deger]\n    }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tablodaki veriyi pivot yapan fonksiyon yaz",
+    "response": "function pivotIslemi(data, satir, sutun, deger) {\n    const s = {};\n    for (const r of data) {\n        const ri = r[satir], si = r[sutun];\n        if (!s[ri]) s[ri] = {};\n        s[ri][si] = r[deger];\n    }\n    return s;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tablodaki veriyi pivot yapan fonksiyon yaz",
+    "response": "def pivot_islemi(data, satir, sutun, deger):\n    s = {}\n    for r in data:\n        ri, si = r[satir], r[sutun]\n        s.setdefault(ri, {})[si] = r[deger]\n    return s",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki benzersiz degerleri donduren fonksiyon yaz",
+    "response": "func UniqueDegerler(dizi []int) []int {\n    g := make(map[int]bool)\n    var s []int\n    for _, v := range dizi {\n        if !g[v] { s = append(s, v); g[v] = true }\n    }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki benzersiz degerleri donduren fonksiyon yaz",
+    "response": "function uniqueDegerler(dizi) {\n    return [...new Set(dizi)];\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "function base64Encode(m) {\n    return btoa(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "func Base64Encode(m string) string {\n    return base64.StdEncoding.EncodeToString([]byte(m))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sifrenin guclugunu kontrol eden fonksiyon yaz",
+    "response": "func SifreGuclugu(s string) int {\n    puan := 0\n    if len(s) >= 8 { puan++ }\n    matched, _ := regexp.MatchString(`[a-z]`, s); if matched { puan++ }\n    matched, _ = regexp.MatchString(`[A-Z]`, s); if matched { puan++ }\n    matched, _ = regexp.MatchString(`\\d`, s); if matched { puan++ }\n    matched, _ = regexp.MatchString(`[^\\w]`, s); if matched { puan++ }\n    return puan\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sifrenin guclugunu kontrol eden fonksiyon yaz",
+    "response": "def sifre_guclugu(s):\n    import re\n    puan = 0\n    if len(s) >= 8: puan += 1\n    if re.search(r'[a-z]', s): puan += 1\n    if re.search(r'[A-Z]', s): puan += 1\n    if re.search(r'\\d', s): puan += 1\n    if re.search(r'[^\\w]', s): puan += 1\n    return puan",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki harf frekansini hesaplayan fonksiyon yaz",
+    "response": "function harfFrekansi(m) {\n    const f = {};\n    for (const h of m.toLowerCase())\n        if (/[a-z]/.test(h)) f[h] = (f[h] || 0) + 1;\n    return f;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki harf frekansini hesaplayan fonksiyon yaz",
+    "response": "def harf_frekansi(m):\n    return {h: m.lower().count(h) for h in set(m.lower()) if h.isalpha()}",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki harf frekansini hesaplayan fonksiyon yaz",
+    "response": "func HarfFrekansi(m string) map[rune]int {\n    f := make(map[rune]int)\n    for _, h := range strings.ToLower(m) {\n        if unicode.IsLetter(h) { f[h]++ }\n    }\n    return f\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin asal olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "def asal_mi(n):\n    if n < 2: return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0: return False\n    return True",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin asal olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "function asalMi(n) {\n    if (n < 2) return false;\n    for (let i = 2; i <= Math.sqrt(n); i++)\n        if (n % i === 0) return false;\n    return true;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin asal olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "func AsalMi(n int) bool {\n    if n < 2 { return false }\n    for i := 2; i*i <= n; i++ {\n        if n%i == 0 { return false }\n    }\n    return true\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye filter islemi uygulayan fonksiyon yaz",
+    "response": "public static List<Integer> filterUygula(List<Integer> dizi, java.util.function.Predicate<Integer> fn) {\n    return dizi.stream().filter(fn).collect(Collectors.toList());\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye filter islemi uygulayan fonksiyon yaz",
+    "response": "function filterUygula(dizi, fn) {\n    return dizi.filter(fn);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziye filter islemi uygulayan fonksiyon yaz",
+    "response": "def filter_uygula(dizi, fn):\n    return [x for x in dizi if fn(x)]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tarihi belirtilen formatta bicimlendiren fonksiyon yaz",
+    "response": "def tarih_formatla(tarih, format):\n    return tarih.strftime(format)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir tarihi belirtilen formatta bicimlendiren fonksiyon yaz",
+    "response": "function tarihFormatla(tarih, format) {\n    const m = String(tarih.getMonth() + 1).padStart(2, '0');\n    const d = String(tarih.getDate()).padStart(2, '0');\n    return format.replace('YYYY', tarih.getFullYear()).replace('MM', m).replace('DD', d);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "func SampleIslemi(dizi []int, k int) []int {\n    rand.Shuffle(len(dizi), func(i, j int) { dizi[i], dizi[j] = dizi[j], dizi[i] })\n    return dizi[:k]\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "function sampleIslemi(dizi, k) {\n    const s = [...dizi];\n    for (let i = s.length - 1; i > 0; i--) {\n        const j = Math.floor(Math.random() * (i + 1));\n        [s[i], s[j]] = [s[j], s[i]];\n    }\n    return s.slice(0, k);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziden rastgele orneklem alan fonksiyon yaz",
+    "response": "def sample_islemi(dizi, k):\n    import random\n    return random.sample(dizi, k)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir telefon numarasini dogrulayan fonksiyon yaz",
+    "response": "function telefonDogrula(tel) {\n    return /^\\+?\\d{10,15}$/.test(tel);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir telefon numarasini dogrulayan fonksiyon yaz",
+    "response": "func TelefonDogrula(tel string) bool {\n    matched, _ := regexp.MatchString(`^\\+?\\d{10,15}$`, tel)\n    return matched\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir telefon numarasini dogrulayan fonksiyon yaz",
+    "response": "def telefon_dogrula(tel):\n    import re\n    return bool(re.fullmatch(r'\\+?\\d{10,15}', tel))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "public static List<Integer> dizidenKumeye(int[] dizi) {\n    return Arrays.stream(dizi).distinct().boxed().collect(Collectors.toList());\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "function dizidenKumeye(dizi) {\n    return [...new Set(dizi)];\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "def diziden_kumeye(dizi):\n    return list(set(dizi))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir e-posta adresini dogrulayan fonksiyon yaz",
+    "response": "def eposta_dogrula(e):\n    import re\n    return bool(re.fullmatch(r'[\\w.+-]+@[\\w-]+\\.[\\w.]+', e))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir e-posta adresini dogrulayan fonksiyon yaz",
+    "response": "function epostaDogrula(e) {\n    return /^[\\w.+-]+@[\\w-]+\\.[\\w.]+$/.test(e);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir e-posta adresini dogrulayan fonksiyon yaz",
+    "response": "func EpostaDogrula(e string) bool {\n    matched, _ := regexp.MatchString(`^[\\w.+-]+@[\\w-]+\\.[\\w.]+$`, e)\n    return matched\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir e-posta adresini dogrulayan fonksiyon yaz",
+    "response": "function epostaDogrula(e) {\n    return /^[\\w.+-]+@[\\w-]+\\.[\\w.]+$/.test(e);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Rastgele renk kodu ureten fonksiyon yaz",
+    "response": "function rastgeleRenk() {\n    return '#' + Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, '0');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Rastgele renk kodu ureten fonksiyon yaz",
+    "response": "def rastgele_renk():\n    import random\n    return f'#{random.randint(0, 0xFFFFFF):06x}'",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Rastgele renk kodu ureten fonksiyon yaz",
+    "response": "func RastgeleRenk() string {\n    return fmt.Sprintf(\"#%06x\", rand.Intn(0x1000000))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "def base64_encode(m):\n    import base64\n    return base64.b64encode(m.encode()).decode()",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "function base64Encode(m) {\n    return btoa(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin faktoriyelini hesaplayan fonksiyon yaz",
+    "response": "def faktoriyel(n):\n    return 1 if n < 2 else n * faktoriyel(n - 1)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir sayinin faktoriyelini hesaplayan fonksiyon yaz",
+    "response": "function faktoriyel(n) {\n    return n < 2 ? 1 : n * faktoriyel(n - 1);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dosya adindan uzantiyi bulan fonksiyon yaz",
+    "response": "def dosya_uzantisi(dosya):\n    import os\n    return os.path.splitext(dosya)[1]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dosya adindan uzantiyi bulan fonksiyon yaz",
+    "response": "func DosyaUzantisi(dosya string) string {\n    return filepath.Ext(dosya)\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metinde alt stringin konumunu bulan fonksiyon yaz",
+    "response": "def substring_bul(m, alt):\n    return m.find(alt)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metinde alt stringin konumunu bulan fonksiyon yaz",
+    "response": "function substringBul(m, alt) {\n    return m.indexOf(alt);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Diziyi tersine ceviren fonksiyon yaz",
+    "response": "public static int[] tersCevir(int[] dizi) {\n    int[] sonuc = new int[dizi.length];\n    for (int i = 0; i < dizi.length; i++) sonuc[i] = dizi[dizi.length-1-i];\n    return sonuc;\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Diziyi tersine ceviren fonksiyon yaz",
+    "response": "function tersCevir(dizi) {\n    return [...dizi].reverse();\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki harf frekansini hesaplayan fonksiyon yaz",
+    "response": "func HarfFrekansi(m string) map[rune]int {\n    f := make(map[rune]int)\n    for _, h := range strings.ToLower(m) {\n        if unicode.IsLetter(h) { f[h]++ }\n    }\n    return f\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki harf frekansini hesaplayan fonksiyon yaz",
+    "response": "function harfFrekansi(m) {\n    const f = {};\n    for (const h of m.toLowerCase())\n        if (/[a-z]/.test(h)) f[h] = (f[h] || 0) + 1;\n    return f;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "def diziden_kumeye(dizi):\n    return list(set(dizi))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "public static List<Integer> dizidenKumeye(int[] dizi) {\n    return Arrays.stream(dizi).distinct().boxed().collect(Collectors.toList());\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki benzersiz degerleri donduren fonksiyon yaz",
+    "response": "func UniqueDegerler(dizi []int) []int {\n    g := make(map[int]bool)\n    var s []int\n    for _, v := range dizi {\n        if !g[v] { s = append(s, v); g[v] = true }\n    }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki benzersiz degerleri donduren fonksiyon yaz",
+    "response": "function uniqueDegerler(dizi) {\n    return [...new Set(dizi)];\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Rastgele renk kodu ureten fonksiyon yaz",
+    "response": "def rastgele_renk():\n    import random\n    return f'#{random.randint(0, 0xFFFFFF):06x}'",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Rastgele renk kodu ureten fonksiyon yaz",
+    "response": "function rastgeleRenk() {\n    return '#' + Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, '0');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Rastgele renk kodu ureten fonksiyon yaz",
+    "response": "func RastgeleRenk() string {\n    return fmt.Sprintf(\"#%06x\", rand.Intn(0x1000000))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir telefon numarasini dogrulayan fonksiyon yaz",
+    "response": "func TelefonDogrula(tel string) bool {\n    matched, _ := regexp.MatchString(`^\\+?\\d{10,15}$`, tel)\n    return matched\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir telefon numarasini dogrulayan fonksiyon yaz",
+    "response": "function telefonDogrula(tel) {\n    return /^\\+?\\d{10,15}$/.test(tel);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "def diziden_kumeye(dizi):\n    return list(set(dizi))",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "function dizidenKumeye(dizi) {\n    return [...new Set(dizi)];\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir diziyi kumeye ceviren fonksiyon yaz",
+    "response": "public static List<Integer> dizidenKumeye(int[] dizi) {\n    return Arrays.stream(dizi).distinct().boxed().collect(Collectors.toList());\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metnin palindrom olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "function palindrom(m) {\n    const s = m.toLowerCase().replace(/ /g, '');\n    return s === [...s].reverse().join('');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metnin palindrom olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "def palindrom(m):\n    m = m.lower().replace(' ', '')\n    return m == m[::-1]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki kelimenin anagram olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "public static boolean anagramKontrol(String a, String b) {\n    char[] x = a.toLowerCase().toCharArray();\n    char[] y = b.toLowerCase().toCharArray();\n    Arrays.sort(x); Arrays.sort(y);\n    return Arrays.equals(x, y);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki kelimenin anagram olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "function anagramKontrol(a, b) {\n    return a.toLowerCase().split('').sort().join('') === b.toLowerCase().split('').sort().join('');\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki kelimenin anagram olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "def anagram_kontrol(a, b):\n    return sorted(a.lower()) == sorted(b.lower())",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni belirtilen ayirac ile bolen fonksiyon yaz",
+    "response": "def string_split(m, ayirac):\n    return m.split(ayirac)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni belirtilen ayirac ile bolen fonksiyon yaz",
+    "response": "function stringSplit(m, ayirac) {\n    return m.split(ayirac);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni belirtilen ayirac ile bolen fonksiyon yaz",
+    "response": "func StringSplit(m, ayirac string) []string {\n    return strings.Split(m, ayirac)\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki benzersiz degerleri donduren fonksiyon yaz",
+    "response": "func UniqueDegerler(dizi []int) []int {\n    g := make(map[int]bool)\n    var s []int\n    for _, v := range dizi {\n        if !g[v] { s = append(s, v); g[v] = true }\n    }\n    return s\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki benzersiz degerleri donduren fonksiyon yaz",
+    "response": "function uniqueDegerler(dizi) {\n    return [...new Set(dizi)];\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi karsilastiran fonksiyon yaz",
+    "response": "def dizi_karsilastir(a, b):\n    return a == b",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi karsilastiran fonksiyon yaz",
+    "response": "function diziKarsilastir(a, b) {\n    return a.length === b.length && a.every((v, i) => v === b[i]);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Iki diziyi karsilastiran fonksiyon yaz",
+    "response": "func DiziKarsilastir(a, b []int) bool {\n    if len(a) != len(b) { return false }\n    for i := range a { if a[i] != b[i] { return false } }\n    return true\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni belirtilen ayirac ile bolen fonksiyon yaz",
+    "response": "func StringSplit(m, ayirac string) []string {\n    return strings.Split(m, ayirac)\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni belirtilen ayirac ile bolen fonksiyon yaz",
+    "response": "function stringSplit(m, ayirac) {\n    return m.split(ayirac);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki en buyuk sayiyi bulan fonksiyon yaz",
+    "response": "public static int enBuyuk(int[] dizi) {\n    int max = dizi[0];\n    for (int n : dizi) if (n > max) max = n;\n    return max;\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizideki en buyuk sayiyi bulan fonksiyon yaz",
+    "response": "function enBuyuk(dizi) {\n    return dizi.length ? Math.max(...dizi) : null;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizide belirtilen degeri arayan fonksiyon yaz",
+    "response": "function dizideAra(dizi, hedef) {\n    return dizi.indexOf(hedef);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizide belirtilen degeri arayan fonksiyon yaz",
+    "response": "def dizide_ara(dizi, hedef):\n    try: return dizi.index(hedef)\n    except ValueError: return -1",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dizide belirtilen degeri arayan fonksiyon yaz",
+    "response": "public static int dizideAra(int[] dizi, int hedef) {\n    for (int i = 0; i < dizi.length; i++)\n        if (dizi[i] == hedef) return i;\n    return -1;\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "func Base64Encode(m string) string {\n    return base64.StdEncoding.EncodeToString([]byte(m))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "function base64Encode(m) {\n    return btoa(m);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metni Base64 encode eden fonksiyon yaz",
+    "response": "def base64_encode(m):\n    import base64\n    return base64.b64encode(m.encode()).decode()",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelimeleri alfabetik siraya dizen fonksiyon yaz",
+    "response": "func KelimeSirala(m string) []string {\n    k := strings.Fields(m)\n    sort.Strings(k)\n    return k\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki kelimeleri alfabetik siraya dizen fonksiyon yaz",
+    "response": "function kelimeSirala(m) {\n    return m.split(' ').sort();\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metinde alt stringin konumunu bulan fonksiyon yaz",
+    "response": "public static int substringBul(String m, String alt) {\n    return m.indexOf(alt);\n}",
+    "language": "java",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metinde alt stringin konumunu bulan fonksiyon yaz",
+    "response": "def substring_bul(m, alt):\n    return m.find(alt)",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metinde alt stringin konumunu bulan fonksiyon yaz",
+    "response": "function substringBul(m, alt) {\n    return m.indexOf(alt);\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Rastgele renk kodu ureten fonksiyon yaz",
+    "response": "func RastgeleRenk() string {\n    return fmt.Sprintf(\"#%06x\", rand.Intn(0x1000000))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Rastgele renk kodu ureten fonksiyon yaz",
+    "response": "def rastgele_renk():\n    import random\n    return f'#{random.randint(0, 0xFFFFFF):06x}'",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dosya adindan uzantiyi bulan fonksiyon yaz",
+    "response": "function dosyaUzantisi(dosya) {\n    return dosya.substring(dosya.lastIndexOf('.'));\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir dosya adindan uzantiyi bulan fonksiyon yaz",
+    "response": "def dosya_uzantisi(dosya):\n    import os\n    return os.path.splitext(dosya)[1]",
+    "language": "python",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki karakter sayisini bulan fonksiyon yaz",
+    "response": "func KarakterSayisi(m string) int {\n    return len([]rune(m))\n}",
+    "language": "go",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  },
+  {
+    "instruction": "Bir metindeki karakter sayisini bulan fonksiyon yaz",
+    "response": "function karakterSayisi(m) {\n    return m.length;\n}",
+    "language": "javascript",
+    "category": "cross_lang",
+    "type": "manual",
+    "format": "cross_lang"
+  }
+]

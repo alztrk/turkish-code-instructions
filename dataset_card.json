@@ -1,21 +1,20 @@
 {
   "name": "turkish-code-instructions",
   "version": "1.0.0",
-  "description": "Turkish code instruction dataset for LLM fine-tuning. 1003 examples across 8 formats and 11 languages.",
+  "description": "Turkish code instruction dataset for LLM fine-tuning. 24,705 examples across 9 formats and 10 languages.",
   "license": "mit",
   "language": ["tr"],
   "task_categories": ["text-generation", "code-generation"],
   "tags": ["turkish", "code", "instruction-tuning", "code-review", "bug-fix"],
   "pretty_name": "Turkish Code Instructions",
-  "size_categories": "1K<n<10K",
+  "size_categories": "10K<n<100K",
   "source_datasets": ["original"],
-  "multilinguality": ["monolingual"],
   "modality": ["text"],
   "format": "jsonl",
   "splits": [
     {
       "name": "train",
-      "num_examples": 1003
+      "num_examples": 24705
     }
   ],
   "configs": [

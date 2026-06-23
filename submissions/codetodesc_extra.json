@@ -1,0 +1,4002 @@
+[
+  {
+    "instruction": "DELETE FROM siparisler WHERE durum = 'iptal';",
+    "response": "DELETE ile kayit silme.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const obj = { a: 1, b: 2, c: 3 };\nfor (const [key, value] of Object.entries(obj)) {\n  console.log(key, value);\n}",
+    "response": "Object.entries ile nesne dolasimi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "INSERT INTO urunler (isim, fiyat) VALUES ('Laptop', 15000);",
+    "response": "INSERT ile yeni kayit ekleme.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Promise.all([\n  Promise.resolve(3),\n  Promise.resolve(42),\n]).then(values => console.log(values));",
+    "response": "Promise.all ile paralel islem.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function assert(condition: any): asserts condition {\n    if (!condition) throw new Error();\n}\nfunction double(x: number | string): number {\n    assert(typeof x === \"number\");\n    return x * 2;\n}",
+    "response": "Type guard ile tip daraltma.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import secrets\ndef guvenli_sifre(uzunluk=16):\n    import string\n    alfabe = string.ascii_letters + string.digits\n    return ''.join(secrets.choice(alfabe) for _ in range(uzunluk))",
+    "response": "secrets modulu ile kriptografik guvenli sifre.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public static int topla(int a, int b) { return a + b; }\npublic static double topla(double a, double b) { return a + b; }",
+    "response": "Method overloading ile cesitlilik.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import filecmp\nprint(filecmp.cmp('dosya1.txt', 'dosya2.txt'))\nkarsilastirma = filecmp.dircmp('dizin1', 'dizin2')\nprint(karsilastirma.left_only, karsilastirma.right_only)",
+    "response": "filecmp ile dosya ve dizin karsilastirma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const pair: [string, number] = [\"Yas\", 30];\nconsole.log(pair[0], pair[1]);",
+    "response": "Tuple tipi ile sabit sayida eleman.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const url = new URL('https://api.example.com/search');\nurl.searchParams.set('q', 'test');\nconsole.log(url.toString());",
+    "response": "URL objesi ile sorgu parametresi yonetimi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "def find_peaks(data):\n    peaks = []\n    for i in range(1, len(data) - 1):\n        if data[i] > data[i-1] and data[i] > data[i+1]:\n            peaks.append((i, data[i]))\n    return peaks",
+    "response": "Dizide tepe noktasi bulma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Singleton:\n    _instance = None\n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance",
+    "response": "Singleton deseni ile tek ornek olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "INSERT INTO urunler (isim, fiyat) VALUES ('Laptop', 15000);",
+    "response": "INSERT ile yeni kayit ekleme.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "'Hello World'.includes('World');\n'Hello World'.startsWith('Hello');\n'Hello World'.endsWith('World');",
+    "response": "String includes, startsWith, endsWith metotlari.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Props = { name: string; children?: React.ReactNode };\nfunction Card({ name, children }: Props) {\n    return null;\n}",
+    "response": "React props tip tanimi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const [name, setName] = useState('');\nuseEffect(() => {\n  console.log('Bilesen yuklendi');\n  return () => console.log('Temizlik');\n}, []);",
+    "response": "React useState ve useEffect hooklari.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from functools import lru_cache\n\n@lru_cache(maxsize=128)\ndef factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)",
+    "response": "lru_cache ile fonksiyon sonuclarini onbellekleme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef inorder_traversal(root):\n    if root is None:\n        return []\n    return inorder_traversal(root.left) + [root.val] + inorder_traversal(root.right)",
+    "response": "Ikili agac ve inorder dolasma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import asyncio\nimport aiofiles\n\nasync def dosya_oku(dosya_adi):\n    async with aiofiles.open(dosya_adi, 'r') as f:\n        return await f.read()",
+    "response": "aiofiles ile asenkron dosya okuma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from itertools import groupby\ndata = [(2019, 100), (2019, 150), (2020, 200)]\nfor yil, grup in groupby(data, key=lambda x: x[0]):\n    print(yil, sum(d for _, d in grup))",
+    "response": "groupby ile veri gruplama ve toplama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "a := [3]int{1, 2, 3}\nfmt.Println(len(a))",
+    "response": "Dizi (array) sabit boyutlu yapi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Counter {\n    private int count = 0;\n    public synchronized void increment() { count++; }\n    public synchronized int getCount() { return count; }\n}",
+    "response": "synchronized ile thread guvenligi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function log(value: unknown): void {\n    if (typeof value === \"string\") {\n        console.log(value.toUpperCase());\n    }\n}",
+    "response": "unknown tipi ile guvenli tip kontrolu.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from functools import lru_cache\n\n@lru_cache(maxsize=128)\ndef factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)",
+    "response": "lru_cache ile fonksiyon sonuclarini onbellekleme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from enum import Enum, auto\n\nclass Durum(Enum):\n    BEKLIYOR = auto()\n    ISLENIYOR = auto()\n    HATA = auto()",
+    "response": "Enum ile adlandirilmis sabit degerler olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "setTimeout(() => console.log('3 sn'), 3000);\nconst interval = setInterval(() => console.log('2 sn'), 2000);\nclearInterval(interval);",
+    "response": "setTimeout ve setInterval kullanimi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Kullanici struct {\n    Isim string\n    Yas  int\n}\nu := Kullanici{Isim: \"Ali\", Yas: 30}\nfmt.Println(u.Isim)",
+    "response": "Struct tanimi ve kullanimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "for i := 0; i < 5; i++ {\n    defer fmt.Printf(\"%d \", i)\n}",
+    "response": "defer ile LIFO erteleme.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "def error_handler(func):\n    def wrapper(*args, **kwargs):\n        try:\n            return func(*args, **kwargs)\n        except Exception as e:\n            print(f'Hata: {e}')\n            return None\n    return wrapper",
+    "response": "Dekorator ile merkezi hata yonetimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public record Kullanici(String isim, int yas) {}\nKullanici k = new Kullanici(\"Ali\", 30);\nSystem.out.println(k.isim());",
+    "response": "Java 14+ record ile immutable veri sinifi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public record Kullanici(String isim, int yas) {}\nKullanici k = new Kullanici(\"Ali\", 30);\nSystem.out.println(k.isim());",
+    "response": "Java 14+ record ile immutable veri sinifi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from threading import Lock\nlock = Lock()\nsayac = 0\ndef artir():\n    global sayac\n    for _ in range(10000):\n        with lock:\n            sayac += 1",
+    "response": "Thread guvenligi icin Lock kullanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import tempfile\nwith tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False) as f:\n    f.write('Gecici veri')\n    print(f.name)",
+    "response": "tempfile ile gecici dosya olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Singleton:\n    _instance = None\n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance",
+    "response": "Singleton deseni ile tek ornek olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import numpy as np\nmatris = np.array([[1, 2], [3, 4]])\nprint(matris.T)\nprint(np.dot(matris, matris.T))",
+    "response": "NumPy ile matris islemleri.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import sys\nprint(f'int: {sys.getsizeof(42)} bytes')\nprint(f'list: {sys.getsizeof([1,2,3])} bytes')",
+    "response": "sys.getsizeof ile bellek kullanimi olcumu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT * FROM kullanicilar WHERE sehir IN ('Istanbul', 'Ankara');",
+    "response": "IN ile birden cok deger sorgulama.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "go func() {\n    fmt.Println(\"Goroutine\")\n}()",
+    "response": "Goroutine ile hafif thread baslatma.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import os\nprint(os.path.expanduser('~/.config/app/config.json'))",
+    "response": "Kullanici ev dizininde dosya yolu olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from typing import Final\nMAX_RETRY: Final = 3\nDEFAULT_PORT: Final = 8080",
+    "response": "Final ile sabit degisken tanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "enum Renk {\n    KIRMIZI(0xFF0000), YESIL(0x00FF00);\n    private int hex;\n    Renk(int hex) { this.hex = hex; }\n    public int getHex() { return hex; }\n}",
+    "response": "Enum ile sabit deger ve constructor.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Counter {\n    private int count = 0;\n    public synchronized void increment() { count++; }\n    public synchronized int getCount() { return count; }\n}",
+    "response": "synchronized ile thread guvenligi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Point = { x: number; y: number };\nconst p: Point = { x: 10, y: 20 };",
+    "response": "Inline type ile nesne yapisi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const fetchData = async () => {\n  const response = await fetch('https://api.example.com');\n  const data = await response.json();\n  return data;\n};",
+    "response": "Async/await ile asenkron API cagrisi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import os\nfor key, val in sorted(os.environ.items()):\n    print(f'{key}={val}')",
+    "response": "Tum ortam degiskenlerini listeleme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Observable:\n    def __init__(self):\n        self._observers = []\n    def abone_ol(self, observer):\n        self._observers.append(observer)\n    def bildirim(self, *args):\n        for observer in self._observers:\n            observer(*args)",
+    "response": "Observer tasarim deseni ile olay bildirimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Person {\n  constructor(name, age) {\n    this.name = name;\n    this.age = age;\n  }\n  greet() {\n    return \"Merhaba, ben \" + this.name;\n  }\n}\nconst ali = new Person('Ali', 30);",
+    "response": "ES6 class ve constructor yapisi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "temp_c = 30\ntemp_f = (temp_c * 9/5) + 32\nprint(f'{temp_c}C = {temp_f}F')",
+    "response": "Santigrat-Fahrenheit donusumu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "StringBuilder sb = new StringBuilder();\nsb.append(\"Merhaba \");\nsb.append(\"Dunya\");\nSystem.out.println(sb.toString());",
+    "response": "StringBuilder ile verimli string birlestirme.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "async def fetch_data(url):\n    async with aiohttp.ClientSession() as session:\n        async with session.get(url) as response:\n            return await response.json()",
+    "response": "Asenkron HTTP istemcisi ile JSON verisi cekme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Merhaba\");\n    }\n}",
+    "response": "Java ana sinif ve main metodu.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Kare {\n    private int kenar;\n    public Kare(int kenar) { this.kenar = kenar; }\n    public int alan() { return kenar * kenar; }\n    public int getKenar() { return kenar; }\n    public void setKenar(int kenar) { this.kenar = kenar; }\n}",
+    "response": "Kapsulleme ile private alan ve getter/setter.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from io import StringIO\nbuffer = StringIO()\nbuffer.write('Satir 1\\n')\nbuffer.write('Satir 2\\n')\nprint(buffer.getvalue())",
+    "response": "StringIO ile bellek ici dosya islemi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import \"sort\"\nsort.Ints([]int{3, 1, 2})",
+    "response": "sort.Ints ile siralama.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function log(value: unknown): void {\n    if (typeof value === \"string\") {\n        console.log(value.toUpperCase());\n    }\n}",
+    "response": "unknown tipi ile guvenli tip kontrolu.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import time\n\ndef cronometre(func):\n    def wrapper(*args, **kwargs):\n        basla = time.perf_counter()\n        sonuc = func(*args, **kwargs)\n        gecen = time.perf_counter() - basla\n        print(f'{func.__name__}: {gecen:.4f}s')\n        return sonuc\n    return wrapper",
+    "response": "Dekorator ile fonksiyon calisma suresi olcumu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class GenericBox<T> {\n    constructor(public value: T) {}\n    getValue(): T { return this.value; }\n}\nconst box = new GenericBox<number>(42);",
+    "response": "Generic class tanimi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import heapq\nsayilar = [3, 1, 4, 1, 5, 9, 2, 6]\nheapq.heapify(sayilar)\nprint(heapq.heappop(sayilar))",
+    "response": "heapq ile oncelik kuyrugu (min-heap).",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Meta(type):\n    def __new__(mcs, name, bases, namespace):\n        namespace['olusturuldu'] = True\n        return super().__new__(mcs, name, bases, namespace)\n\nclass BenimSinif(metaclass=Meta): pass\nprint(BenimSinif.olusturuldu)",
+    "response": "Metaclass ile sinif olusturma surecini kontrol.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "console.log(Object.keys({ a: 1, b: 2 }));\nconsole.log(Object.values({ a: 1, b: 2 }));\nconsole.log(Object.entries({ a: 1, b: 2 }));",
+    "response": "Object.keys, values ve entries metotlari.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "List<String> list = new ArrayList<>();\nlist.add(\"Elma\");\nfor (String s : list) {\n    System.out.println(s);\n}",
+    "response": "ArrayList ve for-each dongusu.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import os\nfor kok, dizinler, dosyalar in os.walk('/projeler'):\n    for dosya in dosyalar:\n        if dosya.endswith('.py'):\n            print(os.path.join(kok, dosya))",
+    "response": "os.walk ile recursive dosya tarama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const obj = { a: 1, b: 2, c: 3 };\nfor (const [key, value] of Object.entries(obj)) {\n  console.log(key, value);\n}",
+    "response": "Object.entries ile nesne dolasimi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "interface User {\n    name: string;\n    age: number;\n    email?: string;\n}\nconst user: User = { name: \"Ali\", age: 30 };",
+    "response": "Interface ile nesne tipi tanimi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import pprint\ndata = {'isim': 'Ali', 'adres': {'sehir': 'Istanbul'}}\npprint.pprint(data, indent=2)",
+    "response": "pprint ile veriyi guzel yazdirma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Yazdirici interface {\n    Yazdir() string\n}\ntype Metin struct{ Icerik string }\nfunc (m Metin) Yazdir() string { return m.Icerik }",
+    "response": "Interface ve structural typing.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Descriptor:\n    def __get__(self, obj, objtype):\n        return obj._value\n    def __set__(self, obj, value):\n        if value < 0: raise ValueError('Negatif olamaz')\n        obj._value = value\nclass Urun:\n    fiyat = Descriptor()\n    def __init__(self, fiyat): self.fiyat = fiyat",
+    "response": "Descriptor protokolu ile ozellik dogrulama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import smtplib\nfrom email.mime.text import MIMEText\nmsg = MIMEText('Test mesaji')\nmsg['Subject'] = 'Test'\nmsg['To'] = 'alici@mail.com'",
+    "response": "SMTP ile e-posta gonderme hazirligi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const [name, setName] = useState('');\nuseEffect(() => {\n  console.log('Bilesen yuklendi');\n  return () => console.log('Temizlik');\n}, []);",
+    "response": "React useState ve useEffect hooklari.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class CustomException extends Exception {\n    public CustomException(String msg) { super(msg); }\n}\nthrow new CustomException(\"Ozel hata\");",
+    "response": "Ozel exception sinifi tanimi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from decimal import Decimal\nfiyat1 = Decimal('0.10')\nfiyat2 = Decimal('0.20')\nprint(fiyat1 + fiyat2)",
+    "response": "Decimal ile kayan nokta hatasiz aritmetik.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "s = {1, 2, 3, 4, 5}\nt = {4, 5, 6, 7, 8}\nprint(s | t, s & t, s - t, s ^ t)",
+    "response": "Kume islemleri: birlesim, kesisim, fark ve simetrik fark.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import os\nfor key, val in sorted(os.environ.items()):\n    print(f'{key}={val}')",
+    "response": "Tum ortam degiskenlerini listeleme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const user = { name: 'Ali', age: 30, city: 'Istanbul' };\nconst { name, age } = user;\nconsole.log(name, age);",
+    "response": "Destructuring ile nesne alanlarina erisim.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "for i := 0; i < 5; i++ {\n    defer fmt.Printf(\"%d \", i)\n}",
+    "response": "defer ile LIFO erteleme.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import re\npattern = r'\\b[A-Z][a-z]+\\s[A-Z][a-z]+\\b'\ntext = 'Ahmet Yilmaz ve Ayse Demir'\nre.findall(pattern, text)",
+    "response": "Regex ile iki kelimeli ozel isim bulma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from io import BytesIO\nfrom PIL import Image\nimport requests\nresponse = requests.get('https://example.com/image.jpg')\nimg = Image.open(BytesIO(response.content))\nimg.thumbnail((200, 200))",
+    "response": "BytesIO ile bellek ici resim isleme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "if x > 0 {\n    fmt.Println(\"Pozitif\")\n} else {\n    fmt.Println(\"Negatif\")\n}",
+    "response": "Go if-else yapisi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "IntStream.rangeClosed(1, 10)\n    .filter(n -> n % 2 == 0)\n    .map(n -> n * n)\n    .average()\n    .ifPresent(System.out::println);",
+    "response": "IntStream sayisal islemler.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import queue\nimport threading\n\ndef isci(q):\n    while True:\n        item = q.get()\n        if item is None: break\n        print(f'Isleniyor: {item}')\n        q.task_done()\n\nq = queue.Queue()\nfor i in range(5):\n    q.put(i)\nthreading.Thread(target=isci, args=(q,), daemon=True).start()\nq.join()",
+    "response": "Queue ve Thread ile isci havuzu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const debounce = (fn, delay) => {\n  let timeout;\n  return (...args) => {\n    clearTimeout(timeout);\n    timeout = setTimeout(() => fn(...args), delay);\n  };\n};",
+    "response": "Debounce deseni ile fonksiyon cagrisi sinirlama.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import signal\nimport sys\ndef sinyal_isle(signum, frame):\n    print('Sinyal alindi')\n    sys.exit(0)\nsignal.signal(signal.SIGINT, sinyal_isle)",
+    "response": "signal ile Ctrl+C yakalama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from io import StringIO\nbuffer = StringIO()\nbuffer.write('Satir 1\\n')\nbuffer.write('Satir 2\\n')\nprint(buffer.getvalue())",
+    "response": "StringIO ile bellek ici dosya islemi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "sayilar = [10, 25, 30, 45, 50]\nbes_kati = list(filter(lambda x: x % 5 == 0, sayilar))\nkareler = list(map(lambda x: x ** 2, sayilar))",
+    "response": "filter ve map ile fonksiyonel donusum.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public static int topla(int a, int b) { return a + b; }\npublic static double topla(double a, double b) { return a + b; }",
+    "response": "Method overloading ile cesitlilik.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "ch := make(chan string)\ngo func() { ch <- \"Merhaba\" }()\nmsg := <-ch\nfmt.Println(msg)",
+    "response": "Channel ile goroutine iletisimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from typing import TypedDict\n\nclass OgrenciDict(TypedDict):\n    ad: str\n    soyad: str\n    numara: int",
+    "response": "TypedDict ile sozluk tipi tanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from collections import Counter\nkelimeler = ['elma', 'armut', 'elma', 'kiraz', 'elma']\nsayac = Counter(kelimeler)\nprint(sayac.most_common(2))",
+    "response": "Counter ile frekans analizi ve en sik tekrarlananlar.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT isim, SUM(tutar) FROM satislar GROUP BY isim;",
+    "response": "SUM ile toplam deger hesaplama.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Props = { name: string; children?: React.ReactNode };\nfunction Card({ name, children }: Props) {\n    return null;\n}",
+    "response": "React props tip tanimi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const debounce = (fn, delay) => {\n  let timeout;\n  return (...args) => {\n    clearTimeout(timeout);\n    timeout = setTimeout(() => fn(...args), delay);\n  };\n};",
+    "response": "Debounce deseni ile fonksiyon cagrisi sinirlama.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class AttrDict:\n    def __init__(self, d):\n        self._d = d\n    def __getattr__(self, name):\n        val = self._d.get(name)\n        if isinstance(val, dict):\n            return AttrDict(val)\n        return val\n\nad = AttrDict({'user': {'name': 'Ali'}})\nprint(ad.user.name)",
+    "response": "AttrDict ile nokta notasyonlu sozluk erisimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import random\nimport string\ndef sifre_olustur(uzunluk=12):\n    karakterler = string.ascii_letters + string.digits\n    return ''.join(random.choice(karakterler) for _ in range(uzunluk))",
+    "response": "Rastgele sifre olusturma fonksiyonu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from abc import ABC, abstractmethod\n\nclass Sekil(ABC):\n    @abstractmethod\n    def alan(self):\n        pass",
+    "response": "ABC ve abstractmethod ile soyut sinif tanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const arr = [1, 2, [3, 4, [5, 6]]];\nconsole.log(arr.flat(2));\nconsole.log(arr.flatMap(x => [x, x * 2]));",
+    "response": "flat ve flatMap ile dizi duzlestirme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "if x > 0 {\n    fmt.Println(\"Pozitif\")\n} else {\n    fmt.Println(\"Negatif\")\n}",
+    "response": "Go if-else yapisi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "IntStream.rangeClosed(1, 10)\n    .filter(n -> n % 2 == 0)\n    .map(n -> n * n)\n    .average()\n    .ifPresent(System.out::println);",
+    "response": "IntStream sayisal islemler.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import subprocess\nsonuc = subprocess.run(['ping', '-c', '3', 'google.com'], capture_output=True, text=True)\nprint(sonuc.stdout)",
+    "response": "subprocess ile sistem komutu calistirma ve cikti yakalama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const now = new Date();\nconsole.log(now.toLocaleDateString('tr-TR'));\nconsole.log(now.toLocaleTimeString('tr-TR'));",
+    "response": "toLocaleDateString ile yerellesmis tarih.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "@contextmanager\ndef dosya_yoneticisi(dosya_adi, mod):\n    dosya = open(dosya_adi, mod)\n    try:\n        yield dosya\n    finally:\n        dosya.close()",
+    "response": "contextmanager ile ozel baglam yoneticisi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from typing import List, Optional\n\ndef find_user(users: List[str], name: str) -> Optional[int]:\n    for i, user in enumerate(users):\n        if user == name:\n            return i\n    return None",
+    "response": "Type hints ile tip guvenli fonksiyon tanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "LocalDateTime simdi = LocalDateTime.now();\nDateTimeFormatter fmt = DateTimeFormatter.ofPattern(\"dd/MM/yyyy\");\nSystem.out.println(simdi.format(fmt));",
+    "response": "LocalDateTime ve DateTimeFormatter.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from functools import reduce\ndef flatten(nested):\n    return reduce(lambda acc, val: acc + (flatten(val) if isinstance(val, list) else [val]), nested, [])",
+    "response": "Ic ice listeleri recursive flatten etme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import pprint\ndata = {'isim': 'Ali', 'adres': {'sehir': 'Istanbul'}}\npprint.pprint(data, indent=2)",
+    "response": "pprint ile veriyi guzel yazdirma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class CustomArray extends Array {\n  get first() { return this[0]; }\n  get last() { return this[this.length - 1]; }\n}\nconst arr = new CustomArray(1, 2, 3);",
+    "response": "Array extension ve getter ozellik.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const numbers: number[] = [1, 2, 3];\nconst doubled: number[] = numbers.map(x => x * 2);",
+    "response": "Dizi tipi ve map donusumu.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "text = 'python'\nprint(text[::-1])\ndef palindrome_mi(kelime):\n    return kelime == kelime[::-1]",
+    "response": "String dilimleme ile ters cevirme ve palindrome kontrolu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const pair = [{ a: 1 }, { a: 2 }];\nconsole.log(pair.find(x => x.a > 1));\nconsole.log(pair.findIndex(x => x.a > 1));",
+    "response": "find ve findIndex ile dizi arama.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const handler = {\n  get(target, prop) {\n    return prop in target ? target[prop] : 'Bilinmiyor';\n  }\n};\nconst proxy = new Proxy({ name: 'Ali' }, handler);",
+    "response": "Proxy ile varsayilan deger donme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "UPDATE kullanicilar SET email = 'yeni@mail.com' WHERE id = 1;",
+    "response": "UPDATE ile kayit guncelleme.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "async def fetch_data(url):\n    async with aiohttp.ClientSession() as session:\n        async with session.get(url) as response:\n            return await response.json()",
+    "response": "Asenkron HTTP istemcisi ile JSON verisi cekme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function identity<T>(arg: T): T {\n    return arg;\n}\nconst result = identity<string>(\"Merhaba\");",
+    "response": "Generic fonksiyon tip parametresi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from contextvars import ContextVar\nuser_id: ContextVar[int] = ContextVar('user_id', default=0)\nuser_id.set(42)\nprint(user_id.get())",
+    "response": "ContextVar ile asenkron baglam degiskeni.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "func topla(a int, b int) int {\n    return a + b\n}",
+    "response": "Go fonksiyon tanimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const arr = [1, 2, [3, 4, [5, 6]]];\nconsole.log(arr.flat(2));\nconsole.log(arr.flatMap(x => [x, x * 2]));",
+    "response": "flat ve flatMap ile dizi duzlestirme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from decimal import Decimal\nfiyat1 = Decimal('0.10')\nfiyat2 = Decimal('0.20')\nprint(fiyat1 + fiyat2)",
+    "response": "Decimal ile kayan nokta hatasiz aritmetik.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const numbers = [1, 2, 3, 4, 5];\nconst result = numbers\n  .filter(n => n > 2)\n  .map(n => n * 2)\n  .reduce((sum, n) => sum + n, 0);",
+    "response": "Method chaining ile pipeline.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "int[] dizi = {1, 2, 3};\nint[][] matris = {{1, 2}, {3, 4}};\nfor (int[] satir : matris) {\n    for (int eleman : satir) System.out.print(eleman);\n}",
+    "response": "Tek ve cok boyutlu diziler.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const now = new Date();\nconsole.log(now.toLocaleDateString('tr-TR'));\nconsole.log(now.toLocaleTimeString('tr-TR'));",
+    "response": "toLocaleDateString ile yerellesmis tarih.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function greet(name: string): string {\n    return \"Merhaba \" + name;\n}\nconst msg: string = greet(\"Ali\");",
+    "response": "TypeScript tip belirtmeli fonksiyon.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "sayilar = [2, 4, 6, 8]\nprint(all(x % 2 == 0 for x in sayilar))\nprint(any(x > 10 for x in sayilar))",
+    "response": "all ve any ile kosul kontrolleri.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> \"Sonuc\");\nfuture.thenAccept(System.out::println);",
+    "response": "CompletableFuture ile asenkron islem.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "func topla(a int, b int) int {\n    return a + b\n}",
+    "response": "Go fonksiyon tanimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Path path = Paths.get(\"dosya.txt\");\nList<String> satirlar = Files.readAllLines(path);\nFiles.write(path, \"Yeni icerik\".getBytes(), StandardOpenOption.APPEND);",
+    "response": "Java NIO ile dosya okuma/yazma.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const numbers = [1, 2, 3, 4, 5];\nconst evens = numbers.filter(n => n % 2 === 0);\nconst sum = numbers.reduce((acc, n) => acc + n, 0);\nconsole.log(evens, sum);",
+    "response": "filter ve reduce ile dizi isleme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "interface User {\n    name: string;\n    age: number;\n    email?: string;\n}\nconst user: User = { name: \"Ali\", age: 30 };",
+    "response": "Interface ile nesne tipi tanimi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const greeting = (name = 'Misafir') => console.log(name);\ngreeting('Ali');\ngreeting();",
+    "response": "Varsayilan parametre kullanimi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "try:\n    result = 10 / 0\nexcept ZeroDivisionError as e:\n    print(f'Hata: {e}')\nfinally:\n    print('Her zaman calisir')",
+    "response": "Try-except-finally ile hata yonetimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import zipfile\nwith zipfile.ZipFile('arsiv.zip', 'w', zipfile.ZIP_DEFLATED) as zf:\n    zf.write('dosya.txt')",
+    "response": "zipfile ile ZIP arsivi olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from collections import ChainMap\nvar1 = {'a': 1, 'b': 2}\nvar2 = {'b': 3, 'c': 4}\nbirlesik = ChainMap(var1, var2)",
+    "response": "ChainMap ile birden cok sozlugu birlestirme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import shutil\nshutil.copy2('kaynak.txt', 'hedef.txt')\nshutil.copytree('proje/', 'proje_yedek/', dirs_exist_ok=True)",
+    "response": "shutil ile dosya ve dizin kopyalama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "enum Renk {\n    KIRMIZI(0xFF0000), YESIL(0x00FF00);\n    private int hex;\n    Renk(int hex) { this.hex = hex; }\n    public int getHex() { return hex; }\n}",
+    "response": "Enum ile sabit deger ve constructor.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Pair<K, V> {\n    private K key;\n    private V value;\n    public Pair(K key, V value) { this.key = key; this.value = value; }\n    public K getKey() { return key; }\n    public V getValue() { return value; }\n}\nPair<String, Integer> p = new Pair<>(\"Yas\", 30);",
+    "response": "Generic sinif tanimi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "int[] sayilar = {5, 2, 8, 1, 9};\nArrays.sort(sayilar);\nint index = Arrays.binarySearch(sayilar, 8);",
+    "response": "Arrays.sort ve binarySearch.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "List<String> isimler = Arrays.asList(\"Ali\", \"Ayse\");\nisimler.stream()\n    .filter(isim -> isim.startsWith(\"A\"))\n    .map(String::toUpperCase)\n    .forEach(System.out::println);",
+    "response": "Stream filter, map, forEach pipeline.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Status = 'active' | 'inactive' | 'pending';\nconst current: Status = 'active';",
+    "response": "Union type ile kisitli deger tanimi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "CREATE TABLE kullanicilar (\n    id INT PRIMARY KEY AUTO_INCREMENT,\n    isim VARCHAR(100) NOT NULL\n);",
+    "response": "CREATE TABLE ile tablo olusturma.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "def find_peaks(data):\n    peaks = []\n    for i in range(1, len(data) - 1):\n        if data[i] > data[i-1] and data[i] > data[i+1]:\n            peaks.append((i, data[i]))\n    return peaks",
+    "response": "Dizide tepe noktasi bulma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from pydantic import BaseModel, validator\nclass Urun(BaseModel):\n    ad: str\n    fiyat: float\n    @validator('fiyat')\n    def pozitif(cls, v):\n        if v <= 0: raise ValueError('Pozitif olmali')\n        return v",
+    "response": "Pydantic ile veri dogrulama modeli.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from operator import itemgetter\nogrenciler = [{'ad': 'Ali', 'not': 85}, {'ad': 'Veli', 'not': 92}]\nsirali = sorted(ogrenciler, key=itemgetter('not'), reverse=True)",
+    "response": "itemgetter ile sozluk alanina gore siralama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from fractions import Fraction\nf1 = Fraction(1, 3)\nf2 = Fraction(2, 5)\nprint(f1 + f2)",
+    "response": "Fraction ile kesirli sayi aritmetigi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Merhaba\")\n}",
+    "response": "Go temel program yapisi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "a := [3]int{1, 2, 3}\nfmt.Println(len(a))",
+    "response": "Dizi (array) sabit boyutlu yapi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from functools import wraps\ndef log_arguments(func):\n    @wraps(func)\n    def wrapper(*args, **kwargs):\n        print(f'{func.__name__} cagrildi')\n        return func(*args, **kwargs)\n    return wrapper",
+    "response": "wraps dekoratoru ile fonksiyon metaverisi koruma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from threading import Lock\nlock = Lock()\nsayac = 0\ndef artir():\n    global sayac\n    for _ in range(10000):\n        with lock:\n            sayac += 1",
+    "response": "Thread guvenligi icin Lock kullanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public abstract class Hayvan {\n    public abstract void sesCikar();\n    public void uyu() { System.out.println(\"Uyuyor...\"); }\n}\npublic class Kedi extends Hayvan {\n    public void sesCikar() { System.out.println(\"Miyav\"); }\n}",
+    "response": "Abstract sinif ve kalitim.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "CREATE INDEX idx_email ON kullanicilar(email);",
+    "response": "CREATE INDEX ile indeks olusturma.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT k.isim, COUNT(s.id) as siparis_sayisi\nFROM kullanicilar k\nLEFT JOIN siparisler s ON k.id = s.kullanici_id\nGROUP BY k.id, k.isim;",
+    "response": "LEFT JOIN ve GROUP BY ile raporlama.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from functools import reduce\ndef flatten(nested):\n    return reduce(lambda acc, val: acc + (flatten(val) if isinstance(val, list) else [val]), nested, [])",
+    "response": "Ic ice listeleri recursive flatten etme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function Person(name) {\n  this.name = name;\n}\nPerson.prototype.greet = function() {\n  return 'Merhaba ' + this.name;\n};\nnew Person('Ali').greet();",
+    "response": "Constructor fonksiyon ve prototype.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT isim, MAX(fiyat) FROM urunler GROUP BY isim HAVING MAX(fiyat) > 100;",
+    "response": "HAVING ile grup bazli filtreleme.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type A = { a: string } & { b: number };\nconst obj: A = { a: \"test\", b: 42 };",
+    "response": "Intersection type ile tip birlestirme.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import re\ndef tokenize(text):\n    return re.findall(r\"\\w+(?:'\\w+)?|[^\\w\\s]\", text)\nprint(tokenize(\"Ali'nin arabasi cok guzeldi.\"))",
+    "response": "Regex ile metni tokenlere ayirma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const set = new Set([1, 2, 2, 3, 3, 4]);\nconsole.log(set);\nconsole.log(set.has(2));\nconst map = new Map();\nmap.set('key1', 'value1');\nconsole.log(map.get('key1'));",
+    "response": "Set ve Map koleksiyonlari.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const nums = [1, 2, 3, 4, 5];\nconst evenSquares = nums.filter(n => n % 2 === 0).map(n => n * n);",
+    "response": "filter-map zinciri ile cift sayilarin karesi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "names = ['Ali', 'Veli', 'Ayse']\nscores = [85, 92, 78]\nfor name, score in zip(names, scores):\n    print(f'{name}: {score}')",
+    "response": "zip ile paralel liste dolasimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import re\npattern = r'\\b[A-Z][a-z]+\\s[A-Z][a-z]+\\b'\ntext = 'Ahmet Yilmaz ve Ayse Demir'\nre.findall(pattern, text)",
+    "response": "Regex ile iki kelimeli ozel isim bulma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import smtplib\nfrom email.mime.text import MIMEText\nmsg = MIMEText('Test mesaji')\nmsg['Subject'] = 'Test'\nmsg['To'] = 'alici@mail.com'",
+    "response": "SMTP ile e-posta gonderme hazirligi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT isim, MAX(fiyat) FROM urunler GROUP BY isim HAVING MAX(fiyat) > 100;",
+    "response": "HAVING ile grup bazli filtreleme.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "s := make([]string, 3)\ns[0] = \"a\"\ns = append(s, \"b\", \"c\")\nfmt.Println(s[:2])",
+    "response": "make ve append ile slice yonetimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT k.isim, COUNT(s.id) as siparis_sayisi\nFROM kullanicilar k\nLEFT JOIN siparisler s ON k.id = s.kullanici_id\nGROUP BY k.id, k.isim;",
+    "response": "LEFT JOIN ve GROUP BY ile raporlama.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type A = { a: string } & { b: number };\nconst obj: A = { a: \"test\", b: 42 };",
+    "response": "Intersection type ile tip birlestirme.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import json\ndata = {'isim': 'Ali', 'yas': 30}\njson_str = json.dumps(data, ensure_ascii=False, indent=2)",
+    "response": "JSON donusumu ve Turkce karakter destegi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "var isim string = \"Ali\"\nyas := 30\nfmt.Printf(\"%s %d yasinda\", isim, yas)",
+    "response": "var ve := ile degisken bildirimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "x := 42\np := &x\nfmt.Println(*p)\n*p = 21\nfmt.Println(x)",
+    "response": "Pointer kullanimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import tempfile\nwith tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False) as f:\n    f.write('Gecici veri')\n    print(f.name)",
+    "response": "tempfile ile gecici dosya olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> \"Sonuc\");\nfuture.thenAccept(System.out::println);",
+    "response": "CompletableFuture ile asenkron islem.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);\nconst add1 = x => x + 1;\nconst double = x => x * 2;\nconst add1ThenDouble = pipe(add1, double);\nconsole.log(add1ThenDouble(5));",
+    "response": "pipe ile fonksiyon birlestirme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "List<String> isimler = Arrays.asList(\"Ali\", \"Ayse\");\nisimler.stream()\n    .filter(isim -> isim.startsWith(\"A\"))\n    .map(String::toUpperCase)\n    .forEach(System.out::println);",
+    "response": "Stream filter, map, forEach pipeline.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "def fibonacci(n):\n    a, b = 0, 1\n    for _ in range(n):\n        yield a\n        a, b = b, a + b",
+    "response": "Fibonacci generatoru, yield ile degerleri tembel olarak uretir.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "try {\n  throw new Error('Hata');\n} catch (error) {\n  console.error(error.message);\n} finally {\n  console.log('Her zaman');\n}",
+    "response": "try-catch-finally ile hata yonetimi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Point = { x: number; y: number };\nconst p: Point = { x: 10, y: 20 };",
+    "response": "Inline type ile nesne yapisi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from contextvars import ContextVar\nuser_id: ContextVar[int] = ContextVar('user_id', default=0)\nuser_id.set(42)\nprint(user_id.get())",
+    "response": "ContextVar ile asenkron baglam degiskeni.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Kare {\n    private int kenar;\n    public Kare(int kenar) { this.kenar = kenar; }\n    public int alan() { return kenar * kenar; }\n    public int getKenar() { return kenar; }\n    public void setKenar(int kenar) { this.kenar = kenar; }\n}",
+    "response": "Kapsulleme ile private alan ve getter/setter.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import filecmp\nprint(filecmp.cmp('dosya1.txt', 'dosya2.txt'))\nkarsilastirma = filecmp.dircmp('dizin1', 'dizin2')\nprint(karsilastirma.left_only, karsilastirma.right_only)",
+    "response": "filecmp ile dosya ve dizin karsilastirma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from functools import reduce\n\nsayilar = [1, 2, 3, 4, 5]\ncarpim = reduce(lambda x, y: x * y, sayilar)",
+    "response": "reduce ile tum elemanlari isleme tabi tutma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "m := make(map[string]int)\nm[\"anahtar\"] = 42\nv, ok := m[\"anahtar\"]\nfmt.Println(v, ok)",
+    "response": "Map ve deger varlik kontrolu.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import numpy as np\nmatris = np.array([[1, 2], [3, 4]])\nprint(matris.T)\nprint(np.dot(matris, matris.T))",
+    "response": "NumPy ile matris islemleri.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class CustomError(Exception):\n    def __init__(self, mesaj, kod):\n        super().__init__(mesaj)\n        self.kod = kod\n\nraise CustomError('Gecersiz islem', 400)",
+    "response": "Ozel hata sinifi tanimi ve kullanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT * FROM kullanicilar WHERE sehir IN ('Istanbul', 'Ankara');",
+    "response": "IN ile birden cok deger sorgulama.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const pair: [string, number] = [\"Yas\", 30];\nconsole.log(pair[0], pair[1]);",
+    "response": "Tuple tipi ile sabit sayida eleman.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "with (\n    open('girdi.txt', 'r') as girdi,\n    open('cikti.txt', 'w') as cikti\n):\n    cikti.write(girdi.read().upper())",
+    "response": "Parantezli context manager ile iki dosyayi ayni anda acma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from itertools import product, combinations\nprint(list(product([1, 2], ['a', 'b'])))\nprint(list(combinations([1, 2, 3], 2)))",
+    "response": "itertools ile kartezyen carpim ve kombinasyon.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class GenericBox<T> {\n    constructor(public value: T) {}\n    getValue(): T { return this.value; }\n}\nconst box = new GenericBox<number>(42);",
+    "response": "Generic class tanimi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "LocalDateTime simdi = LocalDateTime.now();\nDateTimeFormatter fmt = DateTimeFormatter.ofPattern(\"dd/MM/yyyy\");\nSystem.out.println(simdi.format(fmt));",
+    "response": "LocalDateTime ve DateTimeFormatter.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import math\ndef solve_quadratic(a, b, c):\n    delta = b**2 - 4*a*c\n    if delta < 0: return []\n    elif delta == 0: return [-b / (2*a)]\n    else: return [(-b + math.sqrt(delta)) / (2*a), (-b - math.sqrt(delta)) / (2*a)]",
+    "response": "Ikinci derece denklem cozumu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const numbers = [1, 2, 3, 4, 5];\nconst [first, second, ...rest] = numbers;\nconsole.log(first, second, rest);",
+    "response": "Destructuring ve rest operatoru.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public record Kullanici(String isim, int yas) {}\nKullanici k = new Kullanici(\"Ali\", 30);\nSystem.out.println(k.isim());",
+    "response": "Java 14+ record ile immutable veri sinifi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "CREATE TABLE kullanicilar (\n    id INT PRIMARY KEY AUTO_INCREMENT,\n    isim VARCHAR(100) NOT NULL\n);",
+    "response": "CREATE TABLE ile tablo olusturma.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Kare {\n    private int kenar;\n    public Kare(int kenar) { this.kenar = kenar; }\n    public int alan() { return kenar * kenar; }\n    public int getKenar() { return kenar; }\n    public void setKenar(int kenar) { this.kenar = kenar; }\n}",
+    "response": "Kapsulleme ile private alan ve getter/setter.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "def read_large_file(dosya_adi):\n    with open(dosya_adi, 'r', encoding='utf-8') as f:\n        for satir in f:\n            yield satir.strip()",
+    "response": "Generator ile buyuk dosyayi satir satir okuma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "s := make([]string, 3)\ns[0] = \"a\"\ns = append(s, \"b\", \"c\")\nfmt.Println(s[:2])",
+    "response": "make ve append ile slice yonetimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "UPDATE kullanicilar SET email = 'yeni@mail.com' WHERE id = 1;",
+    "response": "UPDATE ile kayit guncelleme.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT s.id, u.isim\nFROM siparisler s\nINNER JOIN kullanicilar u ON s.kullanici_id = u.id;",
+    "response": "INNER JOIN ile eslesen kayitlar.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Map<String, Integer> yaslar = new HashMap<>();\nyaslar.put(\"Ali\", 30);\nyaslar.put(\"Ayse\", 25);\nfor (Map.Entry<String, Integer> e : yaslar.entrySet()) {\n    System.out.println(e.getKey() + \": \" + e.getValue());\n}",
+    "response": "HashMap ve entrySet ile dolasim.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Promise.all([\n  Promise.resolve(3),\n  Promise.resolve(42),\n]).then(values => console.log(values));",
+    "response": "Promise.all ile paralel islem.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "int[] dizi = {1, 2, 3};\nint[][] matris = {{1, 2}, {3, 4}};\nfor (int[] satir : matris) {\n    for (int eleman : satir) System.out.print(eleman);\n}",
+    "response": "Tek ve cok boyutlu diziler.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "List<String> list = new ArrayList<>();\nlist.add(\"Elma\");\nfor (String s : list) {\n    System.out.println(s);\n}",
+    "response": "ArrayList ve for-each dongusu.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const set = new Set([1, 2, 2, 3, 3, 4]);\nconsole.log(set);\nconsole.log(set.has(2));\nconst map = new Map();\nmap.set('key1', 'value1');\nconsole.log(map.get('key1'));",
+    "response": "Set ve Map koleksiyonlari.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import uuid\nprint(str(uuid.uuid4()))\nprint(str(uuid.uuid4()))",
+    "response": "UUID ile evrensel benzersiz tanimlayici olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import uuid\nprint(str(uuid.uuid4()))\nprint(str(uuid.uuid4()))",
+    "response": "UUID ile evrensel benzersiz tanimlayici olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const object1 = { a: 1, b: 2 };\nObject.freeze(object1);\nobject1.a = 3;\nconsole.log(object1.a);\n\nconst object2 = { x: 1 };\nObject.seal(object2);",
+    "response": "Object.freeze ve Object.seal kullanimi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from difflib import SequenceMatcher\nstr1 = 'merhaba dunya'\nstr2 = 'merhaba dunya'\nprint(SequenceMatcher(None, str1, str2).ratio())",
+    "response": "SequenceMatcher ile metin benzerlik orani.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function greet(name: string): string {\n    return \"Merhaba \" + name;\n}\nconst msg: string = greet(\"Ali\");",
+    "response": "TypeScript tip belirtmeli fonksiyon.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT * FROM kullanicilar WHERE yas > 18 ORDER BY isim;",
+    "response": "WHERE ile filtreleme ve ORDER BY ile siralama.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT * FROM kullanicilar WHERE yas > 18 ORDER BY isim;",
+    "response": "WHERE ile filtreleme ve ORDER BY ile siralama.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from typing import TypedDict\n\nclass OgrenciDict(TypedDict):\n    ad: str\n    soyad: str\n    numara: int",
+    "response": "TypedDict ile sozluk tipi tanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const user = { name: 'Ali', age: 30, city: 'Istanbul' };\nconst { name, age } = user;\nconsole.log(name, age);",
+    "response": "Destructuring ile nesne alanlarina erisim.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from functools import partial\ndef us_al(taban, us):\n    return taban ** us\nkaresi = partial(us_al, us=2)\nprint(karesi(5))",
+    "response": "partial ile fonksiyon argumani sabitleme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "ch := make(chan int, 3)\nch <- 1\nch <- 2\nch <- 3\nclose(ch)\nfor v := range ch {\n    fmt.Println(v)\n}",
+    "response": "Buffered channel ve range ile okuma.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "with (\n    open('girdi.txt', 'r') as girdi,\n    open('cikti.txt', 'w') as cikti\n):\n    cikti.write(girdi.read().upper())",
+    "response": "Parantezli context manager ile iki dosyayi ayni anda acma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "List<Integer> sayilar = Arrays.asList(1, 2, 3, 4, 5);\nint toplam = sayilar.stream()\n    .filter(n -> n % 2 == 0)\n    .mapToInt(n -> n * 2)\n    .sum();",
+    "response": "Stream API ile fonksiyonel islem.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from abc import ABC, abstractmethod\n\nclass Sekil(ABC):\n    @abstractmethod\n    def alan(self):\n        pass",
+    "response": "ABC ve abstractmethod ile soyut sinif tanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import json\nfrom jsonschema import validate\nschema = {'type': 'object', 'properties': {'isim': {'type': 'string'}}, 'required': ['isim']}\nvalidate(instance={'isim': 'Ali'}, schema=schema)",
+    "response": "JSON Schema ile veri dogrulama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "try (BufferedReader br = new BufferedReader(new FileReader(\"dosya.txt\"))) {\n    br.readLine();\n} catch (IOException e) {\n    e.printStackTrace();\n}",
+    "response": "Try-with-resources ile otomatik kaynak yonetimi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const greeting = (name = 'Misafir') => console.log(name);\ngreeting('Ali');\ngreeting();",
+    "response": "Varsayilan parametre kullanimi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function greet(name: string): string {\n    return \"Merhaba \" + name;\n}\nconst msg: string = greet(\"Ali\");",
+    "response": "TypeScript tip belirtmeli fonksiyon.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const pair: [string, number] = [\"Yas\", 30];\nconsole.log(pair[0], pair[1]);",
+    "response": "Tuple tipi ile sabit sayida eleman.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "try (BufferedReader br = new BufferedReader(new FileReader(\"dosya.txt\"))) {\n    br.readLine();\n} catch (IOException e) {\n    e.printStackTrace();\n}",
+    "response": "Try-with-resources ile otomatik kaynak yonetimi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const handler = {\n  get(target, prop) {\n    return prop in target ? target[prop] : 'Bilinmiyor';\n  }\n};\nconst proxy = new Proxy({ name: 'Ali' }, handler);",
+    "response": "Proxy ile varsayilan deger donme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const numbers = [1, 2, 3, 4, 5];\nconst [first, second, ...rest] = numbers;\nconsole.log(first, second, rest);",
+    "response": "Destructuring ve rest operatoru.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "text = 'python'\nprint(text[::-1])\ndef palindrome_mi(kelime):\n    return kelime == kelime[::-1]",
+    "response": "String dilimleme ile ters cevirme ve palindrome kontrolu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from itertools import groupby\ndata = [(2019, 100), (2019, 150), (2020, 200)]\nfor yil, grup in groupby(data, key=lambda x: x[0]):\n    print(yil, sum(d for _, d in grup))",
+    "response": "groupby ile veri gruplama ve toplama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Dogrulayici:\n    @staticmethod\n    def email_kontrol(email):\n        return '@' in email and '.' in email",
+    "response": "staticmethod ile bagimsiz yardimci metot.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function sum(a, b, ...rest) {\n  return [a, b, ...rest].reduce((acc, n) => acc + n, 0);\n}\nconsole.log(sum(1, 2, 3, 4, 5));",
+    "response": "Rest parametresi ve reduce ile toplam.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Graph:\n    def __init__(self):\n        self.vertices = {}\n    def add_edge(self, u, v):\n        self.vertices.setdefault(u, []).append(v)\n        self.vertices.setdefault(v, []).append(u)\n    def bfs(self, start):\n        visited = set()\n        queue = [start]\n        while queue:\n            v = queue.pop(0)\n            if v not in visited:\n                visited.add(v)\n                queue.extend(n for n in self.vertices[v] if n not in visited)\n        return visited",
+    "response": "Cizge ve BFS algoritmasi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function* fibonacci() {\n  let a = 0, b = 1;\n  while (true) {\n    yield a;\n    [a, b] = [b, a + b];\n  }\n}\nconst gen = fibonacci();\nconsole.log(gen.next().value, gen.next().value);",
+    "response": "Generator ile Fibonacci dizisi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class CustomError(Exception):\n    def __init__(self, mesaj, kod):\n        super().__init__(mesaj)\n        self.kod = kod\n\nraise CustomError('Gecersiz islem', 400)",
+    "response": "Ozel hata sinifi tanimi ve kullanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function assert(condition: any): asserts condition {\n    if (!condition) throw new Error();\n}\nfunction double(x: number | string): number {\n    assert(typeof x === \"number\");\n    return x * 2;\n}",
+    "response": "Type guard ile tip daraltma.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Singleton {\n    private static Singleton instance;\n    private Singleton() {}\n    public static synchronized Singleton getInstance() {\n        if (instance == null) instance = new Singleton();\n        return instance;\n    }\n}",
+    "response": "Singleton tasarim deseni.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const promise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    Math.random() > 0.5 ? resolve('Basarili') : reject('Hata');\n  }, 1000);\n});\npromise.then(console.log).catch(console.error);",
+    "response": "Promise ile asenkron islem.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public interface Sekil {\n    double alan();\n}\npublic class Daire implements Sekil {\n    private double r;\n    public Daire(double r) { this.r = r; }\n    public double alan() { return Math.PI * r * r; }\n}",
+    "response": "Interface ve implements ile soyutlama.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "func topla(a int, b int) int {\n    return a + b\n}",
+    "response": "Go fonksiyon tanimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import heapq\nsayilar = [3, 1, 4, 1, 5, 9, 2, 6]\nheapq.heapify(sayilar)\nprint(heapq.heappop(sayilar))",
+    "response": "heapq ile oncelik kuyrugu (min-heap).",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "for {\n    // sonsuz dongu\n    break\n}",
+    "response": "Go sonsuz dongu ve break.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from datetime import datetime\ndef tarih_farki(t1, t2, fmt='%Y-%m-%d'):\n    return abs((datetime.strptime(t1, fmt) - datetime.strptime(t2, fmt)).days)",
+    "response": "Iki tarih arasindaki gun farkini hesaplama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from collections import namedtuple\nNokta = namedtuple('Nokta', ['x', 'y'])\np = Nokta(10, 20)\nprint(p.x, p.y, p[0], p[1])",
+    "response": "namedtuple ile basit veri nesnesi olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const obj1 = { a: 1, b: 2 };\nconst obj2 = { c: 3, ...obj1 };\nconsole.log(obj2);",
+    "response": "Spread operatoru ile nesne birlestirme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import json\ndata = {'isim': 'Ali', 'yas': 30}\njson_str = json.dumps(data, ensure_ascii=False, indent=2)",
+    "response": "JSON donusumu ve Turkce karakter destegi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import os\nfor kok, dizinler, dosyalar in os.walk('/projeler'):\n    for dosya in dosyalar:\n        if dosya.endswith('.py'):\n            print(os.path.join(kok, dosya))",
+    "response": "os.walk ile recursive dosya tarama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const numbers = [1, 2, 3, 4, 5];\nconst [first, second, ...rest] = numbers;\nconsole.log(first, second, rest);",
+    "response": "Destructuring ve rest operatoru.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "try:\n    risky_operation()\nexcept (ConnectionError, TimeoutError) as e:\n    print(f'Baglanti hatasi: {e}')\n    raise",
+    "response": "Hatayi loglayip yeniden firlatma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "s = {1, 2, 3, 4, 5}\nt = {4, 5, 6, 7, 8}\nprint(s | t, s & t, s - t, s ^ t)",
+    "response": "Kume islemleri: birlesim, kesisim, fark ve simetrik fark.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from dataclasses import dataclass, field\nfrom typing import List\n\n@dataclass\nclass Sinif:\n    ad: str\n    ogrenciler: List[str] = field(default_factory=list)",
+    "response": "dataclass ile field default_factory kullanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT * FROM urunler ORDER BY fiyat DESC LIMIT 5;",
+    "response": "ORDER BY DESC ve LIMIT ile ilk 5.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import random\nimport string\ndef sifre_olustur(uzunluk=12):\n    karakterler = string.ascii_letters + string.digits\n    return ''.join(random.choice(karakterler) for _ in range(uzunluk))",
+    "response": "Rastgele sifre olusturma fonksiyonu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const nums = [1, 2, 3, 4, 5];\nconsole.log(nums.some(x => x > 3));\nconsole.log(nums.every(x => x > 0));\nconsole.log(nums.includes(3));",
+    "response": "some, every, includes metotlari.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Pair<K, V> {\n    private K key;\n    private V value;\n    public Pair(K key, V value) { this.key = key; this.value = value; }\n    public K getKey() { return key; }\n    public V getValue() { return value; }\n}\nPair<String, Integer> p = new Pair<>(\"Yas\", 30);",
+    "response": "Generic sinif tanimi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "def error_handler(func):\n    def wrapper(*args, **kwargs):\n        try:\n            return func(*args, **kwargs)\n        except Exception as e:\n            print(f'Hata: {e}')\n            return None\n    return wrapper",
+    "response": "Dekorator ile merkezi hata yonetimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "List<Integer> sayilar = Arrays.asList(1, 2, 3, 4, 5);\nint toplam = sayilar.stream()\n    .filter(n -> n % 2 == 0)\n    .mapToInt(n -> n * 2)\n    .sum();",
+    "response": "Stream API ile fonksiyonel islem.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "setTimeout(() => console.log('3 sn'), 3000);\nconst interval = setInterval(() => console.log('2 sn'), 2000);\nclearInterval(interval);",
+    "response": "setTimeout ve setInterval kullanimi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const memoize = (fn) => {\n  const cache = new Map();\n  return (...args) => {\n    const key = JSON.stringify(args);\n    if (cache.has(key)) return cache.get(key);\n    const result = fn(...args);\n    cache.set(key, result);\n    return result;\n  };\n};",
+    "response": "Memoization ile onbellekleme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import argparse\nparser = argparse.ArgumentParser(description='Islem')\nparser.add_argument('--input', required=True)\nparser.add_argument('-v', '--verbose', action='store_true')\nargs = parser.parse_args()",
+    "response": "argparse ile komut satiri argumani isleme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "ch := make(chan int, 3)\nch <- 1\nch <- 2\nch <- 3\nclose(ch)\nfor v := range ch {\n    fmt.Println(v)\n}",
+    "response": "Buffered channel ve range ile okuma.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from itertools import count, takewhile\ndef asal_mi(n):\n    return n > 1 and all(n % i != 0 for i in range(2, int(n**0.5) + 1))\nasallar = takewhile(lambda x: x < 50, filter(asal_mi, count(2)))\nprint(list(asallar))",
+    "response": "itertools ile sonsuz diziden asal sayi filtreleme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import secrets\ndef guvenli_sifre(uzunluk=16):\n    import string\n    alfabe = string.ascii_letters + string.digits\n    return ''.join(secrets.choice(alfabe) for _ in range(uzunluk))",
+    "response": "secrets modulu ile kriptografik guvenli sifre.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "@dataclass\nclass Kullanici:\n    isim: str\n    email: str\n    yas: int = 0",
+    "response": "dataclass ile veri sinifi otomatik olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from operator import itemgetter\nogrenciler = [{'ad': 'Ali', 'not': 85}, {'ad': 'Veli', 'not': 92}]\nsirali = sorted(ogrenciler, key=itemgetter('not'), reverse=True)",
+    "response": "itemgetter ile sozluk alanina gore siralama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class AttrDict:\n    def __init__(self, d):\n        self._d = d\n    def __getattr__(self, name):\n        val = self._d.get(name)\n        if isinstance(val, dict):\n            return AttrDict(val)\n        return val\n\nad = AttrDict({'user': {'name': 'Ali'}})\nprint(ad.user.name)",
+    "response": "AttrDict ile nokta notasyonlu sozluk erisimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import zipfile\nwith zipfile.ZipFile('arsiv.zip', 'w', zipfile.ZIP_DEFLATED) as zf:\n    zf.write('dosya.txt')",
+    "response": "zipfile ile ZIP arsivi olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Stack:\n    def __init__(self):\n        self.items = []\n    def push(self, item):\n        self.items.append(item)\n    def pop(self):\n        return self.items.pop() if self.items else None\n    def is_empty(self):\n        return len(self.items) == 0",
+    "response": "Yigin (stack) veri yapisi LIFO prensibiyle.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "List<String> isimler = Arrays.asList(\"Ali\", \"Ayse\");\nisimler.stream()\n    .filter(isim -> isim.startsWith(\"A\"))\n    .map(String::toUpperCase)\n    .forEach(System.out::println);",
+    "response": "Stream filter, map, forEach pipeline.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function identity<T>(arg: T): T {\n    return arg;\n}\nconst result = identity<string>(\"Merhaba\");",
+    "response": "Generic fonksiyon tip parametresi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public abstract class Hayvan {\n    public abstract void sesCikar();\n    public void uyu() { System.out.println(\"Uyuyor...\"); }\n}\npublic class Kedi extends Hayvan {\n    public void sesCikar() { System.out.println(\"Miyav\"); }\n}",
+    "response": "Abstract sinif ve kalitim.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "m := make(map[string]int)\nm[\"anahtar\"] = 42\nv, ok := m[\"anahtar\"]\nfmt.Println(v, ok)",
+    "response": "Map ve deger varlik kontrolu.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import re\ndef clean_text(text):\n    text = re.sub(r'<[^>]+>', '', text)\n    text = re.sub(r'\\s+', ' ', text)\n    return text.strip()",
+    "response": "Regex ile HTML temizleme ve metin duzeltme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT * FROM kullanicilar WHERE email LIKE '%@gmail.com';",
+    "response": "LIKE ile kalip esleme.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const arr = new Array(5).fill(0);\nconsole.log(arr);\nconst from = Array.from({ length: 5 }, (_, i) => i);",
+    "response": "Array.fill ve Array.from ile dizi olusturma.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const compose = (...fns) => (x) => fns.reduceRight((v, f) => f(v), x);\nconst add1 = x => x + 1;\nconst double = x => x * 2;\nconsole.log(compose(add1, double)(5));",
+    "response": "compose ile fonksiyon birlestirme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "for {\n    // sonsuz dongu\n    break\n}",
+    "response": "Go sonsuz dongu ve break.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "console.log('start');\nsetTimeout(() => console.log('timeout'), 0);\nPromise.resolve().then(() => console.log('promise'));\nconsole.log('end');",
+    "response": "Event Loop: senkron, microtask, macrotask sirasi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "console.log('start');\nsetTimeout(() => console.log('timeout'), 0);\nPromise.resolve().then(() => console.log('promise'));\nconsole.log('end');",
+    "response": "Event Loop: senkron, microtask, macrotask sirasi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "# if-else ternary\nyas = 20\ndurum = 'Resit' if yas >= 18 else 'Resit degil'\nprint(durum)",
+    "response": "Ternary operator ile kosullu atama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const set = new Set([1, 2, 2, 3, 3, 4]);\nconsole.log(set);\nconsole.log(set.has(2));\nconst map = new Map();\nmap.set('key1', 'value1');\nconsole.log(map.get('key1'));",
+    "response": "Set ve Map koleksiyonlari.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const json = JSON.stringify({ name: 'Ali', age: 30 }, null, 2);\nconst parsed = JSON.parse(json);\nconsole.log(parsed.name);",
+    "response": "JSON.stringify ve JSON.parse.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import json\nfrom http.server import HTTPServer, BaseHTTPRequestHandler\n\nclass Handler(BaseHTTPRequestHandler):\n    def do_GET(self):\n        self.send_response(200)\n        self.send_header('Content-type', 'application/json')\n        self.end_headers()\n        self.wfile.write(json.dumps({'durum': 'OK'}).encode())",
+    "response": "Yerlesik HTTP sunucusu ile JSON API.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Promise.all([\n  Promise.resolve(3),\n  Promise.resolve(42),\n]).then(values => console.log(values));",
+    "response": "Promise.all ile paralel islem.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from typing import Generator\n\ndef fibonacci_generator() -> Generator[int, None, None]:\n    a, b = 0, 1\n    while True:\n        yield a\n        a, b = b, a + b",
+    "response": "Sonsuz Fibonacci generatoru ile tip ipucu birlikte.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef inorder_traversal(root):\n    if root is None:\n        return []\n    return inorder_traversal(root.left) + [root.val] + inorder_traversal(root.right)",
+    "response": "Ikili agac ve inorder dolasma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Observable:\n    def __init__(self):\n        self._observers = []\n    def abone_ol(self, observer):\n        self._observers.append(observer)\n    def bildirim(self, *args):\n        for observer in self._observers:\n            observer(*args)",
+    "response": "Observer tasarim deseni ile olay bildirimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Merhaba\");\n    }\n}",
+    "response": "Java ana sinif ve main metodu.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Status = 'active' | 'inactive' | 'pending';\nconst current: Status = 'active';",
+    "response": "Union type ile kisitli deger tanimi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT AVG(fiyat) FROM urunler WHERE kategori = \"elektronik\";",
+    "response": "AVG ile ortalama hesaplama.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Path path = Paths.get(\"dosya.txt\");\nList<String> satirlar = Files.readAllLines(path);\nFiles.write(path, \"Yeni icerik\".getBytes(), StandardOpenOption.APPEND);",
+    "response": "Java NIO ile dosya okuma/yazma.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import os\nenv = os.environ.get('APP_ENV', 'development')\ndebug = os.environ.get('DEBUG', 'false').lower() == 'true'",
+    "response": "Ortam degiskenlerine erisim ve varsayilan deger.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function identity<T>(arg: T): T {\n    return arg;\n}\nconst result = identity<string>(\"Merhaba\");",
+    "response": "Generic fonksiyon tip parametresi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from datetime import datetime, timedelta\nsimdi = datetime.now()\nyarin = simdi + timedelta(days=1)\nprint(simdi.strftime('%d/%m/%Y'))",
+    "response": "datetime ile tarih/saat islemleri ve bicimlendirme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Merhaba\")\n}",
+    "response": "Go temel program yapisi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "enum Yon {\n    YUKARI = \"UP\",\n    ASAGI = \"DOWN\"\n}\nconst y: Yon = Yon.YUKARI;",
+    "response": "Enum ile sabit deger gruplari.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "ch := make(chan string)\ngo func() { ch <- \"Merhaba\" }()\nmsg := <-ch\nfmt.Println(msg)",
+    "response": "Channel ile goroutine iletisimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const user = { name: 'Ali', age: 30, city: 'Istanbul' };\nconst { name, age } = user;\nconsole.log(name, age);",
+    "response": "Destructuring ile nesne alanlarina erisim.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const object1 = { a: 1, b: 2 };\nObject.freeze(object1);\nobject1.a = 3;\nconsole.log(object1.a);\n\nconst object2 = { x: 1 };\nObject.seal(object2);",
+    "response": "Object.freeze ve Object.seal kullanimi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const throttle = (fn, limit) => {\n  let inThrottle = false;\n  return (...args) => {\n    if (!inThrottle) {\n      fn(...args);\n      inThrottle = true;\n      setTimeout(() => inThrottle = false, limit);\n    }\n  };\n};",
+    "response": "Throttle deseni ile frekans sinirlama.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import re\ndef tokenize(text):\n    return re.findall(r\"\\w+(?:'\\w+)?|[^\\w\\s]\", text)\nprint(tokenize(\"Ali'nin arabasi cok guzeldi.\"))",
+    "response": "Regex ile metni tokenlere ayirma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "int[] sayilar = {5, 2, 8, 1, 9};\nArrays.sort(sayilar);\nint index = Arrays.binarySearch(sayilar, 8);",
+    "response": "Arrays.sort ve binarySearch.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type PartialUser = Partial<User>;\ntype ReadonlyUser = Readonly<User>;\ntype PickName = Pick<User, \"name\">;",
+    "response": "Utility tipleri ile tip donusumu.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Graph:\n    def __init__(self):\n        self.vertices = {}\n    def add_edge(self, u, v):\n        self.vertices.setdefault(u, []).append(v)\n        self.vertices.setdefault(v, []).append(u)\n    def bfs(self, start):\n        visited = set()\n        queue = [start]\n        while queue:\n            v = queue.pop(0)\n            if v not in visited:\n                visited.add(v)\n                queue.extend(n for n in self.vertices[v] if n not in visited)\n        return visited",
+    "response": "Cizge ve BFS algoritmasi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import asyncio\nimport aiofiles\n\nasync def dosya_oku(dosya_adi):\n    async with aiofiles.open(dosya_adi, 'r') as f:\n        return await f.read()",
+    "response": "aiofiles ile asenkron dosya okuma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const obj1 = { a: 1, b: 2 };\nconst obj2 = { c: 3, ...obj1 };\nconsole.log(obj2);",
+    "response": "Spread operatoru ile nesne birlestirme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const nums = [1, 2, 3, 4, 5];\nconsole.log(nums.some(x => x > 3));\nconsole.log(nums.every(x => x > 0));\nconsole.log(nums.includes(3));",
+    "response": "some, every, includes metotlari.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from collections import OrderedDict\nod = OrderedDict()\nod['bir'] = 1\nod['iki'] = 2\nod.move_to_end('bir')",
+    "response": "OrderedDict ile sira koruyan sozluk.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const obj1 = { a: 1, b: 2 };\nconst obj2 = { c: 3, ...obj1 };\nconsole.log(obj2);",
+    "response": "Spread operatoru ile nesne birlestirme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "int[] dizi = {1, 2, 3};\nint[][] matris = {{1, 2}, {3, 4}};\nfor (int[] satir : matris) {\n    for (int eleman : satir) System.out.print(eleman);\n}",
+    "response": "Tek ve cok boyutlu diziler.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Yazdirici interface {\n    Yazdir() string\n}\ntype Metin struct{ Icerik string }\nfunc (m Metin) Yazdir() string { return m.Icerik }",
+    "response": "Interface ve structural typing.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "old_list = [1, 2, 3]\nnew_list = old_list\nnew_list.append(4)\nprint(old_list)\n# Dogrusu:\nimport copy\nnew_list = copy.deepcopy(old_list)",
+    "response": "Python referans semantigi ve deepcopy kullanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "try:\n    risky_operation()\nexcept (ConnectionError, TimeoutError) as e:\n    print(f'Baglanti hatasi: {e}')\n    raise",
+    "response": "Hatayi loglayip yeniden firlatma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import time\n\ndef cronometre(func):\n    def wrapper(*args, **kwargs):\n        basla = time.perf_counter()\n        sonuc = func(*args, **kwargs)\n        gecen = time.perf_counter() - basla\n        print(f'{func.__name__}: {gecen:.4f}s')\n        return sonuc\n    return wrapper",
+    "response": "Dekorator ile fonksiyon calisma suresi olcumu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from collections import namedtuple\nNokta = namedtuple('Nokta', ['x', 'y'])\np = Nokta(10, 20)\nprint(p.x, p.y, p[0], p[1])",
+    "response": "namedtuple ile basit veri nesnesi olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import json\nfrom http.server import HTTPServer, BaseHTTPRequestHandler\n\nclass Handler(BaseHTTPRequestHandler):\n    def do_GET(self):\n        self.send_response(200)\n        self.send_header('Content-type', 'application/json')\n        self.end_headers()\n        self.wfile.write(json.dumps({'durum': 'OK'}).encode())",
+    "response": "Yerlesik HTTP sunucusu ile JSON API.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from string import Template\nt = Template('Merhaba $isim')\nprint(t.substitute(isim='Dunya'))\nprint(t.safe_substitute())",
+    "response": "string.Template ile metin sablonu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const throttle = (fn, limit) => {\n  let inThrottle = false;\n  return (...args) => {\n    if (!inThrottle) {\n      fn(...args);\n      inThrottle = true;\n      setTimeout(() => inThrottle = false, limit);\n    }\n  };\n};",
+    "response": "Throttle deseni ile frekans sinirlama.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const memoize = (fn) => {\n  const cache = new Map();\n  return (...args) => {\n    const key = JSON.stringify(args);\n    if (cache.has(key)) return cache.get(key);\n    const result = fn(...args);\n    cache.set(key, result);\n    return result;\n  };\n};",
+    "response": "Memoization ile onbellekleme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from statistics import mean, median, stdev, mode\npuanlar = [85, 92, 78, 90, 88, 85, 95, 70]\nprint(f'Mean: {mean(puanlar):.2f}, Median: {median(puanlar)}')",
+    "response": "statistics modulu ile istatistiksel hesaplama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Person {\n  constructor(name, age) {\n    this.name = name;\n    this.age = age;\n  }\n  greet() {\n    return \"Merhaba, ben \" + this.name;\n  }\n}\nconst ali = new Person('Ali', 30);",
+    "response": "ES6 class ve constructor yapisi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "console.log(Object.keys({ a: 1, b: 2 }));\nconsole.log(Object.values({ a: 1, b: 2 }));\nconsole.log(Object.entries({ a: 1, b: 2 }));",
+    "response": "Object.keys, values ve entries metotlari.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import glob\npy_files = glob.glob('**/*.py', recursive=True)\nprint(f'{len(py_files)} Python dosyasi')",
+    "response": "glob ile recursive dosya arama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function sum(a, b, ...rest) {\n  return [a, b, ...rest].reduce((acc, n) => acc + n, 0);\n}\nconsole.log(sum(1, 2, 3, 4, 5));",
+    "response": "Rest parametresi ve reduce ile toplam.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "enum Yon {\n    YUKARI = \"UP\",\n    ASAGI = \"DOWN\"\n}\nconst y: Yon = Yon.YUKARI;",
+    "response": "Enum ile sabit deger gruplari.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from collections import OrderedDict\nod = OrderedDict()\nod['bir'] = 1\nod['iki'] = 2\nod.move_to_end('bir')",
+    "response": "OrderedDict ile sira koruyan sozluk.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Tek extends Thread {\n    public void run() {\n        for (int i = 0; i < 5; i++) System.out.println(i);\n    }\n    public static void main(String[] args) {\n        Tek t = new Tek();\n        t.start();\n    }\n}",
+    "response": "Thread sinifi genisletme ve start.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import timeit\nolcum = timeit.timeit('sum(range(100))', number=10000)\nprint(f'Sure: {olcum:.4f}s')",
+    "response": "timeit ile kod performans olcumu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const fetchData = async () => {\n  const response = await fetch('https://api.example.com');\n  const data = await response.json();\n  return data;\n};",
+    "response": "Async/await ile asenkron API cagrisi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import subprocess\nsonuc = subprocess.run(['ping', '-c', '3', 'google.com'], capture_output=True, text=True)\nprint(sonuc.stdout)",
+    "response": "subprocess ile sistem komutu calistirma ve cikti yakalama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import os\nenv = os.environ.get('APP_ENV', 'development')\ndebug = os.environ.get('DEBUG', 'false').lower() == 'true'",
+    "response": "Ortam degiskenlerine erisim ve varsayilan deger.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Singleton {\n    private static Singleton instance;\n    private Singleton() {}\n    public static synchronized Singleton getInstance() {\n        if (instance == null) instance = new Singleton();\n        return instance;\n    }\n}",
+    "response": "Singleton tasarim deseni.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const url = new URL('https://api.example.com/search');\nurl.searchParams.set('q', 'test');\nconsole.log(url.toString());",
+    "response": "URL objesi ile sorgu parametresi yonetimi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "DELETE FROM siparisler WHERE durum = 'iptal';",
+    "response": "DELETE ile kayit silme.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import re\ndef clean_text(text):\n    text = re.sub(r'<[^>]+>', '', text)\n    text = re.sub(r'\\s+', ' ', text)\n    return text.strip()",
+    "response": "Regex ile HTML temizleme ve metin duzeltme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Path path = Paths.get(\"dosya.txt\");\nList<String> satirlar = Files.readAllLines(path);\nFiles.write(path, \"Yeni icerik\".getBytes(), StandardOpenOption.APPEND);",
+    "response": "Java NIO ile dosya okuma/yazma.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Singleton {\n    private static Singleton instance;\n    private Singleton() {}\n    public static synchronized Singleton getInstance() {\n        if (instance == null) instance = new Singleton();\n        return instance;\n    }\n}",
+    "response": "Singleton tasarim deseni.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "names = ['Ali', 'Veli', 'Ayse']\nscores = [85, 92, 78]\nfor name, score in zip(names, scores):\n    print(f'{name}: {score}')",
+    "response": "zip ile paralel liste dolasimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import shutil\nshutil.copy2('kaynak.txt', 'hedef.txt')\nshutil.copytree('proje/', 'proje_yedek/', dirs_exist_ok=True)",
+    "response": "shutil ile dosya ve dizin kopyalama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "temp_c = 30\ntemp_f = (temp_c * 9/5) + 32\nprint(f'{temp_c}C = {temp_f}F')",
+    "response": "Santigrat-Fahrenheit donusumu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "console.log('start');\nsetTimeout(() => console.log('timeout'), 0);\nPromise.resolve().then(() => console.log('promise'));\nconsole.log('end');",
+    "response": "Event Loop: senkron, microtask, macrotask sirasi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const promise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    Math.random() > 0.5 ? resolve('Basarili') : reject('Hata');\n  }, 1000);\n});\npromise.then(console.log).catch(console.error);",
+    "response": "Promise ile asenkron islem.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "switch x {\ncase 1: fmt.Println(\"Bir\")\ncase 2: fmt.Println(\"Iki\")\ndefault: fmt.Println(\"Diger\")\n}",
+    "response": "Go switch-case yapisi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "console.log(Object.keys({ a: 1, b: 2 }));\nconsole.log(Object.values({ a: 1, b: 2 }));\nconsole.log(Object.entries({ a: 1, b: 2 }));",
+    "response": "Object.keys, values ve entries metotlari.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from statistics import mean, median, stdev, mode\npuanlar = [85, 92, 78, 90, 88, 85, 95, 70]\nprint(f'Mean: {mean(puanlar):.2f}, Median: {median(puanlar)}')",
+    "response": "statistics modulu ile istatistiksel hesaplama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import asyncio\n\nasync def sayac(isim, n):\n    for i in range(n):\n        print(f'{isim}: {i}')\n        await asyncio.sleep(0.5)\n\nasyncio.run(sayac('A', 3))",
+    "response": "Asenkron saya ile await kullanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "async function fetchData(url: string): Promise<Response> {\n    const response = await fetch(url);\n    return response;\n}",
+    "response": "Async fonksiyon tip tanimi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "List<String> list = new ArrayList<>();\nlist.add(\"Elma\");\nfor (String s : list) {\n    System.out.println(s);\n}",
+    "response": "ArrayList ve for-each dongusu.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const handler = {\n  get(target, prop) {\n    return prop in target ? target[prop] : 'Bilinmiyor';\n  }\n};\nconst proxy = new Proxy({ name: 'Ali' }, handler);",
+    "response": "Proxy ile varsayilan deger donme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Optional<String> isim = Optional.ofNullable(null);\nString sonuc = isim.orElse(\"Varsayilan\");\nSystem.out.println(sonuc);",
+    "response": "Optional ile null guvenli islem.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "ch := make(chan string)\ngo func() { ch <- \"Merhaba\" }()\nmsg := <-ch\nfmt.Println(msg)",
+    "response": "Channel ile goroutine iletisimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from itertools import count, takewhile\ndef asal_mi(n):\n    return n > 1 and all(n % i != 0 for i in range(2, int(n**0.5) + 1))\nasallar = takewhile(lambda x: x < 50, filter(asal_mi, count(2)))\nprint(list(asallar))",
+    "response": "itertools ile sonsuz diziden asal sayi filtreleme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import glob\npy_files = glob.glob('**/*.py', recursive=True)\nprint(f'{len(py_files)} Python dosyasi')",
+    "response": "glob ile recursive dosya arama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public static int topla(int a, int b) { return a + b; }\npublic static double topla(double a, double b) { return a + b; }",
+    "response": "Method overloading ile cesitlilik.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const double = (x) => x * 2;\nconst numbers = [1, 2, 3, 4, 5];\nconst doubled = numbers.map(double);\nconsole.log(doubled);",
+    "response": "Arrow function ve map ile dizi donusumu.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "switch x {\ncase 1: fmt.Println(\"Bir\")\ncase 2: fmt.Println(\"Iki\")\ndefault: fmt.Println(\"Diger\")\n}",
+    "response": "Go switch-case yapisi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public interface Sekil {\n    double alan();\n}\npublic class Daire implements Sekil {\n    private double r;\n    public Daire(double r) { this.r = r; }\n    public double alan() { return Math.PI * r * r; }\n}",
+    "response": "Interface ve implements ile soyutlama.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from difflib import SequenceMatcher\nstr1 = 'merhaba dunya'\nstr2 = 'merhaba dunya'\nprint(SequenceMatcher(None, str1, str2).ratio())",
+    "response": "SequenceMatcher ile metin benzerlik orani.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from fractions import Fraction\nf1 = Fraction(1, 3)\nf2 = Fraction(2, 5)\nprint(f1 + f2)",
+    "response": "Fraction ile kesirli sayi aritmetigi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function sum(a, b, ...rest) {\n  return [a, b, ...rest].reduce((acc, n) => acc + n, 0);\n}\nconsole.log(sum(1, 2, 3, 4, 5));",
+    "response": "Rest parametresi ve reduce ile toplam.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type PartialUser = Partial<User>;\ntype ReadonlyUser = Readonly<User>;\ntype PickName = Pick<User, \"name\">;",
+    "response": "Utility tipleri ile tip donusumu.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "sayilar = [2, 4, 6, 8]\nprint(all(x % 2 == 0 for x in sayilar))\nprint(any(x > 10 for x in sayilar))",
+    "response": "all ve any ile kosul kontrolleri.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "List<Integer> sayilar = Arrays.asList(1, 2, 3, 4, 5);\nint toplam = sayilar.stream()\n    .filter(n -> n % 2 == 0)\n    .mapToInt(n -> n * 2)\n    .sum();",
+    "response": "Stream API ile fonksiyonel islem.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from collections import Counter\nkelimeler = ['elma', 'armut', 'elma', 'kiraz', 'elma']\nsayac = Counter(kelimeler)\nprint(sayac.most_common(2))",
+    "response": "Counter ile frekans analizi ve en sik tekrarlananlar.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from functools import reduce\n\nsayilar = [1, 2, 3, 4, 5]\ncarpim = reduce(lambda x, y: x * y, sayilar)",
+    "response": "reduce ile tum elemanlari isleme tabi tutma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "sayilar := []int{1, 2, 3, 4, 5}\nfor i, sayi := range sayilar {\n    fmt.Printf(\"%d: %d\\n\", i, sayi)\n}",
+    "response": "Slice ve range ile dolasim.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT isim, SUM(tutar) FROM satislar GROUP BY isim;",
+    "response": "SUM ile toplam deger hesaplama.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Merhaba\");\n    }\n}",
+    "response": "Java ana sinif ve main metodu.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function counter() {\n  let count = 0;\n  return function() {\n    count++;\n    return count;\n  };\n}\nconst myCounter = counter();\nconsole.log(myCounter());",
+    "response": "Closure ile ozel sayac.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "go func() {\n    fmt.Println(\"Goroutine\")\n}()",
+    "response": "Goroutine ile hafif thread baslatma.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "enum Yon {\n    YUKARI = \"UP\",\n    ASAGI = \"DOWN\"\n}\nconst y: Yon = Yon.YUKARI;",
+    "response": "Enum ile sabit deger gruplari.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "try {\n  throw new Error('Hata');\n} catch (error) {\n  console.error(error.message);\n} finally {\n  console.log('Her zaman');\n}",
+    "response": "try-catch-finally ile hata yonetimi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from pathlib import Path\n\ndef organize_directory(path_str):\n    p = Path(path_str)\n    for file in p.iterdir():\n        if file.is_file():\n            ext = file.suffix[1:] or 'no_ext'\n            target_dir = p / ext\n            target_dir.mkdir(exist_ok=True)\n            file.rename(target_dir / file.name)",
+    "response": "Dosyalari uzantilarina gore dizinlere ayirma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from pathlib import Path\np = Path('/data/config.json')\nprint(p.parent, p.stem, p.suffix)",
+    "response": "pathlib ile dosya yolu bilesenlerine erisim.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const json = JSON.stringify({ name: 'Ali', age: 30 }, null, 2);\nconst parsed = JSON.parse(json);\nconsole.log(parsed.name);",
+    "response": "JSON.stringify ve JSON.parse.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from dataclasses import dataclass, field\nfrom typing import List\n\n@dataclass\nclass Sinif:\n    ad: str\n    ogrenciler: List[str] = field(default_factory=list)",
+    "response": "dataclass ile field default_factory kullanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from typing import Generator\n\ndef fibonacci_generator() -> Generator[int, None, None]:\n    a, b = 0, 1\n    while True:\n        yield a\n        a, b = b, a + b",
+    "response": "Sonsuz Fibonacci generatoru ile tip ipucu birlikte.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "try (BufferedReader br = new BufferedReader(new FileReader(\"dosya.txt\"))) {\n    br.readLine();\n} catch (IOException e) {\n    e.printStackTrace();\n}",
+    "response": "Try-with-resources ile otomatik kaynak yonetimi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from typing import Final\nMAX_RETRY: Final = 3\nDEFAULT_PORT: Final = 8080",
+    "response": "Final ile sabit degisken tanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "go func() {\n    fmt.Println(\"Goroutine\")\n}()",
+    "response": "Goroutine ile hafif thread baslatma.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from functools import total_ordering\n\n@total_ordering\nclass Ogrenci:\n    def __init__(self, ad, notu):\n        self.ad = ad\n        self.notu = notu\n    def __eq__(self, other):\n        return self.notu == other.notu\n    def __lt__(self, other):\n        return self.notu < other.notu",
+    "response": "total_ordering ile karsilastirma operatorleri.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "'Hello World'.includes('World');\n'Hello World'.startsWith('Hello');\n'Hello World'.endsWith('World');",
+    "response": "String includes, startsWith, endsWith metotlari.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from enum import Enum, auto\n\nclass Durum(Enum):\n    BEKLIYOR = auto()\n    ISLENIYOR = auto()\n    HATA = auto()",
+    "response": "Enum ile adlandirilmis sabit degerler olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const numbers = [1, 2, 3, 4, 5];\nconst evens = numbers.filter(n => n % 2 === 0);\nconst sum = numbers.reduce((acc, n) => acc + n, 0);\nconsole.log(evens, sum);",
+    "response": "filter ve reduce ile dizi isleme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Counter {\n    private int count = 0;\n    public synchronized void increment() { count++; }\n    public synchronized int getCount() { return count; }\n}",
+    "response": "synchronized ile thread guvenligi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import \"sort\"\nsort.Ints([]int{3, 1, 2})",
+    "response": "sort.Ints ile siralama.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import asyncio\nasync def main():\n    loop = asyncio.get_running_loop()\n    result = await loop.run_in_executor(None, lambda: 'bloklayici islem')\n    return result\nasyncio.run(main())",
+    "response": "run_in_executor ile bloklayici kodu asenkron calistirma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import weakref\nclass BuyukNesne: pass\nobj = BuyukNesne()\nref = weakref.ref(obj)\nprint(ref())\ndel obj\nprint(ref())",
+    "response": "weakref ile zayif referans ve GC izleme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "old_list = [1, 2, 3]\nnew_list = old_list\nnew_list.append(4)\nprint(old_list)\n# Dogrusu:\nimport copy\nnew_list = copy.deepcopy(old_list)",
+    "response": "Python referans semantigi ve deepcopy kullanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Map<String, Integer> yaslar = new HashMap<>();\nyaslar.put(\"Ali\", 30);\nyaslar.put(\"Ayse\", 25);\nfor (Map.Entry<String, Integer> e : yaslar.entrySet()) {\n    System.out.println(e.getKey() + \": \" + e.getValue());\n}",
+    "response": "HashMap ve entrySet ile dolasim.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function* fibonacci() {\n  let a = 0, b = 1;\n  while (true) {\n    yield a;\n    [a, b] = [b, a + b];\n  }\n}\nconst gen = fibonacci();\nconsole.log(gen.next().value, gen.next().value);",
+    "response": "Generator ile Fibonacci dizisi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class CustomException extends Exception {\n    public CustomException(String msg) { super(msg); }\n}\nthrow new CustomException(\"Ozel hata\");",
+    "response": "Ozel exception sinifi tanimi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT * FROM kullanicilar WHERE email LIKE '%@gmail.com';",
+    "response": "LIKE ile kalip esleme.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "var isim string = \"Ali\"\nyas := 30\nfmt.Printf(\"%s %d yasinda\", isim, yas)",
+    "response": "var ve := ile degisken bildirimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const obj = { a: 1, b: 2, c: 3 };\nfor (const [key, value] of Object.entries(obj)) {\n  console.log(key, value);\n}",
+    "response": "Object.entries ile nesne dolasimi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Point struct { X, Y float64 }\nfunc (p Point) Distance() float64 {\n    return math.Sqrt(p.X*p.X + p.Y*p.Y)\n}",
+    "response": "Struct metot tanimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Kare {\n    private int kenar;\n    public Kare(int kenar) { this.kenar = kenar; }\n    public int alan() { return kenar * kenar; }\n    public int getKenar() { return kenar; }\n    public void setKenar(int kenar) { this.kenar = kenar; }\n}",
+    "response": "Kapsulleme ile private alan ve getter/setter.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Merhaba\")\n}",
+    "response": "Go temel program yapisi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import timeit\nolcum = timeit.timeit('sum(range(100))', number=10000)\nprint(f'Sure: {olcum:.4f}s')",
+    "response": "timeit ile kod performans olcumu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const promise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    Math.random() > 0.5 ? resolve('Basarili') : reject('Hata');\n  }, 1000);\n});\npromise.then(console.log).catch(console.error);",
+    "response": "Promise ile asenkron islem.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import math\ndef solve_quadratic(a, b, c):\n    delta = b**2 - 4*a*c\n    if delta < 0: return []\n    elif delta == 0: return [-b / (2*a)]\n    else: return [(-b + math.sqrt(delta)) / (2*a), (-b - math.sqrt(delta)) / (2*a)]",
+    "response": "Ikinci derece denklem cozumu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "IntStream.rangeClosed(1, 10)\n    .filter(n -> n % 2 == 0)\n    .map(n -> n * n)\n    .average()\n    .ifPresent(System.out::println);",
+    "response": "IntStream sayisal islemler.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Tek extends Thread {\n    public void run() {\n        for (int i = 0; i < 5; i++) System.out.println(i);\n    }\n    public static void main(String[] args) {\n        Tek t = new Tek();\n        t.start();\n    }\n}",
+    "response": "Thread sinifi genisletme ve start.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Person {\n  constructor(name, age) {\n    this.name = name;\n    this.age = age;\n  }\n  greet() {\n    return \"Merhaba, ben \" + this.name;\n  }\n}\nconst ali = new Person('Ali', 30);",
+    "response": "ES6 class ve constructor yapisi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const fetchData = async () => {\n  const response = await fetch('https://api.example.com');\n  const data = await response.json();\n  return data;\n};",
+    "response": "Async/await ile asenkron API cagrisi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "int[] sayilar = {5, 2, 8, 1, 9};\nArrays.sort(sayilar);\nint index = Arrays.binarySearch(sayilar, 8);",
+    "response": "Arrays.sort ve binarySearch.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class CustomArray extends Array {\n  get first() { return this[0]; }\n  get last() { return this[this.length - 1]; }\n}\nconst arr = new CustomArray(1, 2, 3);",
+    "response": "Array extension ve getter ozellik.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const double = (x) => x * 2;\nconst numbers = [1, 2, 3, 4, 5];\nconst doubled = numbers.map(double);\nconsole.log(doubled);",
+    "response": "Arrow function ve map ile dizi donusumu.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "x := 42\np := &x\nfmt.Println(*p)\n*p = 21\nfmt.Println(x)",
+    "response": "Pointer kullanimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "# if-else ternary\nyas = 20\ndurum = 'Resit' if yas >= 18 else 'Resit degil'\nprint(durum)",
+    "response": "Ternary operator ile kosullu atama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "ch := make(chan int, 3)\nch <- 1\nch <- 2\nch <- 3\nclose(ch)\nfor v := range ch {\n    fmt.Println(v)\n}",
+    "response": "Buffered channel ve range ile okuma.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);\nconst add1 = x => x + 1;\nconst double = x => x * 2;\nconst add1ThenDouble = pipe(add1, double);\nconsole.log(add1ThenDouble(5));",
+    "response": "pipe ile fonksiyon birlestirme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "List<Integer> sayilar = Arrays.asList(1, 2, 3, 4, 5);\nint toplam = sayilar.stream()\n    .filter(n -> n % 2 == 0)\n    .mapToInt(n -> n * 2)\n    .sum();",
+    "response": "Stream API ile fonksiyonel islem.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Point struct { X, Y float64 }\nfunc (p Point) Distance() float64 {\n    return math.Sqrt(p.X*p.X + p.Y*p.Y)\n}",
+    "response": "Struct metot tanimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const numbers = [1, 2, 3, 4, 5];\nconst evens = numbers.filter(n => n % 2 === 0);\nconst sum = numbers.reduce((acc, n) => acc + n, 0);\nconsole.log(evens, sum);",
+    "response": "filter ve reduce ile dizi isleme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const compose = (...fns) => (x) => fns.reduceRight((v, f) => f(v), x);\nconst add1 = x => x + 1;\nconst double = x => x * 2;\nconsole.log(compose(add1, double)(5));",
+    "response": "compose ile fonksiyon birlestirme.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "def fibonacci(n):\n    a, b = 0, 1\n    for _ in range(n):\n        yield a\n        a, b = b, a + b",
+    "response": "Fibonacci generatoru, yield ile degerleri tembel olarak uretir.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "CREATE INDEX idx_email ON kullanicilar(email);",
+    "response": "CREATE INDEX ile indeks olusturma.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import asyncio\nasync def main():\n    loop = asyncio.get_running_loop()\n    result = await loop.run_in_executor(None, lambda: 'bloklayici islem')\n    return result\nasyncio.run(main())",
+    "response": "run_in_executor ile bloklayici kodu asenkron calistirma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const numbers: number[] = [1, 2, 3];\nconst doubled: number[] = numbers.map(x => x * 2);",
+    "response": "Dizi tipi ve map donusumu.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "sayilar = [10, 25, 30, 45, 50]\nbes_kati = list(filter(lambda x: x % 5 == 0, sayilar))\nkareler = list(map(lambda x: x ** 2, sayilar))",
+    "response": "filter ve map ile fonksiyonel donusum.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const pair = [{ a: 1 }, { a: 2 }];\nconsole.log(pair.find(x => x.a > 1));\nconsole.log(pair.findIndex(x => x.a > 1));",
+    "response": "find ve findIndex ile dizi arama.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Merhaba\");\n    }\n}",
+    "response": "Java ana sinif ve main metodu.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import sys\nprint(f'int: {sys.getsizeof(42)} bytes')\nprint(f'list: {sys.getsizeof([1,2,3])} bytes')",
+    "response": "sys.getsizeof ile bellek kullanimi olcumu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from urllib.parse import urlparse, parse_qs\nparsed = urlparse('https://example.com/path?q=test&page=1')\nprint(parsed.scheme, parsed.netloc, parsed.path)\nprint(parse_qs(parsed.query))",
+    "response": "URL ayristirma ve sorgu parametrelerini okuma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT * FROM urunler ORDER BY fiyat DESC LIMIT 5;",
+    "response": "ORDER BY DESC ve LIMIT ile ilk 5.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "try (BufferedReader br = new BufferedReader(new FileReader(\"dosya.txt\"))) {\n    br.readLine();\n} catch (IOException e) {\n    e.printStackTrace();\n}",
+    "response": "Try-with-resources ile otomatik kaynak yonetimi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT s.id, u.isim\nFROM siparisler s\nINNER JOIN kullanicilar u ON s.kullanici_id = u.id;",
+    "response": "INNER JOIN ile eslesen kayitlar.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> \"Sonuc\");\nfuture.thenAccept(System.out::println);",
+    "response": "CompletableFuture ile asenkron islem.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import weakref\nclass BuyukNesne: pass\nobj = BuyukNesne()\nref = weakref.ref(obj)\nprint(ref())\ndel obj\nprint(ref())",
+    "response": "weakref ile zayif referans ve GC izleme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from collections import deque\nkuyruk = deque(maxlen=5)\nfor i in range(10):\n    kuyruk.append(i)\n    print(list(kuyruk))",
+    "response": "deque ile sinirli boyutlu kuyruk yapisi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class CustomIterator:\n    def __init__(self, data):\n        self.data = data\n        self.index = 0\n    def __iter__(self):\n        return self\n    def __next__(self):\n        if self.index >= len(self.data):\n            raise StopIteration\n        val = self.data[self.index]\n        self.index += 1\n        return val",
+    "response": "Ozel iterator sinifi tanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "try:\n    result = 10 / 0\nexcept ZeroDivisionError as e:\n    print(f'Hata: {e}')\nfinally:\n    print('Her zaman calisir')",
+    "response": "Try-except-finally ile hata yonetimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Dogrulayici:\n    @staticmethod\n    def email_kontrol(email):\n        return '@' in email and '.' in email",
+    "response": "staticmethod ile bagimsiz yardimci metot.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public interface Sekil {\n    double alan();\n}\npublic class Daire implements Sekil {\n    private double r;\n    public Daire(double r) { this.r = r; }\n    public double alan() { return Math.PI * r * r; }\n}",
+    "response": "Interface ve implements ile soyutlama.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from functools import total_ordering\n\n@total_ordering\nclass Ogrenci:\n    def __init__(self, ad, notu):\n        self.ad = ad\n        self.notu = notu\n    def __eq__(self, other):\n        return self.notu == other.notu\n    def __lt__(self, other):\n        return self.notu < other.notu",
+    "response": "total_ordering ile karsilastirma operatorleri.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import atexit\n@atexit.register\ndef temizlik():\n    print('Kaynaklar temizleniyor...')",
+    "response": "atexit ile program sonlanisinda temizlik.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const numbers = [1, 2, 3, 4, 5];\nconst result = numbers\n  .filter(n => n > 2)\n  .map(n => n * 2)\n  .reduce((sum, n) => sum + n, 0);",
+    "response": "Method chaining ile pipeline.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "sayilar := []int{1, 2, 3, 4, 5}\nfor i, sayi := range sayilar {\n    fmt.Printf(\"%d: %d\\n\", i, sayi)\n}",
+    "response": "Slice ve range ile dolasim.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Descriptor:\n    def __get__(self, obj, objtype):\n        return obj._value\n    def __set__(self, obj, value):\n        if value < 0: raise ValueError('Negatif olamaz')\n        obj._value = value\nclass Urun:\n    fiyat = Descriptor()\n    def __init__(self, fiyat): self.fiyat = fiyat",
+    "response": "Descriptor protokolu ile ozellik dogrulama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Optional<String> isim = Optional.ofNullable(null);\nString sonuc = isim.orElse(\"Varsayilan\");\nSystem.out.println(sonuc);",
+    "response": "Optional ile null guvenli islem.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from pathlib import Path\n\ndef organize_directory(path_str):\n    p = Path(path_str)\n    for file in p.iterdir():\n        if file.is_file():\n            ext = file.suffix[1:] or 'no_ext'\n            target_dir = p / ext\n            target_dir.mkdir(exist_ok=True)\n            file.rename(target_dir / file.name)",
+    "response": "Dosyalari uzantilarina gore dizinlere ayirma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "def fibonacci_generator():\n    a, b = 0, 1\n    while True:\n        yield a\n        a, b = b, a + b\n\nfib = fibonacci_generator()\nilk_on = [next(fib) for _ in range(10)]",
+    "response": "Sonsuz Fibonacci generatoru.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Kullanici struct {\n    Isim string\n    Yas  int\n}\nu := Kullanici{Isim: \"Ali\", Yas: 30}\nfmt.Println(u.Isim)",
+    "response": "Struct tanimi ve kullanimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import signal\nimport sys\ndef sinyal_isle(signum, frame):\n    print('Sinyal alindi')\n    sys.exit(0)\nsignal.signal(signal.SIGINT, sinyal_isle)",
+    "response": "signal ile Ctrl+C yakalama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Map<String, Integer> yaslar = new HashMap<>();\nyaslar.put(\"Ali\", 30);\nyaslar.put(\"Ayse\", 25);\nfor (Map.Entry<String, Integer> e : yaslar.entrySet()) {\n    System.out.println(e.getKey() + \": \" + e.getValue());\n}",
+    "response": "HashMap ve entrySet ile dolasim.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const debounce = (fn, delay) => {\n  let timeout;\n  return (...args) => {\n    clearTimeout(timeout);\n    timeout = setTimeout(() => fn(...args), delay);\n  };\n};",
+    "response": "Debounce deseni ile fonksiyon cagrisi sinirlama.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from datetime import date\nbugun = date.today()\ndogum = date(1995, 5, 15)\nyas = bugun - dogum\nprint(f'Yas: {yas.days // 365}')",
+    "response": "date ile tarih farki hesaplama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from typing import List, Optional\n\ndef find_user(users: List[str], name: str) -> Optional[int]:\n    for i, user in enumerate(users):\n        if user == name:\n            return i\n    return None",
+    "response": "Type hints ile tip guvenli fonksiyon tanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "squared_even = [x**2 for x in range(20) if x % 2 == 0]",
+    "response": "Liste kavrayisi ile sartli ve donusumlu liste olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from pathlib import Path\np = Path('/data/config.json')\nprint(p.parent, p.stem, p.suffix)",
+    "response": "pathlib ile dosya yolu bilesenlerine erisim.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "var isim string = \"Ali\"\nyas := 30\nfmt.Printf(\"%s %d yasinda\", isim, yas)",
+    "response": "var ve := ile degisken bildirimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import atexit\n@atexit.register\ndef temizlik():\n    print('Kaynaklar temizleniyor...')",
+    "response": "atexit ile program sonlanisinda temizlik.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function counter() {\n  let count = 0;\n  return function() {\n    count++;\n    return count;\n  };\n}\nconst myCounter = counter();\nconsole.log(myCounter());",
+    "response": "Closure ile ozel sayac.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import argparse\nparser = argparse.ArgumentParser(description='Islem')\nparser.add_argument('--input', required=True)\nparser.add_argument('-v', '--verbose', action='store_true')\nargs = parser.parse_args()",
+    "response": "argparse ile komut satiri argumani isleme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "async function fetchData(url: string): Promise<Response> {\n    const response = await fetch(url);\n    return response;\n}",
+    "response": "Async fonksiyon tip tanimi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from functools import wraps\ndef log_arguments(func):\n    @wraps(func)\n    def wrapper(*args, **kwargs):\n        print(f'{func.__name__} cagrildi')\n        return func(*args, **kwargs)\n    return wrapper",
+    "response": "wraps dekoratoru ile fonksiyon metaverisi koruma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "async function fetchData(url: string): Promise<Response> {\n    const response = await fetch(url);\n    return response;\n}",
+    "response": "Async fonksiyon tip tanimi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from collections import ChainMap\nvar1 = {'a': 1, 'b': 2}\nvar2 = {'b': 3, 'c': 4}\nbirlesik = ChainMap(var1, var2)",
+    "response": "ChainMap ile birden cok sozlugu birlestirme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "List<String> list = new ArrayList<>();\nlist.add(\"Elma\");\nfor (String s : list) {\n    System.out.println(s);\n}",
+    "response": "ArrayList ve for-each dongusu.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "if x > 0 {\n    fmt.Println(\"Pozitif\")\n} else {\n    fmt.Println(\"Negatif\")\n}",
+    "response": "Go if-else yapisi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "@dataclass\nclass Kullanici:\n    isim: str\n    email: str\n    yas: int = 0",
+    "response": "dataclass ile veri sinifi otomatik olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function counter() {\n  let count = 0;\n  return function() {\n    count++;\n    return count;\n  };\n}\nconst myCounter = counter();\nconsole.log(myCounter());",
+    "response": "Closure ile ozel sayac.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Kullanici struct {\n    Isim string\n    Yas  int\n}\nu := Kullanici{Isim: \"Ali\", Yas: 30}\nfmt.Println(u.Isim)",
+    "response": "Struct tanimi ve kullanimi.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const nums = [1, 2, 3, 4, 5];\nconst evenSquares = nums.filter(n => n % 2 === 0).map(n => n * n);",
+    "response": "filter-map zinciri ile cift sayilarin karesi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from io import BytesIO\nfrom PIL import Image\nimport requests\nresponse = requests.get('https://example.com/image.jpg')\nimg = Image.open(BytesIO(response.content))\nimg.thumbnail((200, 200))",
+    "response": "BytesIO ile bellek ici resim isleme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from datetime import datetime\ndef tarih_farki(t1, t2, fmt='%Y-%m-%d'):\n    return abs((datetime.strptime(t1, fmt) - datetime.strptime(t2, fmt)).days)",
+    "response": "Iki tarih arasindaki gun farkini hesaplama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Stack:\n    def __init__(self):\n        self.items = []\n    def push(self, item):\n        self.items.append(item)\n    def pop(self):\n        return self.items.pop() if self.items else None\n    def is_empty(self):\n        return len(self.items) == 0",
+    "response": "Yigin (stack) veri yapisi LIFO prensibiyle.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const throttle = (fn, limit) => {\n  let inThrottle = false;\n  return (...args) => {\n    if (!inThrottle) {\n      fn(...args);\n      inThrottle = true;\n      setTimeout(() => inThrottle = false, limit);\n    }\n  };\n};",
+    "response": "Throttle deseni ile frekans sinirlama.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "def merge_dicts(d1, d2):\n    return {**d1, **d2}\n\ndef merge_dicts_v2(d1, d2):\n    return d1 | d2  # Python 3.9+",
+    "response": "Iki farkli yontemle sozluk birlestirme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class CustomException extends Exception {\n    public CustomException(String msg) { super(msg); }\n}\nthrow new CustomException(\"Ozel hata\");",
+    "response": "Ozel exception sinifi tanimi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function* fibonacci() {\n  let a = 0, b = 1;\n  while (true) {\n    yield a;\n    [a, b] = [b, a + b];\n  }\n}\nconst gen = fibonacci();\nconsole.log(gen.next().value, gen.next().value);",
+    "response": "Generator ile Fibonacci dizisi.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from datetime import date\nbugun = date.today()\ndogum = date(1995, 5, 15)\nyas = bugun - dogum\nprint(f'Yas: {yas.days // 365}')",
+    "response": "date ile tarih farki hesaplama.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT DISTINCT sehir FROM kullanicilar WHERE sehir IS NOT NULL;",
+    "response": "DISTINCT ile benzersiz degerler.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "sayilar := []int{1, 2, 3, 4, 5}\nfor i, sayi := range sayilar {\n    fmt.Printf(\"%d: %d\\n\", i, sayi)\n}",
+    "response": "Slice ve range ile dolasim.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const [name, setName] = useState('');\nuseEffect(() => {\n  console.log('Bilesen yuklendi');\n  return () => console.log('Temizlik');\n}, []);",
+    "response": "React useState ve useEffect hooklari.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const arr = new Array(5).fill(0);\nconsole.log(arr);\nconst from = Array.from({ length: 5 }, (_, i) => i);",
+    "response": "Array.fill ve Array.from ile dizi olusturma.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "StringBuilder sb = new StringBuilder();\nsb.append(\"Merhaba \");\nsb.append(\"Dunya\");\nSystem.out.println(sb.toString());",
+    "response": "StringBuilder ile verimli string birlestirme.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from datetime import datetime, timedelta\nsimdi = datetime.now()\nyarin = simdi + timedelta(days=1)\nprint(simdi.strftime('%d/%m/%Y'))",
+    "response": "datetime ile tarih/saat islemleri ve bicimlendirme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import sys\nif len(sys.argv) != 2:\n    print(f'Kullanim: {sys.argv[0]} <dosya>')\n    sys.exit(1)",
+    "response": "Komut satiri arguman kontrolu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import \"strings\"\nstrings.ToUpper(\"merhaba\")\nstrings.TrimSpace(\"  metin  \")",
+    "response": "strings paketi ile metin isleme.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "enum Renk {\n    KIRMIZI(0xFF0000), YESIL(0x00FF00);\n    private int hex;\n    Renk(int hex) { this.hex = hex; }\n    public int getHex() { return hex; }\n}",
+    "response": "Enum ile sabit deger ve constructor.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "LocalDateTime simdi = LocalDateTime.now();\nDateTimeFormatter fmt = DateTimeFormatter.ofPattern(\"dd/MM/yyyy\");\nSystem.out.println(simdi.format(fmt));",
+    "response": "LocalDateTime ve DateTimeFormatter.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from functools import partial\ndef us_al(taban, us):\n    return taban ** us\nkaresi = partial(us_al, us=2)\nprint(karesi(5))",
+    "response": "partial ile fonksiyon argumani sabitleme.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Yazdirici interface {\n    Yazdir() string\n}\ntype Metin struct{ Icerik string }\nfunc (m Metin) Yazdir() string { return m.Icerik }",
+    "response": "Interface ve structural typing.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from string import Template\nt = Template('Merhaba $isim')\nprint(t.substitute(isim='Dunya'))\nprint(t.safe_substitute())",
+    "response": "string.Template ile metin sablonu.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const double = (x) => x * 2;\nconst numbers = [1, 2, 3, 4, 5];\nconst doubled = numbers.map(double);\nconsole.log(doubled);",
+    "response": "Arrow function ve map ile dizi donusumu.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public abstract class Hayvan {\n    public abstract void sesCikar();\n    public void uyu() { System.out.println(\"Uyuyor...\"); }\n}\npublic class Kedi extends Hayvan {\n    public void sesCikar() { System.out.println(\"Miyav\"); }\n}",
+    "response": "Abstract sinif ve kalitim.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "def read_large_file(dosya_adi):\n    with open(dosya_adi, 'r', encoding='utf-8') as f:\n        for satir in f:\n            yield satir.strip()",
+    "response": "Generator ile buyuk dosyayi satir satir okuma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "squared_even = [x**2 for x in range(20) if x % 2 == 0]",
+    "response": "Liste kavrayisi ile sartli ve donusumlu liste olusturma.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from collections import deque\nkuyruk = deque(maxlen=5)\nfor i in range(10):\n    kuyruk.append(i)\n    print(list(kuyruk))",
+    "response": "deque ile sinirli boyutlu kuyruk yapisi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "StringBuilder sb = new StringBuilder();\nsb.append(\"Merhaba \");\nsb.append(\"Dunya\");\nSystem.out.println(sb.toString());",
+    "response": "StringBuilder ile verimli string birlestirme.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Pair<K, V> {\n    private K key;\n    private V value;\n    public Pair(K key, V value) { this.key = key; this.value = value; }\n    public K getKey() { return key; }\n    public V getValue() { return value; }\n}\nPair<String, Integer> p = new Pair<>(\"Yas\", 30);",
+    "response": "Generic sinif tanimi.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Point = { x: number; y: number };\nconst p: Point = { x: 10, y: 20 };",
+    "response": "Inline type ile nesne yapisi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import \"strings\"\nstrings.ToUpper(\"merhaba\")\nstrings.TrimSpace(\"  metin  \")",
+    "response": "strings paketi ile metin isleme.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Optional<String> isim = Optional.ofNullable(null);\nString sonuc = isim.orElse(\"Varsayilan\");\nSystem.out.println(sonuc);",
+    "response": "Optional ile null guvenli islem.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "interface User {\n    name: string;\n    age: number;\n    email?: string;\n}\nconst user: User = { name: \"Ali\", age: 30 };",
+    "response": "Interface ile nesne tipi tanimi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Symbol('id') === Symbol('id'); // false\nconst sym = Symbol('benzersiz');\nconst obj = { [sym]: 'gizli' };",
+    "response": "Symbol ile benzersiz anahtar olusturma.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT DISTINCT sehir FROM kullanicilar WHERE sehir IS NOT NULL;",
+    "response": "DISTINCT ile benzersiz degerler.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function log(value: unknown): void {\n    if (typeof value === \"string\") {\n        console.log(value.toUpperCase());\n    }\n}",
+    "response": "unknown tipi ile guvenli tip kontrolu.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function Person(name) {\n  this.name = name;\n}\nPerson.prototype.greet = function() {\n  return 'Merhaba ' + this.name;\n};\nnew Person('Ali').greet();",
+    "response": "Constructor fonksiyon ve prototype.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "import asyncio\n\nasync def sayac(isim, n):\n    for i in range(n):\n        print(f'{isim}: {i}')\n        await asyncio.sleep(0.5)\n\nasyncio.run(sayac('A', 3))",
+    "response": "Asenkron saya ile await kullanimi.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT AVG(fiyat) FROM urunler WHERE kategori = \"elektronik\";",
+    "response": "AVG ile ortalama hesaplama.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Props = { name: string; children?: React.ReactNode };\nfunction Card({ name, children }: Props) {\n    return null;\n}",
+    "response": "React props tip tanimi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Symbol('id') === Symbol('id'); // false\nconst sym = Symbol('benzersiz');\nconst obj = { [sym]: 'gizli' };",
+    "response": "Symbol ile benzersiz anahtar olusturma.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "public class Tek extends Thread {\n    public void run() {\n        for (int i = 0; i < 5; i++) System.out.println(i);\n    }\n    public static void main(String[] args) {\n        Tek t = new Tek();\n        t.start();\n    }\n}",
+    "response": "Thread sinifi genisletme ve start.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "type Status = 'active' | 'inactive' | 'pending';\nconst current: Status = 'active';",
+    "response": "Union type ile kisitli deger tanimi.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  }
+]

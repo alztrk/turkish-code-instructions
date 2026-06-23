@@ -4,20 +4,24 @@ Turkish instruction-code pairs for LLM fine-tuning. Each entry contains a Turkis
 
 ## Dataset Stats
 
-- **531 examples** across 7 formats and 10 languages
-- 271 KB JSONL format
-- Clean, runnable code with Turkish variable names
+- **24,705 examples** across 9 formats and 10 programming languages
+- 6.4 MB JSONL format
+- Clean, runnable code with Turkish variable names and enhanced explanations
 
 ## Structure
 
 ```
-output/dataset.jsonl       -- merged dataset (531 entries)
+output/dataset.jsonl       -- merged dataset (24,705 entries)
 submissions/               -- individual batch files (sources)
 templates/                 -- pattern templates for each language
   python.json, javascript.json, typescript.json, java.json
   cpp.json, go.json, rust.json, sql.json, web.json, algorithms.json
   knowledge/               -- language reference files
 dataset_card.json          -- HuggingFace metadata
+scripts/                   -- utility and generation scripts
+  augment.js               -- Turkish character augmentation script
+  validate.js              -- structural validation script
+  deduplicate.js           -- duplicate removal script
 ```
 
 ## Formats
