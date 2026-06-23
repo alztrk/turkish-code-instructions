@@ -1,0 +1,28 @@
+{
+  "name": "turkish-code-instructions",
+  "version": "1.0.0",
+  "description": "Türkçe kod açıklama veri seti — Turkish code instruction dataset for LLM fine-tuning",
+  "license": "MIT",
+  "language": ["tr", "en"],
+  "task_categories": ["text-generation", "code-generation"],
+  "tags": ["turkish", "code", "instruction-tuning", "synthetic"],
+  "pretty_name": "Turkish Code Instructions",
+  "size_categories": "1K<n<10K",
+  "source_datasets": ["original"],
+  "multilinguality": ["monolingual"],
+  "modality": ["text"],
+  "format": "jsonl",
+  "configs": [
+    {
+      "name": "default",
+      "description": "Full dataset with all formats and languages"
+    }
+  ],
+  "splits": [
+    {
+      "name": "train",
+      "num_bytes": 271186,
+      "num_examples": 531
+    }
+  ]
+}
