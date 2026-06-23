@@ -1,0 +1,122 @@
+{
+  "python": [
+    "Bir {topic} fonksiyonu yaz",
+    "Verilen {input_type}'den {output_type}'e donusturen bir fonksiyon olustur",
+    "{topic} yapmak icin sinif yaz",
+    "Bir dosyadaki {task} yapan kod yaz",
+    "{data_type} uzerinde {operation} islemi yapan fonksiyon yaz",
+    "{problem}'i cozen bir algoritma yaz",
+    "API'den {data} ceken bir fonksiyon yaz",
+    "Verilen {items}'i {filter_condition}'e gore filtreleyen kod yaz",
+    "{text}'i {format}'a donusturen fonksiyon yaz",
+    "{task} icin decorator yaz"
+  ],
+  "javascript": [
+    "Bir {topic} fonksiyonu yaz (JavaScript)",
+    "{array_operation} yapan bir fonksiyon yaz",
+    "DOM'da {task} yapan kod yaz",
+    "Bir API endpoint'ine {method} istegi atan fonksiyon yaz",
+    "{event}'i dinleyen bir event listener yaz",
+    "Verilen {data}'yi {format}'a ceviren fonksiyon yaz",
+    "{feature} ozelligini ekleyen bir React bileseni yaz",
+    "Promise ile {task} yapan fonksiyon yaz",
+    "LocalStorage'a {data} kaydedip okuyan fonksiyon yaz",
+    "{utility} icin bir yardimci fonksiyon yaz"
+  ],
+  "typescript": [
+    "Tip guvenli bir {topic} fonksiyonu yaz",
+    "Generic type kullanarak {task} yapan fonksiyon yaz",
+    "Interface tanimla ve {task} yapan bir sinif yaz",
+    "Enum kullanarak {task} cozen kod yaz",
+    "Type guard ile {task} yapan fonksiyon yaz",
+    "Utility type kullanarak {task} cozumu yaz",
+    "Async bir {topic} fonksiyonu yaz (TypeScript)",
+    "Mapped type ile {task} yapan tip tanimi yaz",
+    "Conditional type kullanarak {task} cozumu",
+    "Decorator ile {task} ekleyen kod yaz"
+  ],
+  "java": [
+    "Bir {topic} sinifi yaz (Java)",
+    "Stream API ile {task} yapan kod yaz",
+    "{pattern} tasarim desenini uygulayan kod yaz",
+    "Exception handling ile {task} cozen fonksiyon yaz",
+    "Thread kullanarak {task} yapan kod yaz",
+    "Bir REST controller'da {task} yapan endpoint yaz",
+    "Optional kullanarak {task} cozen kod yaz",
+    "{collection} uzerinde {operation} yapan kod yaz",
+    "Bir interface tanimla ve {task} yapan implementasyon yaz",
+    "Lambda expression ile {task} cozen kod yaz"
+  ],
+  "sql": [
+    "Bir {table_name} tablosu olusturan SQL sorgusu yaz",
+    "{table}'da {condition}'a gore veri ceken sorgu yaz",
+    "Iki tabloyu {join_type} ile birlestiren sorgu yaz",
+    "{table}'da {aggregate} islemi yapan sorgu yaz",
+    "Alt sorgu (subquery) ile {task} yapan SQL yaz",
+    "{table}'a {operation} yapan stored procedure yaz",
+    "View ile {task} cozen SQL sorgusu yaz",
+    "{table}'da {constraint} ekleyen SQL yaz",
+    "Transaction ile {task} yapan SQL blogu yaz",
+    "{table}'da index olusturan ve kullanan SQL yaz"
+  ],
+  "go": [
+    "Bir {topic} fonksiyonu yaz (Go)",
+    "Goroutine ile {task} yapan kod yaz",
+    "Channel kullanarak {task} cozen kod yaz",
+    "Struct ve method ile {task} yapan kod yaz",
+    "Interface ile {task} cozen ornek yaz",
+    "Error handling ile {task} yapan fonksiyon yaz",
+    "JSON {operation} yapan fonksiyon yaz",
+    "Dosya {operation} yapan fonksiyon yaz",
+    "HTTP server'da {task} yapan handler yaz",
+    "Testing paketi ile {task} testi yaz"
+  ],
+  "rust": [
+    "Bir {topic} fonksiyonu yaz (Rust)",
+    "Ownership kurallarina uygun {task} cozen kod yaz",
+    "Result/Option ile {task} yapan fonksiyon yaz",
+    "Struct ve trait ile {task} cozen kod yaz",
+    "Match kontrolu ile {task} cozen fonksiyon yaz",
+    "Iterator ile {task} yapan kod yaz",
+    "Generic fonksiyon ile {task} cozen kod yaz",
+    "Dosyaya {operation} yapan kod yaz",
+    "Concurrency icin {task} cozen kod yaz",
+    "Macro ile {task} yapan kod yaz"
+  ],
+  "cpp": [
+    "Bir {topic} fonksiyonu yaz (C++)",
+    "STL kullanarak {task} cozen kod yaz",
+    "Smart pointer ile {task} yapan kod yaz",
+    "Template ile {task} cozen fonksiyon yaz",
+    "Operator overloading ile {task} cozen sinif yaz",
+    "RAII prensibiyle {task} yapan kod yaz",
+    "Multithreading ile {task} cozen kod yaz",
+    "Lambda ifadesi ile {task} yapan kod yaz",
+    "File stream ile {task} cozen kod yaz",
+    "Move semantics ile {task} yapan ornek yaz"
+  ],
+  "algorithms": [
+    "Binary search ile {item} arayan algoritma yaz",
+    "Verilen diziyi {sort_type} ile siralayan fonksiyon yaz",
+    "{graph}'da {search_type} aramasi yapan algoritma yaz",
+    "{data}'yi hash table'da {operation} yapan kod yaz",
+    "Ikili agacta {task} yapan algoritma yaz",
+    "Dinamik programlama ile {problem}'i cozen kod yaz",
+    "BFS ile {task} yapan algoritma yaz",
+    "DFS ile {task} cozen algoritma yaz",
+    "Greedy algoritma ile {problem} cozen kod yaz",
+    "Dijkstra ile en kisa yolu bulan kod yaz"
+  ],
+  "web": [
+    "Responsive bir {component} bileseni yaz (CSS)",
+    "{layout}'i flexbox ile olusturan CSS yaz",
+    "Karanlik mod destegi olan {component} yaz",
+    "{keyframe} animasyonu yazan CSS kodu yaz",
+    "Media query ile {breakpoint}'de duzen degistiren CSS yaz",
+    "CSS grid ile {layout} olusturan kod yaz",
+    "Form dogrulama yapan {task} kodu yaz",
+    "API'den veri cekip {render_type} yapan kod yaz",
+    "Sayfalama (pagination) yapan fonksiyon yaz",
+    "Arama ve filtreleme yapan fonksiyon yaz"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "topics": {
+    "python": {
+      "topic": ["dosya okuma", "JSON parse", "veritabani baglantisi", "e-posta gonder", "tarih formatla", "rastgele sifre", "URL kisalt", "MD5 hash", "CSV okuma", "HTTP istek"],
+      "input_type": ["metin", "sayi listesi", "JSON string", "dosya yolu", "sözlük"],
+      "output_type": ["JSON", "CSV", "XML", "HTML", "duz metin"],
+      "task": ["tekrar edenleri temizle", "dosyalari birlestir", "veriyi grupla", "metin ara"],
+      "data_type": ["liste", "sozluk", "kume", "demet"],
+      "operation": ["siralama", "filtreleme", "donusum", "gruplama"],
+      "problem": ["FizzBuzz", "palindrom kontrolu", "fibonacci", "asal sayi", "faktoriyel"],
+      "data": ["hava durumu", "kullanici listesi", "urun fiyatlari", "haber basliklari"],
+      "items": ["urunler", "kullanicilar", "siparisler", "yorumlar"],
+      "filter_condition": ["fiyati 100'den az", "aktif kullanicilar", "son 7 gun", "belirli kategorideki"],
+      "text": ["verilen metin", "kaynak kod", "URL", "dosya adi"],
+      "format": ["buyuk harf", "kucuk harf", "camelCase", "snake_case", "kisaltma"]
+    },
+    "javascript": {
+      "topic": ["dizi duzlestir", "obje birlestir", "tarih farki", "rastgele secim", "metin kes"],
+      "array_operation": ["diziyi kumelere ayir", "en cok tekrar edeni bul", "ic ice dizileri duzle"],
+      "task": ["sekmeyi ac/kapa", "formu gonder", "bildirim goster", "cerez yonet"],
+      "method": ["GET", "POST", "PUT", "DELETE"],
+      "event": ["tiklama", "kaydirma", "tus basma", "form gonderimi"],
+      "data": ["kullanici bilgileri", "ayarlar", "sepet verisi", "tercihler"],
+      "feature": ["arama cubugu", "filtreleme", "siralama", "sayfalama"],
+      "utility": ["tarih bicimleme", "para birimi", "dosya indirme", "metin kirpma"]
+    },
+    "typescript": {
+      "topic": ["API cagrisi", "veri dogrulama", "state yonetimi", "localStorage islem", "event handling"],
+      "task": ["nesneleri birlestir", "tip donusumu yap", "API yanitini isle", "veriyi validate et"]
+    },
+    "java": {
+      "topic": ["dosya islemleri", "ag baglantisi", "veritabani sorgu", "XML isleme", "JSON cozumleme"],
+      "task": ["listeyi sirala", "maas hesapla", "ogrenci kaydet", "urun ara", "odeme yap"],
+      "pattern": ["Singleton", "Factory", "Observer", "Builder", "Strategy"],
+      "collection": ["listeler", "kumeler", "haritalar", "kuyruklar"],
+      "operation": ["gezinti", "filtreleme", "donusturme", "indirgeme"]
+    },
+    "sql": {
+      "table_name": ["kullanicilar", "urunler", "siparisler", "kategoriler"],
+      "table": ["musteriler", "faturalar", "stok", "odemeler"],
+      "condition": ["belirli tarih araligi", "minimum fiyat", "aktif kayit", "isim sirasi"],
+      "join_type": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL JOIN"],
+      "aggregate": ["toplam", "ortalama", "sayma", "maksimum", "minimum"],
+      "operation": ["ekleme", "guncelleme", "silme", "sorgulama"],
+      "constraint": ["PRIMARY KEY", "FOREIGN KEY", "UNIQUE", "CHECK"]
+    },
+    "go": {
+      "topic": ["dosya okuma", "JSON marshal", "goroutine baslat", "HTTP istek"],
+      "operation": ["okuma", "yazma", "silme", "guncelleme"]
+    },
+    "rust": {
+      "topic": ["dosya islemleri", "string manipulasyon", "vector islemleri", "hata yonetimi"],
+      "operation": ["okuma", "yazma", "ekleme", "silme"]
+    },
+    "cpp": {
+      "topic": ["dosya okuma", "string islemleri", "vector manipulasyon", "dosya yazma"],
+      "operation": ["okuma", "yazma", "ekleme", "silme"]
+    },
+    "algorithms": {
+      "item": ["sayi", "karakter", "kelime", "ogrenci numarasi"],
+      "sort_type": ["kabarcik", "secme", "ekleme", "birlestirme", "hizli"],
+      "graph": ["yonlu graf", "yonsuz graf", "agirlikli graf"],
+      "search_type": ["derinlik oncelikli (DFS)", "genislik oncelikli (BFS)"],
+      "data": ["veri", "anahtar-deger"],
+      "problem": ["0/1 cantasi", "en uzun ortak alt dizi", "para ustu", "en kisa yol"]
+    },
+    "web": {
+      "component": ["navbar", "kart", "buton", "modal", "form"],
+      "layout": ["uc sutunlu", "grid galeri", "dashboard", "header+sidebar"],
+      "keyframe": "yuklenme animasyonu",
+      "breakpoint": ["mobil (768px)", "tablet (1024px)", "masaustu (1280px)"],
+      "render_type": ["liste", "tablo", "kart goruntuleme", "grafik"]
+    }
+  }
+}

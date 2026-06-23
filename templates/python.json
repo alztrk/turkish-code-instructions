@@ -1,0 +1,583 @@
+{
+  "category": "python",
+  "templates": [
+    {
+      "pattern": "Bir {topic} fonksiyonu yaz",
+      "slots": {
+        "topic": [
+          "dosya okuma", "JSON parse", "veritabani baglantisi", "e-posta gonder",
+          "tarih formatla", "rastgele sifre", "URL kisalt", "MD5 hash",
+          "CSV okuma", "HTTP istek", "dosya yazma", "log kaydet",
+          "arama yap", "bildirim gonder", "grafik ciz", "indirme yap",
+          "upload yap", "veri sil", "veri guncelle", "veri ekle",
+          "tablo olustur", "API cagrisi yap", "metin ara",
+          "duzenli ifade ile sorgula", "config oku", "ortam degiskeni ayarla",
+          "hata kaydet", "yedek al", "dosya kopyala", "klasor olustur"
+        ]
+      }
+    },
+    {
+      "pattern": "{veri} verisini {format} formatina donustur",
+      "slots": {
+        "veri": [
+          "JSON", "CSV", "XML", "HTML", "YAML", "Excel", "SQLite", "binary",
+          "text", "datetime", "float", "integer", "boolean", "bytes", "decimal",
+          "liste", "sozluk", "demet", "kume", "string", "base64", "hex",
+          "MD5", "SHA256", "UUID"
+        ],
+        "format": [
+          "JSON", "CSV", "XML", "YAML", "Excel", "SQL", "HTML", "Markdown",
+          "binary", "base64", "hex", "string", "sozluk", "liste", "demet",
+          "datetime", "timestamp", "PDF", "gorsel", "ses", "video",
+          "sikistirilmis", "sifrelenmis", "serilestirilmis"
+        ]
+      }
+    },
+    {
+      "pattern": "{topic} yapan {tip} yaz",
+      "slots": {
+        "topic": [
+          "veritabani yedekleme", "e-posta gonderme", "dosya senkronizasyonu",
+          "kullanici dogrulama", "veri analizi", "rapor olusturma",
+          "hata takibi", "log analizi", "performans testi", "icerik yonetimi",
+          "oturum yonetimi", "kimlik dogrulama", "yetkilendirme", "odeme islemi",
+          "stok takibi", "fatura olusturma", "musteri yonetimi", "urun katalogu",
+          "siparis yonetimi", "envanter yonetimi", "bildirim gonder", "veri cekme",
+          "veri gonder", "veri isleme", "sistem izleme", "ag taramasi",
+          "guvenlik denetimi", "dosya yonetimi", "veritabani sorgulama", "API entegrasyonu"
+        ],
+        "tip": [
+          "fonksiyon", "sinif", "decorator", "generator", "context manager",
+          "modul", "paket", "script", "CLI araci", "API servisi",
+          "middleware", "handler", "utility", "helper", "mixin",
+          "abstract sinif", "veri modeli", "servis katmani", "controller",
+          "factory", "singleton", "adapter", "proxy", "observer", "strategy"
+        ]
+      }
+    },
+    {
+      "pattern": "{kaynak} kaynagindaki {veri} verisini {hedef} hedefine kaydeden script yaz",
+      "slots": {
+        "kaynak": [
+          "yerel dosya", "uzak sunucu", "veritabani", "API", "web sayfasi",
+          "e-posta sunucusu", "FTP sunucusu", "bulut depolama", "Redis",
+          "RabbitMQ", "Kafka", "socket", "pipe", "bellek", "pano",
+          "standart girdi", "komut satiri", "ortam degiskeni", "config dosyasi", "kayit defteri"
+        ],
+        "veri": [
+          "JSON", "CSV", "XML", "HTML", "YAML", "Excel", "SQLite", "binary",
+          "text", "datetime", "float", "integer", "boolean", "bytes", "decimal",
+          "liste", "sozluk", "demet", "kume", "string", "base64", "hex",
+          "MD5", "SHA256", "UUID"
+        ],
+        "hedef": [
+          "yerel dosya", "veritabani", "API", "e-posta", "web sunucusu",
+          "FTP sunucusu", "bulut depolama", "standart cikti", "log dosyasi",
+          "bellek", "pano", "mesaj kuyrugu", "socket", "Redis cache",
+          "Excel raporu", "PDF dokuman", "HTML sayfa", "JSON dosyasi",
+          "CSV dosyasi", "XML dosyasi"
+        ]
+      }
+    },
+    {
+      "pattern": "{veri_yapisi} kullanarak {problem} cozen algoritma yaz",
+      "slots": {
+        "veri_yapisi": [
+          "list", "sozluk", "demet", "kume", "yigin", "kuyruk",
+          "baglantili liste", "ikili agac", "cizge", "yigin agaci", "hash tablosu",
+          "dizi", "cift yonlu kuyruk", "sirali liste", "bit dizisi", "trie",
+          "bloom filter", "LRU cache", "atlamali liste", "ayrik kume",
+          "segment agaci", "Fenwick agaci", "sonek dizisi", "dongusel buffer", "oncelik kuyrugu"
+        ],
+        "problem": [
+          "en kisa yol", "siralama", "ikili arama", "graf dolasimi",
+          "agac dolasimi", "en buyuk ortak bolen", "asal sayi bulma",
+          "fibonacci hesaplama", "faktoriyel hesaplama", "palindrom kontrol",
+          "anagram kontrol", "en uzun alt dizi", "en cok tekrar eden eleman",
+          "benzersiz eleman bulma", "iki sayinin toplami", "alt metin arama",
+          "metin benzerligi", "kume islemleri", "matris carpimi",
+          "sayi taban donusumu", "Romen rakami donusumu", "ifade degerlendirme",
+          "parantez esleme", "topolojik siralama", "en kucuk yayan agac"
+        ]
+      }
+    },
+    {
+      "pattern": "{hata_turu} hatalarini {cozum} ile yoneten decorator yaz",
+      "slots": {
+        "hata_turu": [
+          "ValueError", "TypeError", "KeyError", "IndexError",
+          "FileNotFoundError", "IOError", "ConnectionError", "TimeoutError",
+          "ZeroDivisionError", "AttributeError", "ImportError", "RuntimeError",
+          "StopIteration", "EOFError", "OSError", "PermissionError",
+          "UnicodeError", "MemoryError", "RecursionError", "SystemError"
+        ],
+        "cozum": [
+          "try-except blogu", "varsayilan deger", "yeniden deneme", "log kaydi",
+          "kullanici uyarisi", "otomatik duzeltme", "baglanti yenileme",
+          "ozel hata sinifi", "hatali veriyi atlama", "dosya yoksa olusturma",
+          "zaman asimi uzatma", "alternatif cozum", "geri alma islemi",
+          "bellek temizleme", "baglantiyi kapatma", "veri dogrulama",
+          "format donusumu", "encoding degistirme", "yetki kontrolu", "onkosul kontrolu"
+        ]
+      }
+    },
+    {
+      "pattern": "{nesne} sinifina {ozellik} ve {metod} metodu ekleyen OOP tasarimi yap",
+      "slots": {
+        "nesne": [
+          "Kullanici", "Urun", "Siparis", "Ogrenci", "Calisan", "Hayvan",
+          "Arac", "Bina", "Hesap", "Dosya", "Mesaj", "Gorev", "Etkinlik",
+          "Odeme", "Rapor", "Belge", "Resim", "SesKaydi", "Video", "Veritabani"
+        ],
+        "ozellik": [
+          "isim", "ID", "tarih", "durum", "miktar", "fiyat", "adres",
+          "telefon", "e-posta", "sifre", "rol", "yetki", "kategori",
+          "etiket", "aciklama", "baslik", "icerik", "boyut", "renk", "konum"
+        ],
+        "metod": [
+          "kaydet", "sil", "guncelle", "ara", "hesapla", "dogrula", "gonder",
+          "al", "olustur", "kopyala", "birlestir", "ayir", "export_yap",
+          "import_yap", "filtrele", "sirala", "grupla", "indir", "yukle",
+          "yedekle", "geri_yukle", "parse_et", "formatla", "logla", "bildirim_gonder"
+        ]
+      }
+    },
+    {
+      "pattern": "Asenkron {gorev} icin {yontem} kullanan fonksiyon yaz",
+      "slots": {
+        "gorev": [
+          "veri cekme", "veri gonderme", "veri isleme", "rapor olusturma",
+          "bildirim gonderme", "dosya senkronizasyonu", "veritabani yedekleme",
+          "log analizi", "performans testi", "icerik yonetimi",
+          "kullanici yonetimi", "oturum yonetimi", "hata takibi",
+          "sistem izleme", "dosya yonetimi", "ag yonetimi",
+          "kimlik dogrulama", "yetkilendirme", "odeme islemi", "envanter yonetimi",
+          "siparis yonetimi", "musteri takibi", "urun katalogu", "fatura olusturma",
+          "stok takibi"
+        ],
+        "yontem": [
+          "async/await", "asyncio.gather", "asyncio.create_task",
+          "asyncio.wait", "asyncio.Queue", "asyncio.Semaphore",
+          "aiohttp.ClientSession", "async generator", "async context manager",
+          "asyncio.subprocess", "asyncio.Event", "asyncio.Lock",
+          "concurrent.futures", "ThreadPoolExecutor", "ProcessPoolExecutor",
+          "multiprocessing.Pool", "multiprocessing.Queue", "threading.Thread",
+          "asyncio.sleep", "asyncio.timeout"
+        ]
+      }
+    },
+    {
+      "pattern": "{arac} kutuphanesi ile {gorev} otomasyonu yaz",
+      "slots": {
+        "arac": [
+          "requests", "BeautifulSoup", "Selenium", "pandas", "numpy",
+          "matplotlib", "seaborn", "scikit-learn", "Flask", "FastAPI",
+          "Django REST", "SQLAlchemy", "asyncpg", "redis-py", "pika",
+          "aiohttp", "httpx", "pytest", "unittest", "argparse"
+        ],
+        "gorev": [
+          "veri cekme", "veri gonderme", "veri isleme", "rapor olusturma",
+          "bildirim gonderme", "dosya senkronizasyonu", "veritabani yedekleme",
+          "log analizi", "performans testi", "icerik yonetimi",
+          "kullanici yonetimi", "oturum yonetimi", "hata takibi",
+          "sistem izleme", "dosya yonetimi", "ag yonetimi",
+          "kimlik dogrulama", "yetkilendirme", "odeme islemi", "envanter yonetimi",
+          "siparis yonetimi", "musteri takibi", "urun katalogu", "fatura olusturma",
+          "stok takibi"
+        ]
+      }
+    },
+    {
+      "pattern": "{kriter} gore {veri_yapisi} filtreleyen generator fonksiyonu yaz",
+      "slots": {
+        "kriter": [
+          "belirli bir kosul", "minimum/maksimum deger", "tarih araligi",
+          "metin eslesmesi", "duzenli ifade", "boyut siniri",
+          "benzersizlik", "veri tipi", "bos olmama", "sayisal aralik",
+          "negatif olmama", "pozitif olma", "esik degeri", "oruntu tanima",
+          "kume uyeligi", "sirali erisim", "hash degeri", "oncelik degeri",
+          "siklik degeri", "konum bilgisi"
+        ],
+        "veri_yapisi": [
+          "liste", "sozluk", "demet", "kume", "yigin", "kuyruk",
+          "baglantili liste", "ikili agac", "cizge", "yigin agaci", "hash tablosu",
+          "dizi", "cift yonlu kuyruk", "sirali liste", "bit dizisi", "trie",
+          "bloom filter", "LRU cache", "atlamali liste", "ayrik kume",
+          "segment agaci", "Fenwick agaci", "sonek dizisi", "dongusel buffer", "oncelik kuyrugu"
+        ]
+      }
+    },
+    {
+      "pattern": "CLI {komut} komutu ile {islem} yapan argparse tabanli araci yaz",
+      "slots": {
+        "komut": [
+          "start", "stop", "restart", "status", "backup", "restore",
+          "clean", "reset", "sync", "deploy", "build", "test",
+          "lint", "format", "check", "validate", "convert", "merge",
+          "split", "extract", "compress", "decrypt", "encrypt", "hash", "verify"
+        ],
+        "islem": [
+          "baslatma", "durdurma", "yeniden baslatma", "durum sorgulama",
+          "yedekleme", "geri yukleme", "temizleme", "sifirlama",
+          "senkronizasyon", "yayinlama", "derleme", "test etme",
+          "kod kontrolu", "biçimlendirme", "kontrol etme", "dogrulama",
+          "donusturme", "birlestirme", "bolme", "cikartma",
+          "sikistirma", "sifre cozme", "sifreleme", "hash hesaplama", "dogrulama yapma"
+        ]
+      }
+    },
+    {
+      "pattern": "{dizin} dizinindeki {ozellik} dosyalari {islem} ile yoneten script yaz",
+      "slots": {
+        "dizin": [
+          "temp", "logs", "data", "output", "backup", "archive",
+          "uploads", "downloads", "config", "cache", "exports",
+          "imports", "reports", "media", "static", "scripts",
+          "templates", "database", "resources", "public", "private"
+        ],
+        "ozellik": [
+          "belirli uzantili", "belirli tarihte", "belirli boyuttan buyuk",
+          "belirli boyuttan kucuk", "son degistirilen", "en eski",
+          "en yeni", "isim oruntusune uyan", "salt okunur", "gizli",
+          "gecici", "yedek", "log", "sifrelenmis", "sikistirilmis",
+          "binary", "text", "yapilandirilmis", "gecersiz", "bozuk"
+        ],
+        "islem": [
+          "temizleyen", "yedekleyen", "arsivleyen", "sirala", "grupla",
+          "filtrele", "kopyala", "tasi", "sifrele", "sifre coz",
+          "sikistir", "ac", "yeniden adlandir", "sil", "ozet raporu olustur",
+          "organize et", "etiketle", "kategorize et", "donustur", "birlestir"
+        ]
+      }
+    },
+    {
+      "pattern": "{kaynak} ile {hedef} arasinda {protokol} kullanarak veri aktar",
+      "slots": {
+        "kaynak": [
+          "yerel dosya", "uzak sunucu", "veritabani", "API", "web sayfasi",
+          "e-posta sunucusu", "FTP sunucusu", "bulut depolama", "Redis",
+          "RabbitMQ", "Kafka", "socket", "pipe", "bellek", "pano",
+          "standart girdi", "komut satiri", "ortam degiskeni", "config dosyasi", "kayit defteri"
+        ],
+        "hedef": [
+          "yerel dosya", "veritabani", "API", "e-posta", "web sunucusu",
+          "FTP sunucusu", "bulut depolama", "standart cikti", "log dosyasi",
+          "bellek", "pano", "mesaj kuyrugu", "socket", "Redis cache",
+          "Excel raporu", "PDF dokuman", "HTML sayfa", "JSON dosyasi",
+          "CSV dosyasi", "XML dosyasi"
+        ],
+        "protokol": [
+          "HTTP", "HTTPS", "FTP", "SFTP", "SMTP", "IMAP", "POP3",
+          "WebSocket", "gRPC", "MQTT", "AMQP", "TCP", "UDP",
+          "SSH", "Telnet", "LDAP", "NFS", "SMB", "Redis", "Kafka"
+        ]
+      }
+    },
+    {
+      "pattern": "{dogrulama} ile veri dogrulayan ve {hata_cozumu} uygulayan fonksiyon yaz",
+      "slots": {
+        "dogrulama": [
+          "schema kontrolu", "tip kontrolu", "aralik kontrolu",
+          "format kontrolu", "varlik kontrolu", "benzersizlik kontrolu",
+          "regex eslestirme", "uzunluk kontrolu", "bosluk kontrolu",
+          "ozel karakter kontrolu", "sayisal sinir kontrolu", "tarih gecerlilik",
+          "e-posta format kontrolu", "URL gecerlilik", "IP adresi dogrulama",
+          "renk kodu dogrulama", "telefon dogrulama", "kimlik dogrulama",
+          "hash dogrulama", "imza dogrulama"
+        ],
+        "hata_cozumu": [
+          "uygun hata mesaji", "default deger ata", "hatayi logla",
+          "islemi tekrar dene", "hatayi gormezden gel", "kullaniciya sor",
+          "alternatif yol dene", "geri bildirim gonder", "islemi durdur",
+          "temizlik yap", "kismi sonuc don", "ortbellegi kullan",
+          "yedek mekanizma", "kuyruga ekle", "yöneticiye bildir",
+          "otomatik duzelt", "veriyi atla", "yeniden baslat",
+          "baglantiyi kapat", "oturumu yenile"
+        ]
+      }
+    },
+    {
+      "pattern": "{seviye} seviyesinde {log_ozellik} icin logger yapilandirmasi yaz",
+      "slots": {
+        "seviye": [
+          "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL",
+          "NOTSET", "FATAL", "TRACE", "VERBOSE", "PROFILE",
+          "DEBUG_VERBOSE", "INFO_PERF", "WARNING_SECURITY",
+          "ERROR_DB", "ERROR_NETWORK", "ERROR_DISK",
+          "AUDIT_EVENT", "METRIC", "HEARTBEAT", "DIAGNOSTIC"
+        ],
+        "log_ozellik": [
+          "dosyaya yazma", "konsola yazdirma", "log rotasyonu",
+          "format belirleme", "filtreleme", "seviye belirleme",
+          "zaman damgasi ekleme", "context bilgisi ekleme",
+          "JSON formatinda log", "uzak sunucuya gonderme",
+          "e-posta bildirimi", "veritabanina kaydetme",
+          "sikistirma", "sifreleme", "saklama politikasi",
+          "thread guvenligi", "asenkron yazma", "buffer yonetimi",
+          "renkli cikti", "istisna yakalama"
+        ]
+      }
+    }
+  ],
+  "direct_instructions": [
+    "Bir metin dosyasini satir satir okuyup ekrana yazdiran kod yaz",
+    "JSON dosyasini okuyup Python sozlugune ceviren fonksiyon yaz",
+    "Bir listeyi tersine ceviren fonksiyon yaz",
+    "Iki sayinin toplamini, farkini, carpimini ve bolumunu donduren hesap makinesi yaz",
+    "Verilen bir cumledeki kelime sayisini bulan fonksiyon yaz",
+    "Bir dizideki en buyuk ve en kucuk elemani bulan fonksiyon yaz",
+    "HTML iceriginden tum linkleri cekerek liste olarak donduren kod yaz",
+    "CSV dosyasini okuyup sutun bazli istatistik hesaplayan betik yaz",
+    "Bir URL'ye GET istegi gonderip donen JSON'i isleyen fonksiyon yaz",
+    "Belirtilen dizindeki tum dosyalari rekursif olarak listeleyen kod yaz",
+    "Bir SQLite veritabanina baglanip tablo olusturan betik yaz",
+    "E-posta gondermek icin SMTP kullanan fonksiyon yaz",
+    "Su anki tarihi belirtilen formatta string olarak donduren fonksiyon yaz",
+    "Rastgele guclu bir sifre olusturan fonksiyon yaz",
+    "Bir metnin MD5 hash degerini hesaplayan kod yaz",
+    "Belirtilen URL'yi kisa linke ceviren fonksiyon yaz",
+    "Bir dosyadaki tum satirlari okuyup belirtilen kritere gore filtreleyen kod yaz",
+    "Bir klasor icindeki tum .log dosyalarini bulup arsivleyen script yaz",
+    "Bir API'ye POST istegi ile JSON verisi gonderip yaniti isleyen kod yaz",
+    "Bir listedeki tekrar eden elemanlari temizleyerek benzersiz liste donduren fonksiyon yaz",
+    "Verilen bir metnin icinde belirtilen alt metni arayip konumlarini donduren kod yaz",
+    "Bir dosyaya satir satir log yazan context manager yaz",
+    "Bir dictionary icindeki tum anahtarlari ve degerleri ekrana yazdiran fonksiyon yaz",
+    "Belirtilen portta basit bir HTTP sunucusu baslatan betik yaz",
+    "Bir CSV dosyasini okuyup JSON formatina donusturen kod yaz",
+    "Duzensiz ifade ile bir metindeki tum e-posta adreslerini bulan kod yaz",
+    "Bir SQL sorgusunu calistirip sonuclari pandas DataFrame olarak donduren fonksiyon yaz",
+    "Belirtilen bir API'den veri cekip pandas ile analiz yapan betik yaz",
+    "Bir resmi gri tonlamaya ceviren ve kaydeden kod yaz",
+    "Bir liste icindeki sayilari kucukten buyuge siralayan fonksiyon yaz (built-in kullanmadan)",
+    "Belirtilen karakter kodlamasindaki bir dosyayi farkli kodlamaya ceviren kod yaz",
+    "Bir web sayfasindaki tum goruntuleri indiren scraper yaz",
+    "try-except kullanarak bolme isleminde ZeroDivisionError'u yoneten fonksiyon yaz",
+    "Bir decorator kullanarak fonksiyonun calisma suresini olcen kod yaz",
+    "yield anahtar kelimesi ile Fibonacci sayilari ureten generator yaz",
+    "with statement icin ozel bir context manager sinifi yaz",
+    "argparse kullanarak dosya okuma-yazma yapan CLI araci yaz",
+    "threading kullanarak paralel istek gonderip sonuclari toplayan kod yaz",
+    "Bir siniftan miras alarak alt sinif olusturan ODP ornegi yaz",
+    "Verilen bir JSON stringini dogrulayip parse eden fonksiyon yaz",
+    "Bir klasordeki tum dosyalari belirtilen boyut sinirina gore filtreleyen kod yaz",
+    "Bir liste icindeki sayilarin ortalamasini, medyanini ve modunu hesaplayan fonksiyon yaz",
+    "Bir metin dosyasindaki satirlari tersten yazarak yeni dosya olusturan kod yaz",
+    "Yigin veri yapisini kullanarak bir ifadedeki parantezlerin dengeli olup olmadigini kontrol eden kod yaz",
+    "Bir URL'den XML verisi cekip Python nesnesine donusturen fonksiyon yaz",
+    "os modulu ile sistemdeki ortam degiskenlerini listeleyip degistiren kod yaz",
+    "Bir veritabanindaki kayitlari belli bir kosula gore guncelleyen SQL sorgusu calistiran kod yaz",
+    "f-string kullanarak degiskenleri metin icine formatlayan ornekler yaz",
+    "Bir sozlugu JSON dosyasina kaydedip tekrar okuyan fonksiyon yaz",
+    "sys.argv ile komut satiri argumanlarini okuyan basit bir betik yaz",
+    "Bir URL'ye dosya yukleme (multipart/form-data) yapan requests kodu yaz",
+    "BeautifulSoup ile bir web sayfasindaki tablolari parse edip CSV'ye kaydeden kod yaz",
+    "Bir liste icinde arama yaparak eslesen ilk elemani donduren fonksiyon yaz",
+    "datetime modulu ile iki tarih arasindaki gun farkini hesaplayan kod yaz",
+    "os.walk kullanarak bir dizin agacini dolasip dosya bilgilerini toplayan kod yaz",
+    "Bir veri cercevesinde eksik degerleri tespit edip dolduran pandas kodu yaz",
+    "pyzmail veya built-in email kutuphanesi ile HTML e-posta gonder",
+    "Bir sozlugu anahtarina gore siralamis halde donduren fonksiyon yaz",
+    "subprocess modulu ile harici bir komutu calistirip ciktisini okuyan kod yaz",
+    "Bir metindeki sesli harfleri sayan fonksiyon yaz",
+    "staticmethod ve classmethod decoratorlerini kullanan bir sinif ornegi yaz",
+    "pickle kullanarak bir Python nesnesini serilestirip dosyaya kaydeden kod yaz",
+    "hashlib ile bir metnin SHA256 hashini hesaplayip hexadecimal gosteren kod yaz",
+    "Bir tuple icindeki elemanlari unpacking yaparak ayri degiskenlere atayan kod yaz",
+    "Bir JSON API'den gelen paginated veriyi sayfa sayfa ceken kod yaz",
+    "zip fonksiyonu ile iki listeyi birlestirip sozluk olusturan kod yaz",
+    "Bir metindeki tum buyuk harfleri kucuge, kucuk harfleri buyuge ceviren fonksiyon yaz",
+    "sqlite3 modulu ile veritabanina baglanip SELECT sorgusu calistiran kod yaz",
+    "Bir lambda fonksiyonu ve map kullanarak listedeki her sayinin karesini alan kod yaz",
+    "Bir dosyadaki her satiri okurken satir numarasini da gosteren kod yaz",
+    "Bir listenin tum elemanlarina belirtilen islemi uygulayip yeni liste donduren fonksiyon yaz",
+    "Selenium ile bir web sayfasindaki formu doldurup gonderim yapan kod yaz",
+    "Bir metin dosyasindaki en cok gecen 10 kelimeyi bulan kod yaz",
+    "With open kullanarak bir dosyayi okuyan ve satir sayisini hesaplayan kod yaz",
+    "Bir class icinde __str__ ve __repr__ metodlarini tanimlayan ornek yaz",
+    "Hata ayiklama amaciyla fonksiyon cagrisini loglayan decorator yaz",
+    "flask ile basit bir REST API endpoint'i yaz (GET ve POST destekli)",
+    "Bir numpy dizisi olusturup matris islemleri yapan kod yaz",
+    "Bir text dosyasindaki satirlari random olarak karistirip yeni dosyaya yazan kod yaz",
+    "itertools.permutations ile bir listenin tum permutasyonlarini bulan kod yaz",
+    "Bir sozlukteki tum degerleri toplama veya birlestirme islemi yapan fonksiyon yaz",
+    "Bir URL'ye HTTP HEAD istegi atip donen header'lari inceleyen kod yaz",
+    "Bir metnin base64 kodlamasini yapan ve cozen fonksiyon yaz",
+    "Verilen bir sayinin asal olup olmadigini kontrol eden fonksiyon yaz",
+    "Bir JSON dosyasini okuyup icindeki belirli anahtarlari guncelleyen kod yaz",
+    "Bir fonksiyonda *args ve **kwargs kullanimini gosteren ornek yaz",
+    "Bir log dosyasini belirli bir tarih araligina gore filtreleyip ozet cikartan kod yaz",
+    "Pillow ile bir resmin uzerine yazi yazip kaydeden kod yaz",
+    "Bir tuple listesini belirtilen indisteki alana gore siralayan kod yaz",
+    "Bir veri setini egitim ve test olarak ayiran fonksiyon yaz",
+    "Bir CSV dosyasindaki belirli sutunlari secip yeni CSV dosyasina yazan kod yaz",
+    "global ve nonlocal anahtar kelimelerini kullanan ornek kod yaz",
+    "Bir REST API'ye PUT istegi ile veri guncellemesi yapan kod yaz",
+    "json modulu ile ozel bir Python nesnesini JSON'a ceviren encoder yaz",
+    "Bir metin icindeki tum sayilari bulup toplamini hesaplayan regex kodu yaz",
+    "asyncio ile 3 adet HTTP istegini paralel olarak calistiran kod yaz",
+    "Bir dictionary'nin ic ice anahtarlarina guvenli bir sekilde erisen fonksiyon yaz",
+    "Bir liste icindeki dizileri birlestirip duz bir liste olusturan kod yaz (flatten)",
+    "Bir Excel dosyasini pandas ile okuyup belirli sutunlari filtreleyen kod yaz",
+    "Bir metin dosyasindan duzensiz ifade ile IP adreslerini cikartan kod yaz",
+    "Bir class icinde property decoratoru kullanarak getter/setter tanimlayan ornek yaz",
+    "Bir API'den alinan veriyi pandas DataFrame'e donusturup istatistik hesaplayan kod yaz",
+    "Bir tuple'i sozluk anahtari olarak kullanip deger atayan ornek yaz",
+    "Bir dosyayi belirtilen konumdan itibaren okuyan (seek) ornek kod yaz",
+    "Bir API endpoint'ine DELETE istegi atarak kayit silen kod yaz",
+    "Bir listedeki elemanlari belirtilen sayida tekrarlayarak yeni liste olusturan kod yaz",
+    "Bir sinif icinde __add__ operatorunu overload eden ornek yaz",
+    "Bir XML dosyasini ElementTree ile parse edip Python nesnesine ceviren kod yaz",
+    "Bir stringin palindrome olup olmadigini kontrol eden fonksiyon yaz (buyuk-kucuk harf duyarsiz)",
+    "Bir portu dinleyip gelen baglantilari kabul eden basit bir TCP socket sunucusu yaz",
+    "Bir liste icindeki demetleri belirtilen alana gore gruplayan fonksiyon yaz",
+    "Bir veri setini normalize eden (min-max skalalama) fonksiyon yaz",
+    "Bir klasordeki tum Python (.py) dosyalarini bulup satir sayisini hesaplayan script yaz",
+    "YAML dosyasini okuyup Python sozlugune ceviren kod yaz",
+    "Bir data class ornegi olusturup kullanan kod yaz",
+    "Bir metindeki noktalama isaretlerini temizleyen fonksiyon yaz",
+    "Bir SQLite veritabanina toplu kayit ekleyip commit yapan kod yaz",
+    "Bir stringin basindaki ve sonundaki bosluklari temizleyip ortadaki bosluklari teke indiren fonksiyon yaz",
+    "Bir dictionary'nin tum anahtarlarini belirtilen bir fonksiyondan geciren kod yaz",
+    "Bir REST API'den alinan veriyi ozel bir formatta rapor olarak kaydeden kod yaz",
+    "Bir dosyayi binary modda okuyup icindeki byte degerlerini ekrana yazdiran kod yaz",
+    "all() ve any() fonksiyonlarini kullanarak liste elemanlarini kontrol eden ornek yaz",
+    "Bir sinif icinde __eq__ metodunu overload ederek nesne karsilastirmasi yapan ornek yaz",
+    "Bir text dosyasina belirtilen formatta log kaydi ekleyen fonksiyon yaz (tarih-saat: seviye: mesaj)",
+    "Bir listenin kopyasini olusturup orijinali degistirmeden islem yapan kod yaz (deep copy vs shallow copy)",
+    "Bir URL'den indirilen dosyayi belirtilen klasore kaydeden fonksiyon yaz",
+    "Bir csv.DictReader ile CSV dosyasini sozluk listesi olarak okuyan kod yaz",
+    "Bir metindeki kelimeleri ayirip her kelimenin ilk harfini buyuk yapan fonksiyon yaz",
+    "Bir dictionary icinde belirtilen anahtar varsa degerini, yoksa varsayilan degeri donduren fonksiyon yaz",
+    "Multiprocessing kullanarak 4 ayri surecte islem yapan kod yaz",
+    "Bir dosyayi CSV formatindan Excel formatina donusturen kod yaz",
+    "Bir sinif icinde __iter__ ve __next__ metodlarini tanimlayarak iterator yapan ornek yaz",
+    "Bir metin icindeki tek tirnaklari cift tirnaga ceviren fonksiyon yaz",
+    "Bir klasordeki tum alt klasorleri rekursif olarak olusturan kod yaz",
+    "Bir tuple'i string'e cevirip geri tuple'a ceviren fonksiyon yaz",
+    "Bir API'den gelen veriyi ozel bir sinifin nesnesine mapleme yapan kod yaz",
+    "Bir metindeki satir sonu karakterlerini isletim sistemine gore duzenleyen kod yaz",
+    "Bir pandas DataFrame'i belirtilen sutuna gore gruplayip toplam hesaplayan kod yaz",
+    "Bir sozlugu JSON dosyasina yazarken Turkish karakterleri duzgun encode eden kod yaz",
+    "Bir decorator ile fonksiyonun giris ve cikis parametrelerini loglayan kod yaz",
+    "Bir stringin belirtilen index araligindaki karakterlerini alan fonksiyon yaz (slicing ile)",
+    "Bir TCP socket uzerinden veri gonderip alan client programi yaz",
+    "Bir metindeki kelimeleri alfabetik sirada donduren fonksiyon yaz",
+    "Bir CSV dosyasinin encodingini otomatik tespit edip okuyan kod yaz (chardet ile)",
+    "Bir liste icinde arama yaparken binary search algoritmasi kullanan fonksiyon yaz",
+    "Bir dosyayi okurken FileNotFoundError'u yakalayip kullaniciya ozel mesaj gosteren kod yaz",
+    "Bir datetime nesnesini UNIX timestamp'e cevirip geri datetime'a ceviren fonksiyon yaz",
+    "Bir abstract base class tanimlayip alt siniflarda zorunlu metodlari implemente eden ornek yaz",
+    "Bir metin icindeki URL'leri duzenli ifade ile bulup liste olarak donduren kod yaz",
+    "Bir REST API'de hata kodlarina gore (4xx, 5xx) ozel islem yapan kod yaz",
+    "Bir listede belirtilen kosula uyan tum elemanlari filtreleyip yeni liste donduren kod yaz (filter ile)",
+    "Bir context manager ile dosya okuma islemini otomatik kapatan ornek yaz",
+    "Bir sozluk icindeki tum anahtarlari belirtilen bir prefix ile guncelleyen kod yaz",
+    "Bir fonksiyonun belirli bir surede calismasini sinirlayan decorator yaz (timeout)",
+    "Bir metindeki HTML etiketlerini temizleyip sadece metni birakan fonksiyon yaz",
+    "Bir tuple icinde belirtilen elemanin kac kez gectigini sayan kod yaz",
+    "Bir API'den alinan CSV verisini dogrudan pandas DataFrame'e yukleyen kod yaz",
+    "Bir dosya yolundaki klasorleri ve dosyayi ayristiran fonksiyon yaz (os.path ile)",
+    "Bir veritabanindaki tablonun schema'sini okuyup sozluk olarak donduren kod yaz",
+    "Bir dosyayi belirtilen satir sayisinda parcaya bolen fonksiyon yaz",
+    "Bir sinif icinde __len__ metodunu overload ederek ozel uzunluk hesaplama yapan ornek yaz",
+    "Bir metin dosyasinda belirtilen bir stringi baska bir stringle degistirip kaydeden kod yaz",
+    "Bir cifte yonlu kuyruk (deque) kullanarak palindrome kontrolu yapan kod yaz",
+    "Bir API isteginde otomatik yeniden deneme (retry) mekanizmasi kuran kod yaz",
+    "Bir liste icindeki elemanlari karistirip yeni liste donduren fonksiyon yaz",
+    "Bir resmin boyutlarini degistirip kalitesini koruyarak kaydeden kod yaz (Pillow ile)",
+    "Bir decimal modulu ile kusuratli sayilarda hassas toplama yapan kod yaz",
+    "Bir dosyanin var olup olmadigini kontrol edip varsa okuyan, yoksa olusturan kod yaz",
+    "Bir class icinde __call__ metodunu kullanarak fonksiyon gibi cagrilabilir nesne yaz",
+    "Bir metindeki kelimeleri uzunluklarina gore siraliyan fonksiyon yaz",
+    "Bir dictionary'nin anahtar-deger ciftlerini tersine ceviren fonksiyon yaz (swap keys/values)",
+    "Bir API'den streaming veri alip satir satir isleyen kod yaz",
+    "Bir listedeki negatif sayilari pozitife, pozitif sayilari negatife ceviren kod yaz",
+    "Bir text dosyasindaki bos satirlari temizleyerek yeni dosyaya yazan kod yaz",
+    "Bir fonksiyonda type hinting kullanimina ornek yaz",
+    "Bir dosyayi okurken satir sonundaki newline karakterlerini koruyarak okuyan kod yaz",
+    "Bir veri setinde aykiri (outlier) degerleri tespit eden fonksiyon yaz",
+    "Bir datetime nesnesini farkli saat dilimlerine ceviren kod yaz",
+    "Bir listedeki her elemanin tipini kontrol edip sozluk olarak donduren kod yaz",
+    "Bir web sayfasindaki belirli bir CSS sinifina sahip elementleri Selenium ile bulan kod yaz",
+    "Bir dosya ismindeki uzantiyi ayristirarak dosya adi ve uzanti olarak donduren kod yaz",
+    "Bir veri cercevesindeki kategorik sutunlari one-hot encode eden pandas kodu yaz",
+    "Bir context manager ile belirli bir sure islemi erteleyen (delay) kod yaz",
+    "Bir fonksiyonun donus degerini ortbellege alan decorator yaz (lru_cache benzeri)",
+    "Bir sozluk icindeki ic ice sozluklere erismek icin guvenli get fonksiyonu yaz",
+    "Bir YouTube videosunu indiren ve mp3'e ceviren script yaz (pytube veya yt-dlp ile)",
+    "Bir metin icindeki tum hex degerleri (0x...) bulup decimal'e ceviren regex kodu yaz",
+    "Bir server-sent events (SSE) endpoint'ini okuyan kod yaz",
+    "Bir listedeki elemanlari belirtilen buyuklukte gruplara ayiran fonksiyon yaz",
+    "Bir class icinde __getitem__ ve __setitem__ ile indekslenebilir nesne yaz",
+    "Bir Windows servisi olarak calisacak Python scripti yaz",
+    "Bir dosyadaki satirlari ters sirada okuyup ekrana basan generator yaz",
+    "Bir XLSX dosyasini openpyxl ile olusturup bicimlendiren kod yaz",
+    "Bir karmasik JSON yapisini dolasarak belirtilen anahtarin degerini bulan fonksiyon yaz",
+    "Bir socket sunucusunda gelen veriyi JSON decode edip isleyen kod yaz",
+    "Bir liste icindeki stringleri belirtilen ayirac ile birlestiren kod yaz",
+    "Bir metin dosyasinin karakter kodlamasini tespit edip dogru okuyan kod yaz",
+    "Bir fonksiyonun belli bir kosulda hata firlatmasini engelleyip varsayilan deger donduren decorator yaz",
+    "Bir resimdeki yuzleri tespit eden kod yaz (OpenCV ile)",
+    "Bir SQL sorgusunda SQL injection'dan korunmak icin parametreli sorgu kullanan ornek yaz",
+    "Bir asenkron context manager ile veritabani baglantisi yoneten kod yaz",
+    "Bir sozlukteki degerleri belirtilen fonksiyondan gecirerek yeni sozluk olusturan kod yaz",
+    "Bir internet sitesinin robots.txt dosyasini okuyup parse eden kod yaz",
+    "Bir stringin belirtilen karakter ile baslayip baslamadigini kontrol eden fonksiyon yaz",
+    "Bir timedelta nesnesini gun, saat, dakika, saniye olarak ayristiran kod yaz",
+    "Bir sinif icinde __contains__ metodunu overload ederek 'in' operatorunu ozellestiren ornek yaz",
+    "Bir JSON verisini ozel bir sinif nesnesine donusturen deserializer yaz",
+    "Bir dosyaya yazarken encoding hatasini yok sayip devam eden kod yaz (errors='ignore')",
+    "Bir API'den alinan toplu veriyi parca parca (chunk) isleyip birlestiren kod yaz",
+    "Bir metnin icindeki buyuk harfleri sayan fonksiyon yaz",
+    "Bir decorator ile fonksiyonun tipini kontrol edip yanlis tipte arguman gelirse hata firlatan kod yaz",
+    "Bir veritabanina baglanip tablodaki kayit sayisini donduren fonksiyon yaz",
+    "Bir stringdeki backslash karakterlerini duzgun sekilde kullanarak dosya yolu olusturan kod yaz",
+    "Bir listedeki elemanlari rastgele iki gruba ayiran fonksiyon yaz",
+    "Bir data class icinde __post_init__ kullanarak dogrulama yapan ornek yaz",
+    "Bir webhook alicisi (receiver) olarak calisan Flask endpoint'i yaz",
+    "Bir XML dosyasini XPath ile sorgulayip belirli elemanlari alan kod yaz",
+    "Bir metinde en uzun kelimeyi bulan fonksiyon yaz",
+    "Bir dictionary'nin degerlerini belirtilen tipe donusturen fonksiyon yaz",
+    "Bir fonksiyonu belirli bir sure sonra otomatik calistiracak zamanlayici (scheduler) yaz",
+    "Bir CSV dosyasindaki tarih sutununu parse edip datetime'a ceviren kod yaz",
+    "Bir class icinde __bool__ metodunu overload ederek mantiksal deger donduren ornek yaz",
+    "Bir metin dosyasindaki her satiri belirtilen formatta yeniden bicimlendirerek yazan kod yaz",
+    "Bir API'den alinan veriyi goruntulemek icin basit bir matplotlib grafigi cizen kod yaz",
+    "Bir stringi bytes'a ve bytes'i string'e ceviren fonksiyon yaz (encode/decode)",
+    "Bir dosyadaki satirlari okurken belirtilen kritere gore satirlari atlayan generator yaz",
+    "Bir sozluk icinde belirtilen anahtar zincirini takip ederek deger bulan fonksiyon yaz",
+    "Bir aiohttp istemcisi ile 10 farkli API'yi asenkron cagiran kod yaz",
+    "Bir listedeki elemanlarin index'lerini ve degerlerini enumerate ile yazdiran kod yaz",
+    "Bir metin dosyasinin satir sonu karakterlerini Unix'ten Windows'a ceviren kod yaz",
+    "Bir veri setinde korelasyon matrisi hesaplayip isi haritasi (heatmap) cizen kod yaz",
+    "Bir sinif icinde __sub__ ve __rsub__ metodlarini overload eden ornek yaz",
+    "Bir API'den alinan paginated veriyi toplam sayfa sayisina gore otomatik ceken kod yaz",
+    "Bir metindeki her kelimenin ilk ve son harfini alip ksaltma olusturan fonksiyon yaz",
+    "Bir dosyayi okurken belirtilen boyuttan buyuk satirlari atlayan kod yaz",
+    "Bir turkce karakterleri Ingilizce karakterlere ceviren fonksiyon yaz",
+    "Bir unittest test sinifi olusturup matematik fonksiyonlarini test eden kod yaz",
+    "Bir pandas DataFrame'ini HTML tablosuna ceviren fonksiyon yaz",
+    "Bir sozlukteki anahtarlari belirtilen bir listeye gore siralayan kod yaz",
+    "Bir stringi belirtilen sayida tekrarlayarak yeni string olusturan kod yaz",
+    "Bir veritabaninda transaction yoneten context manager yaz",
+    "Bir dosyadaki tum satirlari okuyup belirtilen sutun genisligine gore bicimlendiren kod yaz",
+    "Bir asyncio.Queue kullanarak producer-consumer ornegi yaz",
+    "Bir JSON dosyasindaki tarih stringlerini otomatik algilayip datetime'a ceviren kod yaz",
+    "Bir sinif icinde __del__ metodunu kullanarak kaynak temizleme yapan ornek yaz",
+    "Bir liste icindeki belirtilen elemanin tum indekslerini bulan fonksiyon yaz",
+    "Bir metni ters cevirip kelime kelime tersten yazdiran fonksiyon yaz",
+    "Bir veri cercevesini belirtilen sutuna gore siralayip ilk 10 satiri gosteren kod yaz",
+    "Bir decorator ile fonksiyonun sadece belirli zaman araliginda calismasina izin veren kod yaz",
+    "Bir sozluk icindeki degerlerin toplamini alan fonksiyon yaz",
+    "Bir dosyaya yazarken tamponlama (buffering) ayarini kontrol eden kod yaz",
+    "Bir FTP sunucusuna baglanip dosya indiren kod yaz",
+    "Bir stringdeki Unicode karakterleri ASCII esdegerlerine ceviren fonksiyon yaz",
+    "Bir pandas DataFrame'ini Excel'e yazarken birden fazla sayfaya bolen kod yaz",
+    "Bir listedeki elemanlari belirtilen kosula gore iki ayri listeye ayiran fonksiyon yaz",
+    "Bir datetime nesnesini '3 gun once' gibi dogal dil ifadesine ceviren fonksiyon yaz",
+    "Bir sinif icinde __format__ metodunu overload ederek ozel bicimlendirme yapan ornek yaz",
+    "Bir API'ye yapilan isteklerde token yonetimi yapan oturum sinifi yaz",
+    "Bir metin dosyasindaki satirlari okurken satir basina islem suresi ekleyen decorator yaz"
+  ]
+}
