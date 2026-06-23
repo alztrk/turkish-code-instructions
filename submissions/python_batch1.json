@@ -1,0 +1,177 @@
+[
+  {
+    "instruction": "Bir degisken olustur ve adini 'mesaj' koy, icine 'Merhaba Dunya' yaz ve ekrana yazdir.",
+    "response": "mesaj = 'Merhaba Dunya'\nprint(mesaj)",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Iki sayiyi topla ve sonucu ekrana yazdiran bir kod yaz.",
+    "response": "a = 15\nb = 7\nsonuc = a + b\nprint(sonuc)",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Ad ve soyad degiskenlerini birlestirip tam adi ekrana yazdir.",
+    "response": "ad = 'Ali'\nsoyad = 'Yilmaz'\ntam_ad = ad + ' ' + soyad\nprint(tam_ad)",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bos bir liste olustur, icine 3 tane meyve ekle ve listeyi yazdir.",
+    "response": "meyveler = []\nmeyveler.append('Elma')\nmeyveler.append('Muz')\nmeyveler.append('Cilek')\nprint(meyveler)",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicidan alinan sayinin cift mi tek mi oldugunu bulan kodu yaz.",
+    "response": "sayi = int(input('Bir sayi girin: '))\nif sayi % 2 == 0:\n    print('Cift')\nelse:\n    print('Tek')",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "For dongusu kullanarak 1'den 10'a kadar olan sayilari ekrana yazdir.",
+    "response": "for i in range(1, 11):\n    print(i)",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Iki sayiyi carpan ve sonucu donduren bir fonksiyon tanimla ve cagir.",
+    "response": "def carp(a, b):\n    return a * b\n\nprint(carp(4, 5))",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicidan ismini alip 'Merhaba [isim]' seklinde selamlayan kod yaz.",
+    "response": "isim = input('Isminizi girin: ')\nprint('Merhaba ' + isim)",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicidan alinan ondalikli sayiyi tam sayiya cevirip yazdir.",
+    "response": "sayi = float(input('Bir ondalikli sayi girin: '))\ntam_sayi = int(sayi)\nprint(tam_sayi)",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "While dongusu ile 1'den 5'e kadar sayilari ekrana yazdiran kod yaz.",
+    "response": "i = 1\nwhile i <= 5:\n    print(i)\n    i += 1",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir stringin uzunlugunu bulan ve ekrana yazdiran kod yaz.",
+    "response": "metin = 'Python'\nprint(len(metin))",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir listenin elemanlarini for dongusu ile tek tek yazdir.",
+    "response": "renkler = ['Kirmizi', 'Mavi', 'Yesil']\nfor renk in renkler:\n    print(renk)",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicinin girdigi yasa gore resit olup olmadigini kontrol eden kod yaz.",
+    "response": "yas = int(input('Yasinizi girin: '))\nif yas >= 18:\n    print('Resitsiniz')\nelse:\n    print('Resit degilsiniz')",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir sayinin karesini hesaplayip ekrana yazdiran kod yaz.",
+    "response": "sayi = 9\nkaresi = sayi ** 2\nprint(karesi)",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir sayinin mutlak degerini hesaplayip yazdiran kod yaz.",
+    "response": "sayi = -12\nprint(abs(sayi))",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir listedeki en buyuk sayiyi bulup yazdiran kod yaz.",
+    "response": "sayilar = [3, 7, 2, 9, 5]\nprint(max(sayilar))",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicinin girdigi iki sayidan buyuk olanini ekrana yazdir.",
+    "response": "a = int(input('Ilk sayi: '))\nb = int(input('Ikinci sayi: '))\nif a > b:\n    print(a)\nelse:\n    print(b)",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir stringin tum harflerini buyuk harfe cevirip yazdir.",
+    "response": "metin = 'merhaba dunya'\nprint(metin.upper())",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "1'den 100'e kadar olan sayilarin toplamini for dongusu ile hesapla.",
+    "response": "toplam = 0\nfor i in range(1, 101):\n    toplam += i\nprint(toplam)",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicinin girdigi iki sayinin bolumunu ve kalanini hesaplayip yazdir.",
+    "response": "a = int(input('Bolunen: '))\nb = int(input('Bolen: '))\nbolum = a // b\nkalan = a % b\nprint('Bolum:', bolum, 'Kalan:', kalan)",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir sayinin 0'dan buyuk, kucuk veya esit oldugunu kontrol eden kod yaz.",
+    "response": "sayi = int(input('Sayi girin: '))\nif sayi > 0:\n    print('Pozitif')\nelif sayi < 0:\n    print('Negatif')\nelse:\n    print('Sifir')",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir listedeki sayilarin ortalamasini hesaplayip yazdiran kod yaz.",
+    "response": "sayilar = [10, 20, 30, 40, 50]\nortalama = sum(sayilar) / len(sayilar)\nprint(ortalama)",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "While dongusu ile kullanici 0 girene kadar sayi isteyen kod yaz.",
+    "response": "sayi = int(input('Sayi girin (0 cikis): '))\nwhile sayi != 0:\n    print('Girdiniz:', sayi)\n    sayi = int(input('Sayi girin (0 cikis): '))",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir stringin ilk 3 karakterini ekrana yazdiran kod yaz.",
+    "response": "metin = 'Python'\nprint(metin[:3])",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicidan alinan 3 sayinin toplamini hesaplayip yazdiran kod yaz.",
+    "response": "a = int(input('Ilk sayi: '))\nb = int(input('Ikinci sayi: '))\nc = int(input('Ucuncu sayi: '))\nprint(a + b + c)",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  }
+]

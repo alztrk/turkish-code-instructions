@@ -1,0 +1,142 @@
+[
+  {
+    "instruction": "Degisken nedir ve ne ise yarar?",
+    "response": "Degisken, bilgisayar hafizasinda bir degeri saklamak icin kullanilan bir isimlendirilmis alandir. Program yazarken sayilari, metinleri veya baska verileri gecici olarak tutmak icin degisken kullaniriz. Ornegin bir kullanicinin yasini saklamak istedigimizde 'yas' adinda bir degisken olustururuz.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Fonksiyon nedir ve neden kullanilir?",
+    "response": "Fonksiyon, belli bir isi yapmak icin yazilmis, tekrar kullanilabilir kod blokudur. Ayni kodu defalarca yazmak yerine bir fonksiyon tanimlar ve ihtiyac duydugumuzda cagiririz. Bu sayede kodumuz daha duzenli, okunabilir ve bakimi kolay olur.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Dongu nedir ve cesitleri nelerdir?",
+    "response": "Dongu, bir kod blogunu belirli bir kosul saglandigi surece tekrar tekrar calistiran yapidir. En yaygin dongu cesitleri 'for' ve 'while' donguleridir. 'For' dongusu kac kere donecegini bildigimiz durumlarda, 'while' dongusu ise kosul saglandigi surece devam etmesi gereken durumlarda kullanilir.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Dizi (array) nedir?",
+    "response": "Dizi, ayni turden birden fazla veriyi tek bir degiskende sirali olarak saklamamizi saglayan veri yapisidir. Ornegin bir sinifin ogrenci listesini tek tek degiskenlerde tutmak yerine bir dizi icinde tutabiliriz. Dizideki her elemana bir indeks numarasiyla ulasilir ve indeks genelde 0'dan baslar.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Sozluk (dictionary) nedir?",
+    "response": "Sozluk, verileri anahtar-deger (key-value) ciftleri seklinde saklayan bir veri yapisidir. Her degerin kendine ozgu bir anahtari vardir ve bu anahtar sayesinde degere hizlica ulasabiliriz. Ornegin bir telefon rehberinde kisi isimleri anahtar, telefon numaralari ise deger olarak dusunulebilir.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Sinif (class) nedir?",
+    "response": "Sinif, nesne yonelimli programlamada bir nesnenin ozelliklerini ve davranislarini tanimlayan bir sablondur. Bir sinif icinde degiskenler (ozellikler) ve fonksiyonlar (metotlar) bulunur. Ornegin 'Araba' adinda bir sinif tanimlayip bu siniftan 'renk', 'model' gibi ozelliklere sahip birden fazla araba nesnesi olusturabiliriz.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Hata yakalama (try/catch) nedir?",
+    "response": "Hata yakalama, program calisirken olusabilecek beklenmedik hatalari yonetmemizi saglayan bir mekanizmadir. 'Try' blogu icinde hata olusabilecek kod yazilir, eger bir hata olusursa 'catch' blogu devreye girer ve hatayi uygun sekilde isler. Bu sayede program hata verdiginde tamamen cokmek yerine kontrollu bir sekilde davranir.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "API nedir?",
+    "response": "API (Application Programming Interface), farkli yazilimlarin birbiriyle iletisim kurmasini saglayan bir arayuzdur. Ornegin bir hava durumu uygulamasi, hava durumu verilerini almak icin bir API kullanir. API'ler sayesinde bir yazilim, baska bir yazilimin bazi ozelliklerini veya verilerini guvenli ve standart bir sekilde kullanabilir.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Veritabani nedir?",
+    "response": "Veritabani, verilerin duzenli bir sekilde saklandigi, yonetildigi ve gerektiginde hizlica sorgulanabildigi bir sistemdir. Bir okulun ogrenci kayitlarini, bir e-ticaret sitesinin urun bilgilerini veya bir bankanin musteri hesaplarini veritabaninda tutabiliriz. Veritabani yonetim sistemleri (MySQL, PostgreSQL gibi) bu verileri yonetmek icin kullanilir.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Frontend ve backend arasindaki fark nedir?",
+    "response": "Frontend, bir web sitesinin kullanicinin gordugu ve etkilesime girdigi on yuzudur; butonlar, menuler, sayfa duzeni gibi gorsel unsurlari icerir. Backend ise kullanicinin gormedigi ancak sistemin calismasini saglayan arka plan kodudur; veritabani islemleri, kullanici dogrulama ve sunucu yonetimi gibi isleri yapar. Ornegin bir e-ticaret sitesinde urun listesini gormek frontend, sepete ekleme isleminin veritabanina kaydedilmesi backenddir.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Framework nedir?",
+    "response": "Framework, yazilim gelistirmeyi kolaylastiran, hazir yapilar ve araclar sunan bir iskelet veya platformdur. Bir framework, belirli kurallar ve duzen icinde calismanizi saglayarak ortak problemlere hazir cozumler sunar. Ornegin web gelistirmede Django (Python) veya Spring (Java) populer frameworklerdir.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Kutuphane (library) nedir?",
+    "response": "Kutuphane, belirli bir islevi yerine getirmek icin yazilmis, tekrar kullanilabilir kodlarin bir koleksiyonudur. Bir projede ihtiyac duydugumuz bir ozelligi sifirdan yazmak yerine hazir bir kutuphane kullanarak zamandan tasarruf ederiz. Ornegin grafik cizmek icin bir kutuphane veya JSON islemleri icin baska bir kutuphane kullanabiliriz.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Git nedir ve ne ise yarar?",
+    "response": "Git, yazilim projelerindeki degisiklikleri takip etmek icin kullanilan bir versiyon kontrol sistemidir. Git sayesinde bir projenin gecmisindeki her degisikligi gorebilir, gerektiginde eski bir surume donebilir ve birden fazla kisi ayni proje uzerinde sorunsuzca calisabilir. Github gibi platformlar Git depolarini internet uzerinde barindirmak icin kullanilir.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "IDE nedir?",
+    "response": "IDE (Integrated Development Environment), yazilim gelistirme icin ihtiyac duyulan araclari bir arada sunan bir uygulamadir. Kod yazma, hata ayiklama, derleme ve calistirma gibi islemlerin hepsi IDE icinde yapilabilir. Visual Studio Code, IntelliJ IDEA ve PyCharm en populer IDE orneklerindendir.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Derleyici ve yorumlayici arasindaki fark nedir?",
+    "response": "Derleyici (compiler), yazilan kodu tamamini once makine diline cevirir ve ardindan calistirir. Yorumlayici (interpreter) ise kodu satir satir okur ve aninda calistirir. Derleyici kullanan diller (C, C++) genelde daha hizli calisirken, yorumlayici kullanan diller (Python, JavaScript) kod yazimi ve test acisindan daha esnektir.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Algoritma nedir?",
+    "response": "Algoritma, bir problemi cozmek icin izlenen adim adim mantiksal yol veya yontemdir. Gunluk hayatta bir yemek tarifi bile bir algoritma ornegidir: once malzemeleri hazirla, sonra karistir, sonra pisir gibi adimlar icerir. Bilgisayar biliminde algoritmalar, verimli ve dogru sonuclar uretmek icin tasarlanir.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Veri yapisi nedir?",
+    "response": "Veri yapisi, verilerin bilgisayar icinde duzenlenme ve saklanma bicimidir. Dizi, bagli liste, yigin (stack), kuyruk (queue) ve agac (tree) gibi farkli veri yapilari farkli amaclara hizmet eder. Dogru veri yapisini secmek, programin daha hizli ve verimli calismasini saglar.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Recursion (ozyineleme) nedir?",
+    "response": "Recursion, bir fonksiyonun kendi kendini cagirmasiyla calisan bir programlama teknigidir. Her recursive fonksiyon, bir durma kosulu icerir ve bu kosul saglanana kadar kendini cagirmaya devam eder. Ornegin bir sayinin faktoriyelini hesaplamak recursion ile kolayca yapilabilir: 5! = 5 * 4! seklinde kendi kendini cagiran bir yapi kullanilir.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Nesne yonelimli programlama (OOP) nedir?",
+    "response": "Nesne yonelimli programlama, kodun nesneler etrafinda organize edildigi bir programlama paradigmasi. Gercek hayattaki nesneleri (araba, insan, hesap gibi) bilgisayar ortaminda modellemeye dayanir. OOP'nin temel kavramlari sinif, nesne, kalitim (inheritance), kapsulleme (encapsulation) ve cok bicimliliktir (polymorphism).",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  },
+  {
+    "instruction": "Fonksiyonel programlama nedir?",
+    "response": "Fonksiyonel programlama, hesaplamalarin matematiksel fonksiyonlar gibi ele alindigi bir programlama paradigmasi. Bu yaklasimda durum degistirme ve yan etkilerden kacinilir, yani bir fonksiyon ayni girdiyle her zaman ayni ciktiyi verir. Haskell, Scala ve Elixir gibi diller fonksiyonel programlamayi destekler ve bu yaklasim ozellikle paralel islemlerde ve hata ayiklamada avantaj saglar.",
+    "language": "knowledge",
+    "category": "knowledge",
+    "type": "knowledge"
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "instruction": "Konsola 'Merhaba Dünya!' yazdiran bir Rust programi yaz.",
+    "response": "fn main() {\n    println!(\"Merhaba Dünya!\");\n}",
+    "language": "rust",
+    "category": "rust",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir degisken tanimla, degerini sonra degistir ve yazdir.",
+    "response": "fn main() {\n    let mut x = 5;\n    println!(\"x = {}\", x);\n    x = 10;\n    println!(\"x = {}\", x);\n}",
+    "language": "rust",
+    "category": "rust",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir tam sayi (i32), ondalikli sayi (f64), metin (String) ve mantiksal (bool) degisken tanimla ve yazdir.",
+    "response": "fn main() {\n    let sayi: i32 = 42;\n    let pi: f64 = 3.14;\n    let selam = String::from(\"Merhaba\");\n    let dogru: bool = true;\n    println!(\"{} {} {} {}\", sayi, pi, selam, dogru);\n}",
+    "language": "rust",
+    "category": "rust",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir sayinin pozitif, negatif veya sifir oldugunu if/else ile kontrol eden program yaz.",
+    "response": "fn main() {\n    let sayi = -3;\n    if sayi > 0 {\n        println!(\"Pozitif\");\n    } else if sayi < 0 {\n        println!(\"Negatif\");\n    } else {\n        println!(\"Sifir\");\n    }\n}",
+    "language": "rust",
+    "category": "rust",
+    "type": "manual"
+  },
+  {
+    "instruction": "1'den 5'e kadar sayilari loop ile yazdir.",
+    "response": "fn main() {\n    let mut sayac = 1;\n    loop {\n        println!(\"{}\", sayac);\n        sayac += 1;\n        if sayac > 5 {\n            break;\n        }\n    }\n}",
+    "language": "rust",
+    "category": "rust",
+    "type": "manual"
+  },
+  {
+    "instruction": "1'den 5'e kadar sayilari while ile yazdir.",
+    "response": "fn main() {\n    let mut sayac = 1;\n    while sayac <= 5 {\n        println!(\"{}\", sayac);\n        sayac += 1;\n    }\n}",
+    "language": "rust",
+    "category": "rust",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir dizideki elemanlari for ile yazdir.",
+    "response": "fn main() {\n    let sayilar = [10, 20, 30, 40, 50];\n    for sayi in sayilar {\n        println!(\"{}\", sayi);\n    }\n}",
+    "language": "rust",
+    "category": "rust",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir vektor olustur, eleman ekle, uzunlugunu ve elemanlari yazdir.",
+    "response": "fn main() {\n    let mut sayilar: Vec<i32> = Vec::new();\n    sayilar.push(3);\n    sayilar.push(7);\n    sayilar.push(11);\n    println!(\"Uzunluk: {}\", sayilar.len());\n    for sayi in &sayilar {\n        println!(\"{}\", sayi);\n    }\n}",
+    "language": "rust",
+    "category": "rust",
+    "type": "manual"
+  },
+  {
+    "instruction": "Iki String'i push_str ve format! ile birlestirip yazdir.",
+    "response": "fn main() {\n    let mut bir = String::from(\"Merhaba\");\n    let iki = String::from(\" Dünya\");\n    bir.push_str(&iki);\n    println!(\"{}\", bir);\n    let birlesti = format!(\"{} {}\", \"Rust\", \"ogreniyorum\");\n    println!(\"{}\", birlesti);\n}",
+    "language": "rust",
+    "category": "rust",
+    "type": "manual"
+  },
+  {
+    "instruction": "Iki sayiyi toplayan bir fonksiyon yaz ve cagir.",
+    "response": "fn topla(a: i32, b: i32) -> i32 {\n    a + b\n}\n\nfn main() {\n    let sonuc = topla(15, 27);\n    println!(\"Toplam: {}\", sonuc);\n}",
+    "language": "rust",
+    "category": "rust",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir gun adina gore sira numarasini match ile donduren program yaz.",
+    "response": "fn main() {\n    let gun = \"Sali\";\n    let sira = match gun {\n        \"Pazartesi\" => 1,\n        \"Sali\" => 2,\n        \"Carsamba\" => 3,\n        \"Persembe\" => 4,\n        \"Cuma\" => 5,\n        \"Cumartesi\" => 6,\n        \"Pazar\" => 7,\n        _ => 0,\n    };\n    println!(\"{} haftanin {}. gunu\", gun, sira);\n}",
+    "language": "rust",
+    "category": "rust",
+    "type": "manual"
+  },
+  {
+    "instruction": "Option<String> degeri varsa yazdir, yoksa 'deger yok' yaz.",
+    "response": "fn main() {\n    let deger: Option<String> = Some(String::from(\"Rust\"));\n    match deger {\n        Some(d) => println!(\"Deger: {}\", d),\n        None => println!(\"Deger yok\"),\n    }\n    let bos: Option<i32> = None;\n    match bos {\n        Some(s) => println!(\"Sayi: {}\", s),\n        None => println!(\"Deger yok\"),\n    }\n}",
+    "language": "rust",
+    "category": "rust",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir dosyayi acmayi dene, basarili olursa icerigini yazdir, hata olursa unwrap ile panik yap.",
+    "response": "use std::fs::File;\nuse std::io::Read;\n\nfn main() {\n    let mut dosya = File::open(\"ornek.txt\").expect(\"Dosya acilamadi\");\n    let mut icerik = String::new();\n    dosya.read_to_string(&mut icerik).unwrap();\n    println!(\"{}\", icerik);\n}",
+    "language": "rust",
+    "category": "rust",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir struct tanimla, impl ile metot ekle ve kullan.",
+    "response": "struct Dikdortgen {\n    genislik: u32,\n    yukseklik: u32,\n}\n\nimpl Dikdortgen {\n    fn alan(&self) -> u32 {\n        self.genislik * self.yukseklik\n    }\n}\n\nfn main() {\n    let d = Dikdortgen {\n        genislik: 10,\n        yukseklik: 5,\n    };\n    println!(\"Alan: {}\", d.alan());\n}",
+    "language": "rust",
+    "category": "rust",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir dilim (slice) ve demet (tuple) olusturup elemanlarina eris.",
+    "response": "fn main() {\n    let sayilar = [1, 2, 3, 4, 5];\n    let dilim = &sayilar[1..4];\n    println!(\"Dilim: {:?}\", dilim);\n    let kisi: (&str, i32, f64) = (\"Ali\", 25, 1.75);\n    println!(\"Isim: {}, Yas: {}, Boy: {}\", kisi.0, kisi.1, kisi.2);\n}",
+    "language": "rust",
+    "category": "rust",
+    "type": "manual"
+  }
+]

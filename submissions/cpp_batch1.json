@@ -1,0 +1,142 @@
+[
+  {
+    "instruction": "Kullanicidan iki tam sayi alip toplamini ekrana yazdiran C++ programini yaz.",
+    "response": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int a, b;\n    cout << \"Birinci sayiyi girin: \";\n    cin >> a;\n    cout << \"Ikinci sayiyi girin: \";\n    cin >> b;\n    int toplam = a + b;\n    cout << \"Toplam: \" << toplam << endl;\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicidan alinan bir sayinin tek mi cift mi oldugunu kontrol eden C++ programini yaz.",
+    "response": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int sayi;\n    cout << \"Bir sayi girin: \";\n    cin >> sayi;\n    if (sayi % 2 == 0) {\n        cout << sayi << \" cifttir.\" << endl;\n    } else {\n        cout << sayi << \" tektir.\" << endl;\n    }\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "1'den 10'a kadar olan sayilari ekrana yazdiran C++ programini for dongusu ile yaz.",
+    "response": "#include <iostream>\nusing namespace std;\n\nint main() {\n    for (int i = 1; i <= 10; i++) {\n        cout << i << \" \";\n    }\n    cout << endl;\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicidan alinan bir sayinin faktoriyelini hesaplayan C++ programini while dongusu ile yaz.",
+    "response": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int n;\n    cout << \"Bir sayi girin: \";\n    cin >> n;\n    int faktoriyel = 1;\n    int i = 1;\n    while (i <= n) {\n        faktoriyel *= i;\n        i++;\n    }\n    cout << n << \"! = \" << faktoriyel << endl;\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicinin girdigi 5 sayiyi bir dizide saklayip ekrana yazdiran C++ programini yaz.",
+    "response": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int dizi[5];\n    cout << \"5 sayi girin:\" << endl;\n    for (int i = 0; i < 5; i++) {\n        cin >> dizi[i];\n    }\n    cout << \"Girilen sayilar: \";\n    for (int i = 0; i < 5; i++) {\n        cout << dizi[i] << \" \";\n    }\n    cout << endl;\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicidan alinan isim ve soyisim bilgilerini birlestirip tam ad olarak yazdiran C++ programini yaz.",
+    "response": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string isim, soyisim;\n    cout << \"Isminizi girin: \";\n    cin >> isim;\n    cout << \"Soyisminizi girin: \";\n    cin >> soyisim;\n    string tamAd = isim + \" \" + soyisim;\n    cout << \"Tam ad: \" << tamAd << endl;\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicinin girdigi 5 sayinin ortalamasini hesaplayan C++ programini yaz.",
+    "response": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> sayilar;\n    int sayi;\n    cout << \"5 sayi girin:\" << endl;\n    for (int i = 0; i < 5; i++) {\n        cin >> sayi;\n        sayilar.push_back(sayi);\n    }\n    int toplam = 0;\n    for (int i = 0; i < sayilar.size(); i++) {\n        toplam += sayilar[i];\n    }\n    double ortalama = (double)toplam / sayilar.size();\n    cout << \"Ortalama: \" << ortalama << endl;\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicinin girdigi vize ve final notlarina gore gecip gecmedigini hesaplayan C++ programini if/else ile yaz (vize %%40, final %%60, gecme notu 50).",
+    "response": "#include <iostream>\nusing namespace std;\n\nint main() {\n    double vize, final;\n    cout << \"Vize notunu girin: \";\n    cin >> vize;\n    cout << \"Final notunu girin: \";\n    cin >> final;\n    double ortalama = vize * 0.4 + final * 0.6;\n    if (ortalama >= 50) {\n        cout << \"Gectiniz! Ortalamaniz: \" << ortalama << endl;\n    } else {\n        cout << \"Kaldiniz. Ortalamaniz: \" << ortalama << endl;\n    }\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Girilen bir sayinin pozitif, negatif veya sifir oldugunu belirten C++ programini yaz.",
+    "response": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int sayi;\n    cout << \"Bir sayi girin: \";\n    cin >> sayi;\n    if (sayi > 0) {\n        cout << sayi << \" pozitiftir.\" << endl;\n    } else if (sayi < 0) {\n        cout << sayi << \" negatiftir.\" << endl;\n    } else {\n        cout << \"Sayi sifirdir.\" << endl;\n    }\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "1'den 100'e kadar olan cift sayilari ekrana yazdiran C++ programini for dongusu ve continue ile yaz.",
+    "response": "#include <iostream>\nusing namespace std;\n\nint main() {\n    for (int i = 1; i <= 100; i++) {\n        if (i % 2 != 0) {\n            continue;\n        }\n        cout << i << \" \";\n    }\n    cout << endl;\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicidan 5 isim alip bir vector'e ekleyen ve range-based for ile yazdiran C++ programini yaz.",
+    "response": "#include <iostream>\n#include <vector>\n#include <string>\nusing namespace std;\n\nint main() {\n    vector<string> isimler;\n    string isim;\n    cout << \"5 isim girin:\" << endl;\n    for (int i = 0; i < 5; i++) {\n        cin >> isim;\n        isimler.push_back(isim);\n    }\n    cout << \"Girilen isimler: \";\n    for (const string& i : isimler) {\n        cout << i << \" \";\n    }\n    cout << endl;\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Girilen bir gun numarasina gore gun adini yazdiran C++ programini switch-case ile yaz (1=Pazartesi ... 7=Pazar).",
+    "response": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int gun;\n    cout << \"Gun numarasini girin (1-7): \";\n    cin >> gun;\n    switch (gun) {\n        case 1: cout << \"Pazartesi\" << endl; break;\n        case 2: cout << \"Sali\" << endl; break;\n        case 3: cout << \"Carsamba\" << endl; break;\n        case 4: cout << \"Persembe\" << endl; break;\n        case 5: cout << \"Cuma\" << endl; break;\n        case 6: cout << \"Cumartesi\" << endl; break;\n        case 7: cout << \"Pazar\" << endl; break;\n        default: cout << \"Gecersiz gun numarasi!\" << endl;\n    }\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir sayinin karesini hesaplayan bir fonksiyon yaz ve main icinde kullanarak kullanicidan alinan sayinin karesini ekrana yazdiran C++ programini yaz.",
+    "response": "#include <iostream>\nusing namespace std;\n\nint kareAl(int x) {\n    return x * x;\n}\n\nint main() {\n    int sayi;\n    cout << \"Bir sayi girin: \";\n    cin >> sayi;\n    int sonuc = kareAl(sayi);\n    cout << sayi << \" sayisinin karesi: \" << sonuc << endl;\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Iki sayiyi toplayan bir fonksiyon yaz ve main icinde iki sayi alarak sonucu gosteren C++ programini yaz.",
+    "response": "#include <iostream>\nusing namespace std;\n\nint topla(int a, int b) {\n    return a + b;\n}\n\nint main() {\n    int x, y;\n    cout << \"Iki sayi girin: \";\n    cin >> x >> y;\n    cout << \"Toplam: \" << topla(x, y) << endl;\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicinin tam adini (bosluk ile) getline kullanarak alan ve ekrana yazdiran C++ programini yaz.",
+    "response": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string tamAd;\n    cout << \"Tam adinizi girin: \";\n    cin.ignore();\n    getline(cin, tamAd);\n    cout << \"Merhaba, \" << tamAd << \"!\" << endl;\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir double ve bir string degiskeni tanimlayip const ile sabit olarak bildiren ve ekrana yazdiran C++ programini yaz.",
+    "response": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    const double PI = 3.14159;\n    const string MESAJ = \"Merhaba Dunya\";\n    cout << \"PI sayisi: \" << PI << endl;\n    cout << \"Mesaj: \" << MESAJ << endl;\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicidan 5 sayi alip bir vector'e ekleyen, for dongusu ile toplamini bulan ve ekrana yazdiran C++ programini yaz.",
+    "response": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> sayilar;\n    int sayi;\n    cout << \"5 sayi girin:\" << endl;\n    for (int i = 0; i < 5; i++) {\n        cin >> sayi;\n        sayilar.push_back(sayi);\n    }\n    int toplam = 0;\n    for (int i = 0; i < sayilar.size(); i++) {\n        toplam += sayilar[i];\n    }\n    cout << \"Toplam: \" << toplam << endl;\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Birden ona kadar olan sayilari ekrana yazdiran ancak 5'e gelince donguden cikan C++ programini break ile yaz.",
+    "response": "#include <iostream>\nusing namespace std;\n\nint main() {\n    for (int i = 1; i <= 10; i++) {\n        if (i == 5) {\n            break;\n        }\n        cout << i << \" \";\n    }\n    cout << endl;\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir vector icindeki sayilari range-based for dongusu ile yazdiran C++ programini yaz (vector icinde 10 eleman olsun).",
+    "response": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> sayilar = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};\n    cout << \"Sayilar: \";\n    for (int s : sayilar) {\n        cout << s << \" \";\n    }\n    cout << endl;\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanicidan alinan bir metnin uzunlugunu ve ilk karakterini ekrana yazdiran C++ programini yaz (string kullanarak).",
+    "response": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string metin;\n    cout << \"Bir metin girin: \";\n    cin >> metin;\n    cout << \"Metin uzunlugu: \" << metin.length() << endl;\n    if (metin.length() > 0) {\n        cout << \"Ilk karakter: \" << metin[0] << endl;\n    }\n    return 0;\n}",
+    "language": "cpp",
+    "category": "cpp",
+    "type": "manual"
+  }
+]
