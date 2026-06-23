@@ -1,0 +1,402 @@
+[
+  {
+    "instruction": "Bu kodun ciktisi nedir?\nprint(2 ** 10)",
+    "response": "1024",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod ne yazdirir?\nprint(\"Merhaba\"[::-1])",
+    "response": "abahreM",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Asagidaki kodun ciktisi nedir?\nprint([x**2 for x in range(5)])",
+    "response": "[0, 1, 4, 9, 16]",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kodun ekran ciktisi ne olur?\nprint(True and False or not False)",
+    "response": "True",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod calistirildiginda cikti ne olur?\ndef f():\n    return 1, 2, 3\nprint(f())",
+    "response": "(1, 2, 3)",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Asagidaki kod ne yazdirir?\ns = 0\nfor i in range(1, 6):\n    s += i\nprint(s)",
+    "response": "15",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kodun ciktisi nedir?\nx = 10\nprint(\"cift\" if x % 2 == 0 else \"tek\")",
+    "response": "cift",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod ne yazdirir?\nprint({i: i**2 for i in range(3)})",
+    "response": "{0: 0, 1: 1, 2: 4}",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod calistirilirsa cikti ne olur?\ntry:\n    print(1/0)\nexcept ZeroDivisionError as e:\n    print(e)",
+    "response": "division by zero",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Asagidaki kodun ekran ciktisi nedir?\nprint(\"Python Programlama\"[::2])",
+    "response": "Pto rgalm",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod ne yazdirir?\nisim = \"Ali\"\nyas = 25\nprint(f\"{isim} {yas} yasinda.\")",
+    "response": "Ali 25 yasinda.",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kodun ciktisi nedir?\nprint(int(\"1010\", 2))",
+    "response": "10",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod calistirilirsa cikti ne olur?\nprint(\"  hello world  \".strip().upper().replace(\" \", \"-\"))",
+    "response": "HELLO-WORLD",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Asagidaki kod ne yazdirir?\nprint([] or [1, 2] or [3, 4])",
+    "response": "[1, 2]",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kodun ciktisi nedir?\nprint(bool(\"\"), bool(\"a\"), bool(0), bool(1))",
+    "response": "False True False True",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod ne yazdirir?\ndef f():\n    pass\nprint(f())",
+    "response": "None",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Asagidaki kodun ekran ciktisi ne olur?\na = [1, 2, 3]\nb = a\nb.append(4)\nprint(a)",
+    "response": "[1, 2, 3, 4]",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod calistirilirsa cikti ne olur?\nx = 5\ndef f():\n    x = 10\nf()\nprint(x)",
+    "response": "5",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kodun ciktisi nedir?\nprint(type(42))",
+    "response": "<class 'int'>",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod ne yazdirir?\nprint(list(range(10, 0, -3)))",
+    "response": "[10, 7, 4, 1]",
+    "language": "python",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kodun ciktisi nedir?\nconsole.log(2 + \"2\")",
+    "response": "22",
+    "language": "javascript",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Asagidaki kod ne yazdirir?\nconsole.log(typeof NaN)",
+    "response": "number",
+    "language": "javascript",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kodun ekran ciktisi nedir?\nconsole.log([1, 2, 3].map(x => x * 2))",
+    "response": "[ 2, 4, 6 ]",
+    "language": "javascript",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod calistirilirsa cikti ne olur?\nPromise.resolve(42).then(console.log)",
+    "response": "42",
+    "language": "javascript",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Asagidaki kod ne yazdirir?\nsetTimeout(() => console.log(\"sonra\"), 0)\nconsole.log(\"once\")",
+    "response": "once\nsonra",
+    "language": "javascript",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kodun ciktisi nedir?\nconsole.log({...{x: 1, y: 2}, z: 3})",
+    "response": "{ x: 1, y: 2, z: 3 }",
+    "language": "javascript",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod ne yazdirir?\nconsole.log(`Merhaba ${\"Dunya\"}`)",
+    "response": "Merhaba Dunya",
+    "language": "javascript",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Asagidaki kodun ekran ciktisi ne olur?\nconsole.log(null ?? \"varsayilan\")\nconsole.log(0 ?? \"varsayilan\")",
+    "response": "varsayilan\n0",
+    "language": "javascript",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod calistirilirsa cikti ne olur?\nconst [a, , b] = [10, 20, 30]\nconsole.log(a, b)",
+    "response": "10 30",
+    "language": "javascript",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kodun ciktisi nedir?\nconsole.log([1, 2, 3, 4, 5].reduce((a, b) => a + b, 0))",
+    "response": "15",
+    "language": "javascript",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod ne yazdirir?\nSystem.out.println(\"Java\" + \" \" + 17);",
+    "response": "Java 17",
+    "language": "java",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Asagidaki kodun ciktisi nedir?\nSystem.out.println(new StringBuilder(\"Merhaba\").reverse());",
+    "response": "abahreM",
+    "language": "java",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod calistirilirsa cikti ne olur?\nvar list = new java.util.ArrayList<>(java.util.Arrays.asList(1, 2, 3, 4, 5));\nlist.remove(0);\nSystem.out.println(list);",
+    "response": "[2, 3, 4, 5]",
+    "language": "java",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kodun ekran ciktisi nedir?\nvar map = new java.util.HashMap<String, Integer>();\nmap.put(\"a\", 1);\nSystem.out.println(map.get(\"b\"));",
+    "response": "null",
+    "language": "java",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Asagidaki kod ne yazdirir?\nSystem.out.println(java.util.stream.Stream.of(1, 2, 3, 4, 5).filter(x -> x % 2 == 0).collect(java.util.stream.Collectors.toList()));",
+    "response": "[2, 4]",
+    "language": "java",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kodun ciktisi nedir?\nSystem.out.println(java.util.Optional.ofNullable(null).orElse(\"varsayilan\"));",
+    "response": "varsayilan",
+    "language": "java",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod ne yazdirir?\nSystem.out.println(10 / 3);",
+    "response": "3",
+    "language": "java",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Asagidaki kodun ekran ciktisi nedir?\nSystem.out.println((int) 'B');",
+    "response": "66",
+    "language": "java",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod calistirilirsa cikti ne olur?\nSystem.out.println(Math.max(7, 3));",
+    "response": "7",
+    "language": "java",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kodun ciktisi nedir?\ntry {\n    int x = 1 / 0;\n} catch (Exception e) {\n    System.out.println(e.getMessage());\n}",
+    "response": "/ by zero",
+    "language": "java",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod ne yazdirir?\nfmt.Println(2 * 3 * 5)",
+    "response": "30",
+    "language": "go",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kodun ciktisi nedir?\nfmt.Println(\"Go \" + \"Lang\")",
+    "response": "Go Lang",
+    "language": "go",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Asagidaki kod ne yazdirir?\ns := []int{1, 2, 3}\ns = append(s, 4)\nfmt.Println(s)",
+    "response": "[1 2 3 4]",
+    "language": "go",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kodun ekran ciktisi nedir?\nm := map[string]int{\"bir\": 1, \"iki\": 2}\nfmt.Println(m[\"uc\"])",
+    "response": "0",
+    "language": "go",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kod calistirilirsa cikti ne olur?\ndefer fmt.Print(\" dunya\")\nfmt.Print(\"merhaba\")",
+    "response": "merhaba dunya",
+    "language": "go",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu kodun ciktisi nedir?\nSELECT 7 * 3 + 5 AS sonuc;",
+    "response": "26",
+    "language": "sql",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Asagidaki SQL sorgusu ne dondurur?\nSELECT UPPER('sql') AS sonuc;",
+    "response": "SQL",
+    "language": "sql",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu SQL sorgusunun sonucu nedir?\nSELECT COALESCE(NULL, 'yedek') AS yedek;",
+    "response": "yedek",
+    "language": "sql",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Bu sorgu ne dondurur?\nSELECT 'Veri' || 'tabani' AS birlestir;",
+    "response": "Veritabani",
+    "language": "sql",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  },
+  {
+    "instruction": "Asagidaki SQL sorgusunun ciktisi nedir?\nSELECT LENGTH('veritabani') AS uzunluk;",
+    "response": "10",
+    "language": "sql",
+    "category": "output_prediction",
+    "type": "manual",
+    "format": "output_prediction"
+  }
+]

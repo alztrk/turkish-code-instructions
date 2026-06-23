@@ -1,0 +1,322 @@
+[
+  {
+    "instruction": "Bu kodu yeniden düzenle:\ndef hesapla(a, b, c):\n    x = a * 0.18\n    y = b * c\n    z = x + y\n    return z",
+    "response": "KDV_ORANI = 0.18\n\ndef siparis_toplami_hesapla(urun_fiyati, miktar, birim_fiyat):\n    kdv_tutari = urun_fiyati * KDV_ORANI\n    ara_toplam = miktar * birim_fiyat\n    return kdv_tutari + ara_toplam",
+    "language": "python",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su kodu iyilestir (kokulu kod):\ndef kontrol(user):\n    if user != None:\n        if user['age'] >= 18:\n            if user['active'] == True:\n                return True\n    return False",
+    "response": "def kullanici_gecerli_mi(kullanici):\n    if kullanici is None:\n        return False\n    if kullanici['age'] < 18:\n        return False\n    if not kullanici['active']:\n        return False\n    return True",
+    "language": "python",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu fonksiyonu daha okunabilir yap:\ndef get_data():\n    import requests\n    r = requests.get('https://api.ornek.com/v1/users')\n    d = r.json()\n    u = []\n    for item in d['results']:\n        u.append({'id': item['id'], 'name': item['ad']})\n    return u",
+    "response": "import requests\n\nKULLANICI_API_URL = 'https://api.ornek.com/v1/users'\n\ndef kullanicilari_getir():\n    yanit = requests.get(KULLANICI_API_URL, timeout=10)\n    veri = yanit.json()\n    return [{'id': kullanici['id'], 'name': kullanici['ad']}\n            for kullanici in veri['results']]",
+    "language": "python",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su kodu refactor et (switch yerine sozluk kullan):\ndef islem_turu(kod):\n    if kod == 'EKLE':\n        return 'Urun eklendi'\n    elif kod == 'SIL':\n        return 'Urun silindi'\n    elif kod == 'GUNCELLE':\n        return 'Urun guncellendi'\n    elif kod == 'LISTELE':\n        return 'Urunler listelendi'\n    else:\n        return 'Bilinmeyen islem'",
+    "response": "ISLEM_MESAJLARI = {\n    'EKLE': 'Urun eklendi',\n    'SIL': 'Urun silindi',\n    'GUNCELLE': 'Urun guncellendi',\n    'LISTELE': 'Urunler listelendi',\n}\n\ndef islem_mesaji_getir(kod):\n    return ISLEM_MESAJLARI.get(kod, 'Bilinmeyen islem')",
+    "language": "python",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu kodu temizle (gereksiz degiskeni kaldir):\ndef indirim_uygula(fiyat):\n    indirim = 0\n    if fiyat > 100:\n        indirim = fiyat * 0.1\n        sonuc = fiyat - indirim\n    else:\n        sonuc = fiyat\n    return sonuc",
+    "response": "INDIREM_ESIGI = 100\nINDIREM_ORANI = 0.1\n\ndef indirim_uygula(fiyat):\n    if fiyat > INDIREM_ESIGI:\n        return fiyat - (fiyat * INDIREM_ORANI)\n    return fiyat",
+    "language": "python",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu kodu refactor et (sinif kullanarak duzenle):\nimport math\n\ndef daire_alani(yaricap):\n    return math.pi * yaricap ** 2\n\ndef dikdortgen_alani(genislik, yukseklik):\n    return genislik * yukseklik\n\ndef ucgen_alani(taban, yukseklik):\n    return (taban * yukseklik) / 2",
+    "response": "import math\nfrom abc import ABC, abstractmethod\n\n\nclass Sekil(ABC):\n    @abstractmethod\n    def alan_hesapla(self):\n        pass\n\n\nclass Daire(Sekil):\n    def __init__(self, yaricap):\n        self.yaricap = yaricap\n\n    def alan_hesapla(self):\n        return math.pi * self.yaricap ** 2\n\n\nclass Dikdortgen(Sekil):\n    def __init__(self, genislik, yukseklik):\n        self.genislik = genislik\n        self.yukseklik = yukseklik\n\n    def alan_hesapla(self):\n        return self.genislik * self.yukseklik\n\n\nclass Ucgen(Sekil):\n    def __init__(self, taban, yukseklik):\n        self.taban = taban\n        self.yukseklik = yukseklik\n\n    def alan_hesapla(self):\n        return (self.taban * self.yukseklik) / 2",
+    "language": "python",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu kodu iyilestir (icerik cozumleme):\ndef parse_log(line):\n    parts = line.split('|')\n    date = parts[0]\n    time = parts[1]\n    level = parts[2]\n    msg = parts[3]\n    if level == 'ERROR':\n        print(f'[{date} {time}] HATA: {msg}')\n    elif level == 'WARN':\n        print(f'[{date} {time}] UYARI: {msg}')\n    else:\n        print(f'[{date} {time}] BILGI: {msg}')",
+    "response": "from collections import namedtuple\n\nLogKaydi = namedtuple('LogKaydi', ['tarih', 'saat', 'seviye', 'mesaj'])\n\nSEVIYE_ETIKETLERI = {\n    'ERROR': 'HATA',\n    'WARN': 'UYARI',\n    'INFO': 'BILGI',\n}\n\ndef log_kaydi_cozumle(satir):\n    tarih, saat, seviye, mesaj = satir.split('|')\n    return LogKaydi(tarih, saat, seviye, mesaj)\n\ndef log_yazdir(kayit):\n    etiket = SEVIYE_ETIKETLERI.get(kayit.seviye, kayit.seviye)\n    print(f'[{kayit.tarih} {kayit.saat}] {etiket}: {kayit.mesaj}')",
+    "language": "python",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su kodu refactor et (list comprehension kullan):\ndef cift_kareler(sayilar):\n    sonuc = []\n    for s in sayilar:\n        if s % 2 == 0:\n            sonuc.append(s ** 2)\n    return sonuc",
+    "response": "def cift_kareler(sayilar):\n    return [sayi ** 2 for sayi in sayilar if sayi % 2 == 0]",
+    "language": "python",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu kodu iyilestir (sihirli sayilari kaldir):\ndef maas_hesapla(brut):\n    vergi = brut * 0.15\n    sgk = brut * 0.075\n    damga = brut * 0.00759\n    return brut - vergi - sgk - damga",
+    "response": "VERGI_ORANI = 0.15\nSGK_ORANI = 0.075\nDAMGA_VERGISI_ORANI = 0.00759\n\ndef maas_hesapla(brut_maas):\n    vergi = brut_maas * VERGI_ORANI\n    sgk = brut_maas * SGK_ORANI\n    damga_vergisi = brut_maas * DAMGA_VERGISI_ORANI\n    return brut_maas - vergi - sgk - damga_vergisi",
+    "language": "python",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su kodu duzelt (sorgu ile degistiriciyi ayir):\nclass Hesap:\n    def get_balance(self):\n        return self.bakiye\n    \n    def process_order(self, miktar):\n        if self.bakiye >= miktar:\n            self.bakiye -= miktar\n            self.islem_gecmisi.append(f'Alisveris: -{miktar}')\n            return True\n        return False",
+    "response": "class Hesap:\n    def bakiye_yeterli_mi(self, miktar):\n        return self.bakiye >= miktar\n\n    def bakiye_goruntule(self):\n        return self.bakiye\n\n    def odeme_yap(self, miktar):\n        if not self.bakiye_yeterli_mi(miktar):\n            return False\n        self.bakiye -= miktar\n        self._islem_kaydet(f'Alisveris: -{miktar}')\n        return True\n\n    def _islem_kaydet(self, aciklama):\n        self.islem_gecmisi.append(aciklama)",
+    "language": "python",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu kodu refactor et (parametre nesnesi olustur):\ndef kullanici_kaydet(ad, soyad, email, tel, sehir, ilce, cadde, no, posta_kodu, dogum_tarihi, cinsiyet):\n    print(f'{ad} {soyad} kaydedildi')",
+    "response": "from dataclasses import dataclass\n\n@dataclass\nclass Adres:\n    sehir: str\n    ilce: str\n    cadde: str\n    no: str\n    posta_kodu: str\n\n@dataclass\nclass Kullanici:\n    ad: str\n    soyad: str\n    email: str\n    telefon: str\n    adres: Adres\n    dogum_tarihi: str\n    cinsiyet: str\n\ndef kullanici_kaydet(kullanici: Kullanici):\n    print(f'{kullanici.ad} {kullanici.soyad} kaydedildi')",
+    "language": "python",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su kodu iyilestir (icerikli koleksiyonu kapsulle):\nclass Takim:\n    def __init__(self):\n        self.oyuncular = []\n    \n    def oyuncu_ekle(self, oyuncu):\n        self.oyuncular.append(oyuncu)",
+    "response": "class Takim:\n    def __init__(self):\n        self._oyuncular = []\n\n    def oyuncu_ekle(self, oyuncu):\n        if not oyuncu:\n            raise ValueError('Gecersiz oyuncu')\n        self._oyuncular.append(oyuncu)\n\n    def oyuncu_cikar(self, oyuncu):\n        self._oyuncular.remove(oyuncu)\n\n    def oyuncu_sayisi(self):\n        return len(self._oyuncular)\n\n    def oyuncu_var_mi(self, oyuncu):\n        return oyuncu in self._oyuncular\n\n    def oyunculari_listele(self):\n        return list(self._oyuncular)",
+    "language": "python",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu kodu refactor et (fonksiyon cikar):\ndef maas_bordro_hesapla(calisan):\n    brut = calisan['saatlik_ucret'] * calisan['calisma_saati']\n    vergi = brut * 0.2\n    sgk = brut * 0.15\n    kesintiler = vergi + sgk\n    net = brut - kesintiler\n    ikramiye = brut * 0.05 if calisan['performans'] == 'iyi' else 0\n    toplam = net + ikramiye\n    return {'brut': brut, 'net': net, 'kesintiler': kesintiler, 'toplam': toplam}",
+    "response": "VERGI_ORANI = 0.2\nSGK_ORANI = 0.15\nIKRAMIYE_ORANI = 0.05\n\ndef brut_hesapla(saatlik_ucret, calisma_saati):\n    return saatlik_ucret * calisma_saati\n\ndef kesinti_hesapla(brut):\n    vergi = brut * VERGI_ORANI\n    sgk = brut * SGK_ORANI\n    return vergi + sgk\n\ndef ikramiye_hesapla(brut, performans):\n    if performans == 'iyi':\n        return brut * IKRAMIYE_ORANI\n    return 0\n\ndef maas_bordro_hesapla(calisan):\n    brut = brut_hesapla(calisan['saatlik_ucret'], calisan['calisma_saati'])\n    kesintiler = kesinti_hesapla(brut)\n    net = brut - kesintiler\n    ikramiye = ikramiye_hesapla(brut, calisan['performans'])\n    return {'brut': brut, 'net': net, 'kesintiler': kesintiler, 'toplam': net + ikramiye}",
+    "language": "python",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu JS kodunu iyilestir (hatali kod yerine istisna firlat):\nfunction findUser(userId) {\n    if (userId <= 0) {\n        return { error: 'Gecersiz ID' };\n    }\n    return { id: userId, name: 'Ahmet' };\n}",
+    "response": "class InvalidUserIdError extends Error {\n    constructor(userId) {\n        super(`Gecersiz kullanici ID: ${userId}`);\n        this.name = 'InvalidUserIdError';\n    }\n}\n\nclass UserNotFoundError extends Error {\n    constructor(userId) {\n        super(`Kullanici bulunamadi: ${userId}`);\n        this.name = 'UserNotFoundError';\n    }\n}\n\nfunction findUser(userId) {\n    if (userId <= 0) {\n        throw new InvalidUserIdError(userId);\n    }\n    return { id: userId, name: 'Ahmet' };\n}",
+    "language": "javascript",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su kodu refactor et (dizi yerine nesne kullan):\ndef siparis_olustur(veri):\n    urun = veri[0]\n    adet = veri[1]\n    fiyat = veri[2]\n    toplam = adet * fiyat\n    print(f'{adet}x {urun} = {toplam} TL')",
+    "response": "from dataclasses import dataclass\n\n@dataclass\nclass SiparisKalemi:\n    urun: str\n    adet: int\n    birim_fiyat: float\n\n    def toplam_fiyat(self):\n        return self.adet * self.birim_fiyat\n\n\ndef siparis_olustur(kalem: SiparisKalemi):\n    print(f'{kalem.adet}x {kalem.urun} = {kalem.toplam_fiyat()} TL')",
+    "language": "python",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu kodu temizle (olu kodu kaldir):\ndef rapor_olustur(veri):\n    import datetime\n    tarih = datetime.datetime.now().strftime('%Y-%m-%d')\n    # TODO: bu logic ilerde kullanilacak\n    # eski_veri = []\n    # for v in veri:\n    #     if v['aktif']:\n    #         eski_veri.append(v)\n    baslik = f'Rapor - {tarih}'\n    satirlar = []\n    for v in veri:\n        satirlar.append(f'{v[\"id\"]}: {v[\"deger\"]}')\n    return '\\n'.join([baslik] + satirlar)",
+    "response": "import datetime\n\ndef rapor_olustur(veri):\n    tarih = datetime.datetime.now().strftime('%Y-%m-%d')\n    baslik = f'Rapor - {tarih}'\n    satirlar = [f'{v[\"id\"]}: {v[\"deger\"]}' for v in veri]\n    return '\\n'.join([baslik] + satirlar)",
+    "language": "python",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su JavaScript kodunu refactor et (guard clause kullan):\nfunction getDiscount(price, user) {\n    let discount = 0;\n    if (user != null) {\n        if (user.isPremium) {\n            if (price > 100) {\n                discount = price * 0.2;\n            } else {\n                discount = price * 0.1;\n            }\n        }\n    }\n    return discount;\n}",
+    "response": "const PREMIUM_INDIRIM_ESIGI = 100;\n\nfunction getDiscount(price, user) {\n    if (user == null) return 0;\n    if (!user.isPremium) return 0;\n    return price > PREMIUM_INDIRIM_ESIGI\n        ? price * 0.2\n        : price * 0.1;\n}",
+    "language": "javascript",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu JavaScript kodunu iyilestir (switch yerine map kullan):\nfunction getStatusText(status) {\n    switch (status) {\n        case 'pending':\n            return 'Beklemede';\n        case 'approved':\n            return 'Onaylandi';\n        case 'rejected':\n            return 'Reddedildi';\n        case 'shipped':\n            return 'Kargoya verildi';\n        case 'delivered':\n            return 'Teslim edildi';\n        default:\n            return 'Bilinmiyor';\n    }\n}",
+    "response": "const DURUM_METINLERI = {\n    pending: 'Beklemede',\n    approved: 'Onaylandi',\n    rejected: 'Reddedildi',\n    shipped: 'Kargoya verildi',\n    delivered: 'Teslim edildi',\n};\n\nfunction getStatusText(status) {\n    return DURUM_METINLERI[status] ?? 'Bilinmiyor';\n}",
+    "language": "javascript",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su kodu duzelt (sihirli sayilari kaldir):\nfunction calculateShipping(weight) {\n    if (weight <= 1) return 10;\n    if (weight <= 5) return 10 + (weight - 1) * 3;\n    if (weight <= 10) return 22 + (weight - 5) * 2;\n    return 32 + (weight - 10) * 1.5;\n}",
+    "response": "const SHIPPING_BASE = 10;\nconst SHIPPING_TIER1_LIMIT = 1;\nconst SHIPPING_TIER2_LIMIT = 5;\nconst SHIPPING_TIER3_LIMIT = 10;\nconst TIER1_RATE = 3;\nconst TIER2_RATE = 2;\nconst TIER3_RATE = 1.5;\n\nfunction calculateShipping(weight) {\n    if (weight <= SHIPPING_TIER1_LIMIT) return SHIPPING_BASE;\n    if (weight <= SHIPPING_TIER2_LIMIT) {\n        return SHIPPING_BASE + (weight - SHIPPING_TIER1_LIMIT) * TIER1_RATE;\n    }\n    if (weight <= SHIPPING_TIER3_LIMIT) {\n        return 22 + (weight - SHIPPING_TIER2_LIMIT) * TIER2_RATE;\n    }\n    return 32 + (weight - SHIPPING_TIER3_LIMIT) * TIER3_RATE;\n}",
+    "language": "javascript",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu kodu refactor et (parametre nesnesi olustur):\nfunction createUser(name, email, phone, city, district, street, doorNo, zipCode, birthDate, gender) {\n    return { name, email, phone, address: `${city}/${district} ${street} No:${doorNo}` };\n}",
+    "response": "class Address {\n    constructor({ city, district, street, doorNo, zipCode }) {\n        this.city = city;\n        this.district = district;\n        this.street = street;\n        this.doorNo = doorNo;\n        this.zipCode = zipCode;\n    }\n\n    toString() {\n        return `${this.city}/${this.district} ${this.street} No:${this.doorNo}`;\n    }\n}\n\nclass CreateUserRequest {\n    constructor({ name, email, phone, address, birthDate, gender }) {\n        this.name = name;\n        this.email = email;\n        this.phone = phone;\n        this.address = address;\n        this.birthDate = birthDate;\n        this.gender = gender;\n    }\n}\n\nfunction createUser(request) {\n    const { name, email, phone, address } = request;\n    return { name, email, phone, address: address.toString() };\n}",
+    "language": "javascript",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su kodu iyilestir (icerikli sorgu ile degistiriciyi ayir):\nclass BankAccount {\n    getBalance() {\n        return this._balance;\n    }\n\n    withdraw(amount) {\n        if (this._balance >= amount) {\n            this._balance -= amount;\n            this._transactions.push(`Withdrawal: -${amount}`);\n            return true;\n        }\n        return false;\n    }\n}",
+    "response": "class BankAccount {\n    getBalance() {\n        return this._balance;\n    }\n\n    canWithdraw(amount) {\n        return this._balance >= amount;\n    }\n\n    withdraw(amount) {\n        if (!this.canWithdraw(amount)) {\n            return false;\n        }\n        this._balance -= amount;\n        this._addTransaction('Withdrawal', -amount);\n        return true;\n    }\n\n    _addTransaction(type, amount) {\n        this._transactions.push(`${type}: ${amount}`);\n    }\n}",
+    "language": "javascript",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu JavaScript kodunu refactor et (map/filter kullan):\nfunction processOrders(orders) {\n    const result = [];\n    for (let i = 0; i < orders.length; i++) {\n        if (orders[i].status === 'active') {\n            const total = orders[i].quantity * orders[i].unitPrice;\n            result.push({\n                id: orders[i].id,\n                total: total,\n                customer: orders[i].customerName\n            });\n        }\n    }\n    return result;\n}",
+    "response": "function processOrders(orders) {\n    return orders\n        .filter(order => order.status === 'active')\n        .map(order => ({\n            id: order.id,\n            total: order.quantity * order.unitPrice,\n            customer: order.customerName,\n        }));\n}",
+    "language": "javascript",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su kodu temizle (degisken adlarini duzelt):\nfunction calc(x, y, z) {\n    const a = x * y;\n    const b = a * 0.18;\n    const c = b + z;\n    return c;\n}",
+    "response": "const TAX_RATE = 0.18;\n\nfunction calculateTotal(unitPrice, quantity, shippingCost) {\n    const subtotal = unitPrice * quantity;\n    const taxAmount = subtotal * TAX_RATE;\n    return subtotal + taxAmount + shippingCost;\n}",
+    "language": "javascript",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu kodu iyilestir (isimlendirmeleri duzelt):\nconst items = ['elma', 'armut', 'muz'];\nconst t = [];\nfor (var i = 0; i < items.length; i++) {\n    t.push(items[i].toUpperCase());\n}",
+    "response": "const meyveler = ['elma', 'armut', 'muz'];\nconst buyukHarfliMeyveler = meyveler.map(meyve => meyve.toUpperCase());",
+    "language": "javascript",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu JavaScript kodunu refactor et (nesne sabiti cikar):\nfunction getProductUrl(env) {\n    if (env === 'prod') return 'https://api.example.com/v2/products';\n    if (env === 'staging') return 'https://staging.api.example.com/v2/products';\n    if (env === 'dev') return 'http://localhost:3000/api/products';\n    return 'https://api.example.com/v2/products';\n}",
+    "response": "const API_URLS = {\n    prod: 'https://api.example.com/v2/products',\n    staging: 'https://staging.api.example.com/v2/products',\n    dev: 'http://localhost:3000/api/products',\n};\n\nconst DEFAULT_ENV = 'prod';\n\nfunction getProductUrl(env) {\n    return API_URLS[env] ?? API_URLS[DEFAULT_ENV];\n}",
+    "language": "javascript",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su Java kodunu refactor et (switch yerine polymorphism kullan):\npublic double calculateShipping(String type, double weight) {\n    switch (type) {\n        case \"STANDARD\":\n            return weight * 2.5;\n        case \"EXPRESS\":\n            return weight * 5.0 + 10;\n        case \"SAME_DAY\":\n            return weight * 10.0 + 25;\n        default:\n            throw new IllegalArgumentException(\"Bilinmeyen kargo tipi\");\n    }\n}",
+    "response": "public interface ShippingStrategy {\n    double calculate(double weight);\n}\n\npublic class StandardShipping implements ShippingStrategy {\n    private static final double RATE = 2.5;\n\n    @Override\n    public double calculate(double weight) {\n        return weight * RATE;\n    }\n}\n\npublic class ExpressShipping implements ShippingStrategy {\n    private static final double RATE = 5.0;\n    private static final double FLAT_FEE = 10.0;\n\n    @Override\n    public double calculate(double weight) {\n        return weight * RATE + FLAT_FEE;\n    }\n}\n\npublic class SameDayShipping implements ShippingStrategy {\n    private static final double RATE = 10.0;\n    private static final double FLAT_FEE = 25.0;\n\n    @Override\n    public double calculate(double weight) {\n        return weight * RATE + FLAT_FEE;\n    }\n}\n\npublic class ShippingCalculator {\n    private final Map<String, ShippingStrategy> strategies = new HashMap<>();\n\n    public ShippingCalculator() {\n        strategies.put(\"STANDARD\", new StandardShipping());\n        strategies.put(\"EXPRESS\", new ExpressShipping());\n        strategies.put(\"SAME_DAY\", new SameDayShipping());\n    }\n\n    public double calculateShipping(String type, double weight) {\n        ShippingStrategy strategy = strategies.get(type);\n        if (strategy == null) {\n            throw new IllegalArgumentException(\"Bilinmeyen kargo tipi: \" + type);\n        }\n        return strategy.calculate(weight);\n    }\n}",
+    "language": "java",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu Java kodunu iyilestir (guard clause kullan):\npublic class OrderService {\n    public void processOrder(Order order) {\n        if (order != null) {\n            if (order.isPaid()) {\n                if (order.getItems().size() > 0) {\n                    // siparisi isle\n                    System.out.println(\"Siparis isleniyor...\");\n                }\n            }\n        }\n    }\n}",
+    "response": "public class OrderService {\n    public void processOrder(Order order) {\n        if (order == null) {\n            throw new IllegalArgumentException(\"Siparis null olamaz\");\n        }\n        if (!order.isPaid()) {\n            throw new IllegalStateException(\"Siparis henuz odenmemis\");\n        }\n        if (order.getItems().isEmpty()) {\n            throw new IllegalStateException(\"Sipariste urun bulunmuyor\");\n        }\n        System.out.println(\"Siparis isleniyor...\");\n    }\n}",
+    "language": "java",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu Java kodunu refactor et (sihirli sayilari kaldir):\npublic class TaxCalculator {\n    public double calculate(double income) {\n        double tax = 0;\n        if (income <= 32000) {\n            tax = income * 0.15;\n        } else if (income <= 70000) {\n            tax = 4800 + (income - 32000) * 0.20;\n        } else if (income <= 250000) {\n            tax = 12400 + (income - 70000) * 0.27;\n        } else {\n            tax = 61000 + (income - 250000) * 0.35;\n        }\n        return tax;\n    }\n}",
+    "response": "public class TaxCalculator {\n    private static final double TAX_RATE_TIER1 = 0.15;\n    private static final double TAX_RATE_TIER2 = 0.20;\n    private static final double TAX_RATE_TIER3 = 0.27;\n    private static final double TAX_RATE_TIER4 = 0.35;\n\n    private static final double TIER1_LIMIT = 32000;\n    private static final double TIER2_LIMIT = 70000;\n    private static final double TIER3_LIMIT = 250000;\n\n    private static final double TIER2_BASE_TAX = 4800;\n    private static final double TIER3_BASE_TAX = 12400;\n    private static final double TIER4_BASE_TAX = 61000;\n\n    public double calculate(double income) {\n        if (income <= TIER1_LIMIT) {\n            return income * TAX_RATE_TIER1;\n        }\n        if (income <= TIER2_LIMIT) {\n            return TIER2_BASE_TAX + (income - TIER1_LIMIT) * TAX_RATE_TIER2;\n        }\n        if (income <= TIER3_LIMIT) {\n            return TIER3_BASE_TAX + (income - TIER2_LIMIT) * TAX_RATE_TIER3;\n        }\n        return TIER4_BASE_TAX + (income - TIER3_LIMIT) * TAX_RATE_TIER4;\n    }\n}",
+    "language": "java",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu Java kodunu duzelt (stream ile degistir):\npublic List<String> getActiveUserNames(List<User> users) {\n    List<String> names = new ArrayList<>();\n    for (User user : users) {\n        if (user.isActive()) {\n            names.add(user.getName().toUpperCase());\n        }\n    }\n    return names;\n}",
+    "response": "public List<String> getActiveUserNames(List<User> users) {\n    return users.stream()\n            .filter(User::isActive)\n            .map(user -> user.getName().toUpperCase())\n            .collect(Collectors.toList());\n}",
+    "language": "java",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su Java kodunu refactor et (interface cikar):\npublic class EmailNotifier {\n    public void sendEmail(String to, String subject, String body) {\n        System.out.println(\"Email gonderiliyor: \" + to);\n    }\n}\n\npublic class OrderProcessor {\n    private EmailNotifier notifier = new EmailNotifier();\n    \n    public void process(Order order) {\n        notifier.sendEmail(order.getEmail(), \"Siparis\", \"Tesekkurler\");\n    }\n}",
+    "response": "public interface Notifier {\n    void send(String to, String subject, String body);\n}\n\npublic class EmailNotifier implements Notifier {\n    @Override\n    public void send(String to, String subject, String body) {\n        System.out.println(\"Email gonderiliyor: \" + to);\n    }\n}\n\npublic class SmsNotifier implements Notifier {\n    @Override\n    public void send(String to, String subject, String body) {\n        System.out.println(\"SMS gonderiliyor: \" + to);\n    }\n}\n\npublic class OrderProcessor {\n    private final Notifier notifier;\n\n    public OrderProcessor(Notifier notifier) {\n        this.notifier = notifier;\n    }\n\n    public void process(Order order) {\n        notifier.send(order.getEmail(), \"Siparis\", \"Tesekkurler\");\n    }\n}",
+    "language": "java",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su TypeScript kodunu refactor et (opsiyonel zincirleme kullan):\nfunction getCity(user: any): string {\n    if (user && user.address && user.address.city) {\n        return user.address.city;\n    }\n    return 'Bilinmiyor';\n}",
+    "response": "function getCity(user: { address?: { city?: string } } | null): string {\n    return user?.address?.city ?? 'Bilinmiyor';\n}",
+    "language": "typescript",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu TypeScript kodunu iyilestir (tip guvenligi ekle):\nfunction calculateDiscount(price, userType) {\n    const discounts = {\n        'standard': 0.05,\n        'premium': 0.15,\n        'vip': 0.25\n    };\n    return price * (1 - (discounts[userType] || 0));\n}",
+    "response": "type UserType = 'standard' | 'premium' | 'vip';\n\nconst DISCOUNT_RATES: Record<UserType, number> = {\n    standard: 0.05,\n    premium: 0.15,\n    vip: 0.25,\n};\n\nconst DEFAULT_DISCOUNT = 0;\n\nfunction calculateDiscount(price: number, userType: UserType): number {\n    const rate = DISCOUNT_RATES[userType] ?? DEFAULT_DISCOUNT;\n    return price * (1 - rate);\n}",
+    "language": "typescript",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su TypeScript kodunu refactor et (enum kullan):\nfunction getOrderStatusText(status: string): string {\n    if (status === 'PENDING') return 'Beklemede';\n    if (status === 'CONFIRMED') return 'Onaylandi';\n    if (status === 'PREPARING') return 'Hazirlaniyor';\n    if (status === 'SHIPPED') return 'Kargoda';\n    if (status === 'DELIVERED') return 'Teslim Edildi';\n    if (status === 'CANCELLED') return 'Iptal Edildi';\n    return 'Bilinmiyor';\n}",
+    "response": "enum OrderStatus {\n    PENDING = 'PENDING',\n    CONFIRMED = 'CONFIRMED',\n    PREPARING = 'PREPARING',\n    SHIPPED = 'SHIPPED',\n    DELIVERED = 'DELIVERED',\n    CANCELLED = 'CANCELLED',\n}\n\nconst ORDER_STATUS_TEXTS: Record<OrderStatus, string> = {\n    [OrderStatus.PENDING]: 'Beklemede',\n    [OrderStatus.CONFIRMED]: 'Onaylandi',\n    [OrderStatus.PREPARING]: 'Hazirlaniyor',\n    [OrderStatus.SHIPPED]: 'Kargoda',\n    [OrderStatus.DELIVERED]: 'Teslim Edildi',\n    [OrderStatus.CANCELLED]: 'Iptal Edildi',\n};\n\nfunction getOrderStatusText(status: OrderStatus): string {\n    return ORDER_STATUS_TEXTS[status] ?? 'Bilinmiyor';\n}",
+    "language": "typescript",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu TypeScript kodunu duzelt (fonksiyon cikar):\nfunction processUserData(users: any[]) {\n    const validUsers = [];\n    for (const user of users) {\n        if (user.email && user.email.includes('@') && user.age >= 18) {\n            validUsers.push({\n                fullName: `${user.firstName} ${user.lastName}`,\n                email: user.email.toLowerCase(),\n                isAdult: true\n            });\n        }\n    }\n    return validUsers;\n}",
+    "response": "interface RawUser {\n    firstName: string;\n    lastName: string;\n    email: string;\n    age: number;\n}\n\ninterface ProcessedUser {\n    fullName: string;\n    email: string;\n    isAdult: boolean;\n}\n\nfunction isValidUser(user: RawUser): boolean {\n    return !!user.email\n        && user.email.includes('@')\n        && user.age >= 18;\n}\n\nfunction toProcessedUser(user: RawUser): ProcessedUser {\n    return {\n        fullName: `${user.firstName} ${user.lastName}`,\n        email: user.email.toLowerCase(),\n        isAdult: true,\n    };\n}\n\nfunction processUserData(users: RawUser[]): ProcessedUser[] {\n    return users\n        .filter(isValidUser)\n        .map(toProcessedUser);\n}",
+    "language": "typescript",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su TypeScript kodunu iyilestir (generics ile tip guvenligi):\nfunction getFirstItem(list: any[]): any {\n    if (list.length === 0) return null;\n    return list[0];\n}",
+    "response": "function getFirstItem<T>(list: T[]): T | null {\n    return list.length > 0 ? list[0] : null;\n}",
+    "language": "typescript",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu Go kodunu refactor et (hata yonetimini iyilestir):\npackage main\n\nimport (\n\t\"database/sql\"\n\t\"fmt\"\n)\n\nfunc getUser(db *sql.DB, id int) {\n\trow := db.QueryRow(\"SELECT name FROM users WHERE id = ?\", id)\n\tvar name string\n\trow.Scan(&name)\n\tfmt.Println(\"Kullanici:\", name)\n}",
+    "response": "package main\n\nimport (\n\t\"database/sql\"\n\t\"fmt\"\n)\n\nfunc getUser(db *sql.DB, id int) (string, error) {\n\trow := db.QueryRow(\"SELECT name FROM users WHERE id = ?\", id)\n\tvar name string\n\tif err := row.Scan(&name); err != nil {\n\t\tif errors.Is(err, sql.ErrNoRows) {\n\t\t\treturn \"\", fmt.Errorf(\"kullanici bulunamadi: id=%d\", id)\n\t\t}\n\t\treturn \"\", fmt.Errorf(\"kullanici sorgulanirken hata: %w\", err)\n\t}\n\treturn name, nil\n}",
+    "language": "go",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su Go kodunu iyilestir (yapi kullan):\npackage main\n\nfunc createEmployee(name string, age int, department string, salary float64, email string, phone string) map[string]interface{} {\n\treturn map[string]interface{}{\n\t\t\"name\":       name,\n\t\t\"age\":        age,\n\t\t\"department\": department,\n\t\t\"salary\":     salary,\n\t\t\"email\":      email,\n\t\t\"phone\":      phone,\n\t}\n}",
+    "response": "package main\n\ntype Employee struct {\n\tName       string\n\tAge        int\n\tDepartment string\n\tSalary     float64\n\tEmail      string\n\tPhone      string\n}\n\ntype EmployeeOption func(*Employee)\n\nfunc NewEmployee(name string, opts ...EmployeeOption) *Employee {\n\te := &Employee{Name: name}\n\tfor _, opt := range opts {\n\t\topt(e)\n\t}\n\treturn e\n}\n\nfunc WithAge(age int) EmployeeOption {\n\treturn func(e *Employee) {\n\t\te.Age = age\n\t}\n}\n\nfunc WithDepartment(dept string) EmployeeOption {\n\treturn func(e *Employee) {\n\t\te.Department = dept\n\t}\n}\n\nfunc WithSalary(salary float64) EmployeeOption {\n\treturn func(e *Employee) {\n\t\te.Salary = salary\n\t}\n}",
+    "language": "go",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu Go kodunu duzelt (sabit tanimla):\npackage main\n\nfunc calculateParkingFee(hours int) float64 {\n\tif hours <= 1 {\n\t\treturn 10\n\t}\n\tif hours <= 6 {\n\t\treturn 10 + float64(hours-1)*5\n\t}\n\tif hours <= 24 {\n\t\treturn 35 + float64(hours-6)*3\n\t}\n\treturn 85 + float64(hours-24)*2\n}",
+    "response": "package main\n\nconst (\n\tHourlyRateUpTo1  = 10.0\n\tHourlyRateUpTo6  = 5.0\n\tHourlyRateUpTo24 = 3.0\n\tHourlyRateOver24 = 2.0\n\n\tMaxHoursTier1 = 1\n\tMaxHoursTier2 = 6\n\tMaxHoursTier3 = 24\n\n\tFlatRateTier2 = 10.0\n\tFlatRateTier3 = 35.0\n\tFlatRateTier4 = 85.0\n)\n\nfunc calculateParkingFee(hours int) float64 {\n\tswitch {\n\tcase hours <= MaxHoursTier1:\n\t\treturn HourlyRateUpTo1\n\tcase hours <= MaxHoursTier2:\n\t\treturn FlatRateTier2 + float64(hours-MaxHoursTier1)*HourlyRateUpTo6\n\tcase hours <= MaxHoursTier3:\n\t\treturn FlatRateTier3 + float64(hours-MaxHoursTier2)*HourlyRateUpTo24\n\tdefault:\n\t\treturn FlatRateTier4 + float64(hours-MaxHoursTier3)*HourlyRateOver24\n\t}\n}",
+    "language": "go",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Su SQL sorgusunu iyilestir (sutun isimlerini acik yaz):\nSELECT * FROM siparisler s JOIN musteriler m ON s.musteri_id = m.id WHERE s.durum = 'aktif' AND s.tutar > 100;",
+    "response": "SELECT\n    s.id AS siparis_id,\n    s.siparis_tarihi,\n    s.tutar AS siparis_tutari,\n    m.id AS musteri_id,\n    m.ad AS musteri_adi,\n    m.email AS musteri_email\nFROM siparisler s\nINNER JOIN musteriler m ON s.musteri_id = m.id\nWHERE s.durum = 'aktif'\n  AND s.tutar > 100\nORDER BY s.siparis_tarihi DESC;",
+    "language": "sql",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  },
+  {
+    "instruction": "Bu SQL sorgusunu refactor et (ic ice sorgu yerine JOIN kullan):\nSELECT ad, soyad FROM kullaniciler WHERE id IN (SELECT kullanici_id FROM siparisler WHERE toplam > 500);",
+    "response": "SELECT DISTINCT\n    k.id,\n    k.ad,\n    k.soyad\nFROM kullaniciler k\nINNER JOIN siparisler s ON k.id = s.kullanici_id\nWHERE s.toplam > 500\nORDER BY k.ad ASC;",
+    "language": "sql",
+    "category": "refactoring",
+    "type": "manual",
+    "format": "refactoring"
+  }
+]

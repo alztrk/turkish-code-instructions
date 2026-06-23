@@ -1,0 +1,242 @@
+[
+  {
+    "instruction": "Bu kod guvenli mi? Degilse duzelt:\nusername = request.GET['username']\nquery = \"SELECT * FROM users WHERE name = '\" + username + \"'\"\ncursor.execute(query)",
+    "response": "Evet, SQL injection acigi var. Kullanici girdisi direkt sorguya ekleniyor. Cozum parametrik sorgu kullanmaktir:\n\n```python\ncursor.execute(\"SELECT * FROM users WHERE name = %s\", (username,))\n```",
+    "language": "python",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Asagidaki JavaScript kodunda XSS acigi var mi? Nasil duzeltilir?\ndocument.getElementById('output').innerHTML = userInput",
+    "response": "Evet, DOM-based XSS acigi var. `innerHTML` kullanici girdisini HTML olarak yorumlar. Cozum `textContent` kullanmaktir:\n\n```javascript\ndocument.getElementById('output').textContent = userInput;\n```\nYa da DOMPurify ile temizleyin:\n\n```javascript\ndocument.getElementById('output').innerHTML = DOMPurify.sanitize(userInput);\n```",
+    "language": "javascript",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Flask uygulamasinda CSRF korumasi nasil eklenir? Su anki kod:\n@app.route('/transfer', methods=['POST'])\ndef transfer():\n    amount = request.form['amount']\n    transfer_money(amount)\n    return 'OK'",
+    "response": "CSRF korumasi yok. Flask-WTF kullanarak cozum:\n\n```python\nfrom flask_wtf.csrf import CSRFProtect\n\napp = Flask(__name__)\napp.config['SECRET_KEY'] = 'gizli-anahtar'\ncsrf = CSRFProtect(app)\n\n@app.route('/transfer', methods=['POST'])\ndef transfer():\n    amount = request.form['amount']\n    transfer_money(amount)\n    return 'OK'\n```\nTemplate'de forma `{{ form.hidden_tag() }}` eklenmeli.",
+    "language": "python",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Sifreleri veritabaninda nasil guvenli saklariz? Su anki kod:\ndef kaydet(kullanici, sifre):\n    cursor.execute(\"INSERT INTO users VALUES (?, ?)\", (kullanici, sifre))",
+    "response": "Sifre duz metin olarak saklanmamali. PBKDF2 ile hash'leyin:\n\n```python\nimport hashlib, os\n\ndef hash_sifre(sifre):\n    salt = os.urandom(32)\n    hash = hashlib.pbkdf2_hmac('sha256', sifre.encode(), salt, 100000)\n    return salt + hash\n\ndef dogrula(sifre, kayit):\n    salt = kayit[:32]\n    hash = kayit[32:]\n    return hash == hashlib.pbkdf2_hmac('sha256', sifre.encode(), salt, 100000)\n```\nDaha iyisi bcrypt veya argon2 kullanmaktir.",
+    "language": "python",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Express.js session yonetiminde guvenlik acigi var mi?\napp.use(session({\n    secret: 'gizli',\n    resave: false,\n    saveUninitialized: true\n}))",
+    "response": "Evet, eksik ayarlar var. `httpOnly`, `secure`, `sameSite` ve `maxAge` belirtilmemis. Guvenli versiyon:\n\n```javascript\napp.use(session({\n    secret: crypto.randomBytes(64).toString('hex'),\n    resave: false,\n    saveUninitialized: false,\n    cookie: {\n        httpOnly: true,\n        secure: true,\n        sameSite: 'strict',\n        maxAge: 1000 * 60 * 30\n    }\n}))\n```",
+    "language": "javascript",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "JWT token dogrulama kodunda hata var mi?\ndef dogrula_jwt(token):\n    payload = jwt.decode(token, options={\"verify_signature\": False})\n    return payload",
+    "response": "Evet, imza dogrulama devre disi birakilmis (`verify_signature: False`). Saldirgan herhangi bir token olusturabilir. Dogru kullanim:\n\n```python\nimport jwt\n\ndef dogrula_jwt(token):\n    try:\n        payload = jwt.decode(token, \"gizli-anahtar\", algorithms=[\"HS256\"])\n        return payload\n    except jwt.InvalidTokenError:\n        return None\n```",
+    "language": "python",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Kullanici girdisi dosya adi olarak kullaniliyor. Guvenli mi?\ndef oku_dosya(kullanici_adi):\n    with open('/data/' + kullanici_adi, 'r') as f:\n        return f.read()",
+    "response": "Hayir, path traversal acigi var. Kullanici '../etc/passwd' ile erisebilir. Guvenli versiyon:\n\n```python\nimport os\n\ndef oku_dosya(kullanici_adi):\n    # Dosya adinda sadece alfanumerik karakterlere izin ver\n    if not kullanici_adi.isalnum():\n        raise ValueError(\"Gecersiz dosya adi\")\n    \n    base = os.path.abspath('/data/')\n    path = os.path.abspath(os.path.join(base, kullanici_adi))\n    \n    if not path.startswith(base):\n        raise ValueError(\"Erisim engellendi\")\n    \n    with open(path, 'r') as f:\n        return f.read()\n```",
+    "language": "python",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Kullanici girdisi shell komutuna ekleniyor. Guvenlik sorunu var mi?\nkomut = \"ping \" + ip_adresi\nos.system(komut)",
+    "response": "Evet, command injection acigi var. Kullanici `; rm -rf /` ekleyerek komut zincirleyebilir. Guvenli versiyon:\n\n```python\nimport subprocess\n\ndef ping_at(ip_adresi):\n    # IP dogrulama\n    import re\n    if not re.match(r'^[\\d\\.]+$', ip_adresi):\n        raise ValueError(\"Gecersiz IP\")\n    \n    subprocess.run([\"ping\", \"-n\", \"1\", ip_adresi], check=True)\n```",
+    "language": "python",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Dosya yukleme kodunda ne gibi guvenlik aciklari var?\n@app.route('/upload', methods=['POST'])\ndef upload():\n    dosya = request.files['file']\n    dosya.save('/uploads/' + dosya.filename)\n    return 'Yuklendi'",
+    "response": "Birden cok acik var: dosya turu kontrolu yok, dosya adi temizlenmiyor, boyut siniri yok. Guvenli versiyon:\n\n```python\nimport os\nfrom werkzeug.utils import secure_filename\n\nALLOWED_EXT = {'png', 'jpg', 'pdf'}\nMAX_SIZE = 5 * 1024 * 1024  # 5MB\n\n@app.route('/upload', methods=['POST'])\ndef upload():\n    dosya = request.files['file']\n    \n    if not dosya:\n        return 'Dosya gerekli', 400\n    \n    if not dosya.filename.rsplit('.', 1)[1].lower() in ALLOWED_EXT:\n        return 'Gecersiz dosya turu', 400\n    \n    dosya.seek(0, os.SEEK_END)\n    if dosya.tell() > MAX_SIZE:\n        return 'Dosya cok buyuk', 400\n    dosya.seek(0)\n    \n    guvenli_adi = secure_filename(dosya.filename)\n    dosya.save(os.path.join('/uploads/', guvenli_adi))\n    return 'Yuklendi'\n```",
+    "language": "python",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "CORS ayarlari guvenli mi?\napp.use(cors({\n    origin: '*',\n    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH']\n}))",
+    "response": "Hayir, `origin: '*'` tum sitelere izin verir. Guvenli versiyon:\n\n```javascript\nconst corsOptions = {\n    origin: ['https://sitem.com', 'https://api.sitem.com'],\n    methods: ['GET', 'POST'],\n    allowedHeaders: ['Content-Type', 'Authorization'],\n    credentials: true,\n    maxAge: 86400\n};\n\napp.use(cors(corsOptions));\n```",
+    "language": "javascript",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Rate limiting eksik mi? Kod:\napp.post('/api/login', (req, res) => {\n    const { username, password } = req.body;\n    // giris kontrolu\n})",
+    "response": "Evet, rate limiting yok, kaba kuvvet saldirisina acik. express-rate-limit ile cozum:\n\n```javascript\nconst rateLimit = require('express-rate-limit');\n\nconst loginLimiter = rateLimit({\n    windowMs: 15 * 60 * 1000,  // 15 dakika\n    max: 5,                      // 5 deneme\n    message: 'Cok fazla giris denemesi, lutfen 15 dakika sonra tekrar deneyin.',\n    standardHeaders: true,\n    legacyHeaders: false\n});\n\napp.post('/api/login', loginLimiter, (req, res) => {\n    const { username, password } = req.body;\n    // giris kontrolu\n});\n```",
+    "language": "javascript",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Java JDBC ile SQL sorgusu guvenli mi?\nString query = \"SELECT * FROM kullanicilar WHERE email = '\" + email + \"'\";\nStatement stmt = conn.createStatement();\nResultSet rs = stmt.executeQuery(query);",
+    "response": "Hayir, SQL injection acigi var. PreparedStatement kullanilmalı:\n\n```java\nString query = \"SELECT * FROM kullanicilar WHERE email = ?\";\nPreparedStatement stmt = conn.prepareStatement(query);\nstmt.setString(1, email);\nResultSet rs = stmt.executeQuery();\n```",
+    "language": "java",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "JSP sayfasinda XSS acigi var mi?\n<html>\n<body>\nKullanici: <%= request.getParameter(\"kullanici\") %>\n</body>\n</html>",
+    "response": "Evet, reflected XSS acigi var. Kullanici girdisi encode edilmemis. Cozum:\n\n```jsp\n<%@ page import=\"org.owasp.encoder.Encoder\" %>\n<html>\n<body>\nKullanici: <%= Encoder.forHtml(request.getParameter(\"kullanici\")) %>\n</body>\n</html>\n```\nYa da JSTL ile:\n```jsp\n<%@ taglib uri=\"http://java.sun.com/jsp/jstl/core\" prefix=\"c\" %>\n<html>\n<body>\nKullanici: <c:out value=\"${param.kullanici}\" />\n</body>\n</html>\n```",
+    "language": "java",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "IDOR acigi var mi? Kod:\n@GetMapping(\"/hesap/{id}\")\npublic Hesap getHesap(@PathVariable Long id) {\n    return hesapRepository.findById(id).orElseThrow();\n}",
+    "response": "Evet, IDOR acigi var. Kullanici kendi hesabi disindaki hesaplara erisebilir. Cozum:\n\n```java\n@GetMapping(\"/hesap/{id}\")\npublic Hesap getHesap(@PathVariable Long id, Authentication auth) {\n    String email = auth.getName();\n    Hesap hesap = hesapRepository.findById(id).orElseThrow();\n    \n    if (!hesap.getEmail().equals(email)) {\n        throw new AccessDeniedException(\"Bu hesaba erisim yetkiniz yok\");\n    }\n    \n    return hesap;\n}\n```",
+    "language": "java",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Go dilinde komut calistirma guvenli mi?\ncmd := exec.Command(\"sh\", \"-c\", \"ping \" + ip)\noutput, _ := cmd.Output()",
+    "response": "Hayir, command injection acigi var. Arguman ayri gecirilmeli:\n\n```go\nimport (\n    \"net\"\n    \"os/exec\"\n)\n\nfunc pingAt(ip string) (string, error) {\n    // IP dogrulama\n    if net.ParseIP(ip) == nil {\n        return \"\", fmt.Errorf(\"Gecersiz IP\")\n    }\n    \n    cmd := exec.Command(\"ping\", \"-n\", \"1\", ip)\n    output, err := cmd.Output()\n    return string(output), err\n}\n```",
+    "language": "go",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Go'da race condition var mi?\nvar bakiye int\n\nfunc paraCek(miktar int) {\n    if bakiye >= miktar {\n        time.Sleep(time.Millisecond)\n        bakiye -= miktar\n    }\n}",
+    "response": "Evet, race condition var. Mutex kullanilmali:\n\n```go\nimport \"sync\"\n\ntype Hesap struct {\n    mu     sync.Mutex\n    bakiye int\n}\n\nfunc (h *Hesap) paraCek(miktar int) bool {\n    h.mu.Lock()\n    defer h.mu.Unlock()\n    \n    if h.bakiye >= miktar {\n        h.bakiye -= miktar\n        return true\n    }\n    return false\n}\n```",
+    "language": "go",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "XXE saldirisina karsi koruma var mi?\nfrom xml.etree import ElementTree as ET\n\ndef parse_xml(xml_str):\n    return ET.fromstring(xml_str)",
+    "response": "Evet, XXE acigi var. Varsayilan ayarlarda external entity'ler yuklenebilir. Cozum:\n\n```python\nimport defusedxml.ElementTree as ET\n\n# defusedxml kullan (guvenli)\ndef parse_xml(xml_str):\n    return ET.fromstring(xml_str)\n\n# Manuel cozum:\nfrom xml.etree import ElementTree as ET\n\ndef parse_xml_guvenli(xml_str):\n    parser = ET.XMLParser()\n    parser.entity = {}  # entity cozumlemesini devre disi birak\n    return ET.fromstring(xml_str, parser)\n```",
+    "language": "python",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "SSRF acigi var mi?\ndef profil_resmi_al(url):\n    response = requests.get(url)\n    return response.content",
+    "response": "Evet, SSRF acigi var. Kullanici ic aglara (127.0.0.1, 10.x.x.x, vs.) erisebilir. Cozum:\n\n```python\nfrom urllib.parse import urlparse\nimport ipaddress\nimport socket\n\ndef profil_resmi_al(url):\n    parsed = urlparse(url)\n    host = parsed.hostname\n    \n    # Sadece HTTP/HTTPS izin ver\n    if parsed.scheme not in ('http', 'https'):\n        raise ValueError(\"Gecersiz protokol\")\n    \n    # Host'u IP'ye cevir ve ic IP kontrolu yap\n    try:\n        ip = socket.gethostbyname(host)\n        ip_obj = ipaddress.ip_address(ip)\n        if ip_obj.is_private or ip_obj.is_loopback or ip_obj.is_link_local:\n            raise ValueError(\"Bu adrese erisim engellendi\")\n    except socket.gaierror:\n        raise ValueError(\"Host cozulemedi\")\n    \n    # Beyaz liste kontrolu\n    IZINLI_HOSTS = ['api.ornek.com', 'resimler.ornek.com']\n    if host not in IZINLI_HOSTS:\n        raise ValueError(\"Bu hosta izin verilmiyor\")\n    \n    return requests.get(url, timeout=5).content\n```",
+    "language": "python",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Java'da dosya okuma islemi guvenli mi?\npublic String dosyaOku(String dosyaAdi) throws Exception {\n    return new String(Files.readAllBytes(Paths.get(\"/data/\" + dosyaAdi)));\n}",
+    "response": "Hayir, path traversal acigi var. Guvenli versiyon:\n\n```java\nimport java.nio.file.*;\n\npublic String dosyaOku(String dosyaAdi) throws Exception {\n    Path basePath = Paths.get(\"/data/\").normalize().toAbsolutePath();\n    Path filePath = basePath.resolve(dosyaAdi).normalize().toAbsolutePath();\n    \n    if (!filePath.startsWith(basePath)) {\n        throw new SecurityException(\"Erisim engellendi\");\n    }\n    \n    if (!Files.exists(filePath) || Files.isDirectory(filePath)) {\n        throw new NoSuchFileException(\"Dosya bulunamadi\");\n    }\n    \n    return new String(Files.readAllBytes(filePath));\n}\n```",
+    "language": "java",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Go'da SQL sorgusu guvenli mi?\nquery := fmt.Sprintf(\"SELECT * FROM kullanicilar WHERE id = %s\", kullaniciID)\nrows, _ := db.Query(query)",
+    "response": "Hayir, SQL injection acigi var. Parameterize query kullanilmali:\n\n```go\nimport \"database/sql\"\n\nfunc kullaniciGetir(db *sql.DB, id string) (*Kullanici, error) {\n    query := \"SELECT * FROM kullanicilar WHERE id = ?\"\n    \n    var k Kullanici\n    err := db.QueryRow(query, id).Scan(&k.ID, &k.Ad, &k.Email)\n    if err != nil {\n        return nil, err\n    }\n    return &k, nil\n}\n```",
+    "language": "go",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Sifre karsilastirma kodunda zaman acigi var mi?\ndef sifre_dogrula(girilen, kayitli_hash):\n    return girilen == kayitli_hash",
+    "response": "Evet, timing attack acigi var. Normal `==` karakter bazinda karsilastirir, sure farkindan saldiri yapilabilir. Cozum:\n\n```python\nimport hmac\n\ndef sifre_dogrula(girilen, kayitli_hash):\n    return hmac.compare_digest(girilen, kayitli_hash)\n```\nHMAC ile sabit sureli karsilastirma yapilir.",
+    "language": "python",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Kullanici girdisi dogrudan HTML'e ekleniyor. Guvenli mi?\nfunction yorumGoster(yorum) {\n    const div = document.createElement('div');\n    div.innerHTML = yorum;\n    document.body.appendChild(div);\n}",
+    "response": "Hayir, stored XSS acigi var. `innerHTML` kullanici girdisini HTML olarak yorumlar. Cozum:\n\n```javascript\nfunction yorumGoster(yorum) {\n    const div = document.createElement('div');\n    div.textContent = yorum;  // HTML yorumlanmaz\n    document.body.appendChild(div);\n}\n\n// HTML etiketlerine izin verilecekse DOMPurify kullan:\nfunction yorumGosterGuvence(yorum) {\n    const div = document.createElement('div');\n    div.innerHTML = DOMPurify.sanitize(yorum);\n    document.body.appendChild(div);\n}\n```",
+    "language": "javascript",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Web guvenlik basliklari eklenmis mi? Eksikleri soyleyin.\napp.use((req, res, next) => {\n    res.setHeader('X-Frame-Options', 'DENY');\n    next();\n});",
+    "response": "Eksik basliklar: CSP, HSTS, X-Content-Type-Options, Referrer-Policy. Guvenli versiyon:\n\n```javascript\n// helmet kullanarak (oneri len)\nconst helmet = require('helmet');\napp.use(helmet());\n\n// Manuel:\napp.use((req, res, next) => {\n    res.setHeader('X-Frame-Options', 'DENY');\n    res.setHeader('X-Content-Type-Options', 'nosniff');\n    res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');\n    res.setHeader('X-XSS-Protection', '0');\n    res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');\n    res.setHeader('Content-Security-Policy', \"default-src 'self'\");\n    next();\n});\n```",
+    "language": "web",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Gizli anahtarlar koda yazilmis. Guvenli mi?\nAPI_KEY = 'sk-1234567890abcdef'\nDB_PASSWORD = 'sifre123'\nSECRET = 'supergizli'",
+    "response": "Hayir, sirlar kaynak kodunda olmamali. Ortam degiskenleri kullanin:\n\n```python\nimport os\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\nAPI_KEY = os.environ.get('API_KEY')\nDB_PASSWORD = os.environ.get('DB_PASSWORD')\nSECRET = os.environ.get('SECRET')\n\nif not all([API_KEY, DB_PASSWORD, SECRET]):\n    raise ValueError(\"Eksik ortam degiskenleri\")\n```\n`.env` dosyasi `.gitignore`'a eklenmeli.",
+    "language": "python",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Kullanici email'i log'lanmis. Sorun var mi?\nlogging.info(f\"Kullanici giris yapti: {email}\")\nsend_email(f\"Hos geldin {email}\")",
+    "response": "Evet, hassas veri log'lanmamali (KVKK/GDPR ihlali). Cozum:\n\n```python\nimport logging\n\n# Email'i maskele\ndef maskele(email):\n    ad, domain = email.split('@')\n    return ad[:2] + '***@' + domain\n\nlogging.info(f\"Kullanici giris yapti: {maskele(email)}\")\n\n# Log seviyesini ayarla\nlogging.basicConfig(level=logging.INFO)\n\n# Hassas verileri log tutma\nclass HassasFiltre(logging.Filter):\n    def filter(self, record):\n        return 'sifre' not in record.getMessage().lower() and 'email' not in record.getMessage().lower()\n\nlogging.getLogger().addFilter(HassasFiltre())\n```",
+    "language": "python",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Node.js'te JWT token nerede saklanmali? Su anki kod:\nlocalStorage.setItem('token', jwt)\n// API cagrilarinda:\nheaders: { Authorization: 'Bearer ' + localStorage.getItem('token') }",
+    "response": "`localStorage` XSS saldirilarina karsi korumasizdir. Token httpOnly cookie'de saklanmali:\n\n```javascript\n// Backend - token'i httpOnly cookie olarak gonder\nres.cookie('token', jwt, {\n    httpOnly: true,\n    secure: true,\n    sameSite: 'strict',\n    maxAge: 30 * 60 * 1000  // 30 dakika\n});\n\n// Frontend - cookie otomatik gonderilir\nfetch('/api/veri', {\n    credentials: 'include'\n});\n```",
+    "language": "javascript",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Java'da JWT dogrulamasi guvenli mi?\npublic boolean dogrulaToken(String token) {\n    String[] parts = token.split(\"\\\\.\");\n    String payload = new String(Base64.getUrlDecoder().decode(parts[1]));\n    return payload.contains(\"\\\"role\\\":\\\"admin\\\"\");\n}",
+    "response": "Hayir, imza kontrolu yok! Herhangi bir token olusturulabilir. Dogru JWT kutuphanesi kullanilmali:\n\n```java\nimport io.jsonwebtoken.Jwts;\nimport io.jsonwebtoken.security.Keys;\nimport javax.crypto.SecretKey;\n\npublic class JwtUtil {\n    private static final SecretKey KEY = Keys.hmacShaKeyFor(\n        System.getenv(\"JWT_SECRET\").getBytes()\n    );\n    \n    public static boolean dogrulaToken(String token) {\n        try {\n            Jwts.parser()\n                .verifyWith(KEY)\n                .build()\n                .parseSignedClaims(token);\n            return true;\n        } catch (Exception e) {\n            return false;\n        }\n    }\n}\n```",
+    "language": "java",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "SQL'de dinamik sorgu guvenli mi?\nEXEC('SELECT * FROM kullanicilar WHERE id = ' + @id)",
+    "response": "Hayir, SQL injection acigi var. Parametrik sorgu kullanilmali:\n\n```sql\n-- Guvenli versiyon\nDECLARE @id INT = 123\nSELECT * FROM kullanicilar WHERE id = @id\n\n-- Eger dinamik sorgu sartsa sp_executesql kullan:\nDECLARE @sql NVARCHAR(MAX) = 'SELECT * FROM kullanicilar WHERE id = @id'\nEXEC sp_executesql @sql, N'@id INT', @id = 123\n```",
+    "language": "sql",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Stored procedure'de SQL injection riski var mi?\nCREATE PROCEDURE kullanici_ara @isim NVARCHAR(100)\nAS\nBEGIN\n    DECLARE @sql NVARCHAR(MAX)\n    SET @sql = 'SELECT * FROM kullanicilar WHERE ad = ''' + @isim + ''''\n    EXEC(@sql)\nEND",
+    "response": "Evet, `EXEC(@sql)` SQL injection acigi olusturur. Parametrik sorgu kullanin:\n\n```sql\nCREATE PROCEDURE kullanici_ara @isim NVARCHAR(100)\nAS\nBEGIN\n    SELECT * FROM kullanicilar WHERE ad = @isim\nEND\n\n-- Eger gercekten dinamik gerekiyorsa:\nCREATE PROCEDURE kullanici_ara @isim NVARCHAR(100), @sira NVARCHAR(10)\nAS\nBEGIN\n    DECLARE @sql NVARCHAR(MAX)\n    SET @sql = 'SELECT * FROM kullanicilar WHERE ad = @isim ORDER BY ' \n               + QUOTENAME(@sira)  -- sadece sutun adi icin\n    EXEC sp_executesql @sql, N'@isim NVARCHAR(100)', @isim\nEND\n```",
+    "language": "sql",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  },
+  {
+    "instruction": "Clickjacking korumasi nasil eklenir? Su anki HTML:\n<html>\n<head>\n<title>Site</title>\n</head>\n<body>\n<!-- icerik -->\n</body>\n</html>",
+    "response": "X-Frame-Options ve CSP basliklari eklenmeli. Cozum:\n\n```html\n<!-- HTML meta ile (tam koruma saglamaz, baslik tercih edilir) -->\n<html>\n<head>\n<meta http-equiv=\"X-Frame-Options\" content=\"DENY\">\n<meta http-equiv=\"Content-Security-Policy\" content=\"frame-ancestors 'none';\">\n<title>Site</title>\n</head>\n<body>\n<!-- icerik -->\n</body>\n</html>\n```\n\nBackend'de baslik olarak eklemek daha guvenlidir:\n\n```javascript\n// Node.js ile\nres.setHeader('X-Frame-Options', 'DENY');\nres.setHeader('Content-Security-Policy', \"frame-ancestors 'none'\");\n```",
+    "language": "web",
+    "category": "security",
+    "type": "manual",
+    "format": "security"
+  }
+]
