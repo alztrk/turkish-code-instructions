@@ -1,0 +1,40 @@
+{"instruction":"Su kodun ciktisi nedir?\nprint(2 + 3)","response":"5","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint(2 ** 10)","response":"1024","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint(len('istanbul'))","response":"7","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint([1, 2, 3][-1])","response":"3","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint(10 % 3)","response":"1","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint(round(3.7))","response":"4","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint(bool(0))","response":"False","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint('merhaba'.upper())","response":"MERHABA","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint('merhaba'.count('a'))","response":"3","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint(type(42))","response":"<class 'int'>","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint(min(5, 2, 8))","response":"2","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint(max(5, 2, 8))","response":"8","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint(abs(-7))","response":"7","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint(str(123))","response":"123","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint(int('45'))","response":"45","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint([1, 2, 3, 4][1:3])","response":"[2, 3]","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint([0] * 4)","response":"[0, 0, 0, 0]","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint(3 ** 3)","response":"27","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint(15 / 4)","response":"3.75","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nprint(15 // 4)","response":"3","language":"python","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nconsole.log(2 + 3)","response":"5","language":"javascript","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nconsole.log(typeof 'a')","response":"string","language":"javascript","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nconsole.log('hi'.length)","response":"2","language":"javascript","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nconsole.log(Math.max(1,5))","response":"5","language":"javascript","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nconsole.log([1,2,3].pop())","response":"3","language":"javascript","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nconsole.log(!!0)","response":"false","language":"javascript","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nconsole.log('5' - 2)","response":"3","language":"javascript","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nconsole.log(3 > 5)","response":"false","language":"javascript","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nSystem.out.println(2 + 3);","response":"5","language":"java","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nSystem.out.println('a'.length());","response":"1","language":"java","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nSystem.out.println(10 / 3);","response":"3","language":"java","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nSystem.out.println(Math.min(2,7));","response":"2","language":"java","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nfmt.Println(2 + 3)","response":"5","language":"go","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nfmt.Println(len('go'))","response":"2","language":"go","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nfmt.Println(10 > 5)","response":"true","language":"go","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nfmt.Println(3 * 4)","response":"12","language":"go","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nSELECT COUNT(*) FROM users;","response":"Tablodaki kayit sayisi","language":"sql","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nSELECT 5 + 3;","response":"8","language":"sql","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nSELECT UPPER('merhaba');","response":"MERHABA","language":"sql","format":"output_prediction","type":"generated"}
+{"instruction":"Su kodun ciktisi nedir?\nSELECT LENGTH('test');","response":"4","language":"sql","format":"output_prediction","type":"generated"}
