@@ -1,0 +1,716 @@
+{
+  "category": "web",
+  "templates": [
+    {
+      "pattern": "{framework} ile {bilesen} bileseni olusturan {tip} yaz",
+      "slots": {
+        "framework": [
+          "React", "Vue.js", "Angular", "Svelte", "Next.js",
+          "Nuxt.js", "Gatsby", "Remix", "Solid.js", "Preact",
+          "Alpine.js", "Lit", "Stencil", "Ember.js", "Backbone.js",
+          "Mithril", "Inferno", "Qwik", "Astro", "Fresh"
+        ],
+        "bilesen": [
+          "kullanici listesi", "urun kart", "sepet goruntuleme", "odeme formu",
+          "login sayfasi", "arama cubugu", "navigation menu", "footer",
+          "header", "sayfalama", "filtreleme paneli", "bildirim kutusu",
+          "modal diyalog", "progress bar", "yukleniyor spinner",
+          "dropdown menu", "tab panel", "accordion menu", "tooltip", "popover"
+        ],
+        "tip": [
+          "functional component", "class component", "composable", "mixin",
+          "directive", "pipe", "servis", "store module",
+          "custom hook", "higher-order component", "render prop", "atoms (atomic design)",
+          "custom element", "web component", "reusable component",
+          "controlled component", "uncontrolled component", "smart component", "dumb component", "layout component"
+        ]
+      }
+    },
+    {
+      "pattern": "{api_tipi} API'sinde {endpoint} endpoint'i icin {metod} handler yaz",
+      "slots": {
+        "api_tipi": [
+          "REST", "GraphQL", "gRPC", "WebSocket", "SOAP",
+          "JSON-RPC", "XML-RPC", "OData", "MCP (Model Context Protocol)", "SSE (Server-Sent Events)",
+          "Webhook", "RESTful", "REST (JWT Auth)", "GraphQL (Apollo)", "tRPC",
+          "Falcor", "Netflix DGS", "PostgREST", "Feign Client", "OpenAPI"
+        ],
+        "endpoint": [
+          "/api/kullanicilar", "/api/urunler", "/api/siparisler", "/api/odemeler",
+          "/graphql", "/api/auth/login", "/api/auth/register", "/api/dosyalar/yukle",
+          "/api/raporlar", "/api/bildirimler", "/api/kategoriler", "/api/indirimler",
+          "/api/sepet", "/api/favoriler", "/api/yorumlar", "/api/puanlar",
+          "/api/analiz", "/api/ayarlar", "/api/loglar", "/api/senkronizasyon"
+        ],
+        "metod": [
+          "GET listeleme", "GET (ID ile) detay", "POST olusturma", "PUT guncelleme",
+          "PATCH kismi guncelleme", "DELETE silme", "POST (login) kimlik dogrulama",
+          "POST (register) kayit", "POST (upload) dosya yukleme", "GET (download) dosya indirme",
+          "POST search/arama", "POST filter/filtreleme", "PUT toplu guncelleme",
+          "DELETE toplu silme", "GET export/disa aktarim", "POST import/ice aktarim",
+          "GET logs/log goruntuleme", "POST webhook/callback", "GET health/saglik kontrolu",
+          "POST reset/sifirlama"
+        ]
+      }
+    },
+    {
+      "pattern": "{stil_yontemi} kullanarak {bilesen} bilesenini {ozellik} ile stillendir",
+      "slots": {
+        "stil_yontemi": [
+          "CSS Modules", "Styled Components", "Tailwind CSS",
+          "Sass/SCSS", "CSS-in-JS (Emotion)", "BEM metodolojisi",
+          "Bootstrap", "Material UI", "Chakra UI", "Ant Design",
+          "PostCSS", "CSS Grid", "Flexbox", "Vanilla Extract",
+          "Radix UI + Tailwind", "DaisyUI", "PrimeReact/Faces", "Bulma",
+          "Semantic UI", "shadcn/ui"
+        ],
+        "bilesen": [
+          "navbar", "sidebar", "kullanici karti", "urun listesi", "form",
+          "buton", "giris alani", "tablo", "modal", "bildirim mesaji",
+          "page header", "breadcrumb", "pagination", "search bar", "footer",
+          "hero banner", "feature card", "testimonial", "pricing card", "contact form"
+        ],
+        "ozellik": [
+          "responsive tasarim", "dark mode destegi", "animasyon gecisi",
+          "hover efektleri", "mobil uyumlu", "erisilebilirlik (aria)",
+          "lazy loading", "skeleton screen", "loading state", "error state",
+          "empty state", "keyboard navigasyon", "print stili", "focus stili",
+          "disabled state", "active state", "transition efekti", "transform donusumu",
+          "gradient arka plan", "golgelendirme efekti"
+        ]
+      }
+    },
+    {
+      "pattern": "{durum_yonetimi} ile {bilesen} bileseninin durumunu {eylem} yoneten kod yaz",
+      "slots": {
+        "durum_yonetimi": [
+          "React Context API", "Redux Toolkit", "Zustand", "Pinia (Vue)",
+          "Vuex", "NgRx (Angular)", "MobX", "Recoil",
+          "Jotai", "Valtio", "Akita", "Effector",
+          "Signals (Solid)", "Svelte stores", "XState (state machine)",
+          "Redux Observable", "Redux Saga", "TanStack Query", "SWR", "Apollo Client"
+        ],
+        "bilesen": [
+          "kullanici profili", "alisveris sepeti", "urun listesi", "filtre paneli",
+          "kimlik dogrulama", "bildirim sistemi", "tema degistirici", "dil secici",
+          "sayfalama", "form state", "yukleme gostergesi", "hata mesaji",
+          "favoriler listesi", "karsilastirma listesi", "arama sonuclari",
+          "siparis durumu", "odeme islemi", "kullanici ayarlari", "rapor goruntuleme", "dashboard widget"
+        ],
+        "eylem": [
+          "getiren, guncelleyen ve silen", "ekleyip cikaran", "filtreleyip siralayan",
+          "acip kapatan", "baslatip durduran", "artirip azaltan",
+          "kaydedip geri yukleyen", "gecerli kılıp gecersiz kilan",
+          "gosterip gizleyen", "ekleyip guncelleyen",
+          "senkronize eden", "otel yukleyen",
+          "onbellege alip temizleyen", "gruplayip birlestiren",
+          "dogrulayip hata gosteren", "yetkilendirip yonlendiren",
+          "parcalara ayirip birlestiren", "siralayip ters ceviren",
+          "kopyalayip tasiyan", "yedekleyip geri alan"
+        ]
+      }
+    },
+    {
+      "pattern": "{yontem} ile HTTP {istek_turu} istegini {islem} yapan kod yaz",
+      "slots": {
+        "yontem": [
+          "fetch API", "Axios", "XMLHttpRequest", "ky (JavaScript)",
+          "Got (Node.js)", "SuperAgent", "isomorphic-fetch", "unfetch",
+          "node-fetch", "undici (fetch)", "httpx (Python)", "requests (Python)",
+          "aiohttp (Python async)", "curl (PHP)", "HttpClient (C#/.NET)",
+          "URLSession (Swift)", "OkHttp (Java/Kotlin)", "Retrofit (Android)", "Alamofire (iOS)", "Angular HttpClient"
+        ],
+        "istek_turu": [
+          "GET", "POST", "PUT", "PATCH", "DELETE", "HEAD",
+          "OPTIONS", "TRACE", "CONNECT", "GET (dosya indirme)",
+          "POST (multipart dosya yukleme)", "POST (JSON)", "GET (query parametreli)",
+          "POST (form-urlencoded)", "GET (kimlik dogrulamali)", "POST (token yenileme)",
+          "GET (sayfalamali)", "POST (graphql sorgu)", "DELETE (toplu silme)", "PUT (tam guncelleme)"
+        ],
+        "islem": [
+          "gonderip yaniti isleyen", "gonderip hata yoneten",
+          "interceptor ile loglayan", "cancel token ile iptal eden",
+          "retry mekanizmasi ile tekrar deneyen", "timeout ile zaman asimi kontrolu yapan",
+          "base URL yapilandirmasi yapan", "header ekleyip ozellestiren",
+          "query parametre ekleyen", "response transform eden",
+          "request transform eden", "progress callback ile dosya yukleme ilerlemesi gosteren",
+          "interceptor ile auth token ekleyen", "cache kontrolu yapan",
+          "concurrent istek limiti uygulayan", "SSE (Server-Sent Events) dinleyen",
+          "WebSocket baglantisi kuran", "CSRF token ekleyen", "rate limiting uygulayan", "request/response loglayan"
+        ]
+      }
+    },
+    {
+      "pattern": "{veri_turu} verisini {kaynak} kaynagindan {teknoloji} teknolojisi ile cek",
+      "slots": {
+        "veri_turu": [
+          "kullanici profili", "urun listesi", "siparis gecmisi", "hava durumu",
+          "haber basliklari", "sosyal medya gonderileri", "fiyat bilgisi",
+          "kripto para kuru", "hisse senedi verisi", "film bilgileri",
+          "muzik sarkilari", "egitim videolari", "spor sonuclari", "yemek tarifleri",
+          "seyahat bilgileri", "etkinlik takvimi", "is ilanlari", "emlak ilanlari",
+          "urun yorumlari", "indirim kuponlari"
+        ],
+        "kaynak": [
+          "public REST API", "GraphQL endpointi", "Firebase Realtime Database",
+          "Supabase Backend", "localStorage", "sessionStorage", "IndexedDB",
+          "Cookie", "Web Worker", "Server-Sent Events",
+          "WebSocket sunucusu", "JSON dosyasi", "CSV dosyasi",
+          "XML dosyasi", "Markdown dosyasi", "Google Sheets API",
+          "Excel dosyasi", "SQLite veritabani", "Redis cache", "CDN"
+        ],
+        "teknoloji": [
+          "fetch + useEffect (React)", "fetch + onMounted (Vue)", "HttpClient (Angular)",
+          "TanStack Query", "SWR", "Apollo Client (GraphQL)", "Relay (GraphQL)",
+          "Firebase SDK", "Supabase JS Client", "Axios + React Query",
+          "RTK Query (Redux)", "Pinia (Vue) async action", "Svelte stores",
+          "RxJS Observables", "SignalR (.NET)", "Socket.io client",
+          "react-router loader", "Next.js Server Components", "Nuxt.js useFetch", "Astro endpoints"
+        ]
+      }
+    },
+    {
+      "pattern": "{framework} framework'unde {sistem} sistemi icin {yonlendirme_turu} routing yapilandirmasi yaz",
+      "slots": {
+        "framework": [
+          "React Router", "Vue Router", "Angular Router", "Next.js",
+          "Nuxt.js", "SvelteKit", "Solid Router", "TanStack Router",
+          "React Navigation (React Native)", "Reach Router", "Wouter",
+          "NavLink (React)", "Gatsby Link", "Remix", "Astro",
+          "Qwik City", "Preact Router", "Ember Router", "Express.js (server)", "Flask (Python server)"
+        ],
+        "sistem": [
+          "kullanici paneli", "admin paneli", "urun katalogu", "blog sayfasi",
+          "alisveris sepeti", "odeme adimlari", "profil sayfasi", "dashboard",
+          "arama sayfasi", "bildirim merkezi", "fatura goruntuleme", "destek talebi",
+          "SSR (Server-Side Rendering)", "SSG (Static Site Generation)", "ISR (Incremental Static Regeneration)",
+          "SPA (Single Page Application)", "MPA (Multi Page Application)", "PWA (Progressive Web App)",
+          "mobil responsive", "coklu dil destegi"
+        ],
+        "yonlendirme_turu": [
+          "dinamik routing", "ic ice nesting routing", "parametreli routing",
+          "query parametreli routing", "catch-all routing", "optional parametre",
+          "lazy loading routing", "yetki bazli routing", "guard ile korumali routing",
+          "404 not found routing", "redirect routing", "nested layout routing",
+          "programmatic navigation", "hash routing", "browser (history) routing",
+          "scroll restoration", "route transition animasyonu", "parallel routes (Next.js)",
+          "intercepting routes (Next.js)", "middleware ile routing"
+        ]
+      }
+    },
+    {
+      "pattern": "{form_alani} alani icin {dogrulama_turu} dogrulamasi yapan ve {hata_gosterimi} gosteren form kodu yaz",
+      "slots": {
+        "form_alani": [
+          "e-posta", "parola", "telefon numarasi", "TC kimlik no",
+          "kredi karti numarasi", "tarih", "URL", "IP adresi",
+          "kullanici adi", "sifre (guclu)", "posta kodu", "adres",
+          "yas", "fiyat", "miktar", "urun kodu",
+          "dosya yukleme", "renk secimi", "ulke secimi", "sozlesme onayi"
+        ],
+        "dogrulama_turu": [
+          "required (zorunlu alan)", "min/max uzunluk", "regex desen eslesmesi",
+          "e-posta formati (regex)", "guclu parola kurallari",
+          "iki alan eslesmesi (ornek: sifre tekrari)", "sayisal aralik (min/max)",
+          "ozel karakter kontrolu", "benzersizlik kontrolu (async)",
+          "dosya boyutu kontrolu", "dosya turu kontrolu",
+          "tarih araligi kontrolu", "yetiskin yasi kontrolu",
+          "TCKN algoritma dogrulamasi", "kredi karti Luhn algoritmasi",
+          "URL format dogrulamasi", "telefon uluslararasi format",
+          "hex renk kodu dogrulamasi", "iban dogrulamasi", "captcha dogrulamasi"
+        ],
+        "hata_gosterimi": [
+          "satir ici hata mesaji", "tooltip ile hata", "toast bildirim",
+          "modal uyari", "form ustu hata ozeti", "alan alti kirmizi cizgi",
+          "ikon ile hata gostergesi", "sesli uyari", "animasyonlu sallama",
+          "error boundary ile", "field level validation", "form level validation",
+          "inline validation", "async validation spinner", "arka plan kirmizi renk",
+          "border rengi degistirerek", "label rengini degistirerek", "placeholder ile uyari",
+          "disabled submit butonu", "checkbox ile sozlesme onayi uyarisi"
+        ]
+      }
+    },
+    {
+      "pattern": "{durum} durumunu yoneten {storage_turu} storage kodu yaz",
+      "slots": {
+        "durum": [
+          "kullanici oturumu", "tema tercihi", "dil tercihi", "sepet icerigi",
+          "arama gecmisi", "filtre ayarlari", "sayfalama bilgisi",
+          "scroll pozisyonu", "form taslaklari", "bildirim ayarlari",
+          "favori urunler", "son goruntulenen urunler", "karsilastirma listesi",
+          "oauth token", "refresh token", "kullanici rolleri",
+          "uygulama ayarlari", "dashboard widget ayarlari", "cookie onayi", "feature flag durumu"
+        ],
+        "storage_turu": [
+          "localStorage", "sessionStorage", "IndexedDB", "Cookie (document.cookie)",
+          "Web Storage API", "Cache API", "Memory cache (Map)", "React state + localStorage",
+          "Pinia/Vuex + localStorage persist", "Redux persist", "Zustand persist",
+          "TanStack Query cache", "SWR cache", "Service Worker cache",
+          "session cookie", "persistent cookie", "secure cookie", "httpOnly cookie",
+          "shared worker", "opened tab broadcast channel"
+        ]
+      }
+    },
+    {
+      "pattern": "{test_turu} testi yazarak {bilesen} bilesenini {test_yaklasimi} ile test et",
+      "slots": {
+        "test_turu": [
+          "birim (unit)", "bilesen (component)", "entegrasyon (integration)",
+          "ucy-uc (end-to-end)", "anlık goruntu (snapshot)", "gorsel regresyon (visual regression)",
+          "kabul (acceptance)", "performans (performance)", "yuk (load)", "stres (stress)",
+          "guvenlik (security)", "kullanilabilirlik (usability)", "API testi", "mobil test",
+          "cross-browser test", "accessibility (a11y) test", "mutation test", "smoke test", "regression test", "sadelestirme (smoke)"
+        ],
+        "bilesen": [
+          "login formu", "kullanici karti", "urun listesi", "sepet", "navbar",
+          "modal diyalog", "bildirim kutusu", "sayfalama bileseni", "arama cubugu",
+          "dropzone dosya yukleme", "tarih secici", "dropdown menu", "tab panel",
+          "veri tablosu", "grafik bileseni", "harita bileseni", "video oynatici",
+          "anket formu", "odeme sayfasi", "dashboard widget"
+        ],
+        "test_yaklasimi": [
+          "React Testing Library", "Vitest", "Jest", "Cypress",
+          "Playwright", "Puppeteer", "Testing Library (Vue)", "Angular TestBed",
+          "Mocha + Chai", "Jasmine", "Karma", "Ava",
+          "Selenium WebDriver", "Storybook testleri", "Lighthouse CI",
+          "Axe (accessibility)", "MSW (Mock Service Worker)", "Mock Service Worker",
+          "Sinon.js (mocking)", "Supertest (API)"
+        ]
+      }
+    },
+    {
+      "pattern": "{performans_sorunu} sorununu cozmek icin {optimizasyon} optimizasyonu uygula",
+      "slots": {
+        "performans_sorunu": [
+          "gereksiz yeniden render", "buyuk resimlerin yavas yuklenmesi",
+          "cok fazla API istegi", "yavas sayfa ilk yukleme",
+          "buyuk bundle boyutu", "gereksiz importlar", "yavas animasyonlar",
+          "DOM agir componentler", "bellek sizintisi", "yavas liste render",
+          "gereksiz efekt calismasi", "yavas derin karsilastirma",
+          "buyuk JSON parse", "yavas CSS seciciler", "cok fazla reflow/layout",
+          "yavas web font yukleme", "cerez (cookie) sismesi", "yavas localStorage okuma",
+          "event listener sizintisi", "interval/timer temizlenmemesi"
+        ],
+        "optimizasyon": [
+          "React.memo / useMemo / useCallback", "lazy loading component",
+          "resim optimizasyonu (webp, lazy loading)", "code splitting (dynamic import)",
+          "tree shaking", "debounce ve throttle", "virtual scrolling (react-window)",
+          "HTTP/2 multiplexing", "CDN kullanimi", "bundle analyzer ile analiz",
+          "useMemo ile pahali hesaplamalari ortbellegi", "useCallback ile gereksiz render engelle",
+          "Suspense ile streaming SSR", "Intersection Observer ile lazy loading",
+          "Web Worker ile agir islemleri ayirma", "CSS contain ozellestirmesi",
+          "font-display: swap ile font stratejisi", "preload/prefetch ile kaynak on yukleme",
+          "Service Worker ile offline cache", "requestAnimationFrame ile animasyon optimizasyonu"
+        ]
+      }
+    },
+    {
+      "pattern": "{guvenlik_turu} guvenlik onlemini {cozum} ile uygulayan kod yaz",
+      "slots": {
+        "guvenlik_turu": [
+          "XSS (Cross-Site Scripting)", "CSRF (Cross-Site Request Forgery)",
+          "SQL Injection", "Session Hijacking", "Clickjacking",
+          "Man-in-the-Middle (MITM)", "Brute Force saldirisi",
+          "DoS/DDoS saldirisi", "IDOR (Insecure Direct Object Reference)",
+          "Open Redirect", "Local File Inclusion", "Remote Code Execution",
+          "Server-Side Request Forgery (SSRF)", "XML External Entity (XXE)",
+          "Insecure Deserialization", "Race Condition", "Broken Authentication",
+          "Sensitive Data Exposure", "Mass Assignment", "Security Misconfiguration"
+        ],
+        "cozum": [
+          "Content Security Policy (CSP) header", "input sanitization ve encoding",
+          "parametreli SQL sorgulari (prepared statements)", "CSRF token kullanimi",
+          "SameSite cookie ozelligi", "HttpOnly cookie flagi", "Secure cookie flagi",
+          "JWT token dogrulama ve yenileme", "bcrypt ile sifre hashing",
+          "rate limiting ile istek sinirlama", "CORS yapilandirmasi",
+          "Helmet.js middleware kullanimi", "X-Frame-Options header",
+          "input validation ve whitelist kontrolu", "ORM kullanarak native SQL'den kacinma",
+          "yetkilendirme middleware'i ile rol kontrolu", "HTTPS zorunlulugu",
+          "2FA (Iki Faktorlu Kimlik Dogrulama)", "OAuth 2.0 / OpenID Connect", "API key + JWT birlikte kullanim"
+        ]
+      }
+    },
+    {
+      "pattern": "{pwa_ozelligi} ozelligini {teknoloji} kullanarak PWA'ya ekleyen kod yaz",
+      "slots": {
+        "pwa_ozelligi": [
+          "offline calisma", "push bildirim", "arka plan senkronizasyon",
+          "cache yonetimi", "uygulama yukleme (install prompt)", "background fetch",
+          "periodic background sync", "precache statik dosyalar",
+          "runtime cache API yanitlari", "offline analytics",
+          "badge API (bildirim rozeti)", "file system access",
+          "nfc okuyucu", "bluetooth baglantisi", "geolocation takip",
+          "accelerometer access", "camera erisimi", "microphone erisimi",
+          "fullscreen API", "web share API"
+        ],
+        "teknoloji": [
+          "Service Worker", "Cache API", "IndexedDB", "manifest.json",
+          "Web Push API", "Notification API", "Sync Manager",
+          "Background Sync API", "Periodic Background Sync API", "Workbox (Google)",
+          "idb (IndexedDB library)", "localForage", "ngrok (testing)", "Lighthouse",
+          "PWABuilder", "Workbox webpack plugin", "Vite PWA plugin",
+          "Next.js PWA (next-pwa)", "Nuxt PWA module", "Angular Service Worker"
+        ]
+      }
+    },
+    {
+      "pattern": "{ererisilebilirlik_sorunu} erisilebilirlik sorununu {duzeltme} ile duzelten kod yaz",
+      "slots": {
+        "ererisilebilirlik_sorunu": [
+          "gorsel kontrast yetersizligi", "klavye navigasyon eksikligi",
+          "ekran okuyucu uyumsuzlugu", "focus sirasi bozuklugu",
+          "alternatif metin eksikligi", "ARIA label eksikligi",
+          "renk koduyla sadece bilgi verme", "kucuk dokunma hedefi",
+          "sayfa basligi eksikligi", "skip link eksikligi",
+          "hata mesaji okunamazligi", "dil bildirimi eksikligi",
+          "tabindex yanlis kullanimi", "role attribute eksikligi",
+          "dinamik icerik bildirimi eksik", "PDF erisilebilirlik sorunu",
+          "otomatik video oynatma", "parpildayan icerik (epilepsi riski)",
+          "sonsuz scroll erisim sorunu", "form etiketi eksikligi"
+        ],
+        "duzeltme": [
+          "aria-label ve aria-labelledby ekleyerek", "role attribute ekleyerek",
+          "tabindex ile focus sirasi duzenleyerek", "alt text ekleyerek",
+          "contrast oranini WCAG AA/AAA uygun hale getirerek", "skip navigation linki ekleyerek",
+          "aria-live ile dinamik degisiklik bildirerek", "keyboard event handler ekleyerek",
+          "semantic HTML (nav, main, aside) kullanarak", "lang attribute ekleyerek",
+          "aria-expanded ile acilir menu bildirerek", "aria-hidden ile dekoratif ogeleri gizleyerek",
+          "focus visible ile klavye odagi belirginlestirerek", "aria-required ile form zorunluluk bildirerek",
+          "aria-invalid ile hatali alani isaretleyerek", "aria-describedby ile yardim metni ekleyerek",
+          "role=alert ile hata mesaji bildirerek", "role=progressbar ile yukleme durumu bildirerek",
+          "prefers-reduced-motion ile animasyon azaltarak", "prefers-color-scheme ile karanlik mod destegi ekleyerek"
+        ]
+      }
+    },
+    {
+      "pattern": "{derleme_araci} kullanarak {gorev} yapacak build yapilandirmasi yaz",
+      "slots": {
+        "derleme_araci": [
+          "Webpack", "Vite", "Parcel", "Rollup", "esbuild",
+          "Snowpack", "Turbopack", "Rspack", "Bun bundler",
+          "Gulp", "Grunt", "Broccoli", "Brunch",
+          "tsup (TypeScript)", "Microbundle", "NX (monorepo)",
+          "Turborepo", "Lerna", "Bazel", "nwb"
+        ],
+        "gorev": [
+          "TypeScript derleme", "CSS/SASS/SCSS derleme",
+          "resim optimizasyonu yapma", "JS bundle olusturma",
+          "code splitting uygulama", "tree shaking yapma",
+          "dev server baslatma", "HMR (Hot Module Replacement)",
+          "environment variable yonetimi", "polyfill ekleme",
+          "CSS modul yapilandirmasi", "font optimizasyonu",
+          "svg sprite olusturma", "production build cikti",
+          "minifikasyon ve uglifikasyon", "source map olusturma",
+          "eslint/stylelint entegrasyonu", "test calistirma entegrasyonu",
+          "deployment script olusturma", "analiz raporu olusturma"
+        ]
+      }
+    }
+  ],
+  "direct_instructions": [
+    "HTML ile basit bir kisisel web sayfasi iskeleti yaz",
+    "HTML5 semantic elementler (header, nav, main, section, article, footer) kullanarak sayfa yaz",
+    "CSS Flexbox ile uc sutunlu responsive bir layout yap",
+    "CSS Grid ile 3x3 galeri goruntuleme sayfasi yap",
+    "CSS ile bir butona hover, active ve focus efektleri ekleyen stiller yaz",
+    "CSS animasyon (keyframes) kullanarak yukleme spinner'i yap",
+    "CSS ile responsive bir navigation menu yap (mobile hamburger)",
+    "CSS ile dropdown menu yapan navigasyon yaz",
+    "CSS ile dark mode ve light mode destegi ekleyen kod yaz",
+    "CSS ile bir karti cevirme (flip) animasyonu yapan kod yaz",
+    "CSS ile gradient arka plan ve golge efektleri ekleyen kod yaz",
+    "CSS ile scroll-based animasyon (intersection observer olmadan) dene",
+    "CSS ile bir container sorgusu (container query) kullanarak responsive bilesen yap",
+    "CSS ile auto-fit ve minmax kullanarak responsive grid yap",
+    "CSS ile clamp fonksiyonu kullanarak akiskan tipografi olustur",
+    "CSS ile sticky positioning kullanarak sabit baslik yap",
+    "CSS ile aspect-ratio ozellestirmesi kullanarak sabit en-boy oranli resim kutusu yap",
+    "CSS ile custom properties (degiskenler) kullanarak tema sistemi kur",
+    "CSS ile transition ve transform kullanarak kart hover efekti yap",
+    "CSS ile calc() kullanarak dinamik boyutlandirma yapan layout yap",
+    "JavaScript ile DOM'dan bir elementi secip icerigini degistiren kod yaz",
+    "JavaScript ile bir butona click eventi ekleyen kod yaz",
+    "JavaScript ile bir formu dinleyip submit olayini yoneten kod yaz",
+    "JavaScript ile fetch API kullanarak JSON verisi ceken kod yaz",
+    "JavaScript ile async/await kullanarak veri cekme islemi yapan kod yaz",
+    "JavaScript ile localStorage'a veri kaydedip okuyan kod yaz",
+    "JavaScript ile sessionStorage'a veri kaydedip okuyan kod yaz",
+    "JavaScript ile document.cookie kullanarak cookie olusturup okuyan kod yaz",
+    "JavaScript ile bir diziyi filter, map ve reduce ile isleyen kod yaz",
+    "JavaScript ile Promise.all kullanarak birden fazla API istegini paralel calistiran kod yaz",
+    "JavaScript ile IntersectionObserver kullanarak sonsuz scroll yapan kod yaz",
+    "JavaScript ile ResizeObserver kullanarak element boyutu degisimini izleyen kod yaz",
+    "JavaScript ile MutationObserver kullanarak DOM degisikliklerini izleyen kod yaz",
+    "JavaScript ile destructuring assignment kullanarak nesne ve dizi parcalama yapan kod yaz",
+    "JavaScript ile spread operatoru ile dizi ve nesne birlestirme yapan kod yaz",
+    "JavaScript ile optional chaining (?.) ve nullish coalescing (??) kullanan kod yaz",
+    "JavaScript ile class syntax ile bir ES6 sinifi olusturan kod yaz",
+    "JavaScript ile setTimeout ve setInterval ile zamanlayici yoneten kod yaz",
+    "JavaScript ile requestAnimationFrame ile animasyon dongusu yapan kod yaz",
+    "JavaScript ile Event Delegation kullanarak dinamik elementlerde event yoneten kod yaz",
+    "JavaScript ile custom event olusturup dispatch eden kod yaz",
+    "JavaScript ile Debounce fonksiyonu yazarak arama cubugu performansini artiran kod yaz",
+    "JavaScript ile Throttle fonksiyonu yazarak scroll event frekansini sinirlayan kod yaz",
+    "JavaScript ile Error handling (try-catch-finally) kullanan async fonksiyon yaz",
+    "JavaScript ile Proxy kullanarak nesne erisimini izleyen ve yonlendiren kod yaz",
+    "JavaScript ile Symbol kullanarak ozel iterator olusturan kod yaz",
+    "JavaScript ile WeakMap ve WeakSet kullanarak bellek dostu cache yapan kod yaz",
+    "JavaScript ile structuredClone kullanarak derin kopya olusturan kod yaz",
+    "JavaScript ile navigator.clipboard API kullanarak panoya kopyalama yapan kod yaz",
+    "JavaScript ile BroadcastChannel API kullanarak sekmeler arasi iletisim kuran kod yaz",
+    "JavaScript ile Web Worker olusturup ana thread'den mesaj gonderip alan kod yaz",
+    "JavaScript ile Service Worker kaydedip fetch eventini intercept eden kod yaz",
+    "JavaScript ile URLSearchParams kullanarak query string parametrelerini yoneten kod yaz",
+    "React ile basit bir 'Merhaba Dunya' functional component yaz",
+    "React ile useState hooku kullanarak sayac componenti yaz",
+    "React ile useEffect hooku kullanarak API'den veri ceken component yaz",
+    "React ile useContext hooku kullanarak tema bilgisini paylasan component yaz",
+    "React ile useReducer hooku kullanarak karmasik state yoneten form componenti yaz",
+    "React ile useRef hooku kullanarak DOM elementine erisen ve input'a focus yapan component yaz",
+    "React ile useMemo hooku kullanarak pahali hesaplamayi ortbellege alan component yaz",
+    "React ile useCallback hooku kullanarak gereksiz yeniden render'i engelleyen component yaz",
+    "React ile useLayoutEffect hooku kullanarak DOM mutasyonundan sonra calisan efekt yaz",
+    "React ile useImperativeHandle hooku kullanarak child component metodunu parent'a acan kod yaz",
+    "React ile custom hook (useLocalStorage) yazarak state'i localStorage'da saklayan kod yaz",
+    "React ile custom hook (useFetch) yazarak veri cekme mantigini soyutlayan kod yaz",
+    "React ile custom hook (useDebounce) yazarak arama cubugu icin debounce uygulayan kod yaz",
+    "React ile custom hook (useMediaQuery) yazarak ekran boyutuna gore state yoneten kod yaz",
+    "React ile React.memo kullanarak gereksiz render engelleyen component yaz",
+    "React ile prop drilling sorununu Context API ile cozen ornek yaz",
+    "React ile React.lazy ve Suspense kullanarak code splitting yapan component yaz",
+    "React ile Error Boundary componenti yazarak hata yoneten kod yaz",
+    "React ile portal (ReactDOM.createPortal) kullanarak modal component yaz",
+    "React ile uncontrolled component (ref ile form) ornegi yaz",
+    "React ile controlled component (state ile form) ornegi yaz",
+    "React ile render prop patterni kullanan component yaz",
+    "React ile Higher-Order Component (HOC) patterni ile yetkilendirme kontrolu yapan kod yaz",
+    "React ile useRoutes hooku ile routing yapilandirmasi yapan kod yaz",
+    "React ile ProtectedRoute componenti yazarak yetkilendirme kontrolu yapan kod yaz",
+    "React ile Tailwind CSS kullanarak responsive kart componenti yaz",
+    "React ile Styled Components kullanarak stillendirilmis buton componenti yaz",
+    "React ile CSS Modules kullanarak scoped CSS uygulayan component yaz",
+    "React ile Material UI kullanarak veri tablosu componenti yaz",
+    "React ile Ant Design kullanarak form componenti yaz",
+    "React ile axios interceptor kullanarak API isteklerine auth token ekleyen kod yaz",
+    "React ile Redux Toolkit createSlice ile bir state slice'i tanimlayan kod yaz",
+    "React ile Redux Toolkit createAsyncThunk ile asenkron API istegi yapan kod yaz",
+    "React ile Zustand kullanarak sepet state'i yoneten store yaz",
+    "React ile React Router kullanarak 3 sayfali SPA routing yap",
+    "React ile React Router nested routes kullanarak alt sayfalari yonlendiren kod yaz",
+    "React ile React Router useParams hooku ile dinamik URL parametresi okuyan component yaz",
+    "React ile React Router useSearchParams hooku ile query parametrelerini yoneten component yaz",
+    "React ile React Router Outlet kullanarak layout componenti yapan kod yaz",
+    "React ile React Router loader fonksiyonu kullanarak sayfaya veri onceden yukleyen kod yaz",
+    "React ile Formik kullanarak form state ve validasyon yoneten ornek yaz",
+    "React ile react-hook-form kullanarak performansli form yoneten ornek yaz",
+    "React ile zod veya yup schema ile form validasyonu yapan kod yaz",
+    "React ile TanStack Table kullanarak siralamali ve filtrelenebilir tablo yap",
+    "React ile TanStack Query (React Query) kullanarak veri cekme ve cache yoneten kod yaz",
+    "React ile SWR kullanarak veri cekme ve otomatik yenileme yapan kod yaz",
+    "React ile react-dropzone kullanarak dosya yukleme componenti yaz",
+    "React ile recharts veya chart.js kullanarak grafik componenti yaz",
+    "React ile react-beautiful-dnd kullanarak surukle-birak siralamali liste yaz",
+    "React ile react-select kullanarak coklu secimli dropdown yaz",
+    "React ile react-datepicker kullanarak tarih secici component yaz",
+    "React ile react-intl veya react-i18next kullanarak coklu dil destegi ekleyen kod yaz",
+    "React ile framer-motion kullanarak giris-cikis animasyonlu modal yaz",
+    "React ile next/image kullanarak optimize edilmis resim gosteren Next.js sayfasi yaz",
+    "React ile next/link kullanarak Next.js'de istemci tarafli yonlendirme yapan kod yaz",
+    "React ile getServerSideProps (Next.js) kullanarak SSR ile veri yukleyen sayfa yaz",
+    "React ile getStaticProps ve getStaticPaths (Next.js) kullanarak SSG yapan blog sayfasi yaz",
+    "React ile Next.js App Router'da server component ve client component ayirimi yapan kod yaz",
+    "React ile Next.js route handler (API route) ile API endpointi yaz",
+    "React ile Next.js middleware ile istek oncesi yonlendirme ve yetki kontrolu yapan kod yaz",
+    "React ile Next.js generateStaticParams ile dinamik SSG sayfalari olusturan kod yaz",
+    "React ile Next.js revalidate (ISR) kullanarak belirli araliklarla yenilenen sayfa yaz",
+    "React ile Next.js loading.js ve error.js kullanarak yukleme ve hata durumlari yoneten kod yaz",
+    "React ile Next.js Route Group kullanarak farkli layout'lara sahip sayfa gruplari yap",
+    "React ile Next.js intercepting routes kullanarak modal icinde acilan detay sayfasi yaz",
+    "React ile Next.js parallel routes kullanarak es zamanli birden fazla sayfa icerigi gosteren dashboard yap",
+    "React ile Next.js metadata API kullanarak SEO icin baslik ve meta aciklamasi ekleyen kod yaz",
+    "React ile Next.js sitemap ve robots.txt olusturan kod yaz",
+    "Vue.js ile ref() ve reactive() kullanarak reaktif state yoneten component yaz",
+    "Vue.js ile computed() kullanarak hesaplanmis ozellik tanimlayan kod yaz",
+    "Vue.js ile watch() ve watchEffect() kullanarak reaktif degisiklikleri izleyen kod yaz",
+    "Vue.js ile onMounted ve onUnmounted lifecycle hooklari kullanan component yaz",
+    "Vue.js ile v-for ve :key directive'i kullanarak liste render eden kod yaz",
+    "Vue.js ile v-if, v-else-if, v-else kullanarak kosullu render yapan kod yaz",
+    "Vue.js ile v-model kullanarak iki yonlu veri baglama (two-way binding) yapan form yaz",
+    "Vue.js ile v-bind (:) kullanarak dinamik attribute baglayan kod yaz",
+    "Vue.js ile v-on (@) kullanarak event dinleyen kod yaz",
+    "Vue.js ile props ve emits kullanarak parent-child iletisimi yapan component yaz",
+    "Vue.js ile provide/inject kullanarak derin prop drilling'i cozen kod yaz",
+    "Vue.js ile defineProps ve defineEmits (Composition API) kullanan component yaz",
+    "Vue.js ile defineExpose kullanarak child component metodunu parent'a acan kod yaz",
+    "Vue.js ile Teleport kullanarak modal componenti body'e tasiyan kod yaz",
+    "Vue.js ile KeepAlive kullanarak component state'ini koruyan kod yaz",
+    "Vue.js ile useRouter ve useRoute ile programmatic navigation yapan kod yaz",
+    "Vue.js ile navigation guard (beforeEach) ile yetki bazli routing yapan kod yaz",
+    "Vue.js ile Pinia store tanimlayip component icinde kullanan kod yaz",
+    "Vue.js ile Pinia actions ile async API istegi yapan kod yaz",
+    "Vue.js ile defineAsyncComponent ile lazy loading yapan kod yaz",
+    "Nuxt.js ile useFetch kullanarak veri ceken kod yaz",
+    "Nuxt.js ile middleware kullanarak route korumasi yapan kod yaz",
+    "Nuxt.js ile layouts ve pages yapisi ile sayfa duzeni kuran kod yaz",
+    "Nuxt.js ile app.config.ts kullanarak runtime config yoneten kod yaz",
+    "Angular ile bir component olusturup selector, template ve style ozellestirmelerini tanimlayan kod yaz",
+    "Angular ile @Input() ve @Output() decoratorleri ile parent-child iletisimi yapan kod yaz",
+    "Angular ile @ViewChild decoratoru ile DOM elementine erisen kod yaz",
+    "Angular ile ngFor ve ngIf yapisal directive'leri kullanan component yaz",
+    "Angular ile Reactive Forms kullanan validasyonlu form ornegi yaz",
+    "Angular ile Template-Driven Forms kullanan basit form ornegi yaz",
+    "Angular ile custom pipe (orn: 'tel' pipe) olusturan kod yaz",
+    "Angular ile custom directive (orn: highlight) olusturan kod yaz",
+    "Angular ile HttpClientModule kullanarak API'den veri ceken servis yaz",
+    "Angular ile Route Guards (CanActivate, CanDeactivate) kullanan routing yapisi yaz",
+    "Angular ile Resolve guard ile veri onceden yukleyen sayfa yaz",
+    "Angular ile Lazy Loading module yapisi kuran kod yaz",
+    "Angular ile NgRx Store action, reducer, selector tanimlayan kod yaz",
+    "Angular ile NgRx Effect ile yan etki (side effect) yoneten kod yaz",
+    "Angular ile Dependency Injection ile servis enjekte eden component yaz",
+    "Angular ile Lifecycle hooks (ngOnInit, ngOnDestroy, ngOnChanges) kullanan component yaz",
+    "Angular ile Content Projection (ng-content) kullanan reusable component yaz",
+    "Svelte ile $state ve $derived runeleri ile reaktif component yaz",
+    "Svelte ile on:click gibi event directive'leri kullanan component yaz",
+    "Svelte ile bind:value ile iki yonlu veri baglama yapan form yaz",
+    "Svelte ile {#if}, {#each}, {#await} bloklari kullanan template yaz",
+    "Svelte ile dispatchEvent ile parent-child iletisimi yapan kod yaz",
+    "Svelte ile stores (writable, readable, derived) kullanarak state yoneten kod yaz",
+    "Svelte ile svelte:transition, svelte:animate, svelte:motion kullanan animasyonlu component yaz",
+    "SvelteKit ile load fonksiyonu kullanarak veri yukleyen sayfa yaz",
+    "SvelteKit ile form actions kullanarak form yoneten kod yaz",
+    "SvelteKit ile endpoint (API route) yazarak JSON API olusturan kod yaz",
+    "HTML form olusturup action ile basit GET formu gonderimi yapan kod yaz",
+    "HTML tablo olusturup rowspan ve colspan ile birlestirilmis hucreler ekleyen kod yaz",
+    "HTML video ve audio elementleri kullanarak medya oynatici gome kod yaz",
+    "HTML canvas elementi ile basit bir dikdortgen cizen JavaScript kodu yaz",
+    "HTML SVG ile basit bir daire ve dikdortgen cizen kod yaz",
+    "HTML details/summary elementi ile dropdown/acilir bilgi kutusu yap",
+    "HTML dialog elementi ile native modal diyalog yap",
+    "HTML progress ve meter elementleri ile ilerleme cubugu ve olcer yap",
+    "HTML datalist elementi ile inputa otomatik tamamlama onerileri ekleyen kod yaz",
+    "HTML picture elementi ile responsive resim (farkli cozunurlukte) gosteren kod yaz",
+    "HTML figure ve figcaption ile resim aciklamali galeri yap",
+    "HTML time elementi ile makina tarafindan okunabilir tarih ekleyen kod yaz",
+    "HTML output elementi ile JavaScript hesaplama sonucunu gosteren form yap",
+    "HTML fieldset ve legend ile form gruplamasi yapan kod yaz",
+    "HTML input type='range' ile kaydirma cubugu yap",
+    "HTML input type='color' ile renk secici yap",
+    "HTML input type='file' ile dosya yukleme formu yap",
+    "HTML input type='date', 'time', 'datetime-local' ile tarih/saat secici yap",
+    "HTML input type='email', 'tel', 'url' ile ozellestirilmis sanal klavye destegi ekleyen form yap",
+    "HTML input pattern attribute ile regex tabanli validasyon yapan form alani yap",
+    "HTML contenteditable attribute ile duzenlenebilir paragraf yap",
+    "WebSocket ile Node.js (ws) sunucuya baglanip mesaj gonderip alan istemci kodu yaz",
+    "Socket.io ile sunucu ve istemci arasinda oda bazli mesajlasma kuran kod yaz",
+    "Express.js ile basit bir REST API sunucusu yaz (GET endpointi)",
+    "Express.js ile middleware (ornegin: logger) yazip kullanan kod yaz",
+    "Express.js ile hata yonetimi middleware'i yaz",
+    "Express.js ile router yapisi kullanarak moduler endpoint'ler yaz",
+    "Express.js ile multer middleware kullanarak dosya yukleme endpointi yaz",
+    "Express.js ile helmet, cors, morgan middleware'lerini yapilandiran kod yaz",
+    "Express.js ile JWT auth middleware yazarak endpoint'i koruyan kod yaz",
+    "Fastify ile daha hizli bir REST API sunucusu yaz",
+    "Node.js crypto modulu ile rastgele token olusturan fonksiyon yaz",
+    "Node.js bcrypt kullanarak sifre hash'leyip dogrulayan kod yaz",
+    "Node.js fs modulu ile dosya okuyup yazan asenkron kod yaz",
+    "Node.js path modulu ile dosya yolu birlestirme ve normalizasyon yapan kod yaz",
+    "Node.js os modulu ile sistem bilgilerini toplayan kod yaz",
+    "Node.js child_process modulu ile harici komut calistiran kod yaz",
+    "Node.js event emitter kullanarak ozel event yayinlayan ve dinleyen kod yaz",
+    "Node.js stream kullanarak buyuk bir dosyayi parca parca okuyan kod yaz",
+    "Node.js zlib kullanarak dosya sikistirma/acma yapan kod yaz",
+    "Node.js readline modulu ile kullanici girdisini komut satirindan okuyan kod yaz",
+    "Node.js cluster modulu ile coklu CPU kullanan sunucu yaz",
+    "Python Flask ile basit bir REST API endpointi yaz",
+    "Python FastAPI ile asenkron REST API endpointi yaz",
+    "Python Django ile basit bir model ve view yaz",
+    "Python Django REST Framework (DRF) ile serializer ve viewset yaz",
+    "NestJS (Node.js) ile controller, service ve module yapisi kuran kod yaz",
+    "ASP.NET Core (.NET) ile Controller ve API endpointi yaz",
+    "Spring Boot (Java) ile RestController yaz",
+    "GraphQL (Apollo Server) ile schema, resolver ve query tanimlayan kod yaz",
+    "GraphQL (Apollo Server) ile mutation tanimlayan kod yaz",
+    "GraphQL (Apollo Client) ile query ve mutation gonderip yanit isleyen React kodu yaz",
+    "GraphQL ile N+1 problemini DataLoader ile cozen kod yaz",
+    "Supabase ile tablo olusturup SELECT yapan JavaScript kodu yaz",
+    "Supabase ile realtime subscription kuran kod yaz",
+    "Firebase Firestore ile belge ekleyip okuyan JavaScript kodu yaz",
+    "Firebase Authentication ile email/sifre ile kullanici kaydeden kod yaz",
+    "Firebase Cloud Messaging ile push notification gonderim kodu yaz",
+    "AWS S3 ile dosya yukleyip indiren Node.js kodu yaz",
+    "Google OAuth 2.0 ile kullanici giris akisi uygulayan kod yaz",
+    "Prisma ORM ile model tanimlayip veritabani sorgusu yapan kod yaz",
+    "Drizzle ORM ile schema tanimlayip SELECT sorgusu yapan kod yaz",
+    "TypeORM ile entity tanimlayip veritabani baglantisi kuran kod yaz",
+    "Mongoose (MongoDB) ile schema ve model tanimlayip CRUD islemi yapan kod yaz",
+    "Redis ile Node.js uzerinden veri set/get yapan kod yaz",
+    "Jest ile bir JavaScript fonksiyonunu test eden unit test yaz",
+    "Cypress ile bir web sayfasina gidip elementin varligini kontrol eden E2E test yaz",
+    "Playwright ile bir formu doldurup gonderim yapan E2E test yaz",
+    "React Testing Library ile bir component'in render oldugunu test eden test yaz",
+    "Storybook ile bir component icin story yazarak goruntuleme yap",
+    "Lighthouse CLI ile bir sayfanin performans, erisilebilirlik ve SEO raporunu alan komut yaz",
+    "Dockerfile yazarak bir React uygulamasini production build alip Nginx ile serve eden Docker image olustur",
+    "Docker Compose ile bir web uygulamasi (frontend + backend + db) icin multi-container yapisi kur",
+    "NGINX reverse proxy yapilandirmasi yazarak bir web uygulamasina proxy'leme yap",
+    "Vercel veya Netlify uzerine deploy etmek icin konfigurasyon dosyasi yaz",
+    "CI/CD (Github Actions) pipeline'i yazarak kodu test edip deploy eden workflow yaz",
+    "Web sayfasina Google Analytics 4 (GA4) veya benzeri bir analytics kodu entegre eden kod yaz",
+    "Cookie banner (cerez bildirimi) componenti yazarak GDPR uyumluluk saglayan kod yaz",
+    "Lazy loading bir resim icin IntersectionObserver kullanan component yaz",
+    "Image carousel/slider componenti yazarak otomatik ve manuel gecisli slider yap",
+    "Accordion FAQ componenti yazarak soru-cevap listesi yap",
+    "Tab componenti yazarak sekme gecisli icerik paneli yap",
+    "Toast/Snackbar bildirim componenti yazarak gecici bildirim mesaji gosteren kod yaz",
+    "Tooltip componenti yazarak hover ile acilir ipucu kutusu yap",
+    "Pagination componenti yazarak sayfa numarasi gosteren sayfalama yap",
+    "Breadcrumb componenti yazarak sayfa yolunu gosteren navigasyon yap",
+    "Progress bar componenti yazarak yukleme ilerlemesini gosteren UI yap",
+    "Auto-complete/search componenti yazarak yazildikca oneri gosteren input yap",
+    "Star rating componenti yazarak puan verme UI'i yap",
+    "Modal/Dialog componenti yazarak acilir pencere yoneten kod yaz",
+    "Sidebar navigation componenti yazarak mobilde acilir menulu yan panel yap",
+    "Notification bell componenti yazarak okunmamis bildirim sayisi gosteren ikon yap",
+    "Countdown timer componenti yazarak geri sayim gosteren UI yap",
+    "Virtual scroll componenti yazarak 10000 kayitli listeyi performansli render eden kod yaz",
+    "Drag and drop list componenti yazarak surukle-birak ile siralama yap",
+    "Calendar componenti yazarak aylik takvim goruntuleyen kod yaz",
+    "PDF goruntuleme componenti yazarak tarayicida PDF gosteren kod yaz",
+    "Markdown editor/preview componenti yazarak canli markdown onizlemesi yapan kod yaz",
+    "Rich text editor (TinyMCE veya Quill) entegre eden component yaz",
+    "Google Maps veya MapLibre harita componenti yazarak konum isaretleyen kod yaz",
+    "QR code olusturup gosteren component yaz (qrcode.react veya benzeri)",
+    "HTML2Canvas veya dom-to-image kullanarak ekran goruntusu alan kod yaz",
+    "Web Bluetooth API kullanarak bluetooth cihazina baglanan kod yaz",
+    "Web USB API kullanarak USB cihazina baglanip veri okuyan kod yaz",
+    "Web Serial API kullanarak seri port uzerinden veri alisverisi yapan kod yaz",
+    "WebRTC ile peer-to-peer video gorusmesi baslatan kod yaz",
+    "Web Speech API (SpeechRecognition) kullanarak sesli komut algilayan kod yaz",
+    "Web Speech API (SpeechSynthesis) kullanarak metni sese ceviren kod yaz",
+    "Geolocation API kullanarak kullanicinin konumunu alan kod yaz",
+    "Battery API kullanarak pil seviyesini okuyan kod yaz",
+    "Vibration API kullanarak mobil cihazda titresim uyandiran kod yaz",
+    "Screen Orientation API kullanarak ekran yonunu algilayan kod yaz",
+    "Web Share API kullanarak icerik paylasma (native share sheet) yapan kod yaz",
+    "File System Access API kullanarak yerel dosyaya yazma izni alan kod yaz",
+    "IndexedDB kullanarak bir ofline not defteri uygulamasi yaz",
+    "Service Worker ile offline sayfa gosteren kod yaz (fetch eventini intercept et)",
+    "Workbox kullanarak service worker yapilandirmasi yaz",
+    "Manifest.json dosyasi yazarak PWA ozellestirmeleri tanimla",
+    "Web vitals metriklerini (LCP, FID, CLS) olcen ve raporlayan kod yaz",
+    "IntersectionObserver ile reklam gosterim (impression) takibi yapan kod yaz",
+    "CSS counter-increment ile otomatik numaralandirma yapan kod yaz",
+    "CSS scroll-snap ile kaydirma yapistirmali galeri yap",
+    "CSS backdrop-filter ile bulanik arka plan efektli modal yap",
+    "CSS :has() secicisi kullanarak parent element stilini degistiren kod yaz",
+    "CSS @container (container query) ile bilesen bazinda responsive tasarim yap",
+    "CSS @layer ile cascade katmani yonetimi yapan kod yaz",
+    "CSS :focus-visible ile klavye odak stilini ayarlayan kod yaz",
+    "CSS subgrid ile nested grid yapisi kuran kod yaz",
+    "CSS conic-gradient ile pasta grafigi efektli arka plan yap",
+    "CSS mask-image ile resim maskeleme efekti uygulayan kod yaz",
+    "CSS clip-path ile ozel sekilli element (ornek: yildiz) olusturan kod yaz",
+    "CSS text-wrap: balance ile baslik metnini dengeli saran kod yaz"
+  ]
+}

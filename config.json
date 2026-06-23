@@ -1,24 +1,14 @@
 {
   "model": {
-    "command": "ollama",
-    "args": ["run", "codellama"],
-    "type": "ollama"
+    "command": "codex",
+    "args": [],
+    "type": "pipe",
+    "timeout": 300000
   },
   "output": {
-    "batch_size": 50,
-    "total": 2000,
+    "batch_size": 25,
+    "total": 10000,
     "dir": "output"
   },
-  "languages": {
-    "python": { "weight": 3 },
-    "javascript": { "weight": 3 },
-    "typescript": { "weight": 2 },
-    "java": { "weight": 2 },
-    "go": { "weight": 1 },
-    "rust": { "weight": 1 },
-    "cpp": { "weight": 1 },
-    "sql": { "weight": 2 },
-    "algorithms": { "weight": 2 },
-    "web": { "weight": 2 }
-  }
+  "target_per_language": 1000
 }
