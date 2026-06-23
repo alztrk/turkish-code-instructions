@@ -1,0 +1,107 @@
+[
+  {
+    "instruction": "İki sayının çarpımını döndüren bir fonksiyon yaz.",
+    "response": "public class Carpim {\n  public static int carpimHesapla(int sayi1, int sayi2) {\n    return sayi1 * sayi2;\n  }\n\n  public static void main(String[] args) {\n    int sonuc = carpimHesapla(6, 7);\n    System.out.println(\"Carpim: \" + sonuc);\n  }\n}",
+    "language": "java",
+    "category": "java",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir dizideki sayıların toplamını hesapla.",
+    "response": "public class DiziToplam {\n  public static void main(String[] args) {\n    int[] sayilar = {10, 20, 30, 40, 50};\n    int toplam = 0;\n    for (int index = 0; index < sayilar.length; index++) {\n      toplam += sayilar[index];\n    }\n    System.out.println(\"Toplam: \" + toplam);\n  }\n}",
+    "language": "java",
+    "category": "java",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir string'in uzunluğunu döndüren fonksiyon yaz.",
+    "response": "public class KelimeUzunluk {\n  public static int uzunlukBul(String kelime) {\n    return kelime.length();\n  }\n\n  public static void main(String[] args) {\n    String girdi = \"merhaba\";\n    int sonuc = uzunlukBul(girdi);\n    System.out.println(\"Uzunluk: \" + sonuc);\n  }\n}",
+    "language": "java",
+    "category": "java",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir sayının tek mi çift mi olduğunu bulan fonksiyon yaz.",
+    "response": "public class TekCift {\n  public static String tekCiftKontrol(int sayi) {\n    if (sayi % 2 == 0) {\n      return \"cift\";\n    } else {\n      return \"tek\";\n    }\n  }\n\n  public static void main(String[] args) {\n    int deger = 15;\n    String sonuc = tekCiftKontrol(deger);\n    System.out.println(deger + \" \" + sonuc);\n  }\n}",
+    "language": "java",
+    "category": "java",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir ürünün vergili fiyatını hesapla.",
+    "response": "public class UrunFiyat {\n  public static double vergiliFiyatHesapla(double fiyat, double oran) {\n    return fiyat + (fiyat * oran / 100);\n  }\n\n  public static void main(String[] args) {\n    double urunFiyati = 200.0;\n    double vergiOrani = 8.0;\n    double toplam = vergiliFiyatHesapla(urunFiyati, vergiOrani);\n    System.out.println(\"Vergili fiyat: \" + toplam);\n  }\n}",
+    "language": "java",
+    "category": "java",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir dizideki en küçük sayıyı bulan fonksiyon yaz.",
+    "response": "public class EnKucuk {\n  public static int enKucukBul(int[] dizi) {\n    int enKucuk = dizi[0];\n    for (int index = 1; index < dizi.length; index++) {\n      if (dizi[index] < enKucuk) {\n        enKucuk = dizi[index];\n      }\n    }\n    return enKucuk;\n  }\n\n  public static void main(String[] args) {\n    int[] sayilar = {8, 3, 15, 1, 9};\n    int sonuc = enKucukBul(sayilar);\n    System.out.println(\"En kucuk: \" + sonuc);\n  }\n}",
+    "language": "java",
+    "category": "java",
+    "type": "manual"
+  },
+  {
+    "instruction": "Faktöriyel hesaplayan recursive fonksiyon yaz.",
+    "response": "public class Faktoriyel {\n  public static int faktoriyelHesapla(int sayi) {\n    if (sayi <= 1) {\n      return 1;\n    }\n    return sayi * faktoriyelHesapla(sayi - 1);\n  }\n\n  public static void main(String[] args) {\n    int deger = 6;\n    int sonuc = faktoriyelHesapla(deger);\n    System.out.println(deger + \"! = \" + sonuc);\n  }\n}",
+    "language": "java",
+    "category": "java",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir string'deki belirli bir harfi sayan fonksiyon yaz.",
+    "response": "public class HarfSay {\n  public static int harfSayisiBul(String kelime, char aranan) {\n    int sayac = 0;\n    for (int index = 0; index < kelime.length(); index++) {\n      if (kelime.charAt(index) == aranan) {\n        sayac++;\n      }\n    }\n    return sayac;\n  }\n\n  public static void main(String[] args) {\n    String cumle = \"programlama\";\n    char harf = 'a';\n    int sonuc = harfSayisiBul(cumle, harf);\n    System.out.println(harf + \" harfi \" + sonuc + \" kere gecti\");\n  }\n}",
+    "language": "java",
+    "category": "java",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir kullanıcının yaşına göre emeklilik durumunu hesapla.",
+    "response": "public class EmeklilikHesap {\n  public static String emeklilikDurumu(int yas, int calismaYili) {\n    if (yas >= 65 && calismaYili >= 20) {\n      return \"Emekli olabilir\";\n    } else {\n      return \"Emekli olamaz\";\n    }\n  }\n\n  public static void main(String[] args) {\n    String isim = \"Ahmet\";\n    int kullaniciYasi = 67;\n    int kayit = 25;\n    String sonuc = emeklilikDurumu(kullaniciYasi, kayit);\n    System.out.println(isim + \": \" + sonuc);\n  }\n}",
+    "language": "java",
+    "category": "java",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir dizi içinde belirli bir değeri ara ve index'ini döndür.",
+    "response": "public class DiziArama {\n  public static int degerAra(int[] dizi, int aranan) {\n    for (int index = 0; index < dizi.length; index++) {\n      if (dizi[index] == aranan) {\n        return index;\n      }\n    }\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    int[] sayilar = {5, 12, 8, 21, 3};\n    int arananDeger = 8;\n    int sonuc = degerAra(sayilar, arananDeger);\n    System.out.println(arananDeger + \" degeri \" + sonuc + \" indexinde\");\n  }\n}",
+    "language": "java",
+    "category": "java",
+    "type": "manual"
+  },
+  {
+    "instruction": "Fibonacci serisinin ilk n terimini yazdır.",
+    "response": "public class Fibonacci {\n  public static void fibonacciYazdir(int adet) {\n    int sayi1 = 0, sayi2 = 1;\n    System.out.print(sayi1 + \" \" + sayi2);\n    for (int index = 2; index < adet; index++) {\n      int sonraki = sayi1 + sayi2;\n      System.out.print(\" \" + sonraki);\n      sayi1 = sayi2;\n      sayi2 = sonraki;\n    }\n    System.out.println();\n  }\n\n  public static void main(String[] args) {\n    int terimSayisi = 8;\n    fibonacciYazdir(terimSayisi);\n  }\n}",
+    "language": "java",
+    "category": "java",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir string'in büyük harflerini küçük, küçük harflerini büyük yap.",
+    "response": "public class HarfCevir {\n  public static String harfleriCevir(String kelime) {\n    String sonuc = \"\";\n    for (int index = 0; index < kelime.length(); index++) {\n      char gecerli = kelime.charAt(index);\n      if (Character.isUpperCase(gecerli)) {\n        sonuc += Character.toLowerCase(gecerli);\n      } else {\n        sonuc += Character.toUpperCase(gecerli);\n      }\n    }\n    return sonuc;\n  }\n\n  public static void main(String[] args) {\n    String girdi = \"Merhaba Dunya\";\n    String cikti = harfleriCevir(girdi);\n    System.out.println(cikti);\n  }\n}",
+    "language": "java",
+    "category": "java",
+    "type": "manual"
+  },
+  {
+    "instruction": "Daire alanını hesaplayan fonksiyon yaz.",
+    "response": "public class DaireAlan {\n  public static double alanHesapla(double yaricap) {\n    double pi = 3.14159;\n    return pi * yaricap * yaricap;\n  }\n\n  public static void main(String[] args) {\n    double yariCap = 5.0;\n    double sonuc = alanHesapla(yariCap);\n    System.out.println(\"Daire alani: \" + sonuc);\n  }\n}",
+    "language": "java",
+    "category": "java",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir string'deki kelime sayısını bulan fonksiyon yaz.",
+    "response": "public class KelimeSay {\n  public static int kelimeSayisiBul(String cumle) {\n    String[] kelimeler = cumle.trim().split(\" \");\n    return kelimeler.length;\n  }\n\n  public static void main(String[] args) {\n    String mesaj = \"Java ile programlama ogreniyorum\";\n    int sonuc = kelimeSayisiBul(mesaj);\n    System.out.println(\"Kelime sayisi: \" + sonuc);\n  }\n}",
+    "language": "java",
+    "category": "java",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir diziyi küçükten büyüğe sırala (bubble sort).",
+    "response": "public class DiziSirala {\n  public static void sirala(int[] dizi) {\n    int adet = dizi.length;\n    for (int index = 0; index < adet - 1; index++) {\n      for (int index2 = 0; index2 < adet - index - 1; index2++) {\n        if (dizi[index2] > dizi[index2 + 1]) {\n          int gecici = dizi[index2];\n          dizi[index2] = dizi[index2 + 1];\n          dizi[index2 + 1] = gecici;\n        }\n      }\n    }\n  }\n\n  public static void main(String[] args) {\n    int[] sayilar = {64, 34, 25, 12, 22};\n    sirala(sayilar);\n    System.out.print(\"Sirali dizi: \");\n    for (int index = 0; index < sayilar.length; index++) {\n      System.out.print(sayilar[index] + \" \");\n    }\n  }\n}",
+    "language": "java",
+    "category": "java",
+    "type": "manual"
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz:\ndef toplama(a, b):\n    return a + b",
+    "response": "import pytest\n\ndef test_toplama_normal():\n    assert toplama(2, 3) == 5\n    assert toplama(-1, 1) == 0\n    assert toplama(100, 200) == 300\n\ndef test_toplama_kenar():\n    assert toplama(0, 0) == 0\n    assert toplama(-5, -7) == -12\n    assert toplama(1.5, 2.5) == 4.0\n\ndef test_toplama_hata():\n    with pytest.raises(TypeError):\n        toplama(\"a\", 1)",
+    "language": "python",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz:\ndef ters_cevir(s):\n    return s[::-1]",
+    "response": "import pytest\n\ndef test_ters_cevir_normal():\n    assert ters_cevir(\"merhaba\") == \"abahrem\"\n    assert ters_cevir(\"123\") == \"321\"\n    assert ters_cevir(\"a\") == \"a\"\n\ndef test_ters_cevir_kenar():\n    assert ters_cevir(\"\") == \"\"\n    assert ters_cevir(\"   \") == \"   \"\n\ndef test_ters_cevir_hata():\n    with pytest.raises(AttributeError):\n        ters_cevir(42)",
+    "language": "python",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz:\ndef sirala(liste):\n    return sorted(liste)",
+    "response": "import pytest\n\ndef test_sirala_normal():\n    assert sirala([3, 1, 2]) == [1, 2, 3]\n    assert sirala([5, 5, 5]) == [5, 5, 5]\n    assert sirala([-1, 0, 1]) == [-1, 0, 1]\n\ndef test_sirala_kenar():\n    assert sirala([]) == []\n    assert sirala([1]) == [1]\n\ndef test_sirala_hata():\n    with pytest.raises(TypeError):\n        sirala([1, \"a\", 2])",
+    "language": "python",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz:\ndef palindrom_mu(kelime):\n    return kelime == kelime[::-1]",
+    "response": "import pytest\n\ndef test_palindrom_mu_normal():\n    assert palindrom_mu(\"kek\") is True\n    assert palindrom_mu(\"merhaba\") is False\n    assert palindrom_mu(\"12321\") is True\n\ndef test_palindrom_mu_kenar():\n    assert palindrom_mu(\"\") is True\n    assert palindrom_mu(\"a\") is True\n    assert palindrom_mu(\"Aa\") is False\n\ndef test_palindrom_mu_hata():\n    with pytest.raises(AttributeError):\n        palindrom_mu(12321)",
+    "language": "python",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz:\ndef faktoriyel(n):\n    if n < 0:\n        raise ValueError(\"Negatif sayi icin faktoriyel hesaplanamaz\")\n    if n == 0:\n        return 1\n    return n * faktoriyel(n - 1)",
+    "response": "import pytest\n\ndef test_faktoriyel_normal():\n    assert faktoriyel(5) == 120\n    assert faktoriyel(3) == 6\n    assert faktoriyel(1) == 1\n\ndef test_faktoriyel_kenar():\n    assert faktoriyel(0) == 1\n    assert faktoriyel(10) == 3628800\n\ndef test_faktoriyel_hata():\n    with pytest.raises(ValueError, match=\"Negatif\"):\n        faktoriyel(-1)\n    with pytest.raises(TypeError):\n        faktoriyel(\"a\")",
+    "language": "python",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz:\ndef email_dogrula(email):\n    import re\n    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'\n    return bool(re.match(pattern, email))",
+    "response": "import pytest\n\ndef test_email_dogrula_normal():\n    assert email_dogrula(\"test@example.com\") is True\n    assert email_dogrula(\"kullanici@domain.co\") is True\n    assert email_dogrula(\"kullanici.adi@sirket.com.tr\") is True\n\ndef test_email_dogrula_kenar():\n    assert email_dogrula(\"\") is False\n    assert email_dogrula(\"@domain.com\") is False\n    assert email_dogrula(\"kullanici@\") is False\n\ndef test_email_dogrula_hata():\n    with pytest.raises(TypeError):\n        email_dogrula(None)",
+    "language": "python",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz:\ndef sifre_guclu(sifre):\n    if len(sifre) < 8:\n        return False\n    buyuk = any(c.isupper() for c in sifre)\n    kucuk = any(c.islower() for c in sifre)\n    rakam = any(c.isdigit() for c in sifre)\n    ozel = any(not c.isalnum() for c in sifre)\n    return buyuk and kucuk and rakam and ozel",
+    "response": "import pytest\n\ndef test_sifre_guclu_normal():\n    assert sifre_guclu(\"Guclu!12\") is True\n    assert sifre_guclu(\"Zayif1\") is False\n    assert sifre_guclu(\"SADECE1!!\") is False\n\ndef test_sifre_guclu_kenar():\n    assert sifre_guclu(\"12345678\") is False\n    assert sifre_guclu(\"ABCDabcd1!\") is True\n    assert sifre_guclu(\"\") is False\n\ndef test_sifre_guclu_hata():\n    with pytest.raises(TypeError):\n        sifre_guclu(None)",
+    "language": "python",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz:\ndef fibonacci(n):\n    if n < 0:\n        raise ValueError(\"Negatif sayi girilemez\")\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)",
+    "response": "import pytest\n\ndef test_fibonacci_normal():\n    assert fibonacci(0) == 0\n    assert fibonacci(1) == 1\n    assert fibonacci(10) == 55\n\ndef test_fibonacci_kenar():\n    assert fibonacci(2) == 1\n    assert fibonacci(20) == 6765\n\ndef test_fibonacci_hata():\n    with pytest.raises(ValueError, match=\"Negatif\"):\n        fibonacci(-1)\n    with pytest.raises(TypeError):\n        fibonacci(\"a\")",
+    "language": "python",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz:\ndef ikili_arama(liste, hedef):\n    sol, sag = 0, len(liste) - 1\n    while sol <= sag:\n        orta = (sol + sag) // 2\n        if liste[orta] == hedef:\n            return orta\n        elif liste[orta] < hedef:\n            sol = orta + 1\n        else:\n            sag = orta - 1\n    return -1",
+    "response": "import pytest\n\ndef test_ikili_arama_normal():\n    assert ikili_arama([1, 2, 3, 4, 5], 3) == 2\n    assert ikili_arama([1, 2, 3, 4, 5], 1) == 0\n    assert ikili_arama([1, 2, 3, 4, 5], 5) == 4\n\ndef test_ikili_arama_kenar():\n    assert ikili_arama([], 1) == -1\n    assert ikili_arama([1], 1) == 0\n    assert ikili_arama([10, 20, 30], 25) == -1\n\ndef test_ikili_arama_hata():\n    with pytest.raises(TypeError):\n        ikili_arama(None, 1)",
+    "language": "python",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki sinif icin unit test yaz:\nclass Yigin:\n    def __init__(self):\n        self.items = []\n    def ite(self, item):\n        self.items.append(item)\n    def cikar(self):\n        if self.bos_mu():\n            raise IndexError(\"Yigin bos\")\n        return self.items.pop()\n    def bos_mu(self):\n        return len(self.items) == 0\n    def tepe(self):\n        if self.bos_mu():\n            raise IndexError(\"Yigin bos\")\n        return self.items[-1]",
+    "response": "import pytest\n\ndef test_yigin_normal():\n    y = Yigin()\n    assert y.bos_mu() is True\n    y.ite(1)\n    y.ite(2)\n    y.ite(3)\n    assert y.tepe() == 3\n    assert y.cikar() == 3\n    assert y.cikar() == 2\n    assert y.bos_mu() is False\n    assert y.cikar() == 1\n    assert y.bos_mu() is True\n\ndef test_yigin_kenar():\n    y = Yigin()\n    y.ite(42)\n    assert y.cikar() == 42\n    assert y.bos_mu() is True\n\ndef test_yigin_hata():\n    y = Yigin()\n    with pytest.raises(IndexError, match=\"Yigin bos\"):\n        y.cikar()\n    with pytest.raises(IndexError, match=\"Yigin bos\"):\n        y.tepe()",
+    "language": "python",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki sinif icin unit test yaz (JavaScript - Jest):\nclass Kuyruk {\n  constructor() {\n    this.items = [];\n  }\n  ekle(item) {\n    this.items.push(item);\n  }\n  cikar() {\n    if (this.bosMu()) throw new Error('Kuyruk bos');\n    return this.items.shift();\n  }\n  bosMu() {\n    return this.items.length === 0;\n  }\n  on() {\n    if (this.bosMu()) throw new Error('Kuyruk bos');\n    return this.items[0];\n  }\n}",
+    "response": "describe('Kuyruk sinifi testleri', () => {\n  test('normal ekleme ve cikarma', () => {\n    const k = new Kuyruk();\n    expect(k.bosMu()).toBe(true);\n    k.ekle(1);\n    k.ekle(2);\n    k.ekle(3);\n    expect(k.on()).toBe(1);\n    expect(k.cikar()).toBe(1);\n    expect(k.cikar()).toBe(2);\n    expect(k.bosMu()).toBe(false);\n    expect(k.cikar()).toBe(3);\n    expect(k.bosMu()).toBe(true);\n  });\n\n  test('kenar durum - tek eleman', () => {\n    const k = new Kuyruk();\n    k.ekle('test');\n    expect(k.cikar()).toBe('test');\n    expect(k.bosMu()).toBe(true);\n  });\n\n  test('hata durumu - bos kuyruktan cikar', () => {\n    const k = new Kuyruk();\n    expect(() => k.cikar()).toThrow('Kuyruk bos');\n    expect(() => k.on()).toThrow('Kuyruk bos');\n  });\n});",
+    "language": "javascript",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz (JavaScript - Jest):\nfunction alisverisSepetiFiyatHesapla(urunler) {\n  return urunler.reduce((toplam, urun) => {\n    return toplam + (urun.fiyat * (urun.adet || 1));\n  }, 0);\n}",
+    "response": "describe('alisverisSepetiFiyatHesapla', () => {\n  test('normal urun fiyatlari', () => {\n    const urunler = [\n      { ad: 'Elma', fiyat: 5, adet: 3 },\n      { ad: 'Ekmek', fiyat: 10, adet: 2 }\n    ];\n    expect(alisverisSepetiFiyatHesapla(urunler)).toBe(35);\n  });\n\n  test('kenar durumlar', () => {\n    expect(alisverisSepetiFiyatHesapla([])).toBe(0);\n    const tek = [{ ad: 'Su', fiyat: 3 }];\n    expect(alisverisSepetiFiyatHesapla(tek)).toBe(3);\n    const sifirAdet = [{ ad: 'Test', fiyat: 10, adet: 0 }];\n    expect(alisverisSepetiFiyatHesapla(sifirAdet)).toBe(0);\n  });\n\n  test('hata durumu - gecersiz urun', () => {\n    expect(() => alisverisSepetiFiyatHesapla(null)).toThrow();\n  });\n});",
+    "language": "javascript",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz (JavaScript - Jest):\nfunction kullaniciDogrula(kullanici) {\n  if (!kullanici || typeof kullanici !== 'object') throw new Error('Gecersiz kullanici');\n  if (!kullanici.ad || kullanici.ad.trim() === '') throw new Error('Ad zorunludur');\n  if (!kullanici.email || !kullanici.email.includes('@')) throw new Error('Gecerli email zorunludur');\n  if (!kullanici.yas || kullanici.yas < 18) throw new Error('Yas en az 18 olmalidir');\n  return { ...kullanici, dogrulandi: true };\n}",
+    "response": "describe('kullaniciDogrula', () => {\n  test('normal dogrulama', () => {\n    const sonuc = kullaniciDogrula({ ad: 'Ali', email: 'ali@test.com', yas: 25 });\n    expect(sonuc.dogrulandi).toBe(true);\n    expect(sonuc.ad).toBe('Ali');\n  });\n\n  test('kenar durum - yas siniri', () => {\n    expect(() => kullaniciDogrula({ ad: 'Veli', email: 'v@t.com', yas: 17 })).toThrow('Yas en az 18');\n    expect(kullaniciDogrula({ ad: 'Veli', email: 'v@t.com', yas: 18 }).dogrulandi).toBe(true);\n  });\n\n  test('hata durumlari', () => {\n    expect(() => kullaniciDogrula(null)).toThrow('Gecersiz kullanici');\n    expect(() => kullaniciDogrula({ email: 'x@y.com', yas: 20 })).toThrow('Ad zorunludur');\n    expect(() => kullaniciDogrula({ ad: 'X', yas: 20 })).toThrow('Gecerli email');\n  });\n});",
+    "language": "javascript",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz (JavaScript - Jest):\nfunction tarihFormatla(tarih, format) {\n  const map = {\n    'YYYY': tarih.getFullYear(),\n    'MM': String(tarih.getMonth() + 1).padStart(2, '0'),\n    'DD': String(tarih.getDate()).padStart(2, '0'),\n    'HH': String(tarih.getHours()).padStart(2, '0'),\n    'mm': String(tarih.getMinutes()).padStart(2, '0')\n  };\n  let sonuc = format;\n  for (const [anahtar, deger] of Object.entries(map)) {\n    sonuc = sonuc.replace(anahtar, deger);\n  }\n  return sonuc;\n}",
+    "response": "describe('tarihFormatla', () => {\n  test('normal formatlama', () => {\n    const t = new Date(2026, 5, 23, 14, 30);\n    expect(tarihFormatla(t, 'YYYY-MM-DD')).toBe('2026-06-23');\n    expect(tarihFormatla(t, 'HH:mm')).toBe('14:30');\n  });\n\n  test('kenar durum - tekli rakamlar', () => {\n    const t = new Date(2020, 0, 5, 3, 7);\n    expect(tarihFormatla(t, 'YYYY-MM-DD')).toBe('2020-01-05');\n    expect(tarihFormatla(t, 'HH:mm')).toBe('03:07');\n  });\n\n  test('hata durumu - gecersiz tarih', () => {\n    expect(() => tarihFormatla('gecersiz', 'YYYY')).toThrow();\n  });\n});",
+    "language": "javascript",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz (JavaScript - Jest):\nfunction csvParse(csvMetin, ayirac = ',') {\n  if (typeof csvMetin !== 'string') throw new Error('Gecersiz girdi');\n  const satirlar = csvMetin.trim().split('\\n');\n  if (satirlar.length === 0) return [];\n  const basliklar = satirlar[0].split(ayirac);\n  return satirlar.slice(1).map(satir => {\n    const degerler = satir.split(ayirac);\n    return basliklar.reduce((nesne, baslik, i) => {\n      nesne[baslik.trim()] = degerler[i]?.trim() || '';\n      return nesne;\n    }, {});\n  });\n}",
+    "response": "describe('csvParse', () => {\n  test('normal csv ayristirma', () => {\n    const csv = 'ad,yas\\nAli,25\\nVeli,30';\n    const sonuc = csvParse(csv);\n    expect(sonuc).toEqual([{ ad: 'Ali', yas: '25' }, { ad: 'Veli', yas: '30' }]);\n  });\n\n  test('kenar durumlar', () => {\n    expect(csvParse('baslik')).toEqual([]);\n    expect(csvParse('')).toEqual([]);\n    const ozelAyirac = 'isim|puan\\nA|90\\nB|80';\n    expect(csvParse(ozelAyirac, '|')).toEqual([{ isim: 'A', puan: '90' }, { isim: 'B', puan: '80' }]);\n  });\n\n  test('hata durumu', () => {\n    expect(() => csvParse(null)).toThrow('Gecersiz girdi');\n    expect(() => csvParse(42)).toThrow('Gecersiz girdi');\n  });\n});",
+    "language": "javascript",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki sinif icin unit test yaz (Java - JUnit 5):\npublic class HesapMakinesi {\n    public int topla(int a, int b) { return a + b; }\n    public int cikar(int a, int b) { return a - b; }\n    public int carp(int a, int b) { return a * b; }\n    public double bol(int a, int b) {\n        if (b == 0) throw new ArithmeticException(\"Sifira bolunemez\");\n        return (double) a / b;\n    }\n}",
+    "response": "import org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class HesapMakinesiTest {\n\n    private final HesapMakinesi hm = new HesapMakinesi();\n\n    @Test\n    void testToplaNormal() {\n        assertEquals(5, hm.topla(2, 3));\n        assertEquals(0, hm.topla(-1, 1));\n    }\n\n    @Test\n    void testCikarCarpNormal() {\n        assertEquals(3, hm.cikar(10, 7));\n        assertEquals(20, hm.carp(4, 5));\n        assertEquals(0, hm.carp(0, 100));\n    }\n\n    @Test\n    void testBolNormal() {\n        assertEquals(2.5, hm.bol(5, 2), 0.001);\n        assertEquals(0.0, hm.bol(0, 5), 0.001);\n    }\n\n    @Test\n    void testBolHata() {\n        assertThrows(ArithmeticException.class, () -> hm.bol(10, 0));\n    }\n}",
+    "language": "java",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki sinif icin unit test yaz (Java - JUnit 5):\npublic class DiziIslemleri {\n    public static int[] tersCevir(int[] dizi) {\n        if (dizi == null) throw new IllegalArgumentException(\"Dizi null olamaz\");\n        int[] sonuc = new int[dizi.length];\n        for (int i = 0; i < dizi.length; i++) {\n            sonuc[i] = dizi[dizi.length - 1 - i];\n        }\n        return sonuc;\n    }\n\n    public static int enBuyukBul(int[] dizi) {\n        if (dizi == null || dizi.length == 0) throw new IllegalArgumentException(\"Gecersiz dizi\");\n        int max = dizi[0];\n        for (int sayi : dizi) {\n            if (sayi > max) max = sayi;\n        }\n        return max;\n    }\n}",
+    "response": "import org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class DiziIslemleriTest {\n\n    @Test\n    void testTersCevirNormal() {\n        assertArrayEquals(new int[]{3, 2, 1}, DiziIslemleri.tersCevir(new int[]{1, 2, 3}));\n        assertArrayEquals(new int[]{1}, DiziIslemleri.tersCevir(new int[]{1}));\n    }\n\n    @Test\n    void testTersCevirKenar() {\n        assertArrayEquals(new int[]{}, DiziIslemleri.tersCevir(new int[]{}));\n    }\n\n    @Test\n    void testTersCevirHata() {\n        assertThrows(IllegalArgumentException.class, () -> DiziIslemleri.tersCevir(null));\n    }\n\n    @Test\n    void testEnBuyukNormal() {\n        assertEquals(9, DiziIslemleri.enBuyukBul(new int[]{3, 7, 2, 9, 1}));\n        assertEquals(-1, DiziIslemleri.enBuyukBul(new int[]{-5, -1, -3}));\n    }\n\n    @Test\n    void testEnBuyukKenar() {\n        assertEquals(42, DiziIslemleri.enBuyukBul(new int[]{42}));\n    }\n\n    @Test\n    void testEnBuyukHata() {\n        assertThrows(IllegalArgumentException.class, () -> DiziIslemleri.enBuyukBul(null));\n        assertThrows(IllegalArgumentException.class, () -> DiziIslemleri.enBuyukBul(new int[]{}));\n    }\n}",
+    "language": "java",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki sinif icin unit test yaz (Java - JUnit 5):\npublic class SifreDogrulayici {\n    public static boolean gucluMu(String sifre) {\n        if (sifre == null) throw new IllegalArgumentException(\"Sifre null olamaz\");\n        if (sifre.length() < 8) return false;\n        boolean buyuk = false, kucuk = false, rakam = false, ozel = false;\n        for (char c : sifre.toCharArray()) {\n            if (Character.isUpperCase(c)) buyuk = true;\n            else if (Character.isLowerCase(c)) kucuk = true;\n            else if (Character.isDigit(c)) rakam = true;\n            else ozel = true;\n        }\n        return buyuk && kucuk && rakam && ozel;\n    }\n}",
+    "response": "import org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class SifreDogrulayiciTest {\n\n    @Test\n    void testGucluSifre() {\n        assertTrue(SifreDogrulayici.gucluMu(\"Guclu!12\"));\n        assertTrue(SifreDogrulayici.gucluMu(\"Abc123!x\"));\n    }\n\n    @Test\n    void testZayifSifre() {\n        assertFalse(SifreDogrulayici.gucluMu(\"12345678\"));\n        assertFalse(SifreDogrulayici.gucluMu(\"SADECE1!!\"));\n        assertFalse(SifreDogrulayici.gucluMu(\"kucukharf1!\"));\n    }\n\n    @Test\n    void testKenarDurum() {\n        assertFalse(SifreDogrulayici.gucluMu(\"\"));\n        assertFalse(SifreDogrulayici.gucluMu(\"K1!a\"));\n    }\n\n    @Test\n    void testHataDurumu() {\n        assertThrows(IllegalArgumentException.class, () -> SifreDogrulayici.gucluMu(null));\n    }\n}",
+    "language": "java",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki sinif icin unit test yaz (Java - JUnit 5):\npublic class KullaniciServisi {\n    public static class Kullanici {\n        String email;\n        int yas;\n        Kullanici(String email, int yas) {\n            this.email = email;\n            this.yas = yas;\n        }\n    }\n\n    public static boolean dogrula(Kullanici k) {\n        if (k == null) throw new IllegalArgumentException(\"Kullanici null olamaz\");\n        if (k.email == null || !k.email.contains(\"@\")) return false;\n        return k.yas >= 18;\n    }\n}",
+    "response": "import org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class KullaniciServisiTest {\n\n    @Test\n    void testGecerliKullanici() {\n        assertTrue(KullaniciServisi.dogrula(new KullaniciServisi.Kullanici(\"a@b.com\", 25)));\n    }\n\n    @Test\n    void testGecersizKullanici() {\n        assertFalse(KullaniciServisi.dogrula(new KullaniciServisi.Kullanici(\"gecersiz\", 25)));\n        assertFalse(KullaniciServisi.dogrula(new KullaniciServisi.Kullanici(\"a@b.com\", 17)));\n        assertFalse(KullaniciServisi.dogrula(new KullaniciServisi.Kullanici(null, 20)));\n    }\n\n    @Test\n    void testKenarDurum() {\n        assertTrue(KullaniciServisi.dogrula(new KullaniciServisi.Kullanici(\"x@y.com\", 18)));\n        assertFalse(KullaniciServisi.dogrula(new KullaniciServisi.Kullanici(\"x@y.com\", 0)));\n    }\n\n    @Test\n    void testHataDurumu() {\n        assertThrows(IllegalArgumentException.class, () -> KullaniciServisi.dogrula(null));\n    }\n}",
+    "language": "java",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki sinif icin unit test yaz (Java - JUnit 5):\npublic class PalindromKontrol {\n    public static boolean kontrolEt(String metin) {\n        if (metin == null) throw new IllegalArgumentException(\"Metin null olamaz\");\n        String temiz = metin.replaceAll(\"[^a-zA-Z0-9]\", \"\").toLowerCase();\n        return temiz.equals(new StringBuilder(temiz).reverse().toString());\n    }\n}",
+    "response": "import org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class PalindromKontrolTest {\n\n    @Test\n    void testPalindromNormal() {\n        assertTrue(PalindromKontrol.kontrolEt(\"kek\"));\n        assertTrue(PalindromKontrol.kontrolEt(\"12321\"));\n        assertFalse(PalindromKontrol.kontrolEt(\"merhaba\"));\n    }\n\n    @Test\n    void testPalindromBuyukKucuk() {\n        assertTrue(PalindromKontrol.kontrolEt(\"Ada\"));\n        assertTrue(PalindromKontrol.kontrolEt(\"Anastas mum satsana\"));\n    }\n\n    @Test\n    void testKenarDurum() {\n        assertTrue(PalindromKontrol.kontrolEt(\"\"));\n        assertTrue(PalindromKontrol.kontrolEt(\"a\"));\n    }\n\n    @Test\n    void testHataDurumu() {\n        assertThrows(IllegalArgumentException.class, () -> PalindromKontrol.kontrolEt(null));\n    }\n}",
+    "language": "java",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz (Go):\npackage main\n\nfunc Faktoriyel(n int) (int, error) {\n    if n < 0 {\n        return 0, fmt.Errorf(\"negatif sayi: %d\", n)\n    }\n    if n == 0 {\n        return 1, nil\n    }\n    sonuc := 1\n    for i := 2; i <= n; i++ {\n        sonuc *= i\n    }\n    return sonuc, nil\n}",
+    "response": "package main\n\nimport \"testing\"\n\nfunc TestFaktoriyelNormal(t *testing.T) {\n    sonuc, err := Faktoriyel(5)\n    if err != nil {\n        t.Fatalf(\"hata beklenmiyor: %v\", err)\n    }\n    if sonuc != 120 {\n        t.Errorf(\"5! = 120 beklenir, got %d\", sonuc)\n    }\n\n    sonuc, _ = Faktoriyel(1)\n    if sonuc != 1 {\n        t.Errorf(\"1! = 1 beklenir, got %d\", sonuc)\n    }\n}\n\nfunc TestFaktoriyelKenar(t *testing.T) {\n    sonuc, err := Faktoriyel(0)\n    if err != nil {\n        t.Fatalf(\"hata beklenmiyor: %v\", err)\n    }\n    if sonuc != 1 {\n        t.Errorf(\"0! = 1 beklenir, got %d\", sonuc)\n    }\n\n    sonuc, _ = Faktoriyel(10)\n    if sonuc != 3628800 {\n        t.Errorf(\"10! = 3628800 beklenir, got %d\", sonuc)\n    }\n}\n\nfunc TestFaktoriyelHata(t *testing.T) {\n    _, err := Faktoriyel(-1)\n    if err == nil {\n        t.Error(\"negatif sayi icin hata bekleniyor\")\n    }\n}",
+    "language": "go",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz (Go):\npackage main\n\nfunc IkiliArama(dizi []int, hedef int) int {\n    sol, sag := 0, len(dizi)-1\n    for sol <= sag {\n        orta := (sol + sag) / 2\n        if dizi[orta] == hedef {\n            return orta\n        } else if dizi[orta] < hedef {\n            sol = orta + 1\n        } else {\n            sag = orta - 1\n        }\n    }\n    return -1\n}",
+    "response": "package main\n\nimport \"testing\"\n\nfunc TestIkiliAramaNormal(t *testing.T) {\n    dizi := []int{1, 3, 5, 7, 9, 11}\n    testler := []struct {\n        hedef int\n        beklenen int\n    }{\n        {1, 0},\n        {5, 2},\n        {11, 5},\n    }\n    for _, tt := range testler {\n        sonuc := IkiliArama(dizi, tt.hedef)\n        if sonuc != tt.beklenen {\n            t.Errorf(\"IkiliArama(%v, %d) = %d; beklenen %d\", dizi, tt.hedef, sonuc, tt.beklenen)\n        }\n    }\n}\n\nfunc TestIkiliAramaKenar(t *testing.T) {\n    if sonuc := IkiliArama([]int{}, 1); sonuc != -1 {\n        t.Errorf(\"bos dizi icin -1 beklenir, got %d\", sonuc)\n    }\n    if sonuc := IkiliArama([]int{42}, 42); sonuc != 0 {\n        t.Errorf(\"tek elemanli dizi: got %d, beklenen 0\", sonuc)\n    }\n    if sonuc := IkiliArama([]int{1, 2, 3}, 99); sonuc != -1 {\n        t.Errorf(\"olmayan deger icin -1 beklenir, got %d\", sonuc)\n    }\n}\n\nfunc TestIkiliAramaHata(t *testing.T) {\n    defer func() {\n        if r := recover(); r == nil {\n            t.Error(\"nil dizi icin panic bekleniyor\")\n        }\n    }()\n    IkiliArama(nil, 1)\n}",
+    "language": "go",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz (Go):\npackage main\n\ntype Yigin struct {\n    items []int\n}\n\nfunc (y *Yigin) Ite(item int) {\n    y.items = append(y.items, item)\n}\n\nfunc (y *Yigin) Cikar() (int, error) {\n    if len(y.items) == 0 {\n        return 0, fmt.Errorf(\"yigin bos\")\n    }\n    son := len(y.items) - 1\n    deger := y.items[son]\n    y.items = y.items[:son]\n    return deger, nil\n}\n\nfunc (y *Yigin) BosMu() bool {\n    return len(y.items) == 0\n}",
+    "response": "package main\n\nimport \"testing\"\n\nfunc TestYiginNormal(t *testing.T) {\n    y := &Yigin{}\n    if !y.BosMu() {\n        t.Error(\"yeni yigin bos olmali\")\n    }\n    y.Ite(10)\n    y.Ite(20)\n    y.Ite(30)\n    if y.BosMu() {\n        t.Error(\"eklenen yigin bos olmamali\")\n    }\n    deger, _ := y.Cikar()\n    if deger != 30 {\n        t.Errorf(\"LIFO: 30 beklenir, got %d\", deger)\n    }\n    deger, _ = y.Cikar()\n    if deger != 20 {\n        t.Errorf(\"20 beklenir, got %d\", deger)\n    }\n}\n\nfunc TestYiginKenar(t *testing.T) {\n    y := &Yigin{}\n    y.Ite(99)\n    deger, _ := y.Cikar()\n    if deger != 99 || !y.BosMu() {\n        t.Error(\"tek eleman ekleyip cikarma basarisiz\")\n    }\n}\n\nfunc TestYiginHata(t *testing.T) {\n    y := &Yigin{}\n    _, err := y.Cikar()\n    if err == nil {\n        t.Error(\"bos yigindan cikarinca hata bekleniyor\")\n    }\n}",
+    "language": "go",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki fonksiyon icin unit test yaz (TypeScript - Jest):\nfunction fibonacci(n: number): number {\n  if (n < 0) throw new Error('Negatif sayi girilemez');\n  if (n <= 1) return n;\n  let a = 0, b = 1;\n  for (let i = 2; i <= n; i++) {\n    [a, b] = [b, a + b];\n  }\n  return b;\n}",
+    "response": "describe('fibonacci', () => {\n  test('normal degerler', () => {\n    expect(fibonacci(0)).toBe(0);\n    expect(fibonacci(1)).toBe(1);\n    expect(fibonacci(10)).toBe(55);\n    expect(fibonacci(20)).toBe(6765);\n  });\n\n  test('kenar durum', () => {\n    expect(fibonacci(2)).toBe(1);\n    expect(fibonacci(3)).toBe(2);\n  });\n\n  test('hata durumu', () => {\n    expect(() => fibonacci(-1)).toThrow('Negatif sayi girilemez');\n  });\n});",
+    "language": "typescript",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  },
+  {
+    "instruction": "Asagidaki sinif icin unit test yaz (TypeScript - Jest):\nclass Queue<T> {\n  private items: T[] = [];\n  enqueue(item: T): void { this.items.push(item); }\n  dequeue(): T {\n    if (this.isEmpty()) throw new Error('Queue is empty');\n    return this.items.shift()!;\n  }\n  isEmpty(): boolean { return this.items.length === 0; }\n  peek(): T {\n    if (this.isEmpty()) throw new Error('Queue is empty');\n    return this.items[0];\n  }\n  size(): number { return this.items.length; }\n}",
+    "response": "describe('Queue<T>', () => {\n  test('normal enqueue/dequeue', () => {\n    const q = new Queue<number>();\n    q.enqueue(1);\n    q.enqueue(2);\n    q.enqueue(3);\n    expect(q.size()).toBe(3);\n    expect(q.peek()).toBe(1);\n    expect(q.dequeue()).toBe(1);\n    expect(q.dequeue()).toBe(2);\n    expect(q.isEmpty()).toBe(false);\n    expect(q.dequeue()).toBe(3);\n    expect(q.isEmpty()).toBe(true);\n  });\n\n  test('kenar durum - string queue', () => {\n    const q = new Queue<string>();\n    q.enqueue('test');\n    expect(q.dequeue()).toBe('test');\n    expect(q.size()).toBe(0);\n  });\n\n  test('hata durumu', () => {\n    const q = new Queue<number>();\n    expect(() => q.dequeue()).toThrow('Queue is empty');\n    expect(() => q.peek()).toThrow('Queue is empty');\n  });\n});",
+    "language": "typescript",
+    "category": "test",
+    "type": "manual",
+    "format": "test"
+  }
+]

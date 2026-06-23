@@ -1,0 +1,212 @@
+[
+  {
+    "instruction": "Verilen sayinin faktoriyelini hesaplayan fonksiyon yaz",
+    "response": "def faktoriyel_hesapla(sayi):\n    sonuc = 1\n    for i in range(1, sayi + 1):\n        sonuc *= i\n    return sonuc",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir listenin elemanlarini toplayan fonksiyon yaz",
+    "response": "def liste_topla(sayilar):\n    toplam = 0\n    for sayi in sayilar:\n        toplam += sayi\n    return toplam",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Girilen metnin tersini donduren fonksiyon yaz",
+    "response": "def metni_ters_cevir(kelime):\n    sonuc = \"\"\n    for i in range(len(kelime) - 1, -1, -1):\n        sonuc += kelime[i]\n    return sonuc",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir sayinin asal olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "def asal_mi(sayi):\n    if sayi < 2:\n        return False\n    for i in range(2, int(sayi ** 0.5) + 1):\n        if sayi % i == 0:\n            return False\n    return True",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Sozlukteki ogrenci notlarinin ortalamasini hesaplayan fonksiyon yaz",
+    "response": "def ortalama_hesapla(kayitlar):\n    toplam = 0\n    sayac = 0\n    for isim, notu in kayitlar.items():\n        toplam += notu\n        sayac += 1\n    return toplam / sayac if sayac > 0 else 0",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Dosyadaki satir sayisini donduren fonksiyon yaz",
+    "response": "def satir_say(dosya_yolu):\n    sayac = 0\n    with open(dosya_yolu, \"r\", encoding=\"utf-8\") as dosya:\n        for satir in dosya:\n            sayac += 1\n    return sayac",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir dizideki en buyuk elemani bulan fonksiyon yaz",
+    "response": "def en_buyuk_bul(dizi):\n    en_buyuk = dizi[0]\n    for deger in dizi:\n        if deger > en_buyuk:\n            en_buyuk = deger\n    return en_buyuk",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "String icindeki sesli harfleri sayan fonksiyon yaz",
+    "response": "def sesli_say(kelime):\n    sesliler = \"aeiouAEIOU\"\n    sayac = 0\n    for harf in kelime:\n        if harf in sesliler:\n            sayac += 1\n    return sayac",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Iki sayinin ebob degerini bulan fonksiyon yaz",
+    "response": "def ebob_bul(sayi1, sayi2):\n    while sayi2 != 0:\n        gecici = sayi2\n        sayi2 = sayi1 % sayi2\n        sayi1 = gecici\n    return sayi1",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Listedeki tek sayilari filtreleyen fonksiyon yaz",
+    "response": "def tek_sayilari_al(sayilar):\n    sonuc = []\n    for sayi in sayilar:\n        if sayi % 2 != 0:\n            sonuc.append(sayi)\n    return sonuc",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Kullanici adi ve sifre dogrulayan fonksiyon yaz",
+    "response": "def kullanici_dogrula(kullanici, sifre):\n    kullanicilar = {\"ali\": \"1234\", \"ayse\": \"abcd\", \"mehmet\": \"5678\"}\n    if kullanici in kullanicilar and kullanicilar[kullanici] == sifre:\n        return True\n    return False",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir cumledeki kelime sayisini donduren fonksiyon yaz",
+    "response": "def kelime_say(cumle):\n    sayac = 0\n    for harf in cumle:\n        if harf == \" \":\n            sayac += 1\n    return sayac + 1",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Fibonacci serisinin ilk n terimini donduren fonksiyon yaz",
+    "response": "def fibonacci_uret(terim_sayisi):\n    dizi = [0, 1]\n    for i in range(2, terim_sayisi):\n        yeni_deger = dizi[i - 1] + dizi[i - 2]\n        dizi.append(yeni_deger)\n    return dizi[:terim_sayisi]",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Urun fiyatina KDV ekleyerek yeni fiyat hesaplayan fonksiyon yaz",
+    "response": "def kdv_ekle(fiyat, oran=0.18):\n    kdv_tutari = fiyat * oran\n    toplam_fiyat = fiyat + kdv_tutari\n    return toplam_fiyat",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir listedeki elemanlari tekrarsiz hale getiren fonksiyon yaz",
+    "response": "def tekrarsiz_yap(liste):\n    sonuc = []\n    for deger in liste:\n        if deger not in sonuc:\n            sonuc.append(deger)\n    return sonuc",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Dosyaya metin yazan fonksiyon yaz",
+    "response": "def dosyaya_yaz(dosya_yolu, mesaj):\n    with open(dosya_yolu, \"w\", encoding=\"utf-8\") as dosya:\n        dosya.write(mesaj + \"\\n\")",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir sayinin rakamlari toplamini hesaplayan fonksiyon yaz",
+    "response": "def rakam_topla(sayi):\n    toplam = 0\n    while sayi > 0:\n        basamak = sayi % 10\n        toplam += basamak\n        sayi //= 10\n    return toplam",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Iki listedeki ortak elemanlari donduren fonksiyon yaz",
+    "response": "def ortak_bul(liste1, liste2):\n    sonuc = []\n    for deger in liste1:\n        if deger in liste2 and deger not in sonuc:\n            sonuc.append(deger)\n    return sonuc",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Girilen metnin bas harflerini buyuk yapan fonksiyon yaz",
+    "response": "def bas_harf_buyut(cumle):\n    sonuc = \"\"\n    yeni_kelime = True\n    for harf in cumle:\n        if harf == \" \":\n            sonuc += harf\n            yeni_kelime = True\n        elif yeni_kelime:\n            sonuc += harf.upper()\n            yeni_kelime = False\n        else:\n            sonuc += harf\n    return sonuc",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir sayinin tam bolenlerini listeleyen fonksiyon yaz",
+    "response": "def tam_bolenleri_bul(sayi):\n    bolenler = []\n    for i in range(1, sayi + 1):\n        if sayi % i == 0:\n            bolenler.append(i)\n    return bolenler",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Sozlukteki urunlerin toplam fiyatini hesaplayan fonksiyon yaz",
+    "response": "def urun_topla(urunler):\n    toplam = 0\n    for urun, fiyat in urunler.items():\n        defter = urun\n        toplam += fiyat\n    return toplam",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Girilen yasin 18'den buyuk olup olmadigini kontrol eden fonksiyon yaz",
+    "response": "def yas_kontrol(yas):\n    if yas >= 18:\n        return True\n    else:\n        return False",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir stringdeki bosluklari temizleyen fonksiyon yaz",
+    "response": "def bosluk_temizle(kelime):\n    sonuc = \"\"\n    for harf in kelime:\n        if harf != \" \":\n            sonuc += harf\n    return sonuc",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Listedeki sayilarin karelerini hesaplayan fonksiyon yaz",
+    "response": "def kare_hesapla(sayilar):\n    sonuc = []\n    for sayi in sayilar:\n        kare = sayi * sayi\n        sonuc.append(kare)\n    return sonuc",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir metnin icinde gecerli anahtari arayan fonksiyon yaz",
+    "response": "def anahtar_ara(cumle, anahtar):\n    index = 0\n    while index < len(cumle):\n        if cumle[index:index + len(anahtar)] == anahtar:\n            return index\n        index += 1\n    return -1",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Dosyadaki satirlari ters sirada yazdiran fonksiyon yaz",
+    "response": "def satirlari_ters_cevir(dosya_yolu):\n    with open(dosya_yolu, \"r\", encoding=\"utf-8\") as dosya:\n        satirlar = dosya.readlines()\n    for satir in reversed(satirlar):\n        print(satir.strip())",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Miktar ve birim fiyata gore toplam tutar hesaplayan fonksiyon yaz",
+    "response": "def tutar_hesapla(miktar, birim_fiyat):\n    toplam = miktar * birim_fiyat\n    if miktar > 10:\n        toplam *= 0.9\n    return toplam",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Girilen tarih ve saati formatli yazdiran fonksiyon yaz",
+    "response": "def tarih_formatla(gun, ay, yil, saat, dakika):\n    tarih = str(gun) + \"/\" + str(ay) + \"/\" + str(yil)\n    zaman = str(saat) + \":\" + str(dakika)\n    return tarih + \" \" + zaman",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Girdi listesini tersine cevirip cikti olarak donduren fonksiyon yaz",
+    "response": "def listeyi_ters_cevir(girdi):\n    cikti = []\n    for i in range(len(girdi) - 1, -1, -1):\n        cikti.append(girdi[i])\n    return cikti",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  },
+  {
+    "instruction": "Bir listede kac farkli eleman oldugunu bulan fonksiyon yaz",
+    "response": "def farkli_say(liste):\n    gecerli = []\n    for deger in liste:\n        if deger not in gecerli:\n            gecerli.append(deger)\n    return len(gecerli)",
+    "language": "python",
+    "category": "python",
+    "type": "manual"
+  }
+]

@@ -1,0 +1,322 @@
+[
+  {
+    "instruction": "Bu Python kodundaki hatayi bul ve duzelt:\n```python\ndef toplama(a, b):\n    return a + b\n\nprint(toplama(5))\n```",
+    "response": "def toplama(a, b):\n    return a + b\n\nprint(toplama(5, 3))",
+    "language": "python",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Python kodundaki hatayi bul ve duzelt:\n```python\nfor i in range(10):\nprint(i)\n```",
+    "response": "for i in range(10):\n    print(i)",
+    "language": "python",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Python kodundaki hatayi bul ve duzelt:\n```python\ndef getir_oge(liste, index):\n    return liste[index]\n\nprint(getir_oge([1, 2, 3], 3))\n```",
+    "response": "def getir_oge(liste, index):\n    return liste[index]\n\nprint(getir_oge([1, 2, 3], 2))",
+    "language": "python",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Python kodundaki hatayi bul ve duzelt:\n```python\nx = 10\nif x = 10:\n    print(\"Esit\")\n```",
+    "response": "x = 10\nif x == 10:\n    print(\"Esit\")",
+    "language": "python",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Python kodundaki hatayi bul ve duzelt:\n```python\ndef selamla(isim):\n    print(\"Merhaba \" + isim)\n\nselamla()\n```",
+    "response": "def selamla(isim):\n    print(\"Merhaba \" + isim)\n\nselamla(\"Ahmet\")",
+    "language": "python",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Python kodundaki hatayi bul ve duzelt:\n```python\nsayilar = [1, 2, 3, 4, 5]\nfor i in range(len(sayilar)):\n    print(sayilar[i])\n    sayilar.pop(i)\n```",
+    "response": "sayilar = [1, 2, 3, 4, 5]\nfor i in range(len(sayilar)):\n    print(sayilar[i])",
+    "language": "python",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Python kodundaki hatayi bul ve duzelt:\n```python\ndef kare_al(x):\n    return x ** 2\n\nsonuc = kare_al\nprint(sonuc(4))\n```",
+    "response": "def kare_al(x):\n    return x ** 2\n\nsonuc = kare_al\nprint(sonuc(4))",
+    "language": "python",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Python kodundaki hatayi bul ve duzelt:\n```python\nisim = \"Ahmet\"\nprint(\"Merhaba \" + isim + \"!\")\nprint(\"Yasin \" + 25 + \"tir\")\n```",
+    "response": "isim = \"Ahmet\"\nprint(\"Merhaba \" + isim + \"!\")\nprint(\"Yasin \" + str(25) + \"tir\")",
+    "language": "python",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Python kodundaki hatayi bul ve duzelt:\n```python\ndef faktoriyel(n):\n    if n == 0:\n        return 1\n    return n * faktoriyel(n - 1)\n\nprint(faktoriyel(-1))\n```",
+    "response": "def faktoriyel(n):\n    if n < 0:\n        return None\n    if n == 0:\n        return 1\n    return n * faktoriyel(n - 1)\n\nprint(faktoriyel(-1))",
+    "language": "python",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Python kodundaki hatayi bul ve duzelt:\n```python\nfrom math import sqrt\n\nprint(sqrt(16))\nprint(pi)\n```",
+    "response": "from math import sqrt, pi\n\nprint(sqrt(16))\nprint(pi)",
+    "language": "python",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Python kodundaki hatayi bul ve duzelt:\n```python\nnotlar = {\"Ali\": 85, \"Ayse\": 90, \"Mehmet\": 75}\nprint(notlar[\"Veli\"])\n```",
+    "response": "notlar = {\"Ali\": 85, \"Ayse\": 90, \"Mehmet\": 75}\nprint(notlar.get(\"Veli\", \"Ogrenci bulunamadi\"))",
+    "language": "python",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Python kodundaki hatayi bul ve duzelt:\n```python\ndef liste_ekle(oge, liste=[]):\n    liste.append(oge)\n    return liste\n\nprint(liste_ekle(1))\nprint(liste_ekle(2))\n```",
+    "response": "def liste_ekle(oge, liste=None):\n    if liste is None:\n        liste = []\n    liste.append(oge)\n    return liste\n\nprint(liste_ekle(1))\nprint(liste_ekle(2))",
+    "language": "python",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Python kodundaki hatayi bul ve duzelt:\n```python\nsayi = 0\nwhile sayi < 5:\n    print(sayi)\n```",
+    "response": "sayi = 0\nwhile sayi < 5:\n    print(sayi)\n    sayi += 1",
+    "language": "python",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Python kodundaki hatayi bul ve duzelt:\n```python\ndef cift_mi(x):\n    if x % 2 == 0:\n        return \"Cift\"\n    elif x % 2 == 1:\n        return \"Tek\"\n\nprint(cift_mi(3))\n```",
+    "response": "def cift_mi(x):\n    if x % 2 == 0:\n        return \"Cift\"\n    else:\n        return \"Tek\"\n\nprint(cift_mi(3))",
+    "language": "python",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Python kodundaki hatayi bul ve duzelt:\n```python\ndef topla_carp(a, b):\n    toplam = a + b\n    carpim = a * b\n\nprint(topla_carp(3, 4))\n```",
+    "response": "def topla_carp(a, b):\n    toplam = a + b\n    carpim = a * b\n    return toplam, carpim\n\nprint(topla_carp(3, 4))",
+    "language": "python",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu JavaScript kodundaki hatayi bul ve duzelt:\n```javascript\nfunction topla(a, b) {\n    return a + b\n}\n\nconsole.log(topla(5))\n```",
+    "response": "function topla(a, b) {\n    return a + b\n}\n\nconsole.log(topla(5, 3))",
+    "language": "javascript",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu JavaScript kodundaki hatayi bul ve duzelt:\n```javascript\nlet x = 10\nif (x = 5) {\n    console.log(\"x bes\")\n}\n```",
+    "response": "let x = 10\nif (x === 5) {\n    console.log(\"x bes\")\n}",
+    "language": "javascript",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu JavaScript kodundaki hatayi bul ve duzelt:\n```javascript\nconst dizi = [1, 2, 3, 4, 5]\nfor (let i = 0; i <= dizi.length; i++) {\n    console.log(dizi[i])\n}\n```",
+    "response": "const dizi = [1, 2, 3, 4, 5]\nfor (let i = 0; i < dizi.length; i++) {\n    console.log(dizi[i])\n}",
+    "language": "javascript",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu JavaScript kodundaki hatayi bul ve duzelt:\n```javascript\nlet isim = \"Ahmet\"\nconsole.log(\"Merhaba \" + isim)\nconsole.log(\"Yasin \" + 25)\n```",
+    "response": "let isim = \"Ahmet\"\nconsole.log(\"Merhaba \" + isim)\nconsole.log(\"Yasin \" + 25)",
+    "language": "javascript",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu JavaScript kodundaki hatayi bul ve duzelt:\n```javascript\nlet kullanici = null\nconsole.log(kullanici.ad)\n```",
+    "response": "let kullanici = null\nif (kullanici) {\n    console.log(kullanici.ad)\n} else {\n    console.log(\"Kullanici bulunamadi\")\n}",
+    "language": "javascript",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu JavaScript kodundaki hatayi bul ve duzelt:\n```javascript\nconst sayi = 10\nsayi = 20\nconsole.log(sayi)\n```",
+    "response": "let sayi = 10\nsayi = 20\nconsole.log(sayi)",
+    "language": "javascript",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu JavaScript kodundaki hatayi bul ve duzelt:\n```javascript\nfunction selamla() {\n    console.log(\"Merhaba\")\n}\n\nselamla\n```",
+    "response": "function selamla() {\n    console.log(\"Merhaba\")\n}\n\nselamla()",
+    "language": "javascript",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu JavaScript kodundaki hatayi bul ve duzelt:\n```javascript\nconst topla = (a, b) => a + b\nconsole.log(topla(3))\n```",
+    "response": "const topla = (a, b) => a + b\nconsole.log(topla(3, 4))",
+    "language": "javascript",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu JavaScript kodundaki hatayi bul ve duzelt:\n```javascript\nconst dizi = [1, 2, 3]\nconsole.log(dizi[3])\n```",
+    "response": "const dizi = [1, 2, 3]\nif (dizi.length > 3) {\n    console.log(dizi[3])\n} else {\n    console.log(\"Indeks disi\")\n}",
+    "language": "javascript",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu JavaScript kodundaki hatayi bul ve duzelt:\n```javascript\nlet sayac = 0\nwhile (sayac < 5) {\n    console.log(sayac)\n}\n```",
+    "response": "let sayac = 0\nwhile (sayac < 5) {\n    console.log(sayac)\n    sayac++\n}",
+    "language": "javascript",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Java kodundaki hatayi bul ve duzelt:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int x = 10;\n        if (x = 5) {\n            System.out.println(\"x bes\");\n        }\n    }\n}\n```",
+    "response": "public class Main {\n    public static void main(String[] args) {\n        int x = 10;\n        if (x == 5) {\n            System.out.println(\"x bes\");\n        }\n    }\n}",
+    "language": "java",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Java kodundaki hatayi bul ve duzelt:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int[] sayilar = {1, 2, 3, 4, 5};\n        for (int i = 0; i <= sayilar.length; i++) {\n            System.out.println(sayilar[i]);\n        }\n    }\n}\n```",
+    "response": "public class Main {\n    public static void main(String[] args) {\n        int[] sayilar = {1, 2, 3, 4, 5};\n        for (int i = 0; i < sayilar.length; i++) {\n            System.out.println(sayilar[i]);\n        }\n    }\n}",
+    "language": "java",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Java kodundaki hatayi bul ve duzelt:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        String isim = \"Ahmet\";\n        System.out.println(\"Merhaba \" + isim);\n        System.out.println(\"Yasin \" + 25);\n    }\n}\n```",
+    "response": "public class Main {\n    public static void main(String[] args) {\n        String isim = \"Ahmet\";\n        System.out.println(\"Merhaba \" + isim);\n        System.out.println(\"Yasin \" + 25);\n    }\n}",
+    "language": "java",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Java kodundaki hatayi bul ve duzelt:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int toplam = topla(3, 4);\n        System.out.println(toplam);\n    }\n    \n    public static int topla(int a, int b) {\n        a + b;\n    }\n}\n```",
+    "response": "public class Main {\n    public static void main(String[] args) {\n        int toplam = topla(3, 4);\n        System.out.println(toplam);\n    }\n    \n    public static int topla(int a, int b) {\n        return a + b;\n    }\n}",
+    "language": "java",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Java kodundaki hatayi bul ve duzelt:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        for (int i = 0; i < 10; i++) {\n            System.out.println(i);\n    }\n}\n```",
+    "response": "public class Main {\n    public static void main(String[] args) {\n        for (int i = 0; i < 10; i++) {\n            System.out.println(i);\n        }\n    }\n}",
+    "language": "java",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Go kodundaki hatayi bul ve duzelt:\n```go\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n    var x int = 10\n    if x = 5 {\n        fmt.Println(\"x bes\")\n    }\n}\n```",
+    "response": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var x int = 10\n    if x == 5 {\n        fmt.Println(\"x bes\")\n    }\n}",
+    "language": "go",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Go kodundaki hatayi bul ve duzelt:\n```go\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n    sayilar := []int{1, 2, 3, 4, 5}\n    for i := 0; i <= len(sayilar); i++ {\n        fmt.Println(sayilar[i])\n    }\n}\n```",
+    "response": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    sayilar := []int{1, 2, 3, 4, 5}\n    for i := 0; i < len(sayilar); i++ {\n        fmt.Println(sayilar[i])\n    }\n}",
+    "language": "go",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Go kodundaki hatayi bul ve duzelt:\n```go\npackage main\n\nimport \"fmt\"\n\nfunc selamla(isim string) {\n    fmt.Println(\"Merhaba \" + isim)\n}\n\nfunc main() {\n    selamla()\n}\n```",
+    "response": "package main\n\nimport \"fmt\"\n\nfunc selamla(isim string) {\n    fmt.Println(\"Merhaba \" + isim)\n}\n\nfunc main() {\n    selamla(\"Ahmet\")\n}",
+    "language": "go",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Go kodundaki hatayi bul ve duzelt:\n```go\npackage main\n\nimport \"fmt\"\n\nfunc topla(a int, b int) int {\n    a + b\n}\n\nfunc main() {\n    fmt.Println(topla(3, 4))\n}\n```",
+    "response": "package main\n\nimport \"fmt\"\n\nfunc topla(a int, b int) int {\n    return a + b\n}\n\nfunc main() {\n    fmt.Println(topla(3, 4))\n}",
+    "language": "go",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu Go kodundaki hatayi bul ve duzelt:\n```go\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n    x := 10\n    if x > 5 {\n        fmt.Println(\"Buyuk\")\n    else\n        fmt.Println(\"Kucuk\")\n    }\n}\n```",
+    "response": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    x := 10\n    if x > 5 {\n        fmt.Println(\"Buyuk\")\n    } else {\n        fmt.Println(\"Kucuk\")\n    }\n}",
+    "language": "go",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu SQL sorgusundaki hatayi bul ve duzelt:\n```sql\nSELECT * FROM kullanicilar WHERE id = 1;\n\nSELECT * FROM urunler WHERE fiyat > 100;\n```",
+    "response": "SELECT * FROM kullanicilar WHERE id = 1;\n\nSELECT * FROM urunler WHERE fiyat > 100;",
+    "language": "sql",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu SQL sorgusundaki hatayi bul ve duzelt:\n```sql\nSELECT isim, yas FROM kullanicilar\nORDER BY yas\nLIMT 5;\n```",
+    "response": "SELECT isim, yas FROM kullanicilar\nORDER BY yas\nLIMIT 5;",
+    "language": "sql",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu SQL sorgusundaki hatayi bul ve duzelt:\n```sql\nSELECT * FROM kullanicilar\nWHERE email = 'ahmet@example.com';\n\nINSERT INTO kullanicilar (isim, email) VALUES ('Mehmet', 'mehmet@example.com');\n```",
+    "response": "SELECT * FROM kullanicilar\nWHERE email = 'ahmet@example.com';\n\nINSERT INTO kullanicilar (isim, email) VALUES ('Mehmet', 'mehmet@example.com');",
+    "language": "sql",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu SQL sorgusundaki hatayi bul ve duzelt:\n```sql\nSELECT kullanicilar.isim, siparisler.tarih\nFROM kullanicilar\nLEFT JOIN siparisler ON kullanicilar.id = siparisler.kullanici_id\nWHERE siparisler.tarih > '2024-01-01';\n```",
+    "response": "SELECT kullanicilar.isim, siparisler.tarih\nFROM kullanicilar\nLEFT JOIN siparisler ON kullanicilar.id = siparisler.kullanici_id\nWHERE siparisler.tarih > '2024-01-01' OR siparisler.tarih IS NULL;",
+    "language": "sql",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  },
+  {
+    "instruction": "Bu SQL sorgusundaki hatayi bul ve duzelt:\n```sql\nSELECT isim, COUNT(*) FROM kullanicilar;\n```",
+    "response": "SELECT COUNT(*), isim FROM kullanicilar GROUP BY isim;",
+    "language": "sql",
+    "category": "bug_fix",
+    "type": "manual",
+    "format": "bug_fix"
+  }
+]

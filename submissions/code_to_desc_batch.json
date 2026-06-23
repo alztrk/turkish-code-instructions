@@ -1,0 +1,202 @@
+[
+  {
+    "instruction": "even_squares = [x**2 for x in range(20) if x % 2 == 0]",
+    "response": "0'dan 19'a kadar olan cift sayilarin karelerini bir liste olarak olusturur. Liste kavrayisi kosul ve ifadeyi tek satirda birlestirir.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "with open('dosya.txt', 'r') as f:\n    icerik = f.read()",
+    "response": "Dosyayi guvenli bir sekilde acar ve okur. 'with' blogu, islem sonunda dosyanin otomatik olarak kapanmasini saglar, bellek sokintisini onler.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "def loglama(func):\n    def wrapper(*args, **kwargs):\n        print(f'{func.__name__} cagrildi')\n        return func(*args, **kwargs)\n    return wrapper\n\n@loglama\ndef topla(a, b):\n    return a + b",
+    "response": "Decorator deseni ile bir fonksiyonun ne zaman cagrildigini konsola yazdirir. 'loglama' dekoratoru, 'topla' fonksiyonuna ek davranis kazandirir.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "sozluk = dict(zip(anahtarlar, degerler))",
+    "response": "Iki listeyi esleyerek bir sozluk olusturur. 'anahtarlar' listesindeki her eleman, 'degerler' listesindeki ayni indisteki elemanla eslestirilir.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "from functools import reduce\ntoplam = reduce(lambda a, b: a + b, [1, 2, 3, 4, 5], 0)",
+    "response": "Reduce fonksiyonu, bir listedeki tum elemanlari lambda ile belirtilen isleme sokarak tek bir deger elde eder. Bu ornekte sayilar toplanir.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "kisiler = [{'ad': 'Ali', 'yas': 25}, {'ad': 'Veli', 'yas': 30}]\nsirali = sorted(kisiler, key=lambda k: k['yas'])",
+    "response": "Sozluk listesini 'yas' anahtarina gore kucukten buyuge siralar. Lambda fonksiyonu, siralama olcutu olarak her elemanin yas degerini belirtir.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "try:\n    sonuc = 10 / sayi\nexcept ZeroDivisionError:\n    print('Sifira bolme hatasi')\nexcept TypeError:\n    print('Gecersiz veri tipi')\nelse:\n    print(f'Sonuc: {sonuc}')\nfinally:\n    print('Islem tamamlandi')",
+    "response": "Hata yakalama yapisi ile bolme islemini guvence altina alir. 'else' blogu hata olmazsa, 'finally' blogu ise hata olsa da calisir.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "class Zaman:\n    def __init__(self, saat, dakika):\n        self.saat = saat\n        self.dakika = dakika\n    def __str__(self):\n        return f'{self.saat:02d}:{self.dakika:02d}'\n    def __add__(self, diger):\n        toplam = self.dakika + diger.dakika\n        h = self.saat + diger.saat + toplam // 60\n        m = toplam % 60\n        return Zaman(h % 24, m)",
+    "response": "Zaman nesnesi tanimlar. '__str__' metodu nesnenin yazili temsilini, '__add__' metodu ise '+' operatorunu ozellestirerek iki zaman degerini toplar.",
+    "language": "python",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "fetch('https://api.ornek.com/veri')\n  .then(res => res.json())\n  .then(veri => console.log(veri))\n  .catch(hata => console.error('Hata:', hata))",
+    "response": "Bir API'ye GET istegi gonderir. Promise zinciri ile yanit once JSON'a cevrilir, ardindan konsola yazdirilir. Hata durumunda 'catch' blogu calisir.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const ciftKareler = [1, 2, 3, 4, 5, 6]\n  .filter(sayi => sayi % 2 === 0)\n  .map(sayi => sayi ** 2);",
+    "response": "Dizi uzerinde zincirleme islem yapar. 'filter' cift sayilari secer, 'map' her birinin karesini alarak yeni bir dizi olusturur.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const { ad, yas, sehir = 'Bilinmiyor' } = kullanici;",
+    "response": "Nesne yapisini bozarak (destructuring) 'ad', 'yas' ve varsayilan degerli 'sehir' degiskenlerini ayri ayri olusturur.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "const birlesik = [...dizi1, ...dizi2];\nconst klon = { ...nesne, yeniAlan: 'deger' };",
+    "response": "Spread operatoru ile iki dizi birlestirilir ve bir nesne klonlanip yeni bir alan eklenir. Orjinal nesne degismeden kopyalanir.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "async function veriGetir() {\n  try {\n    const yanit = await fetch('/api/kullanicilar');\n    const kullanicilar = await yanit.json();\n    return kullanicilar;\n  } catch (hata) {\n    console.error('Veri alinamadi:', hata);\n  }\n}",
+    "response": "Async/await ile asenkron veri cekme islemi gerceklestirir. 'await' anahtar kelimesi Promise cozulene kadar bekler, hata yonetimi try/catch ile saglanir.",
+    "language": "javascript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "List<String> isimler = Arrays.asList(\"Ali\", \"Ayse\", \"Ahmet\");\nisimler.stream()\n       .filter(i -> i.startsWith(\"A\"))\n       .map(String::toUpperCase)\n       .forEach(System.out::println);",
+    "response": "Java Stream API ile listedeki 'A' ile baslayan isimler filtrelenir, buyuk harfe cevrilir ve her biri konsola yazdirilir.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Optional<String> email = Optional.ofNullable(kullanici.getEmail());\nString eposta = email.orElse(\"email@yok.com\");",
+    "response": "Optional ile null guvenli bir sekilde email degeri alinir. Eger email null ise varsayilan bir deger kullanilir, NullPointerException riski azaltilir.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "Thread thread = new Thread(() -> {\n    for (int i = 0; i < 5; i++) {\n        System.out.println(\"Is parcasi: \" + i);\n    }\n});\nthread.start();",
+    "response": "Lambda ifadesi ile yeni bir thread olusturup baslatir. Thread, 0'dan 4'e kadar sayilari konsola yazdiran is parcacigini ayri bir akista calistirir.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "try (BufferedReader okuyucu = new BufferedReader(new FileReader(\"veri.txt\"))) {\n    String satir;\n    while ((satir = okuyucu.readLine()) != null) {\n        System.out.println(satir);\n    }\n}",
+    "response": "Try-with-resources ile dosyayi satir satir okur. Kaynak otomatik olarak kapatilir, bu sayede finally blogunda close() cagirmaya gerek kalmaz.",
+    "language": "java",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT k.ad, s.tutar\nFROM kullanicilar k\nJOIN siparisler s ON k.id = s.kullanici_id\nWHERE s.tutar > 100\nORDER BY s.tutar DESC;",
+    "response": "Kullanicilar ve siparisler tablolarini birlestirerek (JOIN) 100 TL uzerindeki siparisleri kullanici adiyla birlikte, tutara gore azalan sirada listeler.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT ad, maas\nFROM calisanlar\nWHERE maas > (SELECT AVG(maas) FROM calisanlar);",
+    "response": "Alt sorgu ile calisanlarin ortalama maasini hesaplar ve bu ortalamanin uzerinde maas alan kisileri listeler.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "SELECT ad, maas,\n       ROW_NUMBER() OVER (ORDER BY maas DESC) AS sira\nFROM calisanlar;",
+    "response": "Pencere fonksiyonu kullanarak calisanlari maasina gore azalan sirada numaralandirir. 'ROW_NUMBER' her satira benzersiz bir sira numarasi atar.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "WITH sirali AS (\n    SELECT ad, maas,\n           ROW_NUMBER() OVER (ORDER BY maas DESC) AS sira\n    FROM calisanlar\n)\nSELECT ad, maas FROM sirali WHERE sira <= 3;",
+    "response": "Common Table Expression (CTE) ile gecici bir 'sirali' sanal tablosu olusturur. Ardindan bu tablodan en yuksek 3 maasi alan calisani getirir.",
+    "language": "sql",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "func main() {\n    kanal := make(chan string)\n    go func() {\n        kanal <- \"Merhaba Go\"\n    }()\n    mesaj := <-kanal\n    fmt.Println(mesaj)\n}",
+    "response": "Bir kanal olusturur ve bir goroutine icinden bu kanala mesaj gonderir. Ana fonksiyon kanaldan mesaji alana kadar bloke olur, ardindan yazdirir.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "func dosyaIslemi() {\n    dosya, err := os.Create(\"ornek.txt\")\n    if err != nil {\n        log.Fatal(err)\n    }\n    defer dosya.Close()\n    \n    fmt.Fprintln(dosya, \"Merhaba Dunya\")\n}",
+    "response": "Bir dosya olusturur ve 'defer' ile fonksiyon sonunda kapatilmasini garanti altina alir. Defer, hata olussa dahi calisir.",
+    "language": "go",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "function kimlik<T>(arg: T): T {\n    return arg;\n}\n\nconst sonuc = kimlik<string>('Merhaba');",
+    "response": "Generic bir fonksiyon tanimlar. Tip parametresi 'T', fonksiyonun her cagrildiginda farkli bir tiple calismasini saglar. Bu ornekte 'string' tipi kullanilmistir.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  },
+  {
+    "instruction": "interface Kullanici {\n    readonly id: number;\n    ad: string;\n    email?: string;\n    kayitTarihi: Date;\n}\n\nconst yeniKullanici: Kullanici = {\n    id: 1,\n    ad: 'Ali',\n    kayitTarihi: new Date()\n};",
+    "response": "Bir 'Kullanici' arayuzu tanimlar. 'readonly' ile id degistirilemez, '?' ile email istege bagli olur. Nesne bu arayuze uygun olarak olusturulur.",
+    "language": "typescript",
+    "category": "code_to_desc",
+    "type": "manual",
+    "format": "code_to_desc"
+  }
+]

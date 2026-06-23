@@ -1,0 +1,242 @@
+[
+  {
+    "instruction": "Kullanicidan alinan notlari dosyaya kaydeden ve listeleyen bir not defteri programi yaz",
+    "response": "def not_ekle():\n    baslik = input('Baslik: ')\n    icerik = input('Icerik: ')\n    with open('notlar.txt', 'a', encoding='utf-8') as dosya:\n        dosya.write(f'{baslik}|{icerik}\\n')\n    print('Not eklendi.')\n\ndef notlari_listele():\n    try:\n        with open('notlar.txt', 'r', encoding='utf-8') as dosya:\n            notlar = dosya.readlines()\n        for i, not_satiri in enumerate(notlar, 1):\n            baslik, icerik = not_satiri.strip().split('|')\n            print(f'{i}. {baslik}: {icerik}')\n    except FileNotFoundError:\n        print('Henuz not yok.')\n\nwhile True:\n    print('\\n1-Not Ekle 2-Listele 3-Cikis')\n    secim = input('Seciminiz: ')\n    if secim == '1':\n        not_ekle()\n    elif secim == '2':\n        notlari_listele()\n    elif secim == '3':\n        break",
+    "language": "python",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Gorev ekleme, silme ve tamamlama ozellikleri olan bir yapilacaklar listesi programi yaz",
+    "response": "yapilacaklar = []\n\ndef gorev_ekle():\n    gorev = input('Yapilacak gorev: ')\n    yapilacaklar.append({'gorev': gorev, 'tamamlandi': False})\n\ndef gorevleri_listele():\n    for i, g in enumerate(yapilacaklar, 1):\n        durum = '\\u2713' if g['tamamlandi'] else '\\u2717'\n        print(f'{i}. {durum} {g[\"gorev\"]}')\n\ndef gorev_tamamla():\n    gorevleri_listele()\n    no = int(input('Tamamlanan gorev no: ')) - 1\n    yapilacaklar[no]['tamamlandi'] = True\n\ndef gorev_sil():\n    gorevleri_listele()\n    no = int(input('Silinecek gorev no: ')) - 1\n    yapilacaklar.pop(no)\n\nwhile True:\n    print('\\n1-Ekle 2-Listele 3-Tamamla 4-Sil 5-Cikis')\n    s = input('Secim: ')\n    if s == '1':\n        gorev_ekle()\n    elif s == '2':\n        gorevleri_listele()\n    elif s == '3':\n        gorev_tamamla()\n    elif s == '4':\n        gorev_sil()\n    elif s == '5':\n        break",
+    "language": "python",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Toplama, cikarma, carpma ve bolme yapabilen basit bir hesap makinesi programi yaz",
+    "response": "def topla(a, b):\n    return a + b\n\ndef cikar(a, b):\n    return a - b\n\ndef carp(a, b):\n    return a * b\n\ndef bol(a, b):\n    if b == 0:\n        return 'Bolme hatasi'\n    return a / b\n\nwhile True:\n    print('\\n1-Topla 2-Cikar 3-Carp 4-Bol 5-Cikis')\n    secim = input('Islem: ')\n    if secim == '5':\n        break\n    if secim in '1234':\n        try:\n            s1 = float(input('Sayi 1: '))\n            s2 = float(input('Sayi 2: '))\n            islemler = {'1': topla, '2': cikar, '3': carp, '4': bol}\n            sonuc = islemler[secim](s1, s2)\n            print(f'Sonuc: {sonuc}')\n        except ValueError:\n            print('Gecersiz sayi!')",
+    "language": "python",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Kisi ekleme, arama, silme ve listeleme yapabilen bir telefon rehberi programi yaz",
+    "response": "rehber = {}\n\ndef kisi_ekle():\n    isim = input('Isim: ')\n    tel = input('Telefon: ')\n    rehber[isim] = tel\n    print(f'{isim} rehbere eklendi.')\n\ndef kisi_ara():\n    isim = input('Aranan isim: ')\n    if isim in rehber:\n        print(f'{isim}: {rehber[isim]}')\n    else:\n        print('Kisi bulunamadi.')\n\ndef kisi_sil():\n    isim = input('Silinecek isim: ')\n    if isim in rehber:\n        del rehber[isim]\n        print(f'{isim} silindi.')\n    else:\n        print('Kisi bulunamadi.')\n\ndef rehberi_listele():\n    for isim, tel in rehber.items():\n        print(f'{isim}: {tel}')\n\nwhile True:\n    print('\\n1-Ekle 2-Ara 3-Sil 4-Listele 5-Cikis')\n    s = input('Secim: ')\n    if s == '1':\n        kisi_ekle()\n    elif s == '2':\n        kisi_ara()\n    elif s == '3':\n        kisi_sil()\n    elif s == '4':\n        rehberi_listele()\n    elif s == '5':\n        break",
+    "language": "python",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Urun ekleme, sepeti gosterme ve urun silme ozellikleri olan bir alisveris sepeti programi yaz",
+    "response": "sepet = []\n\ndef urun_ekle():\n    ad = input('Urun adi: ')\n    fiyat = float(input('Fiyat: '))\n    adet = int(input('Adet: '))\n    sepet.append({'ad': ad, 'fiyat': fiyat, 'adet': adet})\n\ndef sepeti_goster():\n    for i, u in enumerate(sepet, 1):\n        print(f'{i}. {u[\"ad\"]} x{u[\"adet\"]} = {u[\"fiyat\"]*u[\"adet\"]} TL')\n    toplam = sum(u['fiyat'] * u['adet'] for u in sepet)\n    print(f'Toplam: {toplam} TL')\n\ndef urun_sil():\n    sepeti_goster()\n    no = int(input('Silinecek urun no: ')) - 1\n    if 0 <= no < len(sepet):\n        sepet.pop(no)\n\nwhile True:\n    print('\\n1-Ekle 2-Goster 3-Sil 4-Cikis')\n    s = input('Secim: ')\n    if s == '1':\n        urun_ekle()\n    elif s == '2':\n        sepeti_goster()\n    elif s == '3':\n        urun_sil()\n    elif s == '4':\n        break",
+    "language": "python",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Bilgisayarin 1-100 arasinda tuttugu sayiyi kullanicinin tahmin etmesini saglayan bir oyun programi yaz",
+    "response": "import random\n\nprint('1-100 arasi bir sayi tuttum. Tahmin et!')\nhedef = random.randint(1, 100)\ndeneme = 0\n\nwhile True:\n    try:\n        tahmin = int(input('Tahmininiz: '))\n        deneme += 1\n        if tahmin < hedef:\n            print('Daha buyuk')\n        elif tahmin > hedef:\n            print('Daha kucuk')\n        else:\n            print(f'Tebrikler! {deneme} denemede buldunuz.')\n            break\n    except ValueError:\n        print('Gecersiz giris!')",
+    "language": "python",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Girilen metindeki kelime sayisi, harf sayisi, cumle sayisi ve en uzun kelimeyi bulan bir metin analiz araci yaz",
+    "response": "def metin_analizi():\n    metin = input('Metni girin: ')\n    kelimeler = metin.split()\n    harf_sayisi = sum(1 for c in metin if c.isalpha())\n    cumle_sayisi = metin.count('.') + metin.count('!') + metin.count('?')\n    kelime_sayisi = len(kelimeler)\n    en_uzun = max(kelimeler, key=len) if kelimeler else '-'\n\n    print(f'Kelime sayisi: {kelime_sayisi}')\n    print(f'Harf sayisi: {harf_sayisi}')\n    print(f'Cumle sayisi: {cumle_sayisi}')\n    print(f'En uzun kelime: {en_uzun}')\n\n    kelime_sayaclari = {}\n    for k in kelimeler:\n        temiz = k.strip('.,!?').lower()\n        kelime_sayaclari[temiz] = kelime_sayaclari.get(temiz, 0) + 1\n    print('En cok gecen kelimeler:')\n    for k, a in sorted(kelime_sayaclari.items(), key=lambda x: -x[1])[:5]:\n        print(f'  {k}: {a}')\n\nmetin_analizi()",
+    "language": "python",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Ogrenci bilgilerini ve notlarini kaydedip ortalama hesaplayan bir ogrenci not kayit sistemi programi yaz",
+    "response": "ogrenciler = {}\n\ndef ogrenci_ekle():\n    no = input('Ogrenci no: ')\n    isim = input('Ad soyad: ')\n    notlar = []\n    for ders in ['Matematik', 'Turkce', 'Fen']:\n        n = float(input(f'{ders} notu: '))\n        notlar.append(n)\n    ogrenciler[no] = {'isim': isim, 'notlar': notlar}\n\ndef notlari_goster():\n    no = input('Ogrenci no: ')\n    if no in ogrenciler:\n        o = ogrenciler[no]\n        print(f'{o[\"isim\"]} - Notlar: {o[\"notlar\"]}')\n        ort = sum(o['notlar']) / len(o['notlar'])\n        print(f'Ortalama: {ort:.2f}')\n\ndef sinif_listesi():\n    for no, o in ogrenciler.items():\n        ort = sum(o['notlar']) / len(o['notlar'])\n        print(f'{no} - {o[\"isim\"]} - Ort: {ort:.2f}')\n\nwhile True:\n    print('\\n1-Ekle 2-Not Goster 3-Liste 4-Cikis')\n    s = input('Secim: ')\n    if s == '1':\n        ogrenci_ekle()\n    elif s == '2':\n        notlari_goster()\n    elif s == '3':\n        sinif_listesi()\n    elif s == '4':\n        break",
+    "language": "python",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Buyuk harf, kucuk harf, rakam ve sembol iceren rastgele sifre olusturan bir program yaz",
+    "response": "import random\nimport string\n\ndef sifre_uret():\n    uzunluk = int(input('Sifre uzunlugu: '))\n    kucuk = string.ascii_lowercase\n    buyuk = string.ascii_uppercase\n    rakam = string.digits\n    sembol = string.punctuation\n    tum = kucuk + buyuk + rakam + sembol\n\n    sifre = [\n        random.choice(kucuk),\n        random.choice(buyuk),\n        random.choice(rakam),\n        random.choice(sembol)\n    ]\n    sifre += random.choices(tum, k=uzunluk - 4)\n    random.shuffle(sifre)\n    print(f'Olusturulan sifre: {\"\".join(sifre)}')\n\nwhile True:\n    print('\\n1-Sifre Uret 2-Cikis')\n    if input('Secim: ') == '2':\n        break\n    sifre_uret()",
+    "language": "python",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Web sitelerine ait kullanici adi ve sifreleri kaydedip goruntuleyen basit bir sifre yoneticisi programi yaz",
+    "response": "sifreler = {}\n\ndef sifre_kaydet():\n    site = input('Site: ')\n    kadi = input('Kullanici adi: ')\n    sifre = input('Sifre: ')\n    sifreler[site] = {'kadi': kadi, 'sifre': sifre}\n    print('Sifre kaydedildi.')\n\ndef sifre_getir():\n    site = input('Site: ')\n    if site in sifreler:\n        s = sifreler[site]\n        print(f'Kullanici: {s[\"kadi\"]}, Sifre: {s[\"sifre\"]}')\n    else:\n        print('Kayit bulunamadi.')\n\ndef sifreleri_listele():\n    for site, s in sifreler.items():\n        print(f'{site} - {s[\"kadi\"]}')\n\nwhile True:\n    print('\\n1-Kaydet 2-Getir 3-Listele 4-Cikis')\n    s = input('Secim: ')\n    if s == '1':\n        sifre_kaydet()\n    elif s == '2':\n        sifre_getir()\n    elif s == '3':\n        sifreleri_listele()\n    elif s == '4':\n        break",
+    "language": "python",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Tarayicida localStorage kullanarak not ekleme, listeleme ve silme yapan bir not defteri JavaScript programi yaz",
+    "response": "function notEkle() {\n    const baslik = prompt('Baslik:');\n    const icerik = prompt('Icerik:');\n    const notlar = JSON.parse(localStorage.getItem('notlar') || '[]');\n    notlar.push({ baslik, icerik, tarih: new Date().toLocaleString() });\n    localStorage.setItem('notlar', JSON.stringify(notlar));\n    alert('Not eklendi!');\n}\n\nfunction notlariListele() {\n    const notlar = JSON.parse(localStorage.getItem('notlar') || '[]');\n    if (notlar.length === 0) {\n        console.log('Henuz not yok.');\n        return;\n    }\n    notlar.forEach((n, i) => {\n        console.log(`${i+1}. ${n.baslik} - ${n.tarih}`);\n        console.log(`   ${n.icerik}`);\n    });\n}\n\nfunction notSil() {\n    notlariListele();\n    const no = prompt('Silinecek not no:');\n    let notlar = JSON.parse(localStorage.getItem('notlar') || '[]');\n    if (no > 0 && no <= notlar.length) {\n        notlar.splice(no - 1, 1);\n        localStorage.setItem('notlar', JSON.stringify(notlar));\n        alert('Not silindi!');\n    }\n}",
+    "language": "javascript",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "DOM manipulasyonu ile gorev ekleme, tamamlama ve listeleme yapan bir yapilacaklar listesi JavaScript programi yaz",
+    "response": "let gorevler = JSON.parse(localStorage.getItem('gorevler') || '[]');\n\nfunction gorevEkle() {\n    const input = document.getElementById('gorevInput');\n    if (!input.value.trim()) return;\n    gorevler.push({ metin: input.value, tamam: false });\n    localStorage.setItem('gorevler', JSON.stringify(gorevler));\n    input.value = '';\n    listeyiGuncelle();\n}\n\nfunction listeyiGuncelle() {\n    const liste = document.getElementById('gorevListesi');\n    liste.innerHTML = gorevler.map((g, i) =>\n        `<li onclick=\"gorevTamamla(${i})\" style=\"text-decoration:${g.tamam ? 'line-through' : 'none'}\">\n            ${g.metin}\n        </li>`\n    ).join('');\n}\n\nfunction gorevTamamla(index) {\n    gorevler[index].tamam = !gorevler[index].tamam;\n    localStorage.setItem('gorevler', JSON.stringify(gorevler));\n    listeyiGuncelle();\n}\n\nfunction gorevSil() {\n    gorevler = gorevler.filter(g => !g.tamam);\n    localStorage.setItem('gorevler', JSON.stringify(gorevler));\n    listeyiGuncelle();\n}\n\ndocument.addEventListener('DOMContentLoaded', listeyiGuncelle);",
+    "language": "javascript",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Ikinci dereceden bir sayi girilip islem secilerek toplama, cikarma, carpma ve bolme yapan bir hesap makinesi JavaScript programi yaz",
+    "response": "function hesapla(islem) {\n    const s1 = parseFloat(document.getElementById('sayi1').value);\n    const s2 = parseFloat(document.getElementById('sayi2').value);\n    let sonuc;\n\n    switch(islem) {\n        case '+':\n            sonuc = s1 + s2;\n            break;\n        case '-':\n            sonuc = s1 - s2;\n            break;\n        case '*':\n            sonuc = s1 * s2;\n            break;\n        case '/':\n            sonuc = s2 !== 0 ? s1 / s2 : 'Hata: Sifira bolunmez';\n            break;\n        default:\n            sonuc = 'Gecersiz islem';\n    }\n    document.getElementById('sonuc').textContent = `Sonuc: ${sonuc}`;\n}\n\nfunction temizle() {\n    document.getElementById('sayi1').value = '';\n    document.getElementById('sayi2').value = '';\n    document.getElementById('sonuc').textContent = 'Sonuc: ';\n}",
+    "language": "javascript",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Bilgisayarin rastgele tuttugu 1-100 arasi sayiyi kullanicinin tahmin etmesi icin bir sayi tahmin oyunu JavaScript programi yaz",
+    "response": "let hedef = Math.floor(Math.random() * 100) + 1;\nlet deneme = 0;\nlet oyunBitti = false;\n\nfunction tahminEt() {\n    if (oyunBitti) {\n        document.getElementById('sonuc').textContent = 'Oyun bitti. Sayfayi yenileyin!';\n        return;\n    }\n    const tahmin = parseInt(document.getElementById('tahmin').value);\n    if (isNaN(tahmin) || tahmin < 1 || tahmin > 100) {\n        document.getElementById('sonuc').textContent = '1-100 arasi bir sayi girin!';\n        return;\n    }\n    deneme++;\n    let mesaj;\n    if (tahmin < hedef) {\n        mesaj = 'Daha buyuk bir sayi girin';\n    } else if (tahmin > hedef) {\n        mesaj = 'Daha kucuk bir sayi girin';\n    } else {\n        mesaj = `Tebrikler! ${deneme} denemede buldunuz.`;\n        oyunBitti = true;\n    }\n    document.getElementById('sonuc').textContent = mesaj;\n    document.getElementById('deneme').textContent = `Deneme: ${deneme}`;\n}",
+    "language": "javascript",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Kullanici tarafindan belirtilen uzunlukta, buyuk-kucuk harf, rakam ve ozel karakter iceren rastgele sifre olusturan JavaScript programi yaz",
+    "response": "function sifreUret() {\n    const uzunluk = parseInt(document.getElementById('uzunluk').value) || 8;\n    if (uzunluk < 4) {\n        document.getElementById('sifre').textContent = 'Uzunluk en az 4 olmali';\n        return;\n    }\n    const kucuk = 'abcdefghijklmnopqrstuvwxyz';\n    const buyuk = kucuk.toUpperCase();\n    const rakam = '0123456789';\n    const sembol = '!@#$%^&*()_+-=[]{}|;:,.<>?';\n    const tum = kucuk + buyuk + rakam + sembol;\n\n    let sifre = '';\n    sifre += kucuk[Math.floor(Math.random() * kucuk.length)];\n    sifre += buyuk[Math.floor(Math.random() * buyuk.length)];\n    sifre += rakam[Math.floor(Math.random() * rakam.length)];\n    sifre += sembol[Math.floor(Math.random() * sembol.length)];\n\n    for (let i = 4; i < uzunluk; i++) {\n        sifre += tum[Math.floor(Math.random() * tum.length)];\n    }\n    sifre = sifre.split('').sort(() => Math.random() - 0.5).join('');\n    document.getElementById('sifre').textContent = sifre;\n    document.getElementById('sifre').style.fontFamily = 'monospace';\n}\n\nfunction kopyala() {\n    const sifre = document.getElementById('sifre').textContent;\n    navigator.clipboard.writeText(sifre);\n    alert('Sifre kopyalandi!');\n}",
+    "language": "javascript",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Kisi ekleme, arama ve listeleme yapabilen bir telefon rehberi Java programi yaz",
+    "response": "import java.util.*;\n\npublic class TelefonRehberi {\n    static Map<String, String> rehber = new HashMap<>();\n    static Scanner sc = new Scanner(System.in);\n\n    static void kisiEkle() {\n        System.out.print('Isim: ');\n        String isim = sc.nextLine();\n        System.out.print('Telefon: ');\n        String tel = sc.nextLine();\n        rehber.put(isim, tel);\n        System.out.println(isim + ' rehbere eklendi.');\n    }\n\n    static void kisiAra() {\n        System.out.print('Aranan isim: ');\n        String isim = sc.nextLine();\n        if (rehber.containsKey(isim)) {\n            System.out.println(isim + ': ' + rehber.get(isim));\n        } else {\n            System.out.println('Kisi bulunamadi.');\n        }\n    }\n\n    static void rehberiListele() {\n        if (rehber.isEmpty()) {\n            System.out.println('Rehber bos.');\n            return;\n        }\n        rehber.forEach((isim, tel) ->\n            System.out.println(isim + ': ' + tel));\n    }\n\n    public static void main(String[] args) {\n        while (true) {\n            System.out.println('\\n1-Ekle 2-Ara 3-Listele 4-Cikis');\n            System.out.print('Secim: ');\n            String s = sc.nextLine();\n            if (s.equals('1')) kisiEkle();\n            else if (s.equals('2')) kisiAra();\n            else if (s.equals('3')) rehberiListele();\n            else if (s.equals('4')) break;\n        }\n    }\n}",
+    "language": "java",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Ogrenci numarasina gore not ekleyen ve ortalama hesaplayan bir ogrenci not kayit sistemi Java programi yaz",
+    "response": "import java.util.*;\n\npublic class OgrenciNotSistemi {\n    static Map<String, List<Double>> ogrenciler = new HashMap<>();\n    static Scanner sc = new Scanner(System.in);\n\n    static void ogrenciEkle() {\n        System.out.print('Ogrenci no: ');\n        String no = sc.nextLine();\n        System.out.print('Ad soyad: ');\n        String isim = sc.nextLine();\n        List<Double> notlar = new ArrayList<>();\n        String[] dersler = {'Matematik', 'Turkce', 'Fen'};\n        for (String ders : dersler) {\n            System.out.print(ders + ' notu: ');\n            notlar.add(Double.parseDouble(sc.nextLine()));\n        }\n        ogrenciler.put(no, notlar);\n        System.out.println(isim + ' kaydedildi.');\n    }\n\n    static void notlariGoster() {\n        System.out.print('Ogrenci no: ');\n        String no = sc.nextLine();\n        if (ogrenciler.containsKey(no)) {\n            List<Double> n = ogrenciler.get(no);\n            double ort = n.stream().mapToDouble(d -> d).average().orElse(0);\n            System.out.println('Notlar: ' + n);\n            System.out.println('Ortalama: ' + String.format('%.2f', ort));\n        } else {\n            System.out.println('Ogrenci bulunamadi.');\n        }\n    }\n\n    public static void main(String[] args) {\n        while (true) {\n            System.out.println('\\n1-Ekle 2-Goster 3-Cikis');\n            System.out.print('Secim: ');\n            String s = sc.nextLine();\n            if (s.equals('1')) ogrenciEkle();\n            else if (s.equals('2')) notlariGoster();\n            else if (s.equals('3')) break;\n        }\n    }\n}",
+    "language": "java",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Urun ekleme, sepeti goruntuleme ve toplam fiyati hesaplama ozellikleri olan bir alisveris sepeti Java programi yaz",
+    "response": "import java.util.*;\n\npublic class AlisverisSepeti {\n    static List<Urun> sepet = new ArrayList<>();\n    static Scanner sc = new Scanner(System.in);\n\n    static class Urun {\n        String ad;\n        double fiyat;\n        int adet;\n\n        Urun(String ad, double fiyat, int adet) {\n            this.ad = ad;\n            this.fiyat = fiyat;\n            this.adet = adet;\n        }\n    }\n\n    static void urunEkle() {\n        System.out.print('Urun adi: ');\n        String ad = sc.nextLine();\n        System.out.print('Fiyat: ');\n        double fiyat = Double.parseDouble(sc.nextLine());\n        System.out.print('Adet: ');\n        int adet = Integer.parseInt(sc.nextLine());\n        sepet.add(new Urun(ad, fiyat, adet));\n        System.out.println(ad + ' sepete eklendi.');\n    }\n\n    static void sepetiGoster() {\n        double toplam = 0;\n        for (Urun u : sepet) {\n            double tutar = u.fiyat * u.adet;\n            System.out.println(u.ad + ' x' + u.adet + ' = ' + tutar + ' TL');\n            toplam += tutar;\n        }\n        System.out.println('Toplam: ' + toplam + ' TL');\n    }\n\n    public static void main(String[] args) {\n        while (true) {\n            System.out.println('\\n1-Ekle 2-Goster 3-Cikis');\n            System.out.print('Secim: ');\n            String s = sc.nextLine();\n            if (s.equals('1')) urunEkle();\n            else if (s.equals('2')) sepetiGoster();\n            else if (s.equals('3')) break;\n        }\n    }\n}",
+    "language": "java",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Gelir ve gider kaydi tutup bakiye hesaplayan basit bir finans takip Java programi yaz",
+    "response": "import java.util.*;\n\npublic class FinansTakip {\n    static List<Islem> islemler = new ArrayList<>();\n    static Scanner sc = new Scanner(System.in);\n\n    static class Islem {\n        String aciklama;\n        double miktar;\n        boolean gelir;\n\n        Islem(String aciklama, double miktar, boolean gelir) {\n            this.aciklama = aciklama;\n            this.miktar = miktar;\n            this.gelir = gelir;\n        }\n    }\n\n    static void islemEkle() {\n        System.out.print('Aciklama: ');\n        String a = sc.nextLine();\n        System.out.print('Miktar: ');\n        double m = Double.parseDouble(sc.nextLine());\n        System.out.print('Gelir mi? (e/h): ');\n        boolean g = sc.nextLine().equalsIgnoreCase('e');\n        islemler.add(new Islem(a, m, g));\n        System.out.println('Islem eklendi.');\n    }\n\n    static void raporGoster() {\n        double gelir = 0, gider = 0;\n        for (Islem i : islemler) {\n            if (i.gelir) gelir += i.miktar;\n            else gider += i.miktar;\n            System.out.println((i.gelir ? '+' : '-') + i.miktar + ' TL - ' + i.aciklama);\n        }\n        System.out.println('\\nGelir: ' + gelir + ' TL');\n        System.out.println('Gider: ' + gider + ' TL');\n        System.out.println('Bakiye: ' + (gelir - gider) + ' TL');\n    }\n\n    public static void main(String[] args) {\n        while (true) {\n            System.out.println('\\n1-Islem Ekle 2-Rapor 3-Cikis');\n            System.out.print('Secim: ');\n            String s = sc.nextLine();\n            if (s.equals('1')) islemEkle();\n            else if (s.equals('2')) raporGoster();\n            else if (s.equals('3')) break;\n        }\n    }\n}",
+    "language": "java",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Kullanici kaydi olusturma ve sifre dogrulama ile giris yapma ozelligi olan bir kullanici giris sistemi Java programi yaz",
+    "response": "import java.util.*;\n\npublic class KullaniciGiris {\n    static Map<String, String> kullanicilar = new HashMap<>();\n    static Scanner sc = new Scanner(System.in);\n\n    static void kayitOl() {\n        System.out.print('Kullanici adi: ');\n        String kadi = sc.nextLine();\n        if (kullanicilar.containsKey(kadi)) {\n            System.out.println('Bu kullanici adi zaten var!');\n            return;\n        }\n        System.out.print('Sifre: ');\n        String sifre = sc.nextLine();\n        kullanicilar.put(kadi, sifre);\n        System.out.println('Kayit basarili!');\n    }\n\n    static void girisYap() {\n        System.out.print('Kullanici adi: ');\n        String kadi = sc.nextLine();\n        System.out.print('Sifre: ');\n        String sifre = sc.nextLine();\n        if (kullanicilar.containsKey(kadi) && kullanicilar.get(kadi).equals(sifre)) {\n            System.out.println('Giris basarili! Hos geldin ' + kadi);\n        } else {\n            System.out.println('Hatali kullanici adi veya sifre!');\n        }\n    }\n\n    static void kullanicilariListele() {\n        System.out.println('Kayitli kullanicilar: ' + kullanicilar.keySet());\n    }\n\n    public static void main(String[] args) {\n        while (true) {\n            System.out.println('\\n1-Kayit Ol 2-Giris Yap 3-Listele 4-Cikis');\n            System.out.print('Secim: ');\n            String s = sc.nextLine();\n            if (s.equals('1')) kayitOl();\n            else if (s.equals('2')) girisYap();\n            else if (s.equals('3')) kullanicilariListele();\n            else if (s.equals('4')) break;\n        }\n    }\n}",
+    "language": "java",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Sehir isimlerine gore rastgele hava durumu bilgisi (sicaklik, durum, nem) donduren bir Go programi yaz",
+    "response": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n\t\"time\"\n)\n\ntype HavaDurumu struct {\n\tSehir    string\n\tSicaklik int\n\tDurum    string\n\tNem      int\n}\n\nfunc havaDurumuGetir(sehir string) HavaDurumu {\n\tdurumlar := []string{\"Gunesli\", \"Bulutlu\", \"Yagmurlu\", \"Karli\", \"Ruzgarli\"}\n\treturn HavaDurumu{\n\t\tSehir:    sehir,\n\t\tSicaklik: rand.Intn(35) - 5,\n\t\tDurum:    durumlar[rand.Intn(len(durumlar))],\n\t\tNem:      rand.Intn(60) + 30,\n\t}\n}\n\nfunc main() {\n\trand.Seed(time.Now().UnixNano())\n\tsehirler := []string{\"Istanbul\", \"Ankara\", \"Izmir\", \"Antalya\", \"Bursa\"}\n\n\tfor _, sehir := range sehirler {\n\t\th := havaDurumuGetir(sehir)\n\t\tfmt.Printf(\"%s: %d derece, %s, Nem: %d%%\\n\",\n\t\t\th.Sehir, h.Sicaklik, h.Durum, h.Nem)\n\t}\n}",
+    "language": "go",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Dosya olusturma, okuma ve uzerine metin ekleme islemlerini yapabilen bir dosya duzenleyici Go programi yaz",
+    "response": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tfor {\n\t\tfmt.Println(\"\\n1-Dosya Yaz 2-Dosya Oku 3-Metin Ekle 4-Cikis\")\n\t\tfmt.Print(\"Secim: \")\n\t\tscanner.Scan()\n\n\t\tswitch scanner.Text() {\n\t\tcase \"1\":\n\t\t\tfmt.Print(\"Dosya adi: \")\n\t\t\tscanner.Scan()\n\t\t\tdosyaAdi := scanner.Text()\n\t\t\tfmt.Print(\"Icerik: \")\n\t\t\tscanner.Scan()\n\t\t\tos.WriteFile(dosyaAdi, []byte(scanner.Text()+\"\\n\"), 0644)\n\t\t\tfmt.Println(\"Dosya kaydedildi.\")\n\n\t\tcase \"2\":\n\t\t\tfmt.Print(\"Dosya adi: \")\n\t\t\tscanner.Scan()\n\t\t\tdata, hata := os.ReadFile(scanner.Text())\n\t\t\tif hata != nil {\n\t\t\t\tfmt.Println(\"Hata:\", hata)\n\t\t\t} else {\n\t\t\t\tfmt.Print(string(data))\n\t\t\t}\n\n\t\tcase \"3\":\n\t\t\tfmt.Print(\"Dosya adi: \")\n\t\t\tscanner.Scan()\n\t\t\tdosyaAdi := scanner.Text()\n\t\t\tfmt.Print(\"Eklenecek metin: \")\n\t\t\tscanner.Scan()\n\t\t\tdosya, hata := os.OpenFile(dosyaAdi, os.O_APPEND|os.O_WRONLY, 0644)\n\t\t\tif hata != nil {\n\t\t\t\tfmt.Println(\"Hata:\", hata)\n\t\t\t} else {\n\t\t\t\tdosya.WriteString(scanner.Text() + \"\\n\")\n\t\t\t\tdosya.Close()\n\t\t\t\tfmt.Println(\"Metin eklendi.\")\n\t\t\t}\n\n\t\tcase \"4\":\n\t\t\treturn\n\t\t}\n\t}\n}",
+    "language": "go",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Coktan secmeli sorulardan olusan ve kullanicinin puanini hesaplayan basit bir quiz uygulamasi Go programi yaz",
+    "response": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Soru struct {\n\tMetin    string\n\tCevaplar [4]string\n\tDogru    int\n}\n\nfunc main() {\n\tsorular := []Soru{\n\t\t{Metin: \"Turkiye\\'nin baskenti neresidir?\",\n\t\t\tCevaplar: [4]string{\"Istanbul\", \"Ankara\", \"Izmir\", \"Bursa\"}, Dogru: 2},\n\t\t{Metin: \"Python programlama dilini kim gelistirmistir?\",\n\t\t\tCevaplar: [4]string{\"Dennis Ritchie\", \"Guido van Rossum\", \"Brendan Eich\", \"James Gosling\"}, Dogru: 2},\n\t\t{Metin: \"Dunya\\'nin en buyuk okyanusu hangisidir?\",\n\t\t\tCevaplar: [4]string{\"Atlantik\", \"Hint\", \"Pasifik\", \"Arktik\"}, Dogru: 3},\n\t}\n\n\tscanner := bufio.NewScanner(os.Stdin)\n\tpuan := 0\n\n\tfor i, s := range sorular {\n\t\tfmt.Printf(\"\\n%d. %s\\n\", i+1, s.Metin)\n\t\tfor j, c := range s.Cevaplar {\n\t\t\tfmt.Printf(\"  %d) %s\\n\", j+1, c)\n\t\t}\n\t\tfmt.Print(\"Cevabiniz (1-4): \")\n\t\tscanner.Scan()\n\t\tcevap := 0\n\t\tfmt.Sscanf(scanner.Text(), \"%d\", &cevap)\n\t\tif cevap == s.Dogru {\n\t\t\tfmt.Println(\"Dogru!\")\n\t\t\tpuan++\n\t\t} else {\n\t\t\tfmt.Printf(\"Yanlis! Dogru cevap: %d) %s\\n\", s.Dogru, s.Cevaplar[s.Dogru-1])\n\t\t}\n\t}\n\n\tfmt.Printf(\"\\nToplam puan: %d/%d\\n\", puan, len(sorular))\n\tif puan == len(sorular) {\n\t\tfmt.Println(\"Muqemmel!\")\n\t} else if puan > len(sorular)/2 {\n\t\tfmt.Println(\"Iyi is cikardin!\")\n\t} else {\n\t\tfmt.Println(\"Tekrar dene!\")\n\t}\n}",
+    "language": "go",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Ogrenci ve dersler icin tablo olusturup, join ile sorgulama yapan bir SQL veritabani programi yaz",
+    "response": "CREATE TABLE ogrenciler (\n    id SERIAL PRIMARY KEY,\n    ad_soyad VARCHAR(100) NOT NULL,\n    bolum VARCHAR(50),\n    baslangic_yili INT\n);\n\nINSERT INTO ogrenciler (ad_soyad, bolum, baslangic_yili) VALUES\n('Ahmet Yilmaz', 'Bilgisayar Muhendisligi', 2022),\n('Ayse Demir', 'Elektrik Muhendisligi', 2021),\n('Mehmet Kaya', 'Makina Muhendisligi', 2022),\n('Zeynep Celik', 'Bilgisayar Muhendisligi', 2023);\n\nCREATE TABLE dersler (\n    id SERIAL PRIMARY KEY,\n    ad VARCHAR(100),\n    kredi INT,\n    ogretim_uyesi VARCHAR(100)\n);\n\nINSERT INTO dersler (ad, kredi, ogretim_uyesi) VALUES\n('Veritabani', 4, 'Prof. Dr. Ali Can'),\n('Programlama', 5, 'Doc. Dr. Elif Su'),\n('Isletim Sistemleri', 3, 'Prof. Dr. Veli San');\n\nCREATE TABLE ogrenci_ders (\n    ogrenci_id INT REFERENCES ogrenciler(id),\n    ders_id INT REFERENCES dersler(id),\n    PRIMARY KEY (ogrenci_id, ders_id)\n);\n\nINSERT INTO ogrenci_ders (ogrenci_id, ders_id) VALUES\n(1, 1), (1, 2), (2, 1), (2, 3), (3, 2), (3, 3), (4, 1), (4, 2);\n\nSELECT o.ad_soyad, d.ad AS ders_adi, d.kredi\nFROM ogrenciler o\nJOIN ogrenci_ders od ON o.id = od.ogrenci_id\nJOIN dersler d ON od.ders_id = d.id\nWHERE o.bolum LIKE '%Bilgisayar%'\nORDER BY o.ad_soyad;",
+    "language": "sql",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "JSONB veri tipini kullanarak urun ozelliklerini saklayan ve sorgulayan bir SQL veritabani programi yaz",
+    "response": "CREATE TABLE urunler (\n    id SERIAL PRIMARY KEY,\n    ad VARCHAR(100) NOT NULL,\n    kategori VARCHAR(50),\n    ozellikler JSONB\n);\n\nINSERT INTO urunler (ad, kategori, ozellikler) VALUES\n('Dizustu Bilgisayar', 'Elektronik',\n    '{\"islemci\": \"Intel i7\", \"ram\": \"16GB\", \"depolama\": \"512GB SSD\", \"fiyat\": 25000}'),\n('Akilli Telefon', 'Elektronik',\n    '{\"islemci\": \"Snapdragon 8\", \"ram\": \"8GB\", \"depolama\": \"256GB\", \"fiyat\": 15000}'),\n('Kitap', 'Kitap',\n    '{\"yazar\": \"Orhan Pamuk\", \"sayfa\": 400, \"dil\": \"Turkce\", \"fiyat\": 150}'),\n('Tablet', 'Elektronik',\n    '{\"islemci\": \"Apple M2\", \"ram\": \"8GB\", \"depolama\": \"128GB\", \"fiyat\": 12000}');\n\nSELECT ad AS urun_adi,\n       ozellikler->>'fiyat' AS fiyat_tl,\n       ozellikler->>'islemci' AS islemci_bilgisi\nFROM urunler\nWHERE kategori = 'Elektronik'\n  AND (ozellikler->>'ram') LIKE '%8GB%'\nORDER BY (ozellikler->>'fiyat')::INT DESC;\n\nSELECT jsonb_object_keys(ozellikler) AS tum_ozellik_alanlari\nFROM urunler\nWHERE ad = 'Dizustu Bilgisayar';",
+    "language": "sql",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Regex kullanarak e-posta adreslerini dogrulayan ve gecersiz e-postalari duzelten bir SQL veritabani programi yaz",
+    "response": "CREATE TABLE kullanicilar (\n    id SERIAL PRIMARY KEY,\n    ad VARCHAR(50),\n    soyad VARCHAR(50),\n    email VARCHAR(100),\n    kayit_tarihi TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n\nINSERT INTO kullanicilar (ad, soyad, email) VALUES\n('Ali', 'Yilmaz', 'ali.yilmaz@gmail.com'),\n('Ayse', 'Demir', 'ayse.demir@ornek.com'),\n('Mehmet', 'Kaya', 'gecersiz-email'),\n('Zeynep', 'Celik', 'zeynep@site.org'),\n('Can', 'Oz', '@example.com'),\n('Ela', 'Su', 'ela.su@dogru.com');\n\nSELECT id, ad, soyad, email,\n       CASE\n           WHEN email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$'\n           THEN 'Gecerli'\n           ELSE 'Gecersiz'\n       END AS durum\nFROM kullanicilar;\n\nUPDATE kullanicilar\nSET email = CONCAT(ad, '.', soyad, '@ornek.com')\nWHERE email !~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$'\n  AND id IN (\n      SELECT id FROM kullanicilar\n      WHERE email !~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$'\n  );\n\nALTER TABLE kullanicilar\nADD CONSTRAINT email_kontrol\nCHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$');\n\nSELECT * FROM kullanicilar;",
+    "language": "sql",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Express.js ile gorev ekleme, listeleme, guncelleme ve silme islemlerini yapan bir REST API TypeScript programi yaz",
+    "response": "import express, { Request, Response } from 'express';\n\ninterface Gorev {\n    id: number;\n    baslik: string;\n    tamamlandi: boolean;\n}\n\nlet gorevler: Gorev[] = [];\nlet sonrakiId = 1;\nconst app = express();\napp.use(express.json());\n\napp.get('/gorevler', (_req: Request, res: Response) => {\n    res.json(gorevler);\n});\n\napp.get('/gorevler/:id', (req: Request, res: Response) => {\n    const gorev = gorevler.find(g => g.id === parseInt(req.params.id));\n    if (gorev) {\n        res.json(gorev);\n    } else {\n        res.status(404).json({ hata: 'Gorev bulunamadi' });\n    }\n});\n\napp.post('/gorevler', (req: Request, res: Response) => {\n    const gorev: Gorev = {\n        id: sonrakiId++,\n        baslik: req.body.baslik,\n        tamamlandi: false\n    };\n    gorevler.push(gorev);\n    res.status(201).json(gorev);\n});\n\napp.put('/gorevler/:id', (req: Request, res: Response) => {\n    const gorev = gorevler.find(g => g.id === parseInt(req.params.id));\n    if (gorev) {\n        gorev.baslik = req.body.baslik ?? gorev.baslik;\n        gorev.tamamlandi = req.body.tamamlandi ?? gorev.tamamlandi;\n        res.json(gorev);\n    } else {\n        res.status(404).json({ hata: 'Gorev bulunamadi' });\n    }\n});\n\napp.delete('/gorevler/:id', (req: Request, res: Response) => {\n    const index = gorevler.findIndex(g => g.id === parseInt(req.params.id));\n    if (index !== -1) {\n        gorevler.splice(index, 1);\n        res.status(204).send();\n    } else {\n        res.status(404).json({ hata: 'Gorev bulunamadi' });\n    }\n});\n\napp.listen(3000, () => {\n    console.log('API 3000 portunda calisiyor...');\n});",
+    "language": "typescript",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "Film ve dizi ekleme, izlendi olarak isaretleme ve puana gore siralama yapan bir medya listesi yoneticisi TypeScript programi yaz",
+    "response": "interface Medya {\n    id: number;\n    baslik: string;\n    tur: 'film' | 'dizi';\n    puan: number;\n    izlendi: boolean;\n    yil: number;\n}\n\nclass MedyaListesi {\n    private liste: Medya[] = [];\n    private sonrakiId = 1;\n\n    ekle(baslik: string, tur: 'film' | 'dizi', puan: number, yil: number): void {\n        this.liste.push({\n            id: this.sonrakiId++,\n            baslik,\n            tur,\n            puan,\n            yil,\n            izlendi: false\n        });\n    }\n\n    izlendiIsaretle(id: number): void {\n        const medya = this.liste.find(m => m.id === id);\n        if (medya) {\n            medya.izlendi = true;\n            console.log(`${medya.baslik} izlendi olarak isaretlendi.`);\n        }\n    }\n\n    listele(filtre?: 'film' | 'dizi'): Medya[] {\n        if (filtre) {\n            return this.liste.filter(m => m.tur === filtre);\n        }\n        return this.liste;\n    }\n\n    enIyiPuanli(limit: number = 3): Medya[] {\n        return [...this.liste]\n            .sort((a, b) => b.puan - a.puan)\n            .slice(0, limit);\n    }\n\n    izlenmeyenler(): Medya[] {\n        return this.liste.filter(m => !m.izlendi);\n    }\n\n    ortalamaPuan(tur?: 'film' | 'dizi'): number {\n        const filtreli = tur ? this.liste.filter(m => m.tur === tur) : this.liste;\n        if (filtreli.length === 0) return 0;\n        return filtreli.reduce((top, m) => top + m.puan, 0) / filtreli.length;\n    }\n}\n\nconst liste = new MedyaListesi();\nliste.ekle('Inception', 'film', 9, 2010);\nliste.ekle('Breaking Bad', 'dizi', 10, 2008);\nliste.ekle('Interstellar', 'film', 8, 2014);\nliste.ekle('Stranger Things', 'dizi', 8, 2016);\nconsole.log('En iyi 3:', liste.enIyiPuanli());\nconsole.log('Filmler:', liste.listele('film'));\nconsole.log('Ortalama film puani:', liste.ortalamaPuan('film'));",
+    "language": "typescript",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "HTML, CSS ve JavaScript kullanarak dort islem yapabilen basit bir hesap makinesi web sayfasi yap",
+    "response": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Hesap Makinesi</title>\n<style>\n    .hesap-makinesi { width: 260px; margin: 50px auto; padding: 20px; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }\n    .ekran { width: 100%; height: 50px; margin-bottom: 15px; text-align: right; font-size: 28px; padding: 5px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }\n    .dugmeler { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }\n    .dugme { padding: 18px; font-size: 20px; border: none; border-radius: 5px; cursor: pointer; background: #f0f0f0; }\n    .dugme:hover { background: #ddd; }\n    .islem { background: #ff9500; color: white; }\n    .islem:hover { background: #e08600; }\n    .temizle { background: #ff3b30; color: white; }\n    .temizle:hover { background: #d62d20; }\n    .esit { background: #34c759; color: white; grid-column: span 2; }\n    .esit:hover { background: #28a745; }\n</style>\n</head>\n<body>\n<div class=\"hesap-makinesi\">\n    <input type=\"text\" class=\"ekran\" id=\"ekran\" readonly>\n    <div class=\"dugmeler\">\n        <button class=\"dugme\" onclick=\"ekle('7')\">7</button>\n        <button class=\"dugme\" onclick=\"ekle('8')\">8</button>\n        <button class=\"dugme\" onclick=\"ekle('9')\">9</button>\n        <button class=\"dugme islem\" onclick=\"ekle('/')\">/</button>\n        <button class=\"dugme\" onclick=\"ekle('4')\">4</button>\n        <button class=\"dugme\" onclick=\"ekle('5')\">5</button>\n        <button class=\"dugme\" onclick=\"ekle('6')\">6</button>\n        <button class=\"dugme islem\" onclick=\"ekle('*')\">*</button>\n        <button class=\"dugme\" onclick=\"ekle('1')\">1</button>\n        <button class=\"dugme\" onclick=\"ekle('2')\">2</button>\n        <button class=\"dugme\" onclick=\"ekle('3')\">3</button>\n        <button class=\"dugme islem\" onclick=\"ekle('-')\">-</button>\n        <button class=\"dugme\" onclick=\"ekle('0')\">0</button>\n        <button class=\"dugme\" onclick=\"ekle('.')\">.</button>\n        <button class=\"dugme esit\" onclick=\"hesapla()\">=</button>\n        <button class=\"dugme islem\" onclick=\"ekle('+')\">+</button>\n        <button class=\"dugme temizle\" onclick=\"temizle()\">C</button>\n    </div>\n</div>\n<script>\n    function ekle(deger) { document.getElementById('ekran').value += deger; }\n    function hesapla() {\n        try { document.getElementById('ekran').value = eval(document.getElementById('ekran').value); }\n        catch { document.getElementById('ekran').value = 'Hata'; }\n    }\n    function temizle() { document.getElementById('ekran').value = ''; }\n</script>\n</body>\n</html>",
+    "language": "web",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  },
+  {
+    "instruction": "localStorage kullanarak not ekleme, listeleme ve silme islemlerini yapan bir not defteri web sayfasi yap",
+    "response": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Not Defteri</title>\n<style>\n    body { font-family: Arial, sans-serif; max-width: 600px; margin: 30px auto; padding: 0 20px; }\n    h2 { color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px; }\n    input, textarea { width: 100%; padding: 8px; margin: 5px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }\n    button { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }\n    button:hover { background: #0056b3; }\n    .not { border: 1px solid #ddd; padding: 15px; margin: 15px 0; border-radius: 8px; background: #f9f9f9; }\n    .not h3 { margin: 0 0 5px; color: #333; }\n    .tarih { color: #888; font-size: 12px; }\n    .sil-btn { background: #dc3545; font-size: 12px; padding: 5px 10px; margin-top: 10px; }\n    .sil-btn:hover { background: #b02a37; }\n</style>\n</head>\n<body>\n<h2>Not Defterim</h2>\n<input type=\"text\" id=\"baslikInput\" placeholder=\"Not basligi\">\n<textarea id=\"icerikInput\" placeholder=\"Not icerigi\" rows=\"3\"></textarea>\n<button onclick=\"notEkle()\">Not Ekle</button>\n<div id=\"notlarAlani\"></div>\n<script>\n    function notlariYukle() { return JSON.parse(localStorage.getItem('notlar') || '[]'); }\n    function notlariGoster() {\n        const notlar = notlariYukle();\n        const alan = document.getElementById('notlarAlani');\n        alan.innerHTML = notlar.map((n, i) =>\n            `<div class=\"not\">\n                <h3>${n.baslik || 'Basliksiz'}</h3>\n                <p>${n.icerik || ''}</p>\n                <div class=\"tarih\">${n.tarih || ''}</div>\n                <button class=\"sil-btn\" onclick=\"notSil(${i})\">Sil</button>\n            </div>`\n        ).join('');\n    }\n    function notEkle() {\n        const baslik = document.getElementById('baslikInput').value.trim();\n        const icerik = document.getElementById('icerikInput').value.trim();\n        if (!baslik && !icerik) { alert('Lutfen bir baslik veya icerik girin.'); return; }\n        const notlar = notlariYukle();\n        notlar.push({ baslik, icerik, tarih: new Date().toLocaleString('tr-TR') });\n        localStorage.setItem('notlar', JSON.stringify(notlar));\n        document.getElementById('baslikInput').value = '';\n        document.getElementById('icerikInput').value = '';\n        notlariGoster();\n    }\n    function notSil(index) {\n        const notlar = notlariYukle();\n        notlar.splice(index, 1);\n        localStorage.setItem('notlar', JSON.stringify(notlar));\n        notlariGoster();\n    }\n    notlariGoster();\n</script>\n</body>\n</html>",
+    "language": "web",
+    "category": "project",
+    "type": "manual",
+    "format": "project"
+  }
+]
